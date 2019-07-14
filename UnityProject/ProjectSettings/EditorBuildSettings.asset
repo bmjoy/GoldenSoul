@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/menu.unity
     guid: b0f8b8681312659448f634360da31893
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Game1.unity
     guid: a24aa6dbf99eb134c85c75ee742d62e4
   - enabled: 0
@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/battle.unity
     guid: 7f26c2b78e070e5458f993543278e7ea
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Minidemo/Demo.unity
     guid: d22e8134dfd5bf44cb5e11000b97753a
   m_configObjects: {}
