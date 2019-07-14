@@ -1,0 +1,1026 @@
+fileFormatVersion: 2
+guid: 554e58273aba8194d80cbab97f424fdd
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Nightwood_0
+    21300002: Nightwood_1
+    21300004: Nightwood_2
+    21300006: Nightwood_3
+    21300008: Nightwood_4
+    21300010: Nightwood_5
+    21300012: Nightwood_6
+    21300014: Nightwood_7
+    21300016: Nightwood_8
+    21300018: Nightwood_9
+    21300020: Nightwood_10
+    21300022: Nightwood_11
+    21300024: Nightwood_12
+    21300026: Nightwood_13
+    21300028: Nightwood_14
+    21300030: Nightwood_15
+    21300032: Nightwood_16
+    21300034: Nightwood_17
+    21300036: Nightwood_18
+    21300038: Nightwood_19
+    21300040: Nightwood_20
+    21300042: Nightwood_21
+    21300044: Nightwood_22
+    21300046: Nightwood_23
+    21300048: Nightwood_24
+    21300050: Nightwood_25
+    21300052: Nightwood_26
+    21300054: Nightwood_27
+    21300056: Nightwood_28
+    21300058: Nightwood_29
+    21300060: Nightwood_30
+    21300062: Nightwood_31
+    21300064: Nightwood_32
+    21300066: Nightwood_33
+    21300068: Nightwood_34
+    21300070: Nightwood_35
+    21300072: Nightwood_36
+    21300074: Nightwood_37
+    21300076: Nightwood_38
+    21300078: Nightwood_39
+    21300080: Nightwood_40
+    21300082: Nightwood_41
+    21300084: Nightwood_42
+    21300086: Nightwood_43
+    21300088: Nightwood_44
+    21300090: Nightwood_45
+    21300092: Nightwood_46
+    21300094: Nightwood_47
+    21300096: Nightwood_48
+    21300098: Nightwood_49
+    21300100: Nightwood_50
+    21300102: Nightwood_51
+    21300104: Nightwood_52
+    21300106: Nightwood_53
+    21300108: Nightwood_54
+    21300110: Nightwood_55
+    21300112: Nightwood_56
+    21300114: Nightwood_57
+    21300116: Nightwood_58
+    21300118: Nightwood_59
+    21300120: Nightwood_60
+    21300122: Nightwood_61
+    21300124: Nightwood_62
+    21300126: Nightwood_63
+    21300128: Nightwood_64
+    21300130: Nightwood_65
+    21300132: Nightwood_66
+    21300134: Nightwood_67
+    21300136: Nightwood_68
+    21300138: Nightwood_69
+    21300140: Nightwood_70
+    21300142: Nightwood_71
+    21300144: Nightwood_72
+    21300146: Nightwood_73
+    21300148: Nightwood_74
+    21300150: Nightwood_75
+    21300152: Nightwood_76
+    21300154: Nightwood_77
+    21300156: Nightwood_78
+    21300158: Nightwood_79
+    21300160: Nightwood_80
+    21300162: Nightwood_81
+    21300164: Nightwood_82
+    21300166: Nightwood_83
+    21300168: Nightwood_84
+    21300170: Nightwood_85
+    21300172: Nightwood_86
+    21300174: Nightwood_87
+    21300176: Nightwood_88
+    21300178: Nightwood_89
+    21300180: Nightwood_90
+    21300182: Nightwood_91
+    21300184: Nightwood_92
+    21300186: Nightwood_93
+    21300188: Nightwood_94
+    21300190: Nightwood_95
+    21300192: Nightwood_96
+    21300194: Nightwood_97
+    21300196: Nightwood_98
+    21300198: Nightwood_99
+    21300200: Nightwood_100
+    21300202: Nightwood_101
+    21300204: Nightwood_102
+    21300206: Nightwood_103
+    21300208: Nightwood_104
+    21300210: Nightwood_105
+    21300212: Nightwood_106
+    21300214: Nightwood_107
+    21300216: Nightwood_108
+    21300218: Nightwood_109
+    21300220: Nightwood_110
+    21300222: Nightwood_111
+    21300224: Nightwood_112
+    21300226: Nightwood_113
+    21300228: Nightwood_114
+    21300230: Nightwood_115
+    21300232: Nightwood_116
+    21300234: Nightwood_117
+    21300236: Nightwood_118
+    21300238: Nightwood_119
+    21300240: Nightwood_120
+    21300242: Nightwood_121
+    21300244: Nightwood_122
+    21300246: Nightwood_123
+    21300248: Nightwood_124
+    21300250: Nightwood_125
+    21300252: Nightwood_126
+    21300254: Nightwood_127
+    21300256: Nightwood_128
+    21300258: Nightwood_129
+    21300260: Nightwood_130
+    21300262: Nightwood_131
+    21300264: Nightwood_132
+    21300266: Nightwood_133
+    21300268: Nightwood_134
+    21300270: Nightwood_135
+    21300272: Nightwood_136
+    21300274: Nightwood_137
+    21300276: Nightwood_138
+    21300278: Nightwood_139
+    21300280: Nightwood_140
+    21300282: Nightwood_141
+    21300284: Nightwood_142
+    21300286: Nightwood_143
+    21300288: Nightwood_144
+    21300290: Nightwood_145
+    21300292: Nightwood_146
+    21300294: Nightwood_147
+    21300296: Nightwood_148
+    21300298: Nightwood_149
+    21300300: Nightwood_150
+    21300302: Nightwood_151
+    21300304: Nightwood_152
+    21300306: Nightwood_153
+    21300308: Nightwood_154
+    21300310: Nightwood_155
+    21300312: Nightwood_156
+    21300314: Nightwood_157
+    21300316: Nightwood_158
+    21300318: Nightwood_159
+    21300320: Nightwood_160
+    21300322: Nightwood_161
+    21300324: Nightwood_162
+    21300326: Nightwood_163
+    21300328: Nightwood_164
+    21300330: Nightwood_165
+    21300332: Nightwood_166
+    21300334: Nightwood_167
+    21300336: Nightwood_168
+    21300338: Nightwood_169
+    21300340: Nightwood_170
+    21300342: Nightwood_171
+    21300344: Nightwood_172
+    21300346: Nightwood_173
+    21300348: Nightwood_174
+    21300350: Nightwood_175
+    21300352: Nightwood_176
+    21300354: Nightwood_177
+    21300356: Nightwood_178
+    21300358: Nightwood_179
+    21300360: Nightwood_180
+    21300362: Nightwood_181
+    21300364: Nightwood_182
+    21300366: Nightwood_183
+    21300368: Nightwood_184
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 2
+    wrapV: 2
+    wrapW: 2
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 63
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Nightwood_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 577
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2053651a7875640aeb8f4af1ac5d04
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 577
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca094d2774e07e4c81d222e0a3e51f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 577
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcaa0b5884a227742ba94b58ee4d1fd6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 577
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d3dac4021cc3148a32830e82fbd7ac
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 577
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e3ba8f00f13ea4599a6ca815bcfc56
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 577
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c719aab1408a144914018e5585bc91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 513
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8587e72cf028b3140af4767cba12683d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 513
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28097e24c8b7c554582128801a37635c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 513
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd3ee7a71bd86848b46b533656af4fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 513
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b05e77eceb3514b96acee6ab21aed7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 513
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed576f77958dbea43a0521d4a0e70c68
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 513
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49dd2fd770ee40f47b7d9e9f7886ab98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fb5ff7787a8254da4b598645852316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 449
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e702d61184327d44892c4c3dfdd92c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_14
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 449
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551065844be801a4995d7e0365dfdd1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 449
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef900ca3b0532624f97e6b2ac442690a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 449
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6addd326bb2a0884caa882e4461e56fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 449
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd2c1850e963f6488e7b9b64fadd230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 385
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6fcf0800ce247468a2949baa4a3bb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 385
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08bd8a5a56483f340b72b6647510371e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_20
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 385
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb3d55c9b449c54ca032b2f6829105a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 385
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c236c5b9c434cb942a1829ba3ad66d33
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 385
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf1ed7919976d44298eee5d180419f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_23
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 385
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ffa967c2f9b674fb5d550f57008785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 321
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a702ddf8e106734d8be2aa68c1612a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 321
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f432f65b9c483f4596fe2ba22187d15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 321
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737f739c8e83c7c48b934450d2f4a979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_27
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 321
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eafcb6427a469c4f95a415c64a195a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 321
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84fdee59a1e9994aafa63f1b328e8dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c599490ae079ba341b7dfcc47e9f94a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_30
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 257
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcfa91382bcdf5943850d43dbf565be4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 257
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0778a39c115ad4f8013b824483425d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 257
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5275519cb56a24447ba4261ef6fd0c7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 193
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237bb4ae6de620a4a8886775b57c6d01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_34
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 193
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7339496f46bd2324f910a90046c5cbb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nightwood_35
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 193
+        width: 63
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc49cfee654abae41b5eb1d1f0e6af94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: d91ed80ba855d924a934149fb7b7ee1e
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
