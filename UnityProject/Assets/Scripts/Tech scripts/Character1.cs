@@ -12,10 +12,14 @@ public class Character1 : MonoBehaviour
 
     void Update()
     {
-        if (_Life.GetComponent<Animator>().GetInteger("Stage") < 0)
+        try
         {
-            SceneManager.LoadScene(0);
+            if (_Life.GetComponent<Animator>().GetInteger("Stage") < 0)
+            {
+                SceneManager.LoadScene(0);
+            }
         }
+        catch {}
 
     }
 }
