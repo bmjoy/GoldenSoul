@@ -28,10 +28,13 @@ public class BulletTransform : MonoBehaviour
         if(StAttType == 1)
             transform.right = plr.GetComponent<Transform>().position - transform.position;
             trsf.rotation = new Quaternion(transform.rotation.x, 0, transform.rotation.z, transform.rotation.w);
-        StartCoroutine(move());
     }
     void Update()   
     {
+        if(!gameObject.GetComponent<Renderer>().isVisible) {
+            Destroy(gameObject);
+        }
+
         switch (StAttType)
         {
             case 0:
@@ -56,17 +59,15 @@ public class BulletTransform : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D col)
     {
+        
+        print("collision");
         if(col.CompareTag("Lifepoint"))
         {
-            Destroy(gameObject);
-            lifeAnim.SetInteger("Stage",lifeAnim.GetInteger("Stage")-1);
+            lifeAnim.SetInteger("Stage", lifeAnim.GetInteger("Stage")-1);
         }
-    }
-    IEnumerator move()
-    {
-        yield return new WaitForSeconds(5f);
         Destroy(gameObject);
     }
+
    /* void FireBall()
     {
         transform.right = Enemy.position - transform.position;

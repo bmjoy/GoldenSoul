@@ -187,7 +187,7 @@ public class Attack : MonoBehaviour
     void CheckStage()
     {
         enemy.GetComponent<Animator>().SetInteger("Stage", Stage);
-        Debug.Log(Iterat);
+        
         if(Stage == 0)
         {
             if(Vector2.Distance(enemy.transform.position, hero.transform.position) < 3f)
