@@ -1,7 +1,6 @@
-
 using UnityEngine;
 
-namespace GC.Utils {
+namespace GS.Utils {
     public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T> {
         static T _instance;
 

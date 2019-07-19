@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using GC.Utils;
+using GS.Utils;
 
 namespace GS.Data {
     public class Settings: Singleton < Settings > {

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using IngameDebugConsole;
 using GS.Utils;
 
 namespace GS.Player {
@@ -15,7 +16,9 @@ namespace GS.Player {
 
         [HideInInspector]
         public Health healthBar;
+        [HideInInspector]
         public Rigidbody2D rigidbody;
+        [HideInInspector]
         public Animator anim;
 
         void Awake() {
@@ -24,8 +27,18 @@ namespace GS.Player {
             anim = GetComponent<Animator>();
         }
 
+        private void Start() {
+            DebugLogConsole.AddCommandInstance( "heal", "Set health", "HealCMD", this );    
+        }
+
         void FixedUpdate() {
             if (healthBar.health <= 0) onGameOver.Invoke();
+        }
+
+        protected void HealCMD(int value = 100)
+        {
+            healthBar.health = value;
+            Debug.Log("New HP is " + healthBar.health);
         }
     }
     

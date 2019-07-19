@@ -1,7 +1,12 @@
 using UnityEngine;
-using GC.Utils;
+using GS.Utils;
 
 namespace GS.Player {
+    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(AudioSource))]
+    [RequireComponent(typeof(BoxCollider2D))]
+    [RequireComponent(typeof(PlayerController))]
     public class PlayerControls : Singleton<PlayerControls> {
         Vector2 currentVelocity = Vector2.zero;
         public float accelerationMultiplier = 2;
