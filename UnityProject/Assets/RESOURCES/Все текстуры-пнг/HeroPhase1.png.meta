@@ -165,7 +165,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e0bb59467d161143ac7239a8745c6db
+      spriteID: 6f6bd8145744d614b89659b892864b3b
       vertices: []
       indices: 
       edges: []
@@ -185,7 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15ffb77bbb4c14e408b6794e043e225b
+      spriteID: 1d6d64135814a1a43a3b697ed0b109af
       vertices: []
       indices: 
       edges: []
@@ -205,7 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1c0b216644c03646a4bb5e3d43e1952
+      spriteID: cefc7c1cbb617a545b3185d373fdc855
       vertices: []
       indices: 
       edges: []
@@ -225,7 +225,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57f4fb3a2ea8cb64498813f410363756
+      spriteID: f2de8730951af62428560d390f0286b3
       vertices: []
       indices: 
       edges: []
@@ -245,7 +245,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63fa75490dc7f31498a4a25c40059179
+      spriteID: ef39b00c98fb37e448828829ebf012d5
       vertices: []
       indices: 
       edges: []
@@ -265,7 +265,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2392e800afaf6fa4ba1397bb8b89e527
+      spriteID: bddd125b49f34934b8630e77be24d1ab
       vertices: []
       indices: 
       edges: []
@@ -285,7 +285,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd5fe0add1816a945bdb81659cb6ded5
+      spriteID: c554b387fffe32346b2d970a5bb85b10
       vertices: []
       indices: 
       edges: []
@@ -305,7 +305,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e836d420ee5a43748ac1eff7b0fc60aa
+      spriteID: 807c9aec9ea3c7a45ab4ea8f77f3f83b
       vertices: []
       indices: 
       edges: []
@@ -325,7 +325,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 890d09705da2c1149976f8d7851f1610
+      spriteID: 150c5f580b26250429af9820a82f1a66
       vertices: []
       indices: 
       edges: []
@@ -345,7 +345,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5823f0f09fbca1842ad3081152202cf6
+      spriteID: ee25bc79edd4459458b627f12fdabedd
       vertices: []
       indices: 
       edges: []
@@ -365,7 +365,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1987a62f721330b4294c69107d9d6ee0
+      spriteID: f15e5a4e9d9d1ac43a3595afab4fe97f
       vertices: []
       indices: 
       edges: []
@@ -385,7 +385,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c0d4c6cae466ca4480f5beb818755a8
+      spriteID: 6b111d85b4699c04a9d689ec18e06006
       vertices: []
       indices: 
       edges: []
@@ -405,7 +405,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dadc386dfa7ae164a8cc1cee282db13c
+      spriteID: dfd01613c951e4a42ac61754b4d4dd9b
       vertices: []
       indices: 
       edges: []
@@ -425,7 +425,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 109266aa22c6373418fa94ebb342fc72
+      spriteID: 3d7b703bbb349ce498d4a8fe25578a8a
       vertices: []
       indices: 
       edges: []
@@ -445,7 +445,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5479eaeadd699a34296958c18b948d1f
+      spriteID: 8d0f9bfa64b02394d846053d61c2f5c0
       vertices: []
       indices: 
       edges: []
@@ -465,7 +465,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0a86bb4e9a83b349b6964f88b08538d
+      spriteID: ab9e7295721b7e94fbc4f395f0b899db
       vertices: []
       indices: 
       edges: []
@@ -485,7 +485,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3e9c22776f79e2478a47d06c432cb7f
+      spriteID: 50146639ff79e2045a2b5b2b00dd17b1
       vertices: []
       indices: 
       edges: []
@@ -505,7 +505,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 749b5338236dd404a8594dad42b3425d
+      spriteID: eed96d64df1b35a4781b60696c0b8911
       vertices: []
       indices: 
       edges: []
@@ -525,7 +525,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3857576b407414845baaf0023f0e94e7
+      spriteID: b050fec933720f7478358e4192599fd7
       vertices: []
       indices: 
       edges: []
@@ -545,7 +545,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4591916d73051054781dae1e620fedd2
+      spriteID: b6fe0c11000a15746aaa5a719e98c198
       vertices: []
       indices: 
       edges: []
@@ -565,7 +565,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17a620f0e789ee44097792d2b70d3928
+      spriteID: 309820aa3f3825a4494e7f477092e73c
       vertices: []
       indices: 
       edges: []
@@ -585,7 +585,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e314ec6f341af1048ae2ad19749cb9cf
+      spriteID: eae4bc3341f777a40832494fa0f099c9
       vertices: []
       indices: 
       edges: []
@@ -605,7 +605,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1c3fd8393e16bc44ada48fd7b45cc66
+      spriteID: d1862e01aed5af64da7d0c7732b29ecd
       vertices: []
       indices: 
       edges: []
@@ -625,7 +625,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c4d2f2281d046e448dbe6c9c33e3904
+      spriteID: cd22c3223937e9744964c30530cfb53f
       vertices: []
       indices: 
       edges: []
@@ -645,7 +645,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b066a49dfea4fa458c100b7bb9240d6
+      spriteID: ba8adb79e0eee9f4eb4be4d4c8df9288
       vertices: []
       indices: 
       edges: []
@@ -665,7 +665,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97bfa6ab96168be4584d3d0e8e3261dc
+      spriteID: cfb42d020c37f7247be9fcbe143834a4
       vertices: []
       indices: 
       edges: []
@@ -685,13 +685,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edafc157f50f58b4e83e3da0b37ffb71
+      spriteID: 46ac26dae2370dd44b660d7f91ada133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: HeroPhase1_27
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038d6be05140b874bb9d2b863b46dc6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPhase1_28
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb413ce9e8f72147976c2dce83a8547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPhase1_29
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2254cf1b2bf7748a59b294d87aa771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPhase1_30
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0a26861995ca24ca48bb9c7ba614d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPhase1_31
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003624be8b198494aabbc4fb3d70c8c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPhase1_32
       rect:
         serializedVersion: 2
         x: 0
@@ -705,13 +805,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b32dd9f8e73825b419057a0cd6d7280a
+      spriteID: 85a097c2fa019e04da07f252cc14810f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_28
+      name: HeroPhase1_33
       rect:
         serializedVersion: 2
         x: 64
@@ -725,13 +825,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbcef10368300364ab00204d2642ea89
+      spriteID: f7b7dd3140b9a82478b41cff89890494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_29
+      name: HeroPhase1_34
       rect:
         serializedVersion: 2
         x: 128
@@ -745,13 +845,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96429e93e672b24438ba126e8a889896
+      spriteID: e674399e330175249a8ef1e068a80164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_30
+      name: HeroPhase1_35
       rect:
         serializedVersion: 2
         x: 192
@@ -765,13 +865,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e5fd7c71742c22409129edfb7582375
+      spriteID: 20212612d0e97f045919d2379e89322c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_31
+      name: HeroPhase1_36
       rect:
         serializedVersion: 2
         x: 256
@@ -785,13 +885,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76bbe462408fda54ba027cf36676eac9
+      spriteID: 04527c333038b484eb3cf1fea7b69792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_32
+      name: HeroPhase1_37
       rect:
         serializedVersion: 2
         x: 320
@@ -805,13 +905,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4334cd2a27b187248a45d5982a8b7cda
+      spriteID: 6d319984b312a6a44bb4fa770b683e1a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_33
+      name: HeroPhase1_38
       rect:
         serializedVersion: 2
         x: 384
@@ -825,13 +925,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce6dc8ec3b091d64db0583c1910cb1b1
+      spriteID: 030cfb3b913a4c246897836ef5abc134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_34
+      name: HeroPhase1_39
       rect:
         serializedVersion: 2
         x: 448
@@ -845,13 +945,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58b2e6b9fecd82d479e3e07c0ca974f4
+      spriteID: 371f2ad7f100ea844a5f63d78e208c05
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_35
+      name: HeroPhase1_40
       rect:
         serializedVersion: 2
         x: 512
@@ -865,13 +965,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d37e422f5b630694dabc6abb0c22a629
+      spriteID: 30fcda81d73cf344c82389082f966baf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_36
+      name: HeroPhase1_41
       rect:
         serializedVersion: 2
         x: 576
@@ -885,13 +985,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: debfef7177010f14a9364d94c56c3b69
+      spriteID: 979a482beb2b9804fa58157afa1e3bb9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_37
+      name: HeroPhase1_42
       rect:
         serializedVersion: 2
         x: 640
@@ -905,13 +1005,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66657b3f2cd22324aa60c1b53bfa610b
+      spriteID: b1b5f0f3c0492274ab8684ed7fdd5bed
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeroPhase1_38
+      name: HeroPhase1_43
       rect:
         serializedVersion: 2
         x: 704
@@ -925,107 +1025,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e24ef99445fd89498f661334c8a1c72
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HeroPhase1_39
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 429ded9a4384b0247a0569d75450936a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HeroPhase1_40
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dc453aa1e6603704c93baedb4234d7a2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HeroPhase1_41
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 799604e335697c24d8b40d119be27033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HeroPhase1_42
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef7e88123d521c0419add2eaece93ee5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HeroPhase1_43
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e986492819d16aa4ba0db6f0cdb07c97
+      spriteID: aa0f2d3b28a1018419837a66da1937bf
       vertices: []
       indices: 
       edges: []
@@ -1034,8 +1034,8 @@ TextureImporter:
       name: HeroPhase1_44
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
+        x: 768
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -1045,7 +1045,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 176f4c850720dab44835232bbe47f0bc
+      spriteID: f86875c8e9d116745885f2833e0b74a4
       vertices: []
       indices: 
       edges: []
