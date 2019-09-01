@@ -110,55 +110,6 @@ public class moveScript : MonoBehaviour
         transform.Translate(speedX, speedY, 0); //Применение передвижения
         speedX = 0;
         speedY = 0;
-
-        /*if (Input.GetKeyDown(KeyCode.Q))
-        {
-            EventSavingSystem.SaveEvent(0, "TransformX", Convert.ToString(transform.position.x));
-            EventSavingSystem.SaveEvent(1, "TransformY", Convert.ToString(transform.position.y));
-            SceneManager.LoadScene(3);
-        }
-
-        if (Input.touchCount > 0/* && Application.platform == RuntimePlatform.Android)
-        {
-            Touch touch = Input.GetTouch(0);
-            if (touch.position.x > Screen.width - (Screen.width / 4))
-            {
-                hero.speed = 1;
-                hero.SetInteger("vector", 3);
-                speedX = horizontalSpeed;
-                th = true;
-            }
-            else
-                th = false;
-            if (touch.position.x < Screen.width / 4)
-            {
-                hero.speed = 1;
-                hero.SetInteger("vector", 1);
-                speedX = -horizontalSpeed;
-                _th = true;
-            }
-            else
-                _th = false;
-            if (touch.position.y < Screen.height / 4)
-            {
-                hero.speed = 1;
-                hero.SetInteger("vector", 4);
-                speedY = -verticalSpeed;
-                _tw = true;
-            }
-            else
-                _tw = false;
-            if (touch.position.y > Screen.height - (Screen.height / 4))
-            {
-                hero.speed = 1;
-                hero.SetInteger("vector", 2);
-                speedY = verticalSpeed;
-                tw = true;
-            }
-            else
-                tw = false;
-
-        }*/
     }
     
     public static void enable(bool x)

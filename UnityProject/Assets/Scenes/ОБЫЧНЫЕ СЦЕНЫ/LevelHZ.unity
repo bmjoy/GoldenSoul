@@ -562,6 +562,12 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
+--- !u!1 &266930117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6143828671200316018, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+    type: 3}
+  m_PrefabInstance: {fileID: 1356741903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &314316336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2858,8 +2864,34 @@ PrefabInstance:
       propertyPath: Speed
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: Lifepoint
+      value: 
+      objectReference: {fileID: 1393270873}
+    - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: Life
+      value: 
+      objectReference: {fileID: 266930117}
+    - target: {fileID: 6980745527509133458, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539946702688045657, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: TexturePixelsPerWorldUnit
+      value: 64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9268050b6b1a1e946a8e77cce7bf3230, type: 3}
+--- !u!1 &1393270873 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8193057592192605682, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+    type: 3}
+  m_PrefabInstance: {fileID: 1356741903}
+  m_PrefabAsset: {fileID: 0}
 --- !u!213 &1397732457
 Sprite:
   m_ObjectHideFlags: 0

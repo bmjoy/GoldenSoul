@@ -70,5 +70,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96d40a74f0beac4a839112b68515d61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  k: 1
+  Stay: 0
+  tagg: Player
+  type: 0
+  mas: 0a0000000b0000000c0000000d0000000e000000
+  masav: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  checkcomm: 1
   t: 3

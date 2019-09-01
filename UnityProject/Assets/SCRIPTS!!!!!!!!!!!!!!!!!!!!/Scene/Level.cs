@@ -25,7 +25,7 @@ public class Level : MonoBehaviour
     
     IEnumerator nextLevel()
     {
-        image = GameObject.Find("Image").GetComponent<Image>();
+        image = GameObject.Find("Imagelvl").GetComponent<Image>();
             for(bright = 0;bright < 1;bright += Time.deltaTime)
         {
             image.color = new Color(0, 0, 0, bright);

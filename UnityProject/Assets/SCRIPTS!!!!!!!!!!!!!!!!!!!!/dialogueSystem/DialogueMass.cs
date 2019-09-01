@@ -16,6 +16,11 @@ public class DialogueMass
             "Всё что осталось, это твоё имя. \nПотеря имени равносильна потере всего, что у вас было.",//7
             "Тебя зовут Каспиан.",//8
             "Пожалуйста, запомни это имя.",//9
+            "A shiny, polished greatsword.",
+            "It is fixed into a shiny, polished stone",
+            "You attempt to separate this wonderful stone from the worthless hunk of metal. You failed.",
+            "What were you hoping for? It's inscribed right here: 'Only for heroes' ",
+            "You are no hero",
  /*cat1*/   
     };
     public static string[] Eng =
@@ -30,6 +35,11 @@ public class DialogueMass
             "All that's left is your name. \nLosing a name is tantamount to losing everything.",//7
             "Your name is Caspian.",//8
             "Please remember it.",//9
+                        "A shiny, polished greatsword.",
+            "It is fixed into a shiny, polished stone",
+            "You attempt to separate this wonderful stone from the worthless hunk of metal. You failed.",
+            "What were you hoping for? It's inscribed right here: 'Only for heroes' ",
+            "You are no hero",
             "1",//10
             "2",//11
             "3",//12
