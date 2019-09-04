@@ -50,7 +50,7 @@ public class Dialog : MonoBehaviour
         TextArea.text = "";
         comment1.IsLock = true;
         disableImage();
-        moveScript.moveyes = true;
+        moveScript.enable(true);
     }
     public static IEnumerator Dialogue3(string[] mass,int[] masav,int[] numbers,float latency = 0.05f, float timeDestroy = 5f)
     {
@@ -71,7 +71,7 @@ public class Dialog : MonoBehaviour
         }
         comment1.IsLock = true;
         disableImage();
-        moveScript.moveyes = true;
+        moveScript.enable(true);
     }
     public static IEnumerator Titres(string inputText, float latency = 0.05f, float timeDestroy = 5f)
     {
@@ -83,7 +83,7 @@ public class Dialog : MonoBehaviour
         }
         yield return new WaitForSeconds(timeDestroy);
         _Titre.text = "";
-        moveScript.moveyes = true;
+        moveScript.enable(true);
     }
     public static void disableImage() {
         avatarevent.avatardisable();

@@ -4,7 +4,7 @@ using System.Collections;
 
 public class comment1 : MonoBehaviour
 {
-    public bool Stay; //стоять во время диалога.
+    public bool Stay = false; //стоять во время диалога.
     public static bool IsLock = true;
     public string tagg = "Player";
     public int type; // ТИП Диалога
@@ -24,7 +24,7 @@ public class comment1 : MonoBehaviour
     {
         if (Stay)
         {
-            moveScript.moveyes = false;
+            moveScript.enable(false);
             StartCoroutine(wait(mas.Length, t));
         }
         if (!IsLock) return;
@@ -83,7 +83,7 @@ public class comment1 : MonoBehaviour
     IEnumerator wait(float x, float y)
     {
         yield return new WaitForSeconds((x + 0.5f) * y);
-        Stay = false;
+        moveScript.enable(true);
     }
 }
 
