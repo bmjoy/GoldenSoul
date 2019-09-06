@@ -13,7 +13,7 @@ public class Character1 : MonoBehaviour
     static GameObject _Lifepoint;
     private GameObject Player;
 
-    static int AttackVector = 1;
+    public static int AttackDirection = 1;
     static int AlertPoints = 0;//Нужно для появления индикатора
 
     private void Start()
@@ -24,12 +24,11 @@ public class Character1 : MonoBehaviour
     }
     void Update()
     {
-
-    if (_Life.GetComponent<Animator>().GetInteger("Stage") < 2)
+    if (_Life.GetComponent<Animator>().GetInteger("Stage") < 2) //Смерть
     {
         Debug.Log("Death");
     }
-        AttackVector =(Player.GetComponent<Animator>().GetInteger("vector") != 6) ? Player.GetComponent<Animator>().GetInteger("vector") : AttackVector;
+        AttackDirection = (Player.GetComponent<Animator>().GetInteger("vector") < 5 ) ? Player.GetComponent<Animator>().GetInteger("vector") : AttackDirection;
     }
 
     static public void MinusHp()

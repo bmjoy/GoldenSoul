@@ -38,7 +38,7 @@ public class comment1 : MonoBehaviour
                 }
             break;
             case 2: //вечный комментарий активируемый
-                if (col.CompareTag(tagg) && Input.GetKeyDown(KeyCode.E))
+                if (col.CompareTag(tagg) && (Input.GetKeyDown(KeyCode.E) || moveScript.activate))
                 {
                     StartCoroutine(Dialog.Dialogue(Dialog.masDial[mas[0]], masav[0], 0.05f, t)); 
                 }
@@ -62,7 +62,7 @@ public class comment1 : MonoBehaviour
             case 5: //Диалог активируемый удаляется
                 if (col.CompareTag(tagg) && checkcomm == true )
                 {
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (Input.GetKeyDown(KeyCode.E) || moveScript.activate)
                     {
                     StartCoroutine(Dialog.Dialogue3(Dialog.masDial, masav, mas, 0.05f, t));
                     checkcomm = false;
@@ -79,6 +79,7 @@ public class comment1 : MonoBehaviour
                 }
                 break;
         }
+        moveScript.activate = false;
     }
     IEnumerator wait(float x, float y)
     {

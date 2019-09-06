@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAttack: 0
-  Speed: 0.05
+  Speed: 0.1
   tw: 0
   th: 0
   _tw: 0

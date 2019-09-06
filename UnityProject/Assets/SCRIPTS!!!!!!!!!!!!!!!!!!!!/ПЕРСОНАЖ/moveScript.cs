@@ -1,26 +1,27 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
+using System.Collections;
 
 public class moveScript : MonoBehaviour
 {
     //public
     public bool IsAttack = false;
     public float Speed = 0.1f;
-    public bool tw, th, _tw, _th;//Для тачей
     //private 
     float horizontalSpeed,verticalSpeed; // Скорость движения
     float speedX; // актуальная скорость игрока
     float speedY;
     //static
-    static public bool _IsAttack;
-    public static bool moveyes;
+    static public bool _IsAttack; // Если атакуем
+    public static bool moveyes; // Если ходим
     public static Animator hero; 
     public static bool attack;
-
-
+    
+ 
     //Джойстик
     public FloatingJoystick JStick;
+    public static bool attackButt = false;
+    public static bool activate = false;
     // Старт!
     void Start()
     {
@@ -35,7 +36,7 @@ public class moveScript : MonoBehaviour
     void Update()
     {
         _IsAttack = IsAttack; //Сверяем тайминг атаки с этой переменной и всё гуд
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) || attackButt)
         {
             attack = true;
             hero.SetInteger("vector",5);
@@ -113,5 +114,24 @@ public class moveScript : MonoBehaviour
     public static void enable(bool x)
     {
         hero.enabled = x;
+    }
+    // Для джойстика
+    public void ActiveButt()
+    {
+        StartCoroutine(StopButt());
+    }
+    IEnumerator StopButt()
+    {
+        activate = true;
+        yield return new WaitForSeconds(0.5f);
+        activate = false;
+    }
+    public void AttackButt()
+    {
+        attackButt = true;
+    }
+    public void NoAttackButt()
+    {
+        attackButt = false;
     }
 }

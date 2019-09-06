@@ -79654,6 +79654,16 @@ PrefabInstance:
       propertyPath: m_UiScaleMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2753905719005824702, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2085881346}
+    - target: {fileID: 2753905719005824702, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActiveButt
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 5853002131688702862, guid: ccf343d937ed3674cb150afa2d71957e, type: 3}
@@ -79849,6 +79859,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2450da17875fb414398f914137f195cb, type: 3}
+--- !u!114 &2085881346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+    type: 3}
+  m_PrefabInstance: {fileID: 8193057591776920888}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f3db7284e13104ca6f7fb69a80b306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8193057591776920888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79924,7 +79946,7 @@ PrefabInstance:
     - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: Speed
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
@@ -79936,6 +79958,21 @@ PrefabInstance:
       propertyPath: JStick
       value: 
       objectReference: {fileID: 614657215}
+    - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: Life
+      value: 
+      objectReference: {fileID: 490819978}
+    - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: Lifepoint
+      value: 
+      objectReference: {fileID: 1358280948}
+    - target: {fileID: 6980745527509133458, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6980745527865888084, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: m_SortingOrder
@@ -79961,21 +79998,6 @@ PrefabInstance:
       propertyPath: m_DrawMode
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2948001021363204678, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: Life
-      value: 
-      objectReference: {fileID: 490819978}
-    - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: Lifepoint
-      value: 
-      objectReference: {fileID: 1358280948}
     - target: {fileID: 6980745527865888086, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -79986,11 +80008,6 @@ PrefabInstance:
       propertyPath: Dis
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 6980745527509133458, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_projectionMatrixMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8193057592587497498, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: m_Enabled
@@ -79999,6 +80016,11 @@ PrefabInstance:
     - target: {fileID: 8193057592587497499, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948001021363204678, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
