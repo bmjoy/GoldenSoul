@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7645662659689647077}
   - component: {fileID: 7645662659689647072}
   - component: {fileID: 7645662659689647073}
+  - component: {fileID: 2019899223257186169}
   - component: {fileID: 7645662659689647086}
   m_Layer: 0
   m_Name: Penek
@@ -137,6 +138,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &2019899223257186169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7645662659689647076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf2c776bb4b81042aa46e8aaa5c2bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &7645662659689647086
 BoxCollider2D:
   m_ObjectHideFlags: 0

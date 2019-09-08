@@ -28,6 +28,27 @@ public class Penek : MonoBehaviour
             Anim.SetBool("Attack", true);
             StartCoroutine(Attack());
         }
+
+        if (Vector2.Distance(Player.transform.position, transform.position) < 0.7f && moveScript._IsAttack && Anim.GetBool("Attack") == false)
+        {
+            if (Player.transform.position.x < transform.position.x && Character1.AttackDirection == 3)
+            {
+                StartCoroutine(Die());
+            }
+            if (Player.transform.position.x > transform.position.x && Character1.AttackDirection == 1)
+            {
+                StartCoroutine(Die());
+            }
+            if (Player.transform.position.y > transform.position.y && Character1.AttackDirection == 4)
+            {
+                StartCoroutine(Die());
+            }
+            if (Player.transform.position.y < transform.position.y && Character1.AttackDirection == 2)
+            {
+                StartCoroutine(Die());
+            }
+        }
+
     }
 
     IEnumerator Attack()
@@ -41,7 +62,7 @@ public class Penek : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Rigi.drag = 20;
         Anim.SetBool("Attack", false);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         Col.isTrigger = false;
         Rigi.drag = 0;
         Active = true;
@@ -50,9 +71,17 @@ public class Penek : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D Col)
     {
-        if (Col.CompareTag("Lifepoint"))
+        if (Col.CompareTag("Lifepoint") && Anim.GetBool("Attack"))
         {
             Character1.MinusHp();
         }
+    }
+
+    IEnumerator Die()
+    {
+        GetComponent<Animator>().SetBool("Break", true);
+        Rigi.simulated = false;
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
 }

@@ -19,10 +19,15 @@ public class LODDistance : MonoBehaviour
         {
             for (int i = 0; i < fovObjects.Length; i++)
             {
-                if (Vector2.Distance(fovObjects[i].transform.position, transform.position) > Dis)
-                    fovObjects[i].SetActive(false);
-                else
-                    fovObjects[i].SetActive(true);
+                try
+                {
+                    if (Vector2.Distance(fovObjects[i].transform.position, transform.position) > Dis)
+                        fovObjects[i].SetActive(false);
+                    else
+                        fovObjects[i].SetActive(true);
+                }
+                catch { }
+
             }
             timer = 0;
         }

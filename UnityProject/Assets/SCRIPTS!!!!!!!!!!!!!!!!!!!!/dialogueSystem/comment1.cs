@@ -12,6 +12,7 @@ public class comment1 : MonoBehaviour
     public int[] masav = new int[10];
     public  bool checkcomm = true; // Проверка для одноразовости диалога
     public float t; // Время до удаления диалога
+    public float await; // Время до удаления диалога
     private Transform playerPos;
     private Collider2D col;
     private int k1;
@@ -22,10 +23,11 @@ public class comment1 : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D col)
     {
-        if (Stay)
+        if (Stay && checkcomm == true)
         {
-            moveScript.enable(false);
-            StartCoroutine(wait(mas.Length, t));
+            moveScript.moveyes = false;
+            moveScript.hero.speed = 0;
+            StartCoroutine(wait(await));
         }
         if (!IsLock) return;
         switch (type)
@@ -72,19 +74,20 @@ public class comment1 : MonoBehaviour
             case 6: //Диалог активируемый НЕ удаляется
                 if (col.CompareTag(tagg) && checkcomm == true)
                 {
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (Input.GetKeyDown(KeyCode.E) || moveScript.activate)
                     {
                         StartCoroutine(Dialog.Dialogue3(Dialog.masDial, masav, mas, 0.05f, t));
                     }
                 }
                 break;
+
         }
-        moveScript.activate = false;
     }
-    IEnumerator wait(float x, float y)
+    IEnumerator wait(float x)
     {
-        yield return new WaitForSeconds((x + 0.5f) * y);
-        moveScript.enable(true);
+        yield return new WaitForSeconds(x);
+        moveScript.moveyes = true;
+        moveScript.hero.speed = 1;
     }
 }
 

@@ -123,6 +123,8 @@ public class moveScript : MonoBehaviour
     IEnumerator StopButt()
     {
         activate = true;
+        transform.Translate(0,0.01f,0);//Лютый костыль просто жесть
+        transform.Translate(0, -0.01f, 0);
         yield return new WaitForSeconds(0.5f);
         activate = false;
     }

@@ -5,6 +5,12 @@ TextureImporter:
     21300000: BAD_PENEK_0
     21300002: BAD_PENEK_1
     21300004: BAD_PENEK_2
+    21300006: BAD_PENEK_3
+    21300008: BAD_PENEK_4
+    21300010: BAD_PENEK_5
+    21300012: BAD_PENEK_6
+    21300014: BAD_PENEK_7
+    21300016: BAD_PENEK_8
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -123,7 +129,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3b591b6438de4a4693c76b37d7ee516
+      spriteID: 114974bc160b0f84cb3c24cd1a2c3b47
       vertices: []
       indices: 
       edges: []
@@ -143,7 +149,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71b627c8ff33d7a4e9bc404321b9d493
+      spriteID: 3f16952e289715449b865bc6017cbd89
       vertices: []
       indices: 
       edges: []
@@ -163,7 +169,127 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24d0ecc3651990e438423e8897077ffa
+      spriteID: 7adfc76136293e049a4fb6ee26641003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BAD_PENEK_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6840b22630c487c458847fe06afa0eb8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BAD_PENEK_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09fe6ca032b11544e9e703252a23f3bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BAD_PENEK_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da35580e2ba8ab54ea6bb20f533146b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BAD_PENEK_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caae11122013e5a45934aca855ce954c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BAD_PENEK_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efb309ce36aa3d947ab3196d97f07604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BAD_PENEK_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9275e733a6d8d7043b5bfac5f5e96d20
       vertices: []
       indices: 
       edges: []

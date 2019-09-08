@@ -28,11 +28,11 @@ public class Dialog : MonoBehaviour
     {
         try
         {
-            masDial = Convert.ToInt32(EventSavingSystem.Language) == 1 ? masDialRus : masDialEng;
+            masDial = (Convert.ToInt32(EventSavingSystem.Language) == 1) ? masDialRus : masDialEng;
         }
         catch
         {
-            masDial = localLang == 1 ? masDialRus : masDialEng;
+            masDial = (localLang == 1) ? masDialRus : masDialEng;
         }
     }
     public static IEnumerator Dialogue(string inputText, int massav = 0, float latency = 0.05f,float timeDestroy = 5f)
