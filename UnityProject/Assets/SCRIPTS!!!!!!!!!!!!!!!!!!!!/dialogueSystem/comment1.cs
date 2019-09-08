@@ -27,7 +27,6 @@ public class comment1 : MonoBehaviour
         {
             moveScript.moveyes = false;
             moveScript.hero.speed = 0;
-            StartCoroutine(wait(await));
         }
         if (!IsLock) return;
         switch (type)
@@ -82,12 +81,6 @@ public class comment1 : MonoBehaviour
                 break;
 
         }
-    }
-    IEnumerator wait(float x)
-    {
-        yield return new WaitForSeconds(x);
-        moveScript.moveyes = true;
-        moveScript.hero.speed = 1;
     }
 }
 

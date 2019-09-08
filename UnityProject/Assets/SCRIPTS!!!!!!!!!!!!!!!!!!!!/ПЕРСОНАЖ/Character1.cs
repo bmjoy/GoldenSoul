@@ -26,7 +26,6 @@ public class Character1 : MonoBehaviour
     {
     if (_Life.GetComponent<Animator>().GetInteger("Stage") < 2) //Смерть
     {
-        Debug.Log("Death");
     }
         AttackDirection = (Player.GetComponent<Animator>().GetInteger("vector") < 5 ) ? Player.GetComponent<Animator>().GetInteger("vector") : AttackDirection;
     }

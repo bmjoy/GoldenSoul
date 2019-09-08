@@ -85,8 +85,10 @@ public class Dialog : MonoBehaviour
         _Titre.text = "";
         moveScript.enable(true);
     }
-    public static void disableImage() {
+    public static void disableImage() { //Убирает УИ табличку и аватар, позволяет ходить
         avatarevent.avatardisable();
         _DialogImage.enabled = false;
+        moveScript.moveyes = true;
+        moveScript.hero.speed = 1;
     } 
 }
