@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: "Assets/Scenes/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/menu.unity"
     guid: b0f8b8681312659448f634360da31893
   - enabled: 1
+    path: "Assets/Scenes/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level0.unity"
+    guid: 07d1a0fd06e95d34cb2de6fbbcc8adf9
+  - enabled: 1
     path: "Assets/Scenes/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level1.unity"
     guid: a24aa6dbf99eb134c85c75ee742d62e4
   - enabled: 1

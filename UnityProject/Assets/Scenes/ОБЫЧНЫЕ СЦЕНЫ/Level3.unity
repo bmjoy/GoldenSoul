@@ -79351,6 +79351,66 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[79].second.m_ColliderType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1957824947344816548, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957824947344816548, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745193696985904227, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745193696985904227, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028357563814869206, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 7028357563814869206, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402222919545329649, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 4402222919545329649, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547533172485196328, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547533172485196328, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 7154936331847220831, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.x
+      value: 0.007936537
+      objectReference: {fileID: 0}
+    - target: {fileID: 7154936331847220831, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.007936537
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f03877bde7d5776448fbfb9d0f8db606, type: 3}
 --- !u!1 &288275339
@@ -79749,25 +79809,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &885356337 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6980745527509133456, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-    type: 3}
-  m_PrefabInstance: {fileID: 8193057591776920888}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &885356343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885356337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f08a6f40d2ec4de981f811bfc829f87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TexturePixelsPerWorldUnit: 64
 --- !u!1 &1358280948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8193057592192605682, guid: 9268050b6b1a1e946a8e77cce7bf3230,
@@ -79883,6 +79924,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: hero
       objectReference: {fileID: 0}
+    - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: Speed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: moveyes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: JStick
+      value: 
+      objectReference: {fileID: 614657215}
     - target: {fileID: 8193057592192605682, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: m_IsActive
@@ -79943,31 +79999,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: Speed
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: moveyes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: JStick
-      value: 
-      objectReference: {fileID: 614657215}
-    - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: Life
-      value: 
-      objectReference: {fileID: 490819978}
-    - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: Lifepoint
-      value: 
-      objectReference: {fileID: 1358280948}
     - target: {fileID: 6980745527509133458, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: m_projectionMatrixMode
@@ -80003,6 +80034,16 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: Life
+      value: 
+      objectReference: {fileID: 490819978}
+    - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: Lifepoint
+      value: 
+      objectReference: {fileID: 1358280948}
     - target: {fileID: 8193057592140920992, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: Dis
@@ -80022,6 +80063,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539946702688045657, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: TexturePixelsPerWorldUnit
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9268050b6b1a1e946a8e77cce7bf3230, type: 3}

@@ -11,6 +11,7 @@ TagManager:
   - Fbull
   - cat
   - Lifepoint
+  - flag
   layers:
   - Default
   - TransparentFX
