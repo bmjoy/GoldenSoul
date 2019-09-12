@@ -90,5 +90,5 @@ public class Dialog : MonoBehaviour
         _DialogImage.enabled = false;
         moveScript.moveyes = true;
         moveScript.hero.speed = 1;
-    } 
+    }
 }

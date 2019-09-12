@@ -25,7 +25,7 @@ public class DialogueMass
             "♛ Я сделаю тебе ЗОЛОТУЮ ДУШУ.",//16
             "♛ С Золотой душой ты сможешь продлить свою жизнь, и я выведу тебя из этого странного места.",//17
             "♛ Иди сюда.",//18
-            "♛ Как только произойдёт соединение, ты отрубишься. Я буду ждать тебя у костра впереди.",//19
+            "♛ Как только произойдёт соединение, ты отрубишься. Я буду ждать тебя впереди.",//19
             "♛ Удачи!",//20
             "",//21
             "Огромный блестящий отполированный меч.",//22
@@ -68,7 +68,7 @@ public class DialogueMass
             "♛ I will make you a Soul out of Gold.",//16
             "♛ With a Golden Soul you can lengthen your life, so I could guide you out of this place.",//17
             "♛ Come over here.",//18
-            "♛ Once the merger happens, you'll pass out. I will wait for you near the campfire ahead.",//19
+            "♛ Once the merger happens, you'll pass out. I will wait for you near ahead.",//19
             "♛ Good luck.",//20
             "",//21
             "A shiny, polished greatsword.",//22

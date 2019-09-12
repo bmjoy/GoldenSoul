@@ -15,8 +15,22 @@ public class comment1 : MonoBehaviour
     public float await; // Время до удаления диалога
     private Transform playerPos;
     private Collider2D col;
-    private int k1;
+    private bool stop = false;
 
+   private void Update()
+    {
+
+        if (moveScript.activate && !stop && Stay)
+        {
+            StopAllCoroutines();
+            Dialog.disableImage();
+            Dialog.TextArea.text = "";
+            IsLock = true;
+            checkcomm = false;
+            InvokeRepeating("EnableEnable",1f,0);
+            stop = true;
+        }
+    }
     void Awake() //Вход в скрипт
     {
         col = GetComponent<Collider2D>();
@@ -81,6 +95,10 @@ public class comment1 : MonoBehaviour
                 break;
 
         }
+    }
+    void EnableEnable()
+    {
+        moveScript.activate = false;
     }
 }
 
