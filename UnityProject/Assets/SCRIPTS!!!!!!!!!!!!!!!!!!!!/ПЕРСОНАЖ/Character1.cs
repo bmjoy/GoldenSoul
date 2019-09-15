@@ -32,7 +32,11 @@ public class Character1 : MonoBehaviour
 
     static public void MinusHp()
     {
-        _Life.GetComponent<Animator>().SetInteger("Stage", (_Life.GetComponent<Animator>().GetInteger("Stage") - 1));
+        if(_Life.GetComponent<Animator>().GetInteger("Stage") > 0)
+        {
+            _Life.GetComponent<Animator>().SetInteger("Stage", (_Life.GetComponent<Animator>().GetInteger("Stage") - 1));
+        }
+        
     }
 
     static public void Alert()
