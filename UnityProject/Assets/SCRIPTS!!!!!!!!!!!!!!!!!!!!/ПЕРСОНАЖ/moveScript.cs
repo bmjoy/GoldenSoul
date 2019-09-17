@@ -33,7 +33,7 @@ public class moveScript : MonoBehaviour
     }
 
     // FixedUpdate потому что Костя захотел
-    void Update()
+    void FixedUpdate()
     {
         _IsAttack = IsAttack; //Сверяем тайминг атаки с этой переменной и всё гуд
         if (Input.GetKey(KeyCode.Space) || attackButt)
