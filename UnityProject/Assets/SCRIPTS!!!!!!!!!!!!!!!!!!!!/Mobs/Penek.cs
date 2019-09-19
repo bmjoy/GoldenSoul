@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Penek : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Penek : MonoBehaviour
     private Vector2 Vector;
     private Collider2D Col;
     private bool Active = true;
+    TilemapCollider2D TC1;
+    TilemapCollider2D TC2;
+    TilemapCollider2D TC3;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -18,10 +22,18 @@ public class Penek : MonoBehaviour
         Anim = GetComponent<Animator>();
         Col = GetComponent<BoxCollider2D>();
         Anim.SetBool("Attack", false);
+        TC1 = GameObject.Find("solidmiddle").GetComponent<TilemapCollider2D>();
+        TC2 = GameObject.Find("solidbottom").GetComponent<TilemapCollider2D>();
+        TC3 = GameObject.Find("solidbottom2").GetComponent<TilemapCollider2D>();
     }
 
     void Update()
     {
+        if (Col.IsTouching(TC1) || Col.IsTouching(TC2) || Col.IsTouching(TC3))
+        {
+            Rigi.drag = 100;
+            Col.isTrigger = false;
+        }
         if(Vector2.Distance(transform.position, Player.transform.position) < 2f && Active)
         {
             Active = false;

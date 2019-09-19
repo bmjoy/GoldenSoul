@@ -45,13 +45,13 @@ public class moveScript : MonoBehaviour
         }
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S ) || JStick.Vertical != 0) && moveyes == true)
         { //Вертикальное передвижение
-            if (Input.GetKey(KeyCode.W) || JStick.Vertical > 0) // Проверяем условие нажатия кнопки W
+            if (Input.GetKey(KeyCode.W) || JStick.Vertical == 1) // Проверяем условие нажатия кнопки W
             {
                 hero.speed = 1;
                 speedY = verticalSpeed; //Изменение скорости игрока и анимация
                hero.SetInteger("vector", 2);
             }
-            if (Input.GetKey(KeyCode.S) || JStick.Vertical < 0) // Проверяем условие нажатия кнопки S
+            if (Input.GetKey(KeyCode.S) || JStick.Vertical == -1) // Проверяем условие нажатия кнопки S
             {
                 hero.speed = 1;
                 speedY = -verticalSpeed;
@@ -67,13 +67,13 @@ public class moveScript : MonoBehaviour
         /*else*/ //закомментировал потому что это не нужно
         if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || JStick.Horizontal != 0) && moveyes == true)
         {
-            if (Input.GetKey(KeyCode.D) || JStick.Horizontal > 0) // Проверяем условие нажатия кнопки D
+            if (Input.GetKey(KeyCode.D) || JStick.Horizontal == 1) // Проверяем условие нажатия кнопки D
             {
                 hero.speed = 1;
                 hero.SetInteger("vector", 3);
                 speedX = horizontalSpeed;
             }
-            if (Input.GetKey(KeyCode.A) || JStick.Horizontal < 0) // Проверяем условие нажатия кнопки A
+            if (Input.GetKey(KeyCode.A) || JStick.Horizontal == -1) // Проверяем условие нажатия кнопки A
             {
                 hero.speed = 1;
                 speedX = -horizontalSpeed;

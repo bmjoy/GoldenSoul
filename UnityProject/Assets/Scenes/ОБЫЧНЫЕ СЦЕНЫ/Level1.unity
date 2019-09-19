@@ -9566,6 +9566,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas 2
       objectReference: {fileID: 0}
+    - target: {fileID: 426191241258493583, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: localLang
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 426191241937243007, guid: ccf343d937ed3674cb150afa2d71957e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9770,7 +9775,7 @@ PrefabInstance:
     - target: {fileID: 426191241937243005, guid: ccf343d937ed3674cb150afa2d71957e,
         type: 3}
       propertyPath: m_UiScaleMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2753905719005824702, guid: ccf343d937ed3674cb150afa2d71957e,
         type: 3}
@@ -9853,11 +9858,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f3aab7a8c79f86947b506fd51c1f8c78, type: 2}
-    - target: {fileID: 426191241258493583, guid: ccf343d937ed3674cb150afa2d71957e,
-        type: 3}
-      propertyPath: localLang
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 5853002131688702862, guid: ccf343d937ed3674cb150afa2d71957e, type: 3}
@@ -14994,7 +14994,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300002, guid: b12eadabce448724ebb98ce9a2c6c5d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -42528,15 +42528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hero
       objectReference: {fileID: 0}
-    - target: {fileID: 8193057592192605682, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: Speed
-      value: 0.05
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
@@ -42556,6 +42551,11 @@ PrefabInstance:
     - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: IsAttack
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193057592192605682, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6980745527865888087, guid: 9268050b6b1a1e946a8e77cce7bf3230,
@@ -42613,11 +42613,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6980745527509133458, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_projectionMatrixMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6980745527865888084, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: m_SortingOrder
@@ -42643,10 +42638,15 @@ PrefabInstance:
       propertyPath: m_DrawMode
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2539946702688045657, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+    - target: {fileID: 6980745527865888086, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
-      propertyPath: TexturePixelsPerWorldUnit
-      value: 64
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980745527865888086, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8674879451278794872, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
@@ -42658,35 +42658,10 @@ PrefabInstance:
       propertyPath: Lifepoint
       value: 
       objectReference: {fileID: 1358280948}
-    - target: {fileID: 6980745527865888086, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6980745527865888086, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 8193057592140920992, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: Dis
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193057592587497498, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193057592587497499, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2948001021363204678, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5007008157374098773, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
@@ -42702,6 +42677,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Range
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6980745527509133458, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193057592587497498, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193057592587497499, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539946702688045657, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: TexturePixelsPerWorldUnit
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 2948001021363204678, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9268050b6b1a1e946a8e77cce7bf3230, type: 3}

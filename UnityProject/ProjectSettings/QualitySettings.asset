@@ -44,7 +44,7 @@ QualitySettings:
     - iPhone
   - serializedVersion: 2
     name: Mobile
-    pixelLightCount: 1
+    pixelLightCount: 4
     shadows: 0
     shadowResolution: 0
     shadowProjection: 0
@@ -62,7 +62,7 @@ QualitySettings:
     softVegetation: 1
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
-    vSyncCount: 2
+    vSyncCount: 0
     lodBias: 2
     maximumLODLevel: 0
     streamingMipmapsActive: 0

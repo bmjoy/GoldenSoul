@@ -6,7 +6,7 @@ public class RLEnemy : MonoBehaviour
 {
     BoxCollider2D bc;
     TilemapCollider2D TC;
-    float x = 0.05f,y = 0.05f;
+    float x = 0.01f,y = 0.01f;
     SpriteRenderer SR;
     public bool isTopDown;
     void Awake()

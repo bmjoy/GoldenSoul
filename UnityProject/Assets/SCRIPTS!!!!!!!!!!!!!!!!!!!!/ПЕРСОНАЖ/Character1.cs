@@ -24,9 +24,13 @@ public class Character1 : MonoBehaviour
     }
     void Update()
     {
-    if (_Life.GetComponent<Animator>().GetInteger("Stage") < 2) //Смерть
-    {
-    }
+        try
+        {
+            if (_Life.GetComponent<Animator>().GetInteger("Stage") < 2) //Смерть
+            {
+            }
+        }
+        catch { }
         AttackDirection = (Player.GetComponent<Animator>().GetInteger("vector") < 5 ) ? Player.GetComponent<Animator>().GetInteger("vector") : AttackDirection;
     }
 
