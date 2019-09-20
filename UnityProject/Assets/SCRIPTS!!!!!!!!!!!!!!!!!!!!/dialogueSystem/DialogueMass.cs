@@ -44,6 +44,7 @@ public class DialogueMass
             "",//35
             "",//36
             "Это старинная газета. В можете разобрать только заголовок.\n На нём написано:",//37------Газета
+            "Самое древнее заклинание удалось повторить одному из магов университета Б...",//38
             
  /*cat1*/   
     };
@@ -84,8 +85,9 @@ public class DialogueMass
             "These fruit usually contain life energy within themselves. A very rare plant.",//32
             "This can enrich your NEW SOUL with energy. To activate it, press 'A'",//33
             "To hit, HOLD the hit button." ,//34
-            "",//
-            "",//
-            "",//
+            "",//35
+            "",//36
+            "This is an old paper. You can make out only the headline. \n It says:", // 37 ------ Newspaper
+            "The oldest spell was able to be repeated by one of the magicians of the University of B ...", // 38
     };
 }

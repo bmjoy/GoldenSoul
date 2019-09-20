@@ -94,6 +94,7 @@ public class Penek : MonoBehaviour
         GetComponent<Animator>().SetBool("Break", true);
         Rigi.simulated = false;
         yield return new WaitForSeconds(2f);
+        Character1.NoAlert();
         Destroy(gameObject);
     }
 }
