@@ -7,6 +7,8 @@ public class DirectorCutScene : MonoBehaviour
     public Animator playerAnimator;
     public RuntimeAnimatorController playerAnim;
     public PlayableDirector director;
+    public bool Stopable = true;
+    public activeComment[] Comms;
 
     private void OnEnable()
     {
@@ -16,6 +18,19 @@ public class DirectorCutScene : MonoBehaviour
 
     private void Update()
     {
+        if (moveScript.activate && Stopable)
+        { 
+            director.Pause();
+            director.Stop();
+            playerAnimator.runtimeAnimatorController = playerAnim;
+            Dialog.disableImage();
+            foreach (activeComment i in Comms)
+            {
+                i.StopAllCoroutines();
+            }
+            Dialog.TextArea.text = "";
+            moveScript.activate = false;
+        }
         if (director.state != PlayState.Playing && !fix)
         {
             fix = true;
