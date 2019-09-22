@@ -16,6 +16,12 @@ public class Character1 : MonoBehaviour
     public static int AttackDirection = 1;
     static int AlertPoints = 0;//Нужно для появления индикатора
 
+    private void Awake()
+    {
+        if(EventSavingSystem.LevelCoordsX[EventSavingSystem.ThisLvl] != 0)
+        transform.position = new Vector2(EventSavingSystem.LevelCoordsX[EventSavingSystem.ThisLvl], EventSavingSystem.LevelCoordsY[EventSavingSystem.ThisLvl]);
+    }
+
     private void Start()
     {
         _Life = Life;
@@ -53,5 +59,4 @@ public class Character1 : MonoBehaviour
         AlertPoints--;
         if (AlertPoints < 1) _Lifepoint.SetActive(false);
     }
-
 }

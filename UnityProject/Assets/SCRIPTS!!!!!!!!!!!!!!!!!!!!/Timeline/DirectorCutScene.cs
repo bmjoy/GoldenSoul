@@ -9,16 +9,26 @@ public class DirectorCutScene : MonoBehaviour
     public PlayableDirector director;
     public bool Stopable = true;
     public activeComment[] Comms;
-
     private void OnEnable()
     {
         playerAnim = playerAnimator.runtimeAnimatorController;
         playerAnimator.runtimeAnimatorController = null;
+
     }
 
     private void Update()
     {
-        if (moveScript.activate && Stopable)
+        if (EventSavingSystem.HeroWasHere[EventSavingSystem.ThisLvl] == true) // Если игрок был на этой карте, его возвращает туда куда надо
+        {
+            director.Pause();
+            director.Stop();
+            playerAnimator.runtimeAnimatorController = playerAnim;
+            fix = true;
+            GameObject.FindGameObjectWithTag("Player").transform.position = new Vector2(EventSavingSystem.LevelCoordsX[EventSavingSystem.ThisLvl], EventSavingSystem.LevelCoordsY[EventSavingSystem.ThisLvl]);
+            Destroy(gameObject);
+        }
+
+        if (moveScript.activate && Stopable) // Возможность остановить таймлайн
         { 
             director.Pause();
             director.Stop();
@@ -31,7 +41,8 @@ public class DirectorCutScene : MonoBehaviour
             Dialog.TextArea.text = "";
             moveScript.activate = false;
         }
-        if (director.state != PlayState.Playing && !fix)
+
+        if (director.state != PlayState.Playing && !fix) //Сложно
         {
             fix = true;
             playerAnimator.runtimeAnimatorController = playerAnim;

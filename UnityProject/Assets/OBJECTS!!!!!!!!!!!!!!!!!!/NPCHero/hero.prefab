@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsAttack: 0
-  Speed: 0.05
+  Speed: 0.08
   JStick: {fileID: 0}
 --- !u!114 &8193057592140920992
 MonoBehaviour:

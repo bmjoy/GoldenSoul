@@ -3,18 +3,27 @@ using System;
 // NameSpace;name:Event
 public class EventSavingSystem : MonoBehaviour
 {
+    public static int ThisLvl = 1;
     public int _Language = 1;
+    public float[] _LevelCoordsX;
+    public float[] _LevelCoordsY;
+    public bool[] _HeroWasHere;
     public static int Language;
+    public static float[] LevelCoordsX;  //для возврата на пребедущие локации
+    public static float[] LevelCoordsY; //для возврата на пребедущие локации
+    public static bool[] HeroWasHere;  //для возврата на пребедущие локации
     private void Awake()
     {
         Language = _Language;
+        LevelCoordsX = _LevelCoordsX;
+        LevelCoordsY = _LevelCoordsY;
+        HeroWasHere = _HeroWasHere;
     }
-    
-    
-    
-    
+
+
+
     //Тимофей, это ваше)
-     
+
     /* static private string[] Event = new string[0]; 
     public string[] _Event; //Debug array
 
