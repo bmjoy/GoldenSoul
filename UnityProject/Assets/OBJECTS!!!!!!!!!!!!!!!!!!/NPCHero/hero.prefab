@@ -414,6 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Life: {fileID: 0}
   Lifepoint: {fileID: 8193057592192605682}
+  Hit: 0
 --- !u!82 &8193057592140920994
 AudioSource:
   m_ObjectHideFlags: 0
@@ -522,7 +523,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77f3db7284e13104ca6f7fb69a80b306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsAttack: 0
+  Isattack: 0
+  StopAttack: 0
   Speed: 0.08
   JStick: {fileID: 0}
 --- !u!114 &8193057592140920992

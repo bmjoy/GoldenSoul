@@ -206,7 +206,7 @@ public class Attack : MonoBehaviour
         }
         if (Stage == 2) //спим
         {
-            if ((Vector2.Distance(enemy.transform.position, hero.transform.position) < 1f) && moveScript._IsAttack)
+            if ((Vector2.Distance(enemy.transform.position, hero.transform.position) < 1f))
             {
                 EnHp -= 20;
                 if (EnHp < 50) {
@@ -225,7 +225,7 @@ public class Attack : MonoBehaviour
         }
         if (Stage == 4 && Iterat == 2)//спим
         {
-            if ((Vector2.Distance(enemy.transform.position, hero.transform.position) < 1f) && moveScript._IsAttack)
+            if ((Vector2.Distance(enemy.transform.position, hero.transform.position) < 1f))
             {
                 EnHp -= 20;
                 if (EnHp <= 0) Stage = 5;

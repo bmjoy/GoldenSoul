@@ -41,7 +41,7 @@ public class Penek : MonoBehaviour
             StartCoroutine(Attack());
         }
 
-        if (Vector2.Distance(Player.transform.position, transform.position) < 0.7f && moveScript._IsAttack && Anim.GetBool("Attack") == false)
+        if (Vector2.Distance(Player.transform.position, transform.position) < 0.7f && Character1._Hit && Anim.GetBool("Attack") == false)
         {
             if (Player.transform.position.x < transform.position.x && Character1.AttackDirection == 3)
             {

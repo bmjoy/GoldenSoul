@@ -5,6 +5,7 @@ using UnityEngine;
 public class Vase : MonoBehaviour
 {
     GameObject hero;
+    public moveScript MS;
     // Update is called once per frame
     private void Start()
     {
@@ -12,7 +13,7 @@ public class Vase : MonoBehaviour
     }
     void Update()
     {
-        if(Vector2.Distance(hero.transform.position, transform.position) < 1f && moveScript._IsAttack)
+        if(Vector2.Distance(hero.transform.position, transform.position) < 1f && Character1._Hit)
         {
             if (hero.transform.position.x < transform.position.x && Character1.AttackDirection == 3)
             {
