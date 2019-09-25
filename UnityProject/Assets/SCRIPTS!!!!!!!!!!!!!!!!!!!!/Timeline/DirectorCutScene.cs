@@ -16,9 +16,9 @@ public class DirectorCutScene : MonoBehaviour
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (EventSavingSystem.HeroWasHere[EventSavingSystem.ThisLvl] == true) // Если игрок был на этой карте, его возвращает туда куда надо
+       if (EventSavingSystem.HeroWasHere[EventSavingSystem.ThisLvl] == true) // Если игрок был на этой карте, его возвращает туда куда надо
         {
             director.Pause();
             director.Stop();

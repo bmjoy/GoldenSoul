@@ -7,7 +7,7 @@ public class moveScript : MonoBehaviour
     //public
     public bool Isattack = false;
     public bool StopAttack = false;
-    public float Speed = 0.1f;
+    public float Speed = 0.08f;
     //private 
     float horizontalSpeed,verticalSpeed; // Скорость движения
     float speedX; // актуальная скорость игрока
@@ -30,28 +30,11 @@ public class moveScript : MonoBehaviour
         hero = GetComponent<Animator>();
         moveyes = true;
         attack = false;
+        hero.SetInteger("Vector", 1);
     }
     void FixedUpdate()
     { 
-        if (StopAttack == true)
-        {
-            hero.speed = 1;
-            hero.SetBool("Hit", false);
-            attackButt = false;
-            return;
-        }
-        if (Input.GetKeyDown(KeyCode.Space) || attackButt)
-        {
-            attack = true;
-            hero.SetBool("Hit", true);
-            hero.speed = 1;
-            if (StopAttack)
-            {
-                hero.SetBool("Hit", false);
-                attackButt = false;
-            }
-            return;
-        }
+
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || JStick.Vertical != 0) && moveyes == true)//Вертикальное передвижение
         {
             if (Input.GetKey(KeyCode.W) || JStick.Vertical == 1)
@@ -107,12 +90,30 @@ public class moveScript : MonoBehaviour
             verticalSpeed = Speed;
         }
         if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || JStick.Horizontal != 0 || JStick.Vertical != 0) && moveyes == true &&
-             !Input.GetKey(KeyCode.Space))
+             !Input.GetKey(KeyCode.Space) && !attackButt)
         {
             hero.speed = 0; //Остановить анимацию если не идём
         }
-        if (!Input.GetKey(KeyCode.Space)&&!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || JStick.Horizontal != 0 || JStick.Vertical != 0))
+
+        if (StopAttack == true)
         {
+            hero.speed = 1;
+            hero.SetBool("Hit", false);
+            attackButt = false;
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) || attackButt)
+        {
+            attackButt = true;
+            attack = true;
+            hero.SetBool("Hit", true);
+            hero.speed = 1;
+            if (StopAttack)
+            {
+                hero.SetBool("Hit", false);
+                attackButt = false;
+            }
+            return;
         }
         transform.Translate(speedX, speedY, 0); //Применение передвижения
         speedX = 0;

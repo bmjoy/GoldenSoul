@@ -29,6 +29,7 @@ public class comment1 : MonoBehaviour
             checkcomm = false;
             InvokeRepeating("EnableEnable",1f,0);
             stop = true;
+            moveScript.activate = false;
         }
     }
     void Awake() //Вход в скрипт
