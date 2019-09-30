@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public int scene;
+    public void Load()
+    {
+
+    }
     public void Play() {
+        EventSavingSystem.RealHp = 2;
         SceneManager.LoadScene(scene);
     }
     public void Exit()

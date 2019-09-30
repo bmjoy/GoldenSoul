@@ -12,6 +12,7 @@ TagManager:
   - cat
   - Lifepoint
   - flag
+  - Death
   layers:
   - Default
   - TransparentFX

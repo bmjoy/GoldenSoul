@@ -3,23 +3,32 @@ using System;
 // NameSpace;name:Event
 public class EventSavingSystem : MonoBehaviour
 {
-    public static int ThisLvl = 1;
-    public int _Language = 1;
-    public float[] _LevelCoordsX;
+    public static int RealHp = 2; //Минимальное ХП с начала 
+    public static int ThisLvl = 1; //Язык
+    public static int LastLvl = 1;
+    public int _Language = 1; //Язык
+    //-----------------------------------
+    public float[] _LevelCoordsX; 
     public float[] _LevelCoordsY;
-    public bool[] _HeroWasHere;
-    public static int Language;
     public static float[] LevelCoordsX;  //для возврата на пребедущие локации
     public static float[] LevelCoordsY; //для возврата на пребедущие локации
     public static bool[] HeroWasHere;  //для возврата на пребедущие локации
+    public bool[] _HeroWasHere;
+    //-----------------------------------
+    public static int Language;
     private void Awake()
     {
         Language = _Language;
         LevelCoordsX = _LevelCoordsX;
         LevelCoordsY = _LevelCoordsY;
         HeroWasHere = _HeroWasHere;
+        for (int i = 0; i < LastLvl; i++) //Отмечаем где мы были до последнего уровня(помогает соблюсти сюжет и вернуться к прогрессу)
+        {
+            HeroWasHere[i] = true;
+        }
+        _HeroWasHere = HeroWasHere;
     }
-
+    
 
 
     //Тимофей, это ваше)

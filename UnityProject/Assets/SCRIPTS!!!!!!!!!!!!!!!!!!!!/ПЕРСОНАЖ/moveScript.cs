@@ -34,6 +34,13 @@ public class moveScript : MonoBehaviour
     }
     void FixedUpdate()
     { 
+        if (hero.GetBool("Died"))
+        {
+            speedX = 0f;
+            speedX = 0f;
+            hero.speed = 1;
+            return;
+        }
 
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || JStick.Vertical != 0) && moveyes == true)//Вертикальное передвижение
         {

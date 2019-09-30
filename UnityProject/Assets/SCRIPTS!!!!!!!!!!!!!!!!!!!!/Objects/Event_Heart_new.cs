@@ -19,7 +19,7 @@ public class Event_Heart_new : MonoBehaviour
         //если дистанция между игроком и сердцем меньше 0.6 юнита И кнопка "Е" нажат, то
         {
             Heart.SetBool("Heart", false);
-            GameObject.FindGameObjectWithTag("Life").GetComponent<Animator>().SetInteger("Stage", 5);
+            EventSavingSystem.RealHp = 5;
             Destroy(this);
         }
     }
