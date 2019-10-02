@@ -42,7 +42,7 @@ public class moveScript : MonoBehaviour
             return;
         }
 
-        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || JStick.Vertical != 0) && moveyes == true)//Вертикальное передвижение
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || JStick.Vertical != 0) && moveyes == true && JStick.Horizontal == 0)//Вертикальное передвижение
         {
             if (Input.GetKey(KeyCode.W) || JStick.Vertical == 1)
             {
@@ -63,7 +63,7 @@ public class moveScript : MonoBehaviour
             }
         }
 
-        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || JStick.Horizontal != 0) && moveyes == true)//Горизонтальное передвижение
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || JStick.Horizontal != 0) && moveyes == true && JStick.Vertical == 0)//Горизонтальное передвижение
         {
             if (Input.GetKey(KeyCode.D) || JStick.Horizontal == 1) // Проверяем условие нажатия кнопки D
             {
@@ -85,10 +85,38 @@ public class moveScript : MonoBehaviour
         }
 
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
-            || JStick.Horizontal != 0 && JStick.Vertical != 0)
+            || JStick.Horizontal != 0 && JStick.Vertical != 0 && moveyes == true)
         {
             horizontalSpeed = Mathf.Sqrt(Mathf.Pow(Speed / 2, 2) * 2); //Скорость вертикальной ходьбы
             verticalSpeed = Mathf.Sqrt(Mathf.Pow(Speed / 2, 2) * 2);
+            hero.speed = 1;
+            if (JStick.Horizontal < 0 && JStick.Vertical > 0)
+            {
+                hero.SetInteger("Vector", 5);
+                speedX = -horizontalSpeed;
+                speedY = verticalSpeed;
+            }
+            else
+            if (JStick.Horizontal > 0 && JStick.Vertical > 0)
+            {
+                hero.SetInteger("Vector", 6);
+                speedX = horizontalSpeed;
+                speedY = verticalSpeed;
+            }
+            else
+            if (JStick.Horizontal > 0 && JStick.Vertical < 0)
+            {
+                hero.SetInteger("Vector", 7);
+                speedX = horizontalSpeed;
+                speedY = -verticalSpeed;
+            }
+            else 
+            if(JStick.Horizontal < 0 && JStick.Vertical < 0)
+            {
+                hero.SetInteger("Vector", 8);
+                speedX = -horizontalSpeed;
+                speedY = -verticalSpeed;
+            }
         }
 
         else

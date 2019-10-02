@@ -41,21 +41,24 @@ public class Penek : MonoBehaviour
             StartCoroutine(Attack());
         }
 
-        if (Vector2.Distance(Player.transform.position, transform.position) < 0.7f && Character1._Hit && Anim.GetBool("Attack") == false)
+        if (Vector2.Distance(Player.transform.position, transform.position) < 0.9f && Character1._Hit && Anim.GetBool("Attack") == false)
         {
-            if (Player.transform.position.x < transform.position.x && Character1.AttackDirection == 3)
-            {
-                StartCoroutine(Die());
-            }
-            if (Player.transform.position.x > transform.position.x && Character1.AttackDirection == 1)
-            {
-                StartCoroutine(Die());
-            }
-            if (Player.transform.position.y > transform.position.y && Character1.AttackDirection == 4)
-            {
-                StartCoroutine(Die());
-            }
-            if (Player.transform.position.y < transform.position.y && Character1.AttackDirection == 2)
+            if (Player.transform.position.x > transform.position.x && Character1.AttackDirection == 1 ||
+                Player.transform.position.x > transform.position.x && Character1.AttackDirection == 5 && Player.transform.position.y < transform.position.y ||
+                Player.transform.position.x > transform.position.x && Character1.AttackDirection == 8 && Player.transform.position.y > transform.position.y ||
+
+                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 2 ||
+                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 7 && Player.transform.position.x < transform.position.x ||
+                Player.transform.position.y > transform.position.y && Character1.AttackDirection == 8 && Player.transform.position.x > transform.position.x ||
+
+                Player.transform.position.x < transform.position.x && Character1.AttackDirection == 3 ||
+                Player.transform.position.x < transform.position.x && Character1.AttackDirection == 6 && Player.transform.position.y < transform.position.y ||
+                Player.transform.position.x < transform.position.x && Character1.AttackDirection == 7 && Player.transform.position.y > transform.position.y ||
+
+                Player.transform.position.y > transform.position.y && Character1.AttackDirection == 4 ||
+                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 5 && Player.transform.position.x > transform.position.x ||
+                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 6 && Player.transform.position.x < transform.position.x
+                )
             {
                 StartCoroutine(Die());
             }

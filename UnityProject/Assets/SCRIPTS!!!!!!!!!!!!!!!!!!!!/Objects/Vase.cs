@@ -4,30 +4,33 @@ using UnityEngine;
 
 public class Vase : MonoBehaviour
 {
-    GameObject hero;
+    GameObject Player;
     public moveScript MS;
     // Update is called once per frame
     private void Start()
     {
-        hero = GameObject.FindGameObjectWithTag("Player");
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
     void Update()
     {
-        if(Vector2.Distance(hero.transform.position, transform.position) < 1f && Character1._Hit)
+        if(Vector2.Distance(Player.transform.position, transform.position) < 1f && Character1._Hit)
         {
-            if (hero.transform.position.x < transform.position.x && Character1.AttackDirection == 3)
-            {
-                Break();
-            }
-            if (hero.transform.position.x > transform.position.x && Character1.AttackDirection == 1)
-            {
-                Break();
-            }
-            if (hero.transform.position.y > transform.position.y && Character1.AttackDirection == 4)
-            {
-                Break();
-            }
-            if (hero.transform.position.y < transform.position.y && Character1.AttackDirection == 2)
+            if (Player.transform.position.x > transform.position.x && Character1.AttackDirection == 1 ||
+                Player.transform.position.x > transform.position.x && Character1.AttackDirection == 5 && Player.transform.position.y < transform.position.y ||
+                Player.transform.position.x > transform.position.x && Character1.AttackDirection == 8 && Player.transform.position.y > transform.position.y ||
+
+                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 2 ||
+                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 7 && Player.transform.position.x < transform.position.x ||
+                Player.transform.position.y > transform.position.y && Character1.AttackDirection == 8 && Player.transform.position.x > transform.position.x ||
+
+                Player.transform.position.x < transform.position.x && Character1.AttackDirection == 3 ||
+                Player.transform.position.x < transform.position.x && Character1.AttackDirection == 6 && Player.transform.position.y < transform.position.y ||
+                Player.transform.position.x < transform.position.x && Character1.AttackDirection == 7 && Player.transform.position.y > transform.position.y ||
+
+                Player.transform.position.y > transform.position.y && Character1.AttackDirection == 4 ||
+                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 5 && Player.transform.position.x > transform.position.x ||
+                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 6 && Player.transform.position.x < transform.position.x
+                )
             {
                 Break();
             }
