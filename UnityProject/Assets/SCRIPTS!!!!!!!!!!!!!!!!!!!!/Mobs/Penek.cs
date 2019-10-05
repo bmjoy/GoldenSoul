@@ -34,7 +34,7 @@ public class Penek : MonoBehaviour
             Rigi.drag = 100;
             Col.isTrigger = false;
         }
-        if(Vector2.Distance(transform.position, Player.transform.position) < 2f && Active)
+        if(Vector2.Distance(transform.position, Player.transform.position) < 3f && Active)
         {
             Active = false;
             Anim.SetBool("Attack", true);
@@ -43,22 +43,7 @@ public class Penek : MonoBehaviour
 
         if (Vector2.Distance(Player.transform.position, transform.position) < 0.9f && Character1._Hit && Anim.GetBool("Attack") == false)
         {
-            if (Player.transform.position.x > transform.position.x && Character1.AttackDirection == 1 ||
-                Player.transform.position.x > transform.position.x && Character1.AttackDirection == 5 && Player.transform.position.y < transform.position.y ||
-                Player.transform.position.x > transform.position.x && Character1.AttackDirection == 8 && Player.transform.position.y > transform.position.y ||
-
-                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 2 ||
-                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 7 && Player.transform.position.x < transform.position.x ||
-                Player.transform.position.y > transform.position.y && Character1.AttackDirection == 8 && Player.transform.position.x > transform.position.x ||
-
-                Player.transform.position.x < transform.position.x && Character1.AttackDirection == 3 ||
-                Player.transform.position.x < transform.position.x && Character1.AttackDirection == 6 && Player.transform.position.y < transform.position.y ||
-                Player.transform.position.x < transform.position.x && Character1.AttackDirection == 7 && Player.transform.position.y > transform.position.y ||
-
-                Player.transform.position.y > transform.position.y && Character1.AttackDirection == 4 ||
-                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 5 && Player.transform.position.x > transform.position.x ||
-                Player.transform.position.y < transform.position.y && Character1.AttackDirection == 6 && Player.transform.position.x < transform.position.x
-                )
+            if (Signature.FromSide(Player,gameObject))
             {
                 StartCoroutine(Die());
             }

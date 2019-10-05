@@ -29,12 +29,12 @@ public class Level : MonoBehaviour
             EventSavingSystem.LevelCoordsX[EventSavingSystem.ThisLvl] = NextX;
             EventSavingSystem.LevelCoordsY[EventSavingSystem.ThisLvl] = NextY;
             EventSavingSystem.ThisLvl = NextLvlNum;
-            StartCoroutine(nextLevel());
+            StartCoroutine(NextLevel());
        }
 
     }
     
-    IEnumerator nextLevel()
+   public IEnumerator NextLevel()
     {
         image = GameObject.Find("Imagelvl").GetComponent<Image>();
             for(bright = 0;bright < 1;bright += Time.deltaTime)
@@ -43,5 +43,14 @@ public class Level : MonoBehaviour
             yield return new WaitForSeconds(0.005f);
         }
         SceneManager.LoadScene(NextLvlNum);
+    }
+    public static IEnumerator ThisLevel()
+    {
+        Image image = GameObject.Find("Imagelvl").GetComponent<Image>();
+        for (float  bright = 1; bright > 0; bright -= Time.deltaTime)
+        {
+            image.color = new Color(0, 0, 0, bright);
+            yield return new WaitForSeconds(0.005f);
+        }
     }
 }

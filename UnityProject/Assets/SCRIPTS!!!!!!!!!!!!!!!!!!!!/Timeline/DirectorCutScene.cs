@@ -4,6 +4,7 @@ using UnityEngine.Playables;
 public class DirectorCutScene : MonoBehaviour
 {
     bool fix = false;
+    public Camera Camera1;
     public Animator playerAnimator;
     public RuntimeAnimatorController playerAnim;
     public PlayableDirector director;
@@ -34,6 +35,7 @@ public class DirectorCutScene : MonoBehaviour
             director.Stop();
             playerAnimator.runtimeAnimatorController = playerAnim;
             Dialog.disableImage();
+            Camera1.orthographicSize = 3.5f;
             foreach (activeComment i in Comms)
             {
                 i.StopAllCoroutines();
@@ -45,6 +47,7 @@ public class DirectorCutScene : MonoBehaviour
         if (director.state != PlayState.Playing && !fix) //Сложно
         {
             fix = true;
+            Camera1.orthographicSize = 3.5f;
             playerAnimator.runtimeAnimatorController = playerAnim;
         }
     }

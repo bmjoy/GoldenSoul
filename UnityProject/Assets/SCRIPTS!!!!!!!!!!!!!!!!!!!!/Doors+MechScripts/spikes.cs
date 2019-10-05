@@ -5,21 +5,11 @@ using UnityEngine;
 public class spikes : MonoBehaviour
 {
     public bool Damage;
-    void OnTriggerExit2D(Collider2D Col)
-    {
-        if (!Col.CompareTag("Player"))
-        {
-            Character1.NoAlert();
-        }
-    }
     void OnTriggerStay2D(Collider2D Col)
     {
-        if (Col.CompareTag("Player"))
+        if (Col.CompareTag("Player") && Damage)
         {
             Character1.Alert();
-        }
-        if (Col.CompareTag("Lifepoint") && Damage)
-        {
             Character1.MinusHp();
         }
     }

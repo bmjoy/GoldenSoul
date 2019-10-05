@@ -40,6 +40,7 @@ public class Character1 : MonoBehaviour
         _Lifepoint = Lifepoint;
         _Hit = Hit;
         Player = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(Level.ThisLevel());
     }
     void Update()
     {
@@ -48,7 +49,7 @@ public class Character1 : MonoBehaviour
             StartCoroutine(WaitForHit());
             StopHitTime = true;
         }
-        _Life.GetComponent<Animator>().SetInteger("Stage", EventSavingSystem.RealHp); //Синхронизируем ХП и эвент сейвинг систем
+        try { _Life.GetComponent<Animator>().SetInteger("Stage", EventSavingSystem.RealHp); } catch { } //Синхронизируем ХП и эвент сейвинг систем
         _Hit = Hit;
 
         if (BlackImg && !Death) //Чтобы экран не повторял тускление при смерти

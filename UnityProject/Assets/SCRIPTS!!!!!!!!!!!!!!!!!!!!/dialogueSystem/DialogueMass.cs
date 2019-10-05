@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿
 public class DialogueMass
 {
     public static string[] Rus =
@@ -47,10 +44,10 @@ public class DialogueMass
             "Студент Разорвал ткань пространства и остался жи..",//38
             "Ну Надо-же! \nПолучилось! \nКак самочувствие?",//39
             "Ты не против присесть и поговорить? Теперь ты в безопасности.",//40
-            "Давай знакомиться. Меня зовут Кэндл.\n Я маг из факультета огня Блэрского университета магии.",//41
+            "Давай знакомиться. Меня зовут Кэндл. Я маг из факультета огня университета магии.",//41
             "Люблю проводить своё свободное время во всяких странных местах... Типа этого леса.",//42
             "У тебя наверное много вопросов: \n'кто ты и что это за место?'",//43
-            "Начнём с места.",//44
+            "Начнём с места. Так будет проще.",//44
             "Это Лес Небытия. Аномальное место, в котором пропадают люди.",//45
             "Ходят легенды, что этот лес служил магической тюрьмой для опасных существ и монстров.",//46
             "Что касается тебя...............",//47
@@ -62,7 +59,7 @@ public class DialogueMass
             "Знаешь, когда я нашёл тебя... Тебе оставалось не долго.",//53
             "Но ЗОЛОТАЯ ДУША - спасла тебя, наполнив тебя МАГИЧЕСКОЙ ЭНЕРГИЕЙ.",//54
             "Это всего лишь ПОДДЕЛКА. Ведь ты не чувствуешь боли, не можешь заплакать. У тебя не течёт кровь.",//55
-            "Но, я кажется знаю, как можно вернуть твою душу назад. /n Сначала нам нужно выбраться отсюда.",//56
+            "Но, я кажется знаю, как можно вернуть твою душу назад. Сначала нам нужно выбраться отсюда.",//56
             "К сожалению, я не могу телепортировать нас обоих. Тебе придётся выбираться своими ногами.",//57
             "Тут поблизости есть старый парк. Он является выходом из этого места.",//58
             "Пошли!",//59
@@ -109,5 +106,26 @@ public class DialogueMass
             "",//36
             "This is an old paper. You can make out only the headline. \n It says:", // 37 ------ Newspaper
             "The student tore apart the spatial tissue and remained ali..", // 38
+            "Would you look at that! \n It worked! \n How are you feeling right now?",//39
+            "Would you mind to sit down and chat with me for a while? You are safe now.",//40
+            "Allow me to introduce myself — I'm Candle. I am a mage from the fire faculty of the  of magic.",//41
+            "I like to spend my free time is various strange places... Just like these woods.",//42
+            "You've probably got a ton of questions for me:'Who are you and what is this place?'",//43
+            "Let us start with the place.",//44
+            "These are the Woods of nothingness. An anomalous place where people go missing.",//45
+            "Legends say that this forest served to magical cage for relicts and monsters.",//46
+            "Regarding you...........",//47
+            "Mate, congratulations! You died!",//48
+            "...Well, formally, your body ain't dead. You can breathe, hear and see.",//49
+            "But you lost the most valuable part of yourself — YOUR SOUL.",//50
+            "What's a SOUL? \n THE SOUL represents who you really are.",//51
+            "It's your energy, your memories, feelings and emotions.",//52
+            "You know, when I found you... You didn't have much longer.",//53
+            "But the GOLDEN SOUL saved you, filling you with MAGIC ENERGY.",//54
+            "It is just a FAKE SOUL, since you can't feel pain nor can you cry. You can't bleed either.",//55
+            "But I think I know, how can we get your soul back. But first we have to escape from here.",//56
+            "Unfortunately, I can't teleport both of us. You'll have to get out of here on your own two feet.",//57
+            "There's an old park nearby. It is the exit from this place.",//58
+            "Let's go!",//59
     };
 }
