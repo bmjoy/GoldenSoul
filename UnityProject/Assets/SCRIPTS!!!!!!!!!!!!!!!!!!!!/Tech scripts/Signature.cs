@@ -2,28 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Signature : MonoBehaviour
-{
-    public static bool FromSide(GameObject X, GameObject Y)
-    {
-        if (X.transform.position.x > Y.transform.position.x && Character1.AttackDirection == 1 ||
-                X.transform.position.x > Y.transform.position.x && Character1.AttackDirection == 5 && X.transform.position.y < Y.transform.position.y ||
-                X.transform.position.x > Y.transform.position.x && Character1.AttackDirection == 8 && X.transform.position.y > Y.transform.position.y ||
+public class Signature : MonoBehaviour {
 
-                X.transform.position.y < Y.transform.position.y && Character1.AttackDirection == 2 ||
-                X.transform.position.y < Y.transform.position.y && Character1.AttackDirection == 7 && X.transform.position.x < Y.transform.position.x ||
-                X.transform.position.y > Y.transform.position.y && Character1.AttackDirection == 8 && X.transform.position.x > Y.transform.position.x ||
+    public enum Direction { Left = 1, Up, Right, Down, UpLeft, UpRight, DownRight, DownLeft }
 
-                X.transform.position.x < Y.transform.position.x && Character1.AttackDirection == 3 ||
-                X.transform.position.x < Y.transform.position.x && Character1.AttackDirection == 6 && X.transform.position.y < Y.transform.position.y ||
-                X.transform.position.x < Y.transform.position.x && Character1.AttackDirection == 7 && X.transform.position.y > Y.transform.position.y ||
-
-                X.transform.position.y > Y.transform.position.y && Character1.AttackDirection == 4 ||
-                X.transform.position.y < Y.transform.position.y && Character1.AttackDirection == 5 && X.transform.position.x > Y.transform.position.x ||
-                X.transform.position.y < Y.transform.position.y && Character1.AttackDirection == 6 && X.transform.position.x < Y.transform.position.x)
-        {
-            return(true);
-        }else
-            return (false);
+    public static bool FromSide(GameObject player, GameObject subject) {
+        Ptp = player.transform.position;
+        Stp = subject.transform.position;
+        CAD = Character1.AttackDirection
+        
+        if (
+            (Ptp.y < tp.y && (
+                (CAD == Direction.UpLeft  && Ptp.x > tp.x)   ||
+                 CAD == Direction.Up                         ||
+                (CAD == Direction.UpRight && Ptp.x < tp.x))
+            )                                        ||
+            (CAD == Direction.Left  && Ptp.x > tp.x) ||
+            (CAD == Direction.Right && Ptp.x < tp.x) ||
+            (Ptp.y > tp.y && (
+                (CAD == Direction.DownLeft && Ptp.x > tp.x)  ||
+                 CAD == Direction.Down                       ||
+                (CAD == Direction.DownRight && Ptp.x < tp.x))
+            )
+        ) {
+            return true;
+        } else 
+            return false;
     }
 }
