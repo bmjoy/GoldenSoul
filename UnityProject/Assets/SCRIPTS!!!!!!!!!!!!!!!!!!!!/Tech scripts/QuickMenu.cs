@@ -11,6 +11,6 @@ public class QuickMenu : MonoBehaviour
     public void Load()
     {
         EventSavingSystem.RealHp = 5;
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(EventSavingSystem.ThisLvl);
     }
 }

@@ -31,10 +31,10 @@ public class Penek : MonoBehaviour
     {
         if (Col.IsTouching(TC1) || Col.IsTouching(TC2) || Col.IsTouching(TC3))
         {
-            Rigi.drag = 100;
             Col.isTrigger = false;
         }
-        if(Vector2.Distance(transform.position, Player.transform.position) < 3f && Active)
+
+        if(Vector2.Distance(transform.position, Player.transform.position) < 2f && Active)
         {
             Active = false;
             Anim.SetBool("Attack", true);
@@ -81,7 +81,7 @@ public class Penek : MonoBehaviour
     {
         GetComponent<Animator>().SetBool("Break", true);
         Rigi.simulated = false;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         Character1.NoAlert();
         Destroy(gameObject);
     }

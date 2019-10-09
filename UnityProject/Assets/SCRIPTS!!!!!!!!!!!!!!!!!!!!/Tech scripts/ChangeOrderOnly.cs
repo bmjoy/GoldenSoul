@@ -8,7 +8,7 @@ public class ChangeOrderOnly : MonoBehaviour
     {
         if(transform.position.y > GameObject.FindGameObjectWithTag("Player").transform.position.y)
         {
-            GetComponent<SpriteRenderer>().sortingOrder = 3;
+            GetComponent<SpriteRenderer>().sortingOrder = 4;
         }
         else
         {

@@ -13,13 +13,6 @@ public class Lampon : MonoBehaviour
         playerPos = GameObject.Find("hero").GetComponent<Transform>(); //Получаем данные о местонахождении Игрока
         lamp = GetComponent<Animator>();
         lamprend = GetComponent<Renderer>();
-    }
-    void Update() //Обновление скрипта
-    {
-        if (Vector2.Distance(transform.position, playerPos.position) < 2f && lampEnabled == false)
-        {
-            lamp.SetBool("on", true);
-        }
-        ChangeOrder.ChangeLayerOrder(lamprend, transform, playerPos);
+        lamp.SetBool("on", true);
     }
 }

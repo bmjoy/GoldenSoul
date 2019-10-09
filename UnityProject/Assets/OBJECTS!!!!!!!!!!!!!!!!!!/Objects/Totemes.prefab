@@ -61,7 +61,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 823
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -674,6 +674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c00434619234554a9abbbc45b561914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Anim: {fileID: 0}
   Wall1: {fileID: 2366925123181625160}
   obj: {fileID: 2366925123181625162}
 --- !u!95 &2366925123181625164
@@ -756,7 +757,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 823
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -825,7 +826,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 823
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1

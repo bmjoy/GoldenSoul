@@ -229,6 +229,11 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 823
       objectReference: {fileID: 0}
+    - target: {fileID: 1679068767675725198, guid: c49dfc2731c0dcc46ba684bfd64a1d58,
+        type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c49dfc2731c0dcc46ba684bfd64a1d58, type: 3}
 --- !u!4 &978284619797090987 stripped
