@@ -8,6 +8,7 @@ using System;
 
 public class Character1 : MonoBehaviour
 {
+    Rigidbody2D Rigi;
     public GameObject DeathObj;
     public bool BlackImg = false;
     public bool Death = false;
@@ -39,6 +40,7 @@ public class Character1 : MonoBehaviour
         _Life = Life;
         _Lifepoint = Lifepoint;
         _Hit = Hit;
+        Rigi = GetComponent<Rigidbody2D>();
         Player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(Level.ThisLevel());
     }
