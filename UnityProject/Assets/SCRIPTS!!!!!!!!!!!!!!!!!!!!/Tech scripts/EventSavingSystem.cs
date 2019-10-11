@@ -3,7 +3,7 @@ using System;
 // NameSpace;name:Event
 public class EventSavingSystem : MonoBehaviour
 {
-    public static int RealHp = 2; //Минимальное ХП с начала 
+    public static int RealHp = 5; //Минимальное ХП с начала 
     public static int ThisLvl = 1; //Язык
     public static int LastLvl = 1;
     public int _Language = 1; //Язык

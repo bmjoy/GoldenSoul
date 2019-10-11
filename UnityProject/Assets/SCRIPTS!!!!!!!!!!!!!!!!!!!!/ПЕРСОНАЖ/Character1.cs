@@ -23,6 +23,7 @@ public class Character1 : MonoBehaviour
     public static bool HitTime = false;
     public static int AttackDirection = 1;
     static int AlertPoints = 0;//Нужно для появления индикатора
+    bool Pushed = false; //для толканий персонажа
 
     private void Awake()
     {
@@ -109,7 +110,7 @@ public class Character1 : MonoBehaviour
 
     IEnumerator WaitForHit() //Моргаем персонажем и не позволяем получить урон за это время
     {
-        SpriteRenderer Rend = GameObject.Find("HearthLife").GetComponent<SpriteRenderer>();
+        try { SpriteRenderer Rend = GameObject.Find("HearthLife").GetComponent<SpriteRenderer>(); 
         SpriteRenderer Rend2 = GameObject.Find("hero").GetComponent<SpriteRenderer>();
         Rend2.color = new Color(1, 1, 1, 0.4f).linear; ;
         Rend.color = new Color(0, 0, 0, 1f).linear;
@@ -124,7 +125,25 @@ public class Character1 : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         Rend.color = new Color(1, 1, 1, 1f).linear;
         Rend2.color = new Color(1, 1, 1, 1f).linear; ;
-        StopHitTime = false;
-        HitTime = false;
+        }
+        finally
+        {
+            StopHitTime = false;
+            HitTime = false;
+            Pushed = false;
+        }
+    }
+
+    public IEnumerator Drag(Vector2 pos) //Отталкиваем героя(передаём позицию врага в векторе)
+    {
+        int X = Player.GetComponent<Animator>().GetInteger("Vector");
+        if (!Pushed)
+        {
+        Pushed = true;
+        Rigi.drag = 0;
+        Rigi.AddForce(((Vector2)transform.position - pos).normalized * 0.2f, ForceMode2D.Force);
+        yield return new WaitForSecondsRealtime(0.03f);
+        Rigi.drag = 100;
+        }
     }
 }

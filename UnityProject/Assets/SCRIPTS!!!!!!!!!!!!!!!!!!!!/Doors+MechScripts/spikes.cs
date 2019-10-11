@@ -25,6 +25,7 @@ public class spikes : MonoBehaviour
     {
         if (HeroIsHere && Damage)
         {
+            StartCoroutine(GameObject.FindGameObjectWithTag("Player").GetComponent<Character1>().Drag(transform.position));
             Character1.Alert();
             Character1.MinusHp();
         }

@@ -74,6 +74,7 @@ public class Penek : MonoBehaviour
         if (Col.CompareTag("Lifepoint") && Anim.GetBool("Attack"))
         {
             Character1.MinusHp();
+            StartCoroutine(Player.GetComponent<Character1>().Drag(transform.position));
         }
     }
 
