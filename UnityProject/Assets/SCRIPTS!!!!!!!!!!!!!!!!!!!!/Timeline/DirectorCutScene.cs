@@ -36,6 +36,7 @@ public class DirectorCutScene : MonoBehaviour
             playerAnimator.runtimeAnimatorController = playerAnim;
             Dialog.disableImage();
             Camera1.orthographicSize = 3.5f;
+            fix = true;
             foreach (activeComment i in Comms)
             {
                 i.StopAllCoroutines();

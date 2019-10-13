@@ -142,7 +142,7 @@ public class Character1 : MonoBehaviour
         Pushed = true;
         Rigi.drag = 0;
         Rigi.AddForce(((Vector2)transform.position - pos).normalized * 0.2f, ForceMode2D.Force);
-        yield return new WaitForSecondsRealtime(0.03f);
+        yield return new WaitForSecondsRealtime(0.02f);
         Rigi.drag = 100;
         }
     }
