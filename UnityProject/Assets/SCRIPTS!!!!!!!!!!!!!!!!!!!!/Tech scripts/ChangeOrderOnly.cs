@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ChangeOrderOnly : MonoBehaviour
 {
+    public int x = 3;
     private void Update()
     {
         if(transform.position.y > GameObject.FindGameObjectWithTag("Player").transform.position.y)
         {
-            GetComponent<SpriteRenderer>().sortingOrder = 4;
+            GetComponent<SpriteRenderer>().sortingOrder = x;
         }
         else
         {

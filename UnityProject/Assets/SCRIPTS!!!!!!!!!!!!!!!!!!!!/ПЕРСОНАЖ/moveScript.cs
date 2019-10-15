@@ -33,6 +33,11 @@ public class moveScript : MonoBehaviour
     }
     void FixedUpdate()
     { 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            AttackButt();
+        }
+
         if (hero.GetBool("Died"))
         {
             speedX = 0f;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 130251688061616645}
   - component: {fileID: 2679253659470991531}
   - component: {fileID: 1476205164952579206}
+  - component: {fileID: 8674263164429406229}
   m_Layer: 0
   m_Name: Koren
   m_TagString: fov
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.002297759, y: -0.16199583}
+  m_Offset: {x: -0.019596815, y: -0.3272043}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,7 +107,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25550818, y: 0.51056564}
+  m_Size: {x: 0.2248559, y: 0.15387523}
   m_EdgeRadius: 0
 --- !u!95 &2679253659470991531
 Animator:
@@ -140,3 +141,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Destr: 0
+--- !u!114 &8674263164429406229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613763759017253667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf2c776bb4b81042aa46e8aaa5c2bb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 3

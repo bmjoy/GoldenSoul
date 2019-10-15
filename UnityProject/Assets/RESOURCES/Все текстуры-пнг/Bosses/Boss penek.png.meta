@@ -16,6 +16,8 @@ TextureImporter:
     21300022: Boss penek_11
     21300024: Boss penek_12
     21300026: Boss penek_13
+    21300028: Boss penek_14
+    21300030: Boss penek_15
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -395,6 +397,46 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c3363b7a7fcb70746ba9d8bcbf85e1ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss penek_14
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43aefbd8e4092624f8270adcc4e74341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss penek_15
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2127f5b474fa4b2499ff58f6edd9c19e
       vertices: []
       indices: 
       edges: []

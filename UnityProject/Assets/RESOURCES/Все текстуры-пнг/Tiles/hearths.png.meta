@@ -12,8 +12,9 @@ TextureImporter:
     21300014: hearths_7
     21300016: hearths_8
     21300018: hearths_9
+    21300020: hearths_10
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 9
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -130,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07b3cf885f47e6f4cae568c47fea4083
+      spriteID: 40aa54d8ca3dd2d498b50842c4f0d9cd
       vertices: []
       indices: 
       edges: []
@@ -150,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53b8f7c8f087e094f987d4b9e8b48be9
+      spriteID: 3a5eeec8cc357d945aa551eb2b0ff551
       vertices: []
       indices: 
       edges: []
@@ -170,7 +171,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e2730cdac1db3542a446ab82ee3ec1f
+      spriteID: 7d3eed801d627b64086a3cc191edfe6e
       vertices: []
       indices: 
       edges: []
@@ -190,7 +191,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3270d2b2c2fe16441add625b0265ae13
+      spriteID: 3691f2c2b182a914d843c17eb216afaf
       vertices: []
       indices: 
       edges: []
@@ -210,7 +211,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07babdd3bc1107b4dbba9b516923f986
+      spriteID: 98801d68e7a59034ca34067b72fc691d
       vertices: []
       indices: 
       edges: []
@@ -230,7 +231,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab27ad764aeabd944915bd9aafd1f147
+      spriteID: 675e2ff6249411d49bf9aa5906dbe14f
       vertices: []
       indices: 
       edges: []
@@ -250,7 +251,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caf12f1a381b08147b9d6b7d822b0317
+      spriteID: 746af70eb35ac3145b8e4d4b552480cb
       vertices: []
       indices: 
       edges: []
@@ -270,7 +271,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f80875aef17d5834a8fcb8f5cebe7530
+      spriteID: 0c819ef5c44c6fb4fb07fcdfde0fcc56
       vertices: []
       indices: 
       edges: []
@@ -290,7 +291,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81d28420bac410449862b95b1afae2cf
+      spriteID: 6136d4a6aefb99a43b50109c361c2c27
       vertices: []
       indices: 
       edges: []
@@ -310,7 +311,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d14ff193b086ac74f8a73ae11658a618
+      spriteID: e64331f6b7c6654488cb933fcf97dd3a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearths_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb33c7b2fd7fac48892f89b47bd9728
       vertices: []
       indices: 
       edges: []
