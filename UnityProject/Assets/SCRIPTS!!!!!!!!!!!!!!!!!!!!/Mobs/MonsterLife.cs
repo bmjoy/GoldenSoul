@@ -15,7 +15,7 @@ public class MonsterLife : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(Player.transform.position, transform.position) < 1.5f && Character1._Hit && HitEnable)
+        if (Vector2.Distance(Player.transform.position, Monster.transform.position) < 1f && Character1._Hit && HitEnable)
         {
             if (Signature.FromSide(Player, gameObject))
             {

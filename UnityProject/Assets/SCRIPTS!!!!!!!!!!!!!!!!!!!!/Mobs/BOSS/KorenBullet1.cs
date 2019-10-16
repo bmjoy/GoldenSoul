@@ -24,7 +24,7 @@ public class KorenBullet1 : MonoBehaviour
     {
         if (Destr)
         {
-        Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

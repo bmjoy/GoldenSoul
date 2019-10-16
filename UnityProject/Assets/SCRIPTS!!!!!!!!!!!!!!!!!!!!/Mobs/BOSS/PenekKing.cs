@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 public class PenekKing : MonoBehaviour
 {
-    public Slider slider;
+    public GameObject slider;
     public int Lifes = 5;
     public float Xfast = 1f; // Ускоряем атаки + увеличиваем размер тычек
     public float Xslow = 3f; // Замедляем атаки + Уменьшаем размер тычек
@@ -52,7 +52,6 @@ public class PenekKing : MonoBehaviour
 
         if (Active)
         {
-            Character1.Alert();
             Heart.SetActive(false);
             Active = false;
             Anim.SetBool("Attack", true);
@@ -85,10 +84,9 @@ public class PenekKing : MonoBehaviour
             }
             else if (Lifes < 1)
             {
-                slider.enabled = false;
                 Character1.NoAlert();
                 Anim.SetInteger("Stage", 99);
-                slider.enabled = false;
+                slider.SetActive(false);
                 if (Vector2.Distance(Player.transform.position, transform.position) < 1f && Character1._Hit)
                     {
                     Anim.SetBool("Died", true);
@@ -100,25 +98,23 @@ public class PenekKing : MonoBehaviour
     IEnumerator SpareMe()//разбег
     {
         Anim.SetBool("Attack", true);
-        Anim.SetInteger("Stage", 3);
-        Character1.Alert();
-        yield return new WaitForSeconds(1f);
+        Anim.SetInteger("Stage", 99);
+        yield return new WaitForSeconds(0.5f);
         CanDoDamage = true;
         Col.isTrigger = true;
         Rigi.drag = 0;
         Anim.speed = 1;
-        Rigi.AddForce((Player.transform.position - transform.position) * Force, ForceMode2D.Impulse);
+        Rigi.AddForce((new Vector2(-16f, 1f) - (Vector2)transform.position) * Force, ForceMode2D.Impulse);
         Anim.SetInteger("Stage", 4);
+        CanDoDamage = false;
         yield return new WaitForSeconds(1f);
         Anim.SetInteger("Stage", 1);
         Rigi.drag = 20;
         Anim.SetBool("Attack", false);
         Col.isTrigger = false;
         yield return new WaitForSeconds(1f);
-        CanDoDamage = false;
         Rigi.drag = 0;
         Active = true;
-        Character1.NoAlert();
     }
 
     IEnumerator Attack1()//разбег
@@ -150,7 +146,6 @@ public class PenekKing : MonoBehaviour
         Anim.SetBool("Attack", true);
         Anim.SetInteger("Stage", 2);
         yield return new WaitForSeconds(1f);
-        Character1.Alert();
         for (int i = 0; i < 7 + Xfast; i++)
         {
             Instantiate(Koren, new Vector2(Player.transform.position.x, Player.transform.position.y), Quaternion.identity);
@@ -167,7 +162,6 @@ public class PenekKing : MonoBehaviour
         Anim.SetBool("Attack", true);
         Anim.SetInteger("Stage", 2);
         yield return new WaitForSeconds(1f);
-        Character1.Alert();
         int X = Random.Range(3, 5);
         for (int j = 0; j < 8 + Xfast; j++)
         {
@@ -207,11 +201,11 @@ public class PenekKing : MonoBehaviour
             Anim.SetBool("Attack", false);
             Col.isTrigger = false;
             yield return new WaitForSeconds(1f);
+            Character1.NoAlert();
             CanDoDamage = false;
             Rigi.drag = 0;
         }
         Active = true;
-        Character1.NoAlert();
     }
 
     IEnumerator Attack5() //финалочка
@@ -243,19 +237,19 @@ public class PenekKing : MonoBehaviour
             Anim.speed = 1;
             Rigi.AddForce((Player.transform.position - transform.position) * (Force + 0.5f) , ForceMode2D.Impulse);
             Anim.SetInteger("Stage", 4);
+            Character1.NoAlert();
             yield return new WaitForSeconds(1f);
             Anim.SetInteger("Stage", 1);
             Rigi.drag = 20;
             Anim.SetBool("Attack", false);
             Col.isTrigger = false;
             Heart.SetActive(true);
+            CanDoDamage = false;
             yield return new WaitForSeconds(3f);
             Heart.SetActive(false);
-            CanDoDamage = false;
             Rigi.drag = 0;
         }
         Active = true;
-        Character1.NoAlert();
     }
 
 
@@ -287,7 +281,7 @@ public class PenekKing : MonoBehaviour
     public IEnumerator Drag(Vector2 pos) //Отталкиваем монстра(передаём позицию врага в векторе)
     {
         Lifes--;
-        slider.value = Lifes;
+        slider.GetComponent<Slider>().value = Lifes;
         Xslow = (Xslow > 1) ? Xslow-1 : Xslow;
         Xfast = (Xfast < 5) ? Xfast+1 : Xfast;
         int X = Player.GetComponent<Animator>().GetInteger("Vector");
@@ -298,6 +292,6 @@ public class PenekKing : MonoBehaviour
         Heart.SetActive(false);
         Heart.GetComponent<MonsterLife>().HitEnable = true;
         StopAllCoroutines();
-        Active = true;
+        StartCoroutine(SpareMe());
     }
 }

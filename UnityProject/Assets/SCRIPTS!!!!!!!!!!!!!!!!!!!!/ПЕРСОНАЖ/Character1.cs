@@ -78,6 +78,7 @@ public class Character1 : MonoBehaviour
     {
         if (EventSavingSystem.RealHp > 0 && !HitTime) 
         {
+            Alert();
             HitTime = true;
             EventSavingSystem.RealHp--;
         }
@@ -124,7 +125,8 @@ public class Character1 : MonoBehaviour
         Rend.color = new Color(0, 0, 0, 1f).linear;
         yield return new WaitForSecondsRealtime(0.5f);
         Rend.color = new Color(1, 1, 1, 1f).linear;
-        Rend2.color = new Color(1, 1, 1, 1f).linear; ;
+        Rend2.color = new Color(1, 1, 1, 1f).linear;
+        NoAlert();
         }
         finally
         {
