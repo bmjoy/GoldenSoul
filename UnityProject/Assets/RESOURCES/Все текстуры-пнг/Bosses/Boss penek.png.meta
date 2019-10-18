@@ -18,6 +18,8 @@ TextureImporter:
     21300026: Boss penek_13
     21300028: Boss penek_14
     21300030: Boss penek_15
+    21300032: Boss penek_16
+    21300034: Boss penek_17
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -126,23 +128,183 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 150
+        y: 300
         width: 128
         height: 150
       alignment: 9
-      pivot: {x: 0.484375, y: 0.21333334}
+      pivot: {x: 0.5, y: 0.21333334}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc1f465cc381a384f85b45547f2a88ce
+      spriteID: 2665a9fbb4b59a84a8944c9e2d29dc4d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: Boss penek_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 300
+        width: 128
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f087a31038b71fe41af3a004949a3858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss penek_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 300
+        width: 128
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad45e52ee9eff5e478ff7d6f37edf162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss penek_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 300
+        width: 128
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51d778c58cf32b449f295b7d65a6015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss penek_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 300
+        width: 128
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade361ce82de377488d690cf3f79d81a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss penek_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 300
+        width: 128
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a57146776bf10468225f2068b533b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss penek_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 300
+        width: 128
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9066e2a74e601f743bc2f72673eff2b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss penek_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 300
+        width: 128
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9161a29d0599f61458b3c359132c6f97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss penek_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 128
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8b013f76a5051b4297b0c4df7752694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss penek_9
       rect:
         serializedVersion: 2
         x: 128
@@ -156,13 +318,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48a5676878a79a844a842e9bb669222c
+      spriteID: 694753c88c2e18b4faa7e48ce711422d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss penek_2
+      name: Boss penek_10
       rect:
         serializedVersion: 2
         x: 256
@@ -176,13 +338,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45d94c4363d2f5b43b083a94123467e6
+      spriteID: 68a0bd912952c194dbaf20a616d0c28e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss penek_3
+      name: Boss penek_11
       rect:
         serializedVersion: 2
         x: 384
@@ -196,13 +358,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c76ab80dc0a19047ba37c9570c6fe8d
+      spriteID: c137e68c249416146b951931a85c7d08
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss penek_4
+      name: Boss penek_12
       rect:
         serializedVersion: 2
         x: 512
@@ -216,13 +378,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcf2fadd504913d45888d45deb4d3ebd
+      spriteID: cd901d7ea89481244b2e4232e02a7c6d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss penek_5
+      name: Boss penek_13
       rect:
         serializedVersion: 2
         x: 640
@@ -236,13 +398,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffb1fd096a113ee4f8c88511287c5939
+      spriteID: eda688d2ef168f14a990ca14274b7eb6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss penek_6
+      name: Boss penek_14
       rect:
         serializedVersion: 2
         x: 768
@@ -256,13 +418,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef4ac099d38d80d4db36c937bd5b903f
+      spriteID: 6dd1c2983be31cb4d8b5fee716c20acd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss penek_7
+      name: Boss penek_15
       rect:
         serializedVersion: 2
         x: 896
@@ -276,13 +438,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f909fe5ebb43bbd498f3fc9ab6b787f8
+      spriteID: 127e1a7ba23557b43a7ddc56dec15fa6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss penek_8
+      name: Boss penek_16
       rect:
         serializedVersion: 2
         x: 0
@@ -296,13 +458,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f71075e0a7bd4c41bf715d9e09f8f07
+      spriteID: 7a9e8c4aa5568504db132623d3447530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss penek_9
+      name: Boss penek_17
       rect:
         serializedVersion: 2
         x: 128
@@ -316,127 +478,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c998713de3047de48b2c00ba6393d5d3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss penek_10
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 128
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5, y: 0.21333334}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8ddf5a2bf5734343a4698f546287696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss penek_11
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5, y: 0.21333334}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e37542f61cf16674a9aac94c523cb7aa
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss penek_12
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 128
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5, y: 0.21333334}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 582904eac30a91049b0dc092fce64db0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss penek_13
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5, y: 0.21333334}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3363b7a7fcb70746ba9d8bcbf85e1ee
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss penek_14
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5, y: 0.21333334}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43aefbd8e4092624f8270adcc4e74341
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss penek_15
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 150
-      alignment: 9
-      pivot: {x: 0.5, y: 0.21333334}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2127f5b474fa4b2499ff58f6edd9c19e
+      spriteID: 35c2092b5421e254eba026007a6a850c
       vertices: []
       indices: 
       edges: []

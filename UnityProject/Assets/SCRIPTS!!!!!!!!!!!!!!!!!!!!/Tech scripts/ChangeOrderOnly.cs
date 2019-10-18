@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChangeOrderOnly : MonoBehaviour
 {
     public int x = 3;
+    public int y = 7;
     private void Update()
     {
         if(transform.position.y > GameObject.FindGameObjectWithTag("Player").transform.position.y)
@@ -13,7 +14,7 @@ public class ChangeOrderOnly : MonoBehaviour
         }
         else
         {
-            GetComponent<SpriteRenderer>().sortingOrder = 7;
+            GetComponent<SpriteRenderer>().sortingOrder = y;
         }
     }
 }

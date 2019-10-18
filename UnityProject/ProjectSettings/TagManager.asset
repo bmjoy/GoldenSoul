@@ -13,6 +13,8 @@ TagManager:
   - Lifepoint
   - flag
   - Death
+  - Boss
+  - DamageForBoss
   layers:
   - Default
   - TransparentFX
