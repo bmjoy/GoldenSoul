@@ -20,6 +20,7 @@ public class comment1 : MonoBehaviour
     {
         col = GetComponent<Collider2D>();
     }
+
     void OnTriggerStay2D(Collider2D col)
     {
         if (!IsLock) {

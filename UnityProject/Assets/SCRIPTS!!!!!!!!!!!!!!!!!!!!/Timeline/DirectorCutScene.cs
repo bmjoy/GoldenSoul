@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.Playables;
+using UnityEngine;
 using UnityEngine.Playables;
 
 public class DirectorCutScene : MonoBehaviour
@@ -19,37 +23,64 @@ public class DirectorCutScene : MonoBehaviour
 
     private void FixedUpdate()
     {
-       if (EventSavingSystem.HeroWasHere[EventSavingSystem.ThisLvl] == true) // Если игрок был на этой карте, его возвращает туда куда надо
+        try
         {
-            director.Pause();
-            director.Stop();
-            playerAnimator.runtimeAnimatorController = playerAnim;
-            fix = true;
-            GameObject.FindGameObjectWithTag("Player").transform.position = new Vector2(EventSavingSystem.LevelCoordsX[EventSavingSystem.ThisLvl], EventSavingSystem.LevelCoordsY[EventSavingSystem.ThisLvl]);
-            Destroy(gameObject);
+            if (EventSavingSystem.HeroWasHere[EventSavingSystem.ThisLvl] == true) // Если игрок был на этой карте, его возвращает туда куда надо
+            {
+                director.Pause();
+                director.Stop();
+                playerAnimator.runtimeAnimatorController = playerAnim;
+                fix = true;
+                GameObject.FindGameObjectWithTag("Player").transform.position = new Vector2(EventSavingSystem.LevelCoordsX[EventSavingSystem.ThisLvl], EventSavingSystem.LevelCoordsY[EventSavingSystem.ThisLvl]);
+                Destroy(gameObject);
+            }
         }
+        catch { }
 
         if (moveScript.activate && Stopable) // Возможность остановить таймлайн
-        { 
-            director.Pause();
-            director.Stop();
-            playerAnimator.runtimeAnimatorController = playerAnim;
-            Dialog.disableImage();
-            Camera1.orthographicSize = 3.5f;
-            fix = true;
-            foreach (activeComment i in Comms)
-            {
-                i.StopAllCoroutines();
-            }
-            Dialog.TextArea.text = "";
-            moveScript.activate = false;
+        {
+            StartCoroutine(Cs());
         }
 
         if (director.state != PlayState.Playing && !fix) //Сложно
         {
-            fix = true;
-            Camera1.orthographicSize = 3.5f;
-            playerAnimator.runtimeAnimatorController = playerAnim;
+            try {GameObject.Find("Delete").SetActive(false); }
+            catch { }
+            StartCoroutine(Cs());
         }
+    }
+    public IEnumerator Cs()
+    {
+        foreach (activeComment i in Comms)
+        {
+            i.StopAllCoroutines();
+        }
+        Dialog.TextArea.text = "";
+        Dialog.disableImage();
+        Image image = GameObject.Find("Imagelvl").GetComponent<Image>();
+        for (float bright = 0; bright < 1; bright += Time.deltaTime)
+        {
+            image.color = new Color(0, 0, 0, bright);
+            yield return new WaitForSeconds(0.005f);
+        }
+        director.Pause();
+        director.Stop();
+        playerAnimator.runtimeAnimatorController = playerAnim;
+        Camera1.orthographicSize = 3.5f;
+        try { GameObject.Find("Delete").SetActive(false); }
+        catch { }
+        fix = true;
+        for (float bright = 1; bright > 0; bright -= Time.deltaTime)
+        {
+            image.color = new Color(0, 0, 0, bright);
+            yield return new WaitForSeconds(0.005f);
+        }
+        yield return new WaitForSeconds(1f);
+        image.color = new Color(0, 0, 0, 0);
+        moveScript.moveyes = true;
+        moveScript.hero.speed = 0;
+        comment1.IsLock = true;
+        moveScript.activate = true;
+        gameObject.SetActive(false);
     }
 }

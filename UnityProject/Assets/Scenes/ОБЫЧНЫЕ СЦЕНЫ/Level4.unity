@@ -91844,12 +91844,12 @@ PrefabInstance:
     - target: {fileID: 5559519182731861528, guid: 8229098de0c1f3642856d1efc998ed79,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.844
+      value: 7.293
       objectReference: {fileID: 0}
     - target: {fileID: 5559519182731861528, guid: 8229098de0c1f3642856d1efc998ed79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.322
+      value: 11.238
       objectReference: {fileID: 0}
     - target: {fileID: 5559519182731861528, guid: 8229098de0c1f3642856d1efc998ed79,
         type: 3}
@@ -91895,6 +91895,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1058993215186095574, guid: 8229098de0c1f3642856d1efc998ed79,
+        type: 3}
+      propertyPath: x
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8229098de0c1f3642856d1efc998ed79, type: 3}
@@ -94671,9 +94676,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: hero
       objectReference: {fileID: 0}
-    - target: {fileID: 8193057592192605682, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+    - target: {fileID: 6980745527509133458, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_projectionMatrixMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
@@ -94691,6 +94696,11 @@ PrefabInstance:
       propertyPath: JStick
       value: 
       objectReference: {fileID: 614657215}
+    - target: {fileID: 8193057592192605682, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6980745527865888087, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -94786,11 +94796,6 @@ PrefabInstance:
       propertyPath: DeathObj
       value: 
       objectReference: {fileID: 614657216}
-    - target: {fileID: 6980745527509133458, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_projectionMatrixMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2539946702688045657, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: TexturePixelsPerWorldUnit

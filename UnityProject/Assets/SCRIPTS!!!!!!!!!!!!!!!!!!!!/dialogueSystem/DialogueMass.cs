@@ -21,7 +21,7 @@ public class DialogueMass
             "У тебя мало времени, но я знаю, как можно помочь",//15
             "Я подарю тебе ЗОЛОТУЮ ДУШУ.",//16
             "С ней ты сможешь продлить себе жизнь и выйти из этого странного места.",//17
-            "Подойди ко мне!",//18
+            "Прими своё спасение!",//18
             "После поглощения души, ты отключишься. Я буду ждать впереди.",//19
             "Удачи!",//20
             "",//21
@@ -44,7 +44,7 @@ public class DialogueMass
             "Студент Разорвал ткань пространства и остался жи..",//38
             "Ну Надо-же! \nПолучилось! \nКак самочувствие?",//39
             "Ты не против присесть и поговорить? Теперь ты в безопасности.",//40
-            "Давай знакомиться. Меня зовут Кэндл. Я маг из факультета огня университета магии.",//41
+            "Давай знакомиться. Меня зовут Кэндл.",//41
             "Люблю проводить своё свободное время во всяких странных местах... Типа этого леса.",//42
             "У тебя наверное много вопросов: \n'кто ты и что это за место?'",//43
             "Начнём с места. Так будет проще.",//44
@@ -59,10 +59,13 @@ public class DialogueMass
             "Знаешь, когда я нашёл тебя... Тебе оставалось не долго.",//53
             "Но ЗОЛОТАЯ ДУША - спасла тебя, наполнив тебя МАГИЧЕСКОЙ ЭНЕРГИЕЙ.",//54
             "Это всего лишь ПОДДЕЛКА. Ведь ты не чувствуешь боли, не можешь заплакать. У тебя не течёт кровь.",//55
-            "Но, я кажется знаю, как можно вернуть твою душу назад. Сначала нам нужно выбраться отсюда.",//56
+            "Твой случай очень интересен......",//56
+            "И, я кажется знаю, как можно вернуть твою душу назад. Сначала нам нужно выбраться отсюда.",//56
             "К сожалению, я не могу телепортировать нас обоих. Тебе придётся выбираться своими ногами.",//57
-            "Тут поблизости есть старый парк. Он является выходом из этого места.",//58
-            "Пошли!",//59
+            "Тут поблизости есть старый мост. Он является выходом из этого места.",//58
+            "Вставай! \nЯ объясню как всё устроено.",//59
+            "Да начнётся гениальный туториал!",//60
+            "Да начнётся гениальный туториал!",//61
  /*cat1*/   
     };
     public static string[] Eng =
@@ -85,7 +88,7 @@ public class DialogueMass
             "We have little time to keep you sane, but I know how to help you.",//15
             "I will make you a Soul out of Gold.",//16
             "With a Golden Soul you can lengthen your life, so I could guide you out of this place.",//17
-            "Come over here.",//18
+            "Accept your salvation...",//18
             "Once the merger happens, you'll pass out. I will wait for you near ahead.",//19
             "Good luck.",//20
             "",//21
@@ -108,7 +111,7 @@ public class DialogueMass
             "The student tore apart the spatial tissue and remained ali..", // 38
             "Would you look at that! \n It worked! \n How are you feeling right now?",//39
             "Would you mind to sit down and chat with me for a while? You are safe now.",//40
-            "Allow me to introduce myself — I'm Candle. I am a mage from the fire faculty of the  of magic.",//41
+            "Allow me to introduce myself — I'm Candle.",//41
             "I like to spend my free time is various strange places... Just like these woods.",//42
             "You've probably got a ton of questions for me:'Who are you and what is this place?'",//43
             "Let us start with the place.",//44
@@ -123,9 +126,11 @@ public class DialogueMass
             "You know, when I found you... You didn't have much longer.",//53
             "But the GOLDEN SOUL saved you, filling you with MAGIC ENERGY.",//54
             "It is just a FAKE SOUL, since you can't feel pain nor can you cry. You can't bleed either.",//55
-            "But I think I know, how can we get your soul back. But first we have to escape from here.",//56
-            "Unfortunately, I can't teleport both of us. You'll have to get out of here on your own two feet.",//57
-            "There's an old park nearby. It is the exit from this place.",//58
-            "Let's go!",//59
+            "Your case is very interesting....",//56
+            "And I think I know, how can we get your soul back. But first we have to escape from here.",//57
+            "Unfortunately, I can't teleport both of us. You'll have to get out of here on your own two feet.",//58
+            "Get up! /n I will explain how everything works.",//59
+            "Let the genial tutorial begin!",//60
+            "Да начнётся гениальный туториал!",//61
     };
 }

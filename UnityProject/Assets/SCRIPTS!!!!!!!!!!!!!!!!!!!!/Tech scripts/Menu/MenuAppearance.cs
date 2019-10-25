@@ -9,6 +9,7 @@ public class MenuAppearance : MonoBehaviour
     public Image Logo;
     public Image Mw;
     public Image Ll;
+    public Image Gs;
     void Start()
     {
         Img = GetComponent<Image>();
@@ -16,6 +17,7 @@ public class MenuAppearance : MonoBehaviour
         Logo.color = new Color(255, 255, 255, 0);
         Mw.color = new Color(255, 165, 246, 0);
         Ll.color = new Color(255, 165, 246, 0);
+        Gs.color = new Color(255, 255, 255, 0);
     }
     IEnumerator Appearance()
     {
@@ -29,16 +31,31 @@ public class MenuAppearance : MonoBehaviour
         yield return new WaitForSeconds(2f);
         for (float bright = 1; bright > 0; bright -= Time.deltaTime * 2)
         {
-        Logo.color = new Color(255, 255, 255, bright);
-        Mw.color = new Color(255, 165, 246, bright);
-        Ll.color = new Color(255, 165, 246, bright);
+            Logo.color = new Color(255, 255, 255, bright);
+            Mw.color = new Color(255, 165, 246, bright);
+            Ll.color = new Color(255, 165, 246, bright);
             yield return new WaitForSeconds(0.002f);
         }
-        for (float bright = 1; bright > 0; bright -= Time.deltaTime*2)
+        yield return new WaitForSeconds(1f);
+        for (float bright = 0; bright < 1; bright += Time.deltaTime * 2)
+        {
+            Gs.color = new Color(255, 255, 255, bright);
+            yield return new WaitForSeconds(0.002f);
+        }
+        yield return new WaitForSeconds(2f);
+        for (float bright = 1; bright > 0; bright -= Time.deltaTime * 2)
+        {
+            Gs.color = new Color(255, 255, 255, bright);
+            yield return new WaitForSeconds(0.002f);
+        }
+
+        Gs.color = new Color(255, 255, 255,0);
+        for (float bright = 1; bright > 0; bright -= Time.deltaTime * 2)
         {
             Img.color = new Color(0, 0, 0, bright);
             yield return new WaitForSeconds(0.005f);
         }
+        Destroy(gameObject);
     }
     IEnumerator Disappearance()
     {

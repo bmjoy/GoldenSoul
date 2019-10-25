@@ -28,7 +28,7 @@ public class Dialog : MonoBehaviour
     {
         try
         {
-            masDial = (Convert.ToInt32(EventSavingSystem.Language) == 1) ? masDialRus : masDialEng;
+            masDial = (Convert.ToInt32(EventSavingSystem.Language) == 1) ? masDialEng : masDialRus; //поменять
         }
         catch
         {

@@ -20,7 +20,7 @@ public class moveScript : MonoBehaviour
     //Джойстик
     public FloatingJoystick JStick;
     public static bool attackButt = false;
-    public static bool activate = false;
+    public static bool activate;
     // Старт!
     void Start()
     {
