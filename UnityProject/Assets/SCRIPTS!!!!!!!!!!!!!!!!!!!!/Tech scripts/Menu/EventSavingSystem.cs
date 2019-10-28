@@ -13,6 +13,7 @@ public class EventSavingSystem : MonoBehaviour
     public static float[] LevelCoordsX;  //для возврата на пребедущие локации
     public static float[] LevelCoordsY; //для возврата на пребедущие локации
     public static bool[] HeroWasHere;  //для возврата на пребедущие локации
+    public static bool[] UsedCutscenes = new bool[10];
     public static bool[] Keys = new bool[10];  //Собранные ключи
     public bool[] _HeroWasHere;
 

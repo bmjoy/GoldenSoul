@@ -7,6 +7,7 @@ using UnityEngine.Playables;
 
 public class DirectorCutScene : MonoBehaviour
 {
+    public int NumScene; // номер катсцены
     bool fix = false;
     public Camera Camera1;
     public Animator playerAnimator;
@@ -51,6 +52,7 @@ public class DirectorCutScene : MonoBehaviour
     }
     public IEnumerator Cs()
     {
+        EventSavingSystem.UsedCutscenes[NumScene] = true; // отмечаем что катсцена проиграла
         foreach (activeComment i in Comms)
         {
             i.StopAllCoroutines();
@@ -80,7 +82,7 @@ public class DirectorCutScene : MonoBehaviour
         moveScript.moveyes = true;
         moveScript.hero.speed = 0;
         comment1.IsLock = true;
-        moveScript.activate = true;
+        moveScript.activate = false;
         gameObject.SetActive(false);
     }
 }
