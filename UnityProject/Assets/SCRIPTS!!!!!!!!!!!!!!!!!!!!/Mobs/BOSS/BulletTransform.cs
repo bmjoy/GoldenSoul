@@ -31,9 +31,8 @@ public class BulletTransform : MonoBehaviour
     {
         if(col.CompareTag("Lifepoint"))
         {
-            StartCoroutine(Player.GetComponent<Character1>().Drag(transform.position));
             Character1.MinusHp();
-            Destroy(gameObject);
+            StartCoroutine(Player.GetComponent<Character1>().Drag(transform.position));
         } 
     }
     IEnumerator WaitDelete()

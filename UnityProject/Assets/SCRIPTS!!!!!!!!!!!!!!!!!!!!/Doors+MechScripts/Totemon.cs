@@ -21,19 +21,24 @@ public class Totemon : MonoBehaviour
     }
     void Update() //Обновление скрипта
     {
-        if (Vector2.Distance(transform.position, playerPos.position) < 0.9f && ( Input.GetKeyDown(KeyCode.E) && !Enabled))
+        if (Vector2.Distance(transform.position, playerPos.position) < 0.9f && (Input.GetKeyDown(KeyCode.E) ||  moveScript.activate && !Enabled))
         {
             totem.SetBool("fired", true);
             Enabled = true;
             Wall.counttoop = Wall.counttoop * 10 + key;
-            Wall.Open();
+            if(Wall.countconst == Wall.counttoop)
+            {
+                Wall.Open();
+            }
+            moveScript.activate = false;
             return;
         }
-        if (Vector2.Distance(transform.position, playerPos.position) < 0.9f && (Input.GetKeyDown(KeyCode.E) && Enabled))
+        if (Vector2.Distance(transform.position, playerPos.position) < 0.9f && (Input.GetKeyDown(KeyCode.E) || moveScript.activate && Enabled))
         {
             totem.SetBool("fired", false);
             Wall.counttoop = Wall.counttoop / 10;
             Enabled = false;
+            moveScript.activate = false;
             return;
         }
             ChangeOrder.ChangeLayerOrder(rend, transform, playerPos);

@@ -52,7 +52,7 @@ public class DirectorCutScene : MonoBehaviour
     }
     public IEnumerator Cs()
     {
-        EventSavingSystem.UsedCutscenes[NumScene] = true; // отмечаем что катсцена проиграла
+        EventSavingSystem.UsedEvents[NumScene] = true; // отмечаем что катсцена проиграла
         foreach (activeComment i in Comms)
         {
             i.StopAllCoroutines();

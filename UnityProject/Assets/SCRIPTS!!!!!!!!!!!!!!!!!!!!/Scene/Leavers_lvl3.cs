@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Leavers_lvl3 : MonoBehaviour
 {
+    public int NumScene;
     public Leaver Obj1;
     public Leaver Obj2;
     public GameObject Tile;
@@ -14,6 +15,7 @@ public class Leavers_lvl3 : MonoBehaviour
         if (!Obj1.On && Obj2.On)
         {
             Tile.SetActive(false);
+            EventSavingSystem.UsedEvents[NumScene] = true;
         }
     }
 }

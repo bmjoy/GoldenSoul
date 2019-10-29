@@ -14,7 +14,7 @@ public class Event_Heart_new : MonoBehaviour
     }
     void Update() //Обновление скрипта
     {
-        if (Vector2.Distance(heartPos.position, playerPos.position) < 0.6f &&
+        if (Vector2.Distance(heartPos.position, playerPos.position) < 1f &&
             (Input.GetKeyDown(KeyCode.E) || moveScript.activate))
         //если дистанция между игроком и сердцем меньше 0.6 юнита И кнопка "Е" нажат, то
         {

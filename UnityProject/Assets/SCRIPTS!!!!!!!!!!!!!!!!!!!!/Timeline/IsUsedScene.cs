@@ -7,7 +7,7 @@ public class IsUsedScene : MonoBehaviour
     public int NumScene; // номер катсцены
     private void Awake()
     {
-        if (EventSavingSystem.UsedCutscenes[NumScene] == true)
+        if (EventSavingSystem.UsedEvents[NumScene] == true)
         {
             Destroy(gameObject);
         }
