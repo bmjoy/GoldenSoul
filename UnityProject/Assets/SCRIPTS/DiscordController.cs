@@ -25,6 +25,8 @@ public class DiscordController : MonoBehaviour
 
     DiscordRpc.EventHandlers handlers;
 
+    public static DiscordController instance = null; // Экземпляр менеджера
+
     public void ReadyCallback()
     {
         ++callbackCalls;
@@ -72,8 +74,23 @@ public class DiscordController : MonoBehaviour
         onJoinRequest.Invoke(request);
     }
 
-    void Start()
+    void Awake()
     {
+        // Проверяем экземпляр объекта
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance == this)
+        {
+            Destroy(gameObject);
+        }
+
+        // Даем понять движку, что его не нужно уничтожать
+        DontDestroyOnLoad(gameObject);
+
+        // Инициализируем нашего менеджера
+        InitializeManager();
     }
 
     void Update()
@@ -81,7 +98,7 @@ public class DiscordController : MonoBehaviour
         DiscordRpc.RunCallbacks();
     }
 
-    void OnEnable()
+    void InitializeManager()
     {
         Debug.Log("Discord: init");
         callbackCalls = 0;
@@ -100,10 +117,5 @@ public class DiscordController : MonoBehaviour
     {
         Debug.Log("Discord: shutdown");
         DiscordRpc.Shutdown();
-    }
-
-    void OnDestroy()
-    {
-
     }
 }
