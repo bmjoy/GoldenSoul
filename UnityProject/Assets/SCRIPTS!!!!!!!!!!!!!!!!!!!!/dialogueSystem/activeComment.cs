@@ -9,6 +9,8 @@ public class activeComment : MonoBehaviour
     public float t; // Время до удаления диалога
     private void OnEnable()
     {
+        moveScript.moveyes = false;
+        moveScript.hero.speed = 0;
         StartCoroutine(Dialog.Dialogue3(Dialog.masDial, masav, mas, 0.05f, t));
     }
 }

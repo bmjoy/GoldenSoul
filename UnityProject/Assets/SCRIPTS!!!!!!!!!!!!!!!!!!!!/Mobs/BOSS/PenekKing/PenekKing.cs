@@ -53,6 +53,7 @@ public class PenekKing : MonoBehaviour
 
         if (Active)
         {
+            slider.SetActive(true);
             Heart.GetComponent<MonsterLife>().HitEnable = true;
             Heart.SetActive(false);
             Active = false;

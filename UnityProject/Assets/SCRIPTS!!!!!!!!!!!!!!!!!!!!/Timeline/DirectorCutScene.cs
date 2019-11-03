@@ -10,6 +10,7 @@ public class DirectorCutScene : MonoBehaviour
     public int NumScene; // номер катсцены
     bool fix = false;
     public Camera Camera1;
+    public GameObject Camera;
     public Animator playerAnimator;
     public RuntimeAnimatorController playerAnim;
     public PlayableDirector director;
@@ -69,6 +70,7 @@ public class DirectorCutScene : MonoBehaviour
         director.Stop();
         playerAnimator.runtimeAnimatorController = playerAnim;
         Camera1.orthographicSize = 3.5f;
+        Camera.SetActive(true);
         try { GameObject.Find("Delete").SetActive(false); }
         catch { }
         fix = true;

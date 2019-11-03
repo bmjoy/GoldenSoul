@@ -85,12 +85,10 @@ public class Penek : MonoBehaviour
         Rigi.drag = 0;
         Rigi.AddForce(-(Player.transform.position - transform.position).normalized * Force, ForceMode2D.Force);
         GetComponent<Animator>().SetBool("Break", true);
+        Character1.NoAlert();
         yield return new WaitForSeconds(1f);
         Rigi.drag = 20;
         Rigi.simulated = false;
-        yield return new WaitForSeconds(3f);
-        Character1.NoAlert();
         Destroy(this);
-        yield return new WaitForSeconds(3f);
     }
 }

@@ -10,7 +10,7 @@ public class RosesEvent : MonoBehaviour
     public static int NeedCombo = 123;
     public static int NewCombo = 0;
     public int X = 0;
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerExit2D(Collider2D col)
     {
        
         if ((NeedCombo != NewCombo && NeedCombo / 10 != NewCombo && NeedCombo / 100 != NewCombo) && NewCombo != 0)

@@ -30,7 +30,10 @@ public class StartCutscene : MonoBehaviour
             image.color = new Color(0, 0, 0, bright);
             yield return new WaitForSeconds(0.005f);
         }
+        if (X != 0 && Y != 0){
         GameObject.Find("hero").transform.position = new Vector2(X, Y);
+        }
+
         DirectorObject.SetActive(true);
         for (float bright = 1; bright > 0; bright -= Time.deltaTime)
         {
