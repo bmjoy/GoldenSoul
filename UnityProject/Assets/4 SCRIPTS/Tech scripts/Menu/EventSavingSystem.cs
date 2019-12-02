@@ -1,29 +1,33 @@
 ﻿using UnityEngine;
 using System;
 // NameSpace;name:Event
+[Serializable]
 public class EventSavingSystem : MonoBehaviour
 {
-    public static int RealHp = 5; //Минимальное ХП с начала 
-    public static int ThisLvl = 1; //Язык
-    public static int LastLvl = 1;
+
+
     public int _Language = 1; //Язык
-    //-----------------------------------
-    public float[] _LevelCoordsX; 
-    public float[] _LevelCoordsY;
-    public static float[] LevelCoordsX;  //для возврата на пребедущие локации
-    public static float[] LevelCoordsY; //для возврата на пребедущие локации
-    public static bool[] HeroWasHere;  //для возврата на пребедущие локации
-    public static bool[] UsedEvents = new bool[100];
-    public static bool[] Keys = new bool[10];  //Собранные ключи
+    public bool[] _UsedEvents;
     public bool[] _HeroWasHere;
+    public bool[] _Keys;
+    public int _ThisLvl;
+    public int _LastLvl;
+    public float[] _LevelCoordsX;
+    public float[] _LevelCoordsY;
+    //-----------------------------------
+    public static int Language = 1; //Язык
+    public static int RealHp = 5; //Минимальное ХП с начала 
+    public static int ThisLvl = 1;
+    public static int LastLvl = 1;
+    public static float[] LevelCoordsX = new float[100]; //для возврата на пребедущие локации
+    public static float[] LevelCoordsY = new float[100]; //для возврата на пребедущие локации
+    public static bool[] UsedEvents = new bool[20];
+    public static bool[] Keys = new bool[10];  //Собранные ключи
+    public static bool[] HeroWasHere;  //для возврата на пребедущие локации
 
     //-----------------------------------
-    public static int Language;
     private void Awake()
     {
-        Language = _Language;
-        LevelCoordsX = _LevelCoordsX;
-        LevelCoordsY = _LevelCoordsY;
         HeroWasHere = _HeroWasHere;
         for (int i = 0; i < LastLvl; i++) //Отмечаем где мы были до последнего уровня(помогает соблюсти сюжет и вернуться к прогрессу)
         {
@@ -31,7 +35,19 @@ public class EventSavingSystem : MonoBehaviour
         }
         _HeroWasHere = HeroWasHere;
     }
-    
+
+    public void Update()
+    {
+        _ThisLvl = ThisLvl;
+        _LastLvl = LastLvl;
+        _UsedEvents = UsedEvents;
+        _Language = Language;
+        _LevelCoordsX = LevelCoordsX;
+        _LevelCoordsY = LevelCoordsY;
+        _HeroWasHere = HeroWasHere;
+        _Keys = Keys;
+    }
+
 
 
     //Тимофей, это ваше)

@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System; 
 using System.IO; //библиотеки
-
 public class saving : MonoBehaviour
 {
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     /* public static string[] save = new string[1]; // Локальный массив (Л/М), массив где хранятся ВСЕ игровые данные нуждающиеся в постоянной памяти. Находится в ОЗУ. Закрыт для других скриптов. Делать запись через функции.
     private static string savePath; //Путь до файла
 

@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
     public int scene;
     public void Load()
     {
-
+        SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
     }
     public void Play() {
         EventSavingSystem.RealHp = 2;
