@@ -9,14 +9,13 @@ public class moveScript : MonoBehaviour
     public float Speed = 0.08f;
     //private 
     float horizontalSpeed,verticalSpeed; // Скорость движения
-    float speedX; // актуальная скорость игрока
-    float speedY;
+    Rigidbody2D Rigi;
     //static
     public static bool moveyes; // Если ходим
     public static Animator hero; 
     public static bool attack;
     
- 
+
     //Джойстик
     public FloatingJoystick JStick;
     public static bool attackButt = false;
@@ -26,6 +25,7 @@ public class moveScript : MonoBehaviour
     {
         //Cursor.lockState = CursorLockMode.Locked; //Фиксируем курсор
         //Cursor.visible = false; //Делаем его невидимым
+        Rigi = gameObject.GetComponent<Rigidbody2D>();
         hero = GetComponent<Animator>();
         moveyes = true;
         attack = false;
@@ -40,8 +40,6 @@ public class moveScript : MonoBehaviour
 
         if (hero.GetBool("Died"))
         {
-            speedX = 0f;
-            speedX = 0f;
             hero.speed = 1;
             return;
         }
@@ -51,19 +49,16 @@ public class moveScript : MonoBehaviour
             if (Input.GetKey(KeyCode.W) || JStick.Vertical == 1)
             {
                 hero.speed = 1;
-                speedY = verticalSpeed; //Изменение скорости игрока и анимация
                 hero.SetInteger("Vector", 2);
             }
             if (Input.GetKey(KeyCode.S) || JStick.Vertical == -1)
             {
                 hero.speed = 1;
-                speedY = -verticalSpeed;
                 hero.SetInteger("Vector", 4);
             }
             if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
             {
                 hero.speed = 0;
-                speedY = 0;
             }
         }
 
@@ -72,19 +67,16 @@ public class moveScript : MonoBehaviour
             if (Input.GetKey(KeyCode.D) || JStick.Horizontal == 1) // Проверяем условие нажатия кнопки D
             {
                 hero.speed = 1;
-                speedX = horizontalSpeed;
                 hero.SetInteger("Vector", 3);
             }
             if (Input.GetKey(KeyCode.A) || JStick.Horizontal == -1) // Проверяем условие нажатия кнопки A
             {
                 hero.speed = 1;
-                speedX = -horizontalSpeed;
                 hero.SetInteger("Vector", 1);
             }
             if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) //Костыль от Кости
             {
                 hero.speed = 0;
-                speedX = 0;
             }
         }
 
@@ -97,29 +89,21 @@ public class moveScript : MonoBehaviour
             if (JStick.Horizontal < 0 && JStick.Vertical > 0)
             {
                 hero.SetInteger("Vector", 5);
-                speedX = -horizontalSpeed;
-                speedY = verticalSpeed;
             }
             else
             if (JStick.Horizontal > 0 && JStick.Vertical > 0)
             {
                 hero.SetInteger("Vector", 6);
-                speedX = horizontalSpeed;
-                speedY = verticalSpeed;
             }
             else
             if (JStick.Horizontal > 0 && JStick.Vertical < 0)
             {
                 hero.SetInteger("Vector", 7);
-                speedX = horizontalSpeed;
-                speedY = -verticalSpeed;
             }
             else 
             if(JStick.Horizontal < 0 && JStick.Vertical < 0)
             {
                 hero.SetInteger("Vector", 8);
-                speedX = -horizontalSpeed;
-                speedY = -verticalSpeed;
             }
         }
 
@@ -141,6 +125,7 @@ public class moveScript : MonoBehaviour
             attackButt = false;
             return;
         }
+
         if (Input.GetKeyDown(KeyCode.Space) || attackButt)
         {
             attackButt = true;
@@ -154,9 +139,15 @@ public class moveScript : MonoBehaviour
             }
             return;
         }
-        transform.Translate(speedX, speedY, 0); //Применение передвижения
-        speedX = 0;
-        speedY = 0;
+        if (moveyes)
+        {
+        Rigi.velocity = new Vector2(JStick.Horizontal, JStick.Vertical).normalized * Speed;
+        }
+        else
+        {
+        Rigi.velocity = Vector2.zero;
+        }
+
     }
     
     public static void enable(bool x)
