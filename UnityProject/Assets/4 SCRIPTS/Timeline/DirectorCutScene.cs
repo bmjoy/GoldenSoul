@@ -71,9 +71,12 @@ public class DirectorCutScene : MonoBehaviour
             }
         director.Pause();
         director.Stop();
+        Dialog.TextArea.text = "";
+        Dialog.disableImage();
         playerAnimator.runtimeAnimatorController = playerAnim;
         Camera1.orthographicSize = 3.5f;
         Camera.SetActive(true);
+        gameObject.GetComponent<Appear>().Appears();
         try { GameObject.Find("Delete").SetActive(false); }
         catch { }
         fix = true;

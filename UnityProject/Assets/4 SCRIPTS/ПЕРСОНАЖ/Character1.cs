@@ -8,13 +8,15 @@ using System;
 
 public class Character1 : MonoBehaviour
 {
+    //Статы
+    public static int HP = 100;
+    public static int MP = 100;
+    //
     Rigidbody2D Rigi;
-    public GameObject DeathObj;
+    public GameObject DeathText;
     public bool BlackImg = false;
     public bool Death = false;
-    public GameObject Life;
     static GameObject _Life;
-    public GameObject Lifepoint;
     static GameObject _Lifepoint;
     private GameObject Player;
     public bool Hit;
@@ -27,6 +29,7 @@ public class Character1 : MonoBehaviour
 
     private void Awake()
     {
+        AlertPoints = 0;
         try //Сверяем уровни и координаты
         {
         if(EventSavingSystem.LevelCoordsX[EventSavingSystem.ThisLvl] != 0)
@@ -38,20 +41,25 @@ public class Character1 : MonoBehaviour
 
     private void Start()
     {
-        _Life = Life;
-        _Lifepoint = Lifepoint;
+        _Life = GameObject.Find("Life");
+        _Lifepoint = GameObject.Find("LifePoint");
+        DeathText = GameObject.Find("YouDead");
         _Hit = Hit;
         Rigi = GetComponent<Rigidbody2D>();
         Player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(Level.ThisLevel());
+        _Lifepoint.SetActive(false);
+        DeathText.SetActive(false);
     }
     void Update()
     {
+
         if(HitTime == true && !StopHitTime && EventSavingSystem.RealHp > 1) //Активируем выжидалку от урона(моргание)
         {
             StartCoroutine(WaitForHit());
             StopHitTime = true;
         }
+
         try { _Life.GetComponent<Animator>().SetInteger("Stage", EventSavingSystem.RealHp); } catch { } //Синхронизируем ХП и эвент сейвинг систем
         _Hit = Hit;
 
@@ -78,7 +86,6 @@ public class Character1 : MonoBehaviour
     {
         if (EventSavingSystem.RealHp > 0 && !HitTime) 
         {
-            Alert();
             HitTime = true;
             EventSavingSystem.RealHp--;
         }
@@ -106,13 +113,13 @@ public class Character1 : MonoBehaviour
             yield return new WaitForSeconds(0.005f);
         }
         AlertPoints = 10;
-        DeathObj.SetActive(true);
+        DeathText.SetActive(true);
     }
 
     IEnumerator WaitForHit() //Моргаем персонажем и не позволяем получить урон за это время
     {
-        try { SpriteRenderer Rend = GameObject.Find("HearthLife").GetComponent<SpriteRenderer>(); 
-        SpriteRenderer Rend2 = GameObject.Find("hero").GetComponent<SpriteRenderer>();
+        try { SpriteRenderer Rend = GameObject.Find("LifePoint").GetComponent<SpriteRenderer>(); 
+        SpriteRenderer Rend2 = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
         Rend2.color = new Color(1, 1, 1, 0.4f).linear; ;
         Rend.color = new Color(0, 0, 0, 1f).linear;
         yield return new WaitForSecondsRealtime(0.5f);

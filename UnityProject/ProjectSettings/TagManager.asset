@@ -15,6 +15,7 @@ TagManager:
   - Death
   - Boss
   - DamageForBoss
+  - Aim
   layers:
   - Default
   - TransparentFX

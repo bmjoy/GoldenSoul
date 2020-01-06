@@ -12,21 +12,22 @@ public class spikes : MonoBehaviour
         Col2 = GetComponent<Collider2D>();
     }
     void OnTriggerEnter2D(Collider2D Col)
-        {
+    {
         if (Col.CompareTag("Player"))
             HeroIsHere = true;
-        }
+            Character1.Alert();
+    }
     void OnTriggerExit2D(Collider2D Col)
-        {
+    {
         if (Col.CompareTag("Player"))
             HeroIsHere = false;
-        }
+            Character1.NoAlert();
+    }
     private void Update()
     {
         if (HeroIsHere && Damage)
         {
             StartCoroutine(GameObject.FindGameObjectWithTag("Player").GetComponent<Character1>().Drag(transform.position));
-            Character1.Alert();
             Character1.MinusHp();
         }
     }

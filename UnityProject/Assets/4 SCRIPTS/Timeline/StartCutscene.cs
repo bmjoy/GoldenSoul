@@ -10,9 +10,9 @@ public class StartCutscene : MonoBehaviour
     public PlayableDirector Director;
     public float X;
     public float Y;
+    bool active = true;
     void OnTriggerEnter2D(Collider2D Col)
     {
-        bool active = true;
         if (Col.CompareTag("Player") && active)
         {
             print(1);

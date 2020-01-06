@@ -62,7 +62,7 @@ public class Penek : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Rigi.drag = 20;
         Anim.SetBool("Attack", false);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         Col.isTrigger = false;
         Rigi.drag = 0;
         Active = true;

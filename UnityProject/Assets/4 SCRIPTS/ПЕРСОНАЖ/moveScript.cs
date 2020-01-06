@@ -4,9 +4,7 @@ using System.Collections;
 public class moveScript : MonoBehaviour
 {
     //public
-    public bool Isattack = false;
-    public bool StopAttack = false;
-    public float Speed = 0.08f;
+    public float Speed = 6f;
     //private 
     float horizontalSpeed,verticalSpeed; // Скорость движения
     Rigidbody2D Rigi;
@@ -14,10 +12,11 @@ public class moveScript : MonoBehaviour
     public static bool moveyes; // Если ходим
     public static Animator hero; 
     public static bool attack;
-    
+    public static float JoystickDegree;
+
 
     //Джойстик
-    public FloatingJoystick JStick;
+    public static FixedJoystick JStick;
     public static bool attackButt = false;
     public static bool activate;
     // Старт!
@@ -30,12 +29,16 @@ public class moveScript : MonoBehaviour
         moveyes = true;
         attack = false;
         hero.SetInteger("Vector", 1);
+        JStick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
     }
     void FixedUpdate()
-    { 
-        if (Input.GetKey(KeyCode.Space))
+    {
+        JoystickDegree = Degree.GetDegree(JStick.HorizontalSnap, JStick.VerticalSnap);
+
+        if (hero.GetBool("Died"))
         {
-            AttackButt();
+            hero.speed = 1;
+            return;
         }
 
         if (hero.GetBool("Died"))
@@ -44,7 +47,7 @@ public class moveScript : MonoBehaviour
             return;
         }
 
-        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || JStick.Vertical != 0) && moveyes == true && JStick.Horizontal == 0)//Вертикальное передвижение
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || JStick.Vertical != 0)&& JStick.Horizontal == 0)//Вертикальное передвижение
         {
             if (Input.GetKey(KeyCode.W) || JStick.Vertical == 1)
             {
@@ -62,7 +65,7 @@ public class moveScript : MonoBehaviour
             }
         }
 
-        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || JStick.Horizontal != 0) && moveyes == true && JStick.Vertical == 0)//Горизонтальное передвижение
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || JStick.Horizontal != 0)&& JStick.Vertical == 0)//Горизонтальное передвижение
         {
             if (Input.GetKey(KeyCode.D) || JStick.Horizontal == 1) // Проверяем условие нажатия кнопки D
             {
@@ -81,7 +84,7 @@ public class moveScript : MonoBehaviour
         }
 
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
-            || JStick.Horizontal != 0 && JStick.Vertical != 0 && moveyes == true)
+            || JStick.Horizontal != 0 && JStick.Vertical != 0)
         {
             horizontalSpeed = Mathf.Sqrt(Mathf.Pow(Speed / 2, 2) * 2); //Скорость вертикальной ходьбы
             verticalSpeed = Mathf.Sqrt(Mathf.Pow(Speed / 2, 2) * 2);
@@ -100,8 +103,8 @@ public class moveScript : MonoBehaviour
             {
                 hero.SetInteger("Vector", 7);
             }
-            else 
-            if(JStick.Horizontal < 0 && JStick.Vertical < 0)
+            else
+            if (JStick.Horizontal < 0 && JStick.Vertical < 0)
             {
                 hero.SetInteger("Vector", 8);
             }
@@ -113,32 +116,26 @@ public class moveScript : MonoBehaviour
             verticalSpeed = Speed;
         }
         if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || JStick.Horizontal != 0 || JStick.Vertical != 0) && moveyes == true &&
-             !Input.GetKey(KeyCode.Space) && !attackButt)
+                !Input.GetKey(KeyCode.Space) && !attackButt)
         {
             hero.speed = 0; //Остановить анимацию если не идём
         }
 
-        if (StopAttack == true)
+        if (moveyes)
         {
-            hero.speed = 1;
-            hero.SetBool("Hit", false);
-            attackButt = false;
-            return;
+            Rigi.velocity = new Vector2(JStick.Horizontal, JStick.Vertical).normalized * Speed;
+        }
+        else
+        {
+            Rigi.velocity = Vector2.zero;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) || attackButt)
+
+        if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || JStick.Horizontal != 0 || JStick.Vertical != 0))
         {
-            attackButt = true;
-            attack = true;
-            hero.SetBool("Hit", true);
-            hero.speed = 1;
-            if (StopAttack)
-            {
-                hero.SetBool("Hit", false);
-                attackButt = false;
-            }
-            return;
+            hero.speed = 0; //Остановить анимацию если не идём
         }
+
         if (moveyes)
         {
         Rigi.velocity = new Vector2(JStick.Horizontal, JStick.Vertical).normalized * Speed;
