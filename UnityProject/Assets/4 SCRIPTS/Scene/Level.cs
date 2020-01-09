@@ -25,7 +25,7 @@ public class Level : MonoBehaviour
        {
             moveScript.activate = false;
             if(HeroWasHere)
-                EventSavingSystem.HeroWasHere[EventSavingSystem.ThisLvl] = true;
+            EventSavingSystem.HeroWasHere[EventSavingSystem.ThisLvl] = true;
             EventSavingSystem.LevelCoordsX[EventSavingSystem.ThisLvl] = NextX;
             EventSavingSystem.LevelCoordsY[EventSavingSystem.ThisLvl] = NextY;
             EventSavingSystem.ThisLvl = NextLvlNum;

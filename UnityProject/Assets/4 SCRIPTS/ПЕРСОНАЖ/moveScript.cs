@@ -41,7 +41,7 @@ public class moveScript : MonoBehaviour
             return;
         }
 
-        if (hero.GetBool("Died"))
+        if (!Character1.CanWalk)
         {
             hero.speed = 1;
             return;

@@ -7,7 +7,8 @@ public class PenekKing : MonoBehaviour
 {
     private const int V = 50;
     public GameObject slider;
-    public int Lifes = 5;
+    public int Lifes = 25;
+    public int LifesNow = 25;
     public float Xfast = 1f; // Ускоряем атаки + увеличиваем размер тычек
     public float Xslow = 3f; // Замедляем атаки + Уменьшаем размер тычек
     //---
@@ -43,8 +44,11 @@ public class PenekKing : MonoBehaviour
 
     void Update()
     {
-        if (Lifes < 1)
+        if (LifesNow - Heart.GetComponent<MonsterLife>().MinusHp != LifesNow)
         {
+            LifesNow--;
+            Lifes = LifesNow;
+            StartCoroutine(Drag(Player.transform.position));
         }
         if (Col.IsTouching(TC1) || Col.IsTouching(TC2) || Col.IsTouching(TC3))
         {
@@ -54,7 +58,7 @@ public class PenekKing : MonoBehaviour
         if (Active)
         {
             slider.SetActive(true);
-            Heart.GetComponent<MonsterLife>().HitEnable = true;
+            //Heart.GetComponent<MonsterLife>().HitEnable = true;
             Heart.SetActive(false);
             Active = false;
             Anim.SetBool("Attack", true);
@@ -81,7 +85,7 @@ public class PenekKing : MonoBehaviour
                         StartCoroutine(Attack2());
                         break;
                 }
-            else if (Lifes == 1)
+            else if (Lifes == 3)
             {
                 StartCoroutine(Attack5());
             }
@@ -100,7 +104,7 @@ public class PenekKing : MonoBehaviour
     }
     IEnumerator SpareMe()//разбег
     {
-        Heart.GetComponent<MonsterLife>().HitEnable = true;
+        //Heart.GetComponent<MonsterLife>().HitEnable = true;
         Character1.Alert();
         Anim.SetBool("Attack", true);
         Anim.SetInteger("Stage", 99);
@@ -134,7 +138,7 @@ public class PenekKing : MonoBehaviour
         Rigi.drag = 30;
         Anim.speed = 1;
         Heart.SetActive(true);
-        Heart.GetComponent<MonsterLife>().HitEnable = true;
+        //Heart.GetComponent<MonsterLife>().HitEnable = true;
         yield return new WaitForSeconds(2f);
         Heart.SetActive(false);
         StartCoroutine(SpareMe());
@@ -323,7 +327,7 @@ public class PenekKing : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.02f);
         Rigi.drag = V;
         Heart.SetActive(false);
-        Heart.GetComponent<MonsterLife>().HitEnable = true;
+        //Heart.GetComponent<MonsterLife>().HitEnable = true;
         StopAllCoroutines();
         StartCoroutine(SpareMe());
     }

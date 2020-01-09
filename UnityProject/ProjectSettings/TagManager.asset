@@ -16,6 +16,8 @@ TagManager:
   - Boss
   - DamageForBoss
   - Aim
+  - PlayerBullet
+  - Monsterlife
   layers:
   - Default
   - TransparentFX

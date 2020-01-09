@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3668198821420633936}
   m_Layer: 0
   m_Name: playerBullet1
-  m_TagString: fov
+  m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,8 +71,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: 21300014, guid: 7672b16005a37d840961dc17f0733192, type: 3}
+  m_SortingOrder: 11
+  m_Sprite: {fileID: 21300022, guid: 7672b16005a37d840961dc17f0733192, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,9 +96,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: -0.03}
+  m_Offset: {x: 0, y: -0.03}
   serializedVersion: 2
-  m_Radius: 0.05037582
+  m_Radius: 0.14
 --- !u!50 &5181227522883926374
 Rigidbody2D:
   serializedVersion: 4

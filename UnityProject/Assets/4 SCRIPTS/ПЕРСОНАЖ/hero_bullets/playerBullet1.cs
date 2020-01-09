@@ -19,7 +19,7 @@ public class playerBullet1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector = (moveScript.JStick.Horizontal != 0 || moveScript.JStick.Vertical != 0) ? new Vector2(moveScript.JStick.Horizontal, moveScript.JStick.Vertical) : Vector;
+        Vector = (moveScript.JStick.Horizontal != 0 || moveScript.JStick.Vertical != 0) ? new Vector2(moveScript.JStick.HorizontalSnap, moveScript.JStick.VerticalSnap) : Vector;
 
         if(Vector.x == 0 && Vector.y == 0)
         {
@@ -66,6 +66,5 @@ public class playerBullet1 : MonoBehaviour
     {
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
-        Character1.NoAlert();
     }
 }

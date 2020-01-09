@@ -435,7 +435,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &6980745527865888073
 BoxCollider2D:
@@ -608,7 +608,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 6
-  JStick: {fileID: 0}
 --- !u!114 &728820527485948525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -646,7 +645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95697886b8d00f41821853d06bddb72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Regen: 1
   Mana: 100
+  SpellObj:
+  - {fileID: 3668198821420633937, guid: 36b6ceba806caec44ab256c83a43c9cd, type: 3}
+  - {fileID: 4458667454688004336, guid: 1800d733b9dddf145adf4bd293d38207, type: 3}
 --- !u!1 &8193057592192605682
 GameObject:
   m_ObjectHideFlags: 0

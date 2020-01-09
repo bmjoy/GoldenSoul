@@ -3,6 +3,7 @@ guid: 75335e53ba403074782d31bf89126ea7
 TextureImporter:
   fileIDToRecycleName:
     21300000: spellItems_0
+    21300002: spellItems_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -121,7 +122,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ff19c3fabd5da84982d20183dfdfb4e
+      spriteID: 80f811bfa0f4d954182af13e52cce55b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spellItems_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44311fdda57d544ab043b7cd9be0cc9
       vertices: []
       indices: 
       edges: []

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5635114949113685431}
   m_Layer: 0
   m_Name: MonsterLife
-  m_TagString: Lifepoint
+  m_TagString: Monsterlife
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 426497267796363146}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.5230322, y: -1.575, z: 0.02734375}
-  m_LocalScale: {x: 0.43574, y: 0.43574, z: 0.43574}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.43574}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f583761a201db4bab784a761c361fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Monster: {fileID: 0}
+  Damaged: 0
 --- !u!58 &5635114949113685431
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -109,4 +109,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.0000076293945, y: 0}
   serializedVersion: 2
-  m_Radius: 0.23
+  m_Radius: 0.37

@@ -6,22 +6,21 @@ public class Vase : MonoBehaviour
 {
     GameObject Player;
     public moveScript MS;
+    bool Destroyed = false;
     // Update is called once per frame
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
     }
-    void Update()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(Vector2.Distance(Player.transform.position, transform.position) < 1f && Character1._Hit)
+        if (collision.CompareTag("PlayerBullet") && !Destroyed)
         {
-            if (Signature.FromSide(Player,gameObject))
-            {
-                Break();
-            }
+            Break();
+            Destroyed = true;
+            Destroy(collision.gameObject);
         }
-
-
     }
     void Break()
     {

@@ -91698,6 +91698,26 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ActiveButt
       objectReference: {fileID: 0}
+    - target: {fileID: 2875550788607268487, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875550788607268487, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5982124344773462769, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5982124344773462769, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4016273812084186756, guid: ccf343d937ed3674cb150afa2d71957e,
         type: 3}
       propertyPath: m_IsActive
@@ -91707,18 +91727,6 @@ PrefabInstance:
     - {fileID: 0}
     - {fileID: 5853002131688702862, guid: ccf343d937ed3674cb150afa2d71957e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ccf343d937ed3674cb150afa2d71957e, type: 3}
---- !u!114 &614657215 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2672238466736846608, guid: ccf343d937ed3674cb150afa2d71957e,
-    type: 3}
-  m_PrefabInstance: {fileID: 614657214}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &614657216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4016273812084186756, guid: ccf343d937ed3674cb150afa2d71957e,
@@ -92450,12 +92458,12 @@ PrefabInstance:
     - target: {fileID: 7645662659689647075, guid: ed67f49fc97629d4fb5bfa4ccc9ab71f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.26
+      value: 4.733
       objectReference: {fileID: 0}
     - target: {fileID: 7645662659689647075, guid: ed67f49fc97629d4fb5bfa4ccc9ab71f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.87
+      value: 9.512
       objectReference: {fileID: 0}
     - target: {fileID: 7645662659689647075, guid: ed67f49fc97629d4fb5bfa4ccc9ab71f,
         type: 3}
@@ -92501,6 +92509,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645662659689647074, guid: ed67f49fc97629d4fb5bfa4ccc9ab71f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2019899223257186169, guid: ed67f49fc97629d4fb5bfa4ccc9ab71f,
+        type: 3}
+      propertyPath: y
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed67f49fc97629d4fb5bfa4ccc9ab71f, type: 3}
@@ -93493,6 +93511,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7645662659689647086, guid: ed67f49fc97629d4fb5bfa4ccc9ab71f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed67f49fc97629d4fb5bfa4ccc9ab71f, type: 3}
@@ -94813,7 +94836,7 @@ PrefabInstance:
         type: 3}
       propertyPath: JStick
       value: 
-      objectReference: {fileID: 614657215}
+      objectReference: {fileID: 0}
     - target: {fileID: 6980745527865888087, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -94923,11 +94946,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_DrawMode
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6980745527865888086, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6980745527865888073, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}

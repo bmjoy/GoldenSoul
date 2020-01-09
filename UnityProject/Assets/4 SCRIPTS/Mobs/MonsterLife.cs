@@ -4,24 +4,17 @@ using UnityEngine;
 
 public class MonsterLife : MonoBehaviour
 {
-    public bool HitEnable = true;
-    GameObject Player;
-    public GameObject Monster;
-    void Start()
-    {
-        Player = GameObject.FindGameObjectWithTag("Player");
-    }
+    public bool Damaged = false;
+    public int Hp = 1;
+    public int MinusHp = 0;
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D Col)
     {
-        if (Vector2.Distance(Player.transform.position, Monster.transform.position) < 2f && Character1._Hit && HitEnable)
-        {
-            if (Signature.FromSide(Player, gameObject))
-            {
-                HitEnable = false;
-                StartCoroutine(Monster.GetComponent<PenekKing>().Drag(Player.transform.position));
-            }
+        if (Col.CompareTag("PlayerBullet"))
+        {  
+            MinusHp += 1;
+            Damaged = (MinusHp == Hp) ? true : false;
+            Destroy(Col.gameObject);
         }
     }
 }

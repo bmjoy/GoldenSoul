@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2841393280839084712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.34, y: 1.158, z: 0.1623148}
+  m_LocalPosition: {x: 2.357, y: 1.133, z: 0.1623148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplier: 1
-  ForceD: 2
+  ForceD: 1.5
 --- !u!58 &3137694344669395176
 CircleCollider2D:
   m_ObjectHideFlags: 0

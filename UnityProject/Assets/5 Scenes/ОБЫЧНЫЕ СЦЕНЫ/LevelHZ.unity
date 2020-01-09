@@ -2412,6 +2412,26 @@ PrefabInstance:
       propertyPath: ImgObj
       value: 
       objectReference: {fileID: 659588022}
+    - target: {fileID: 2875550788607268487, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2875550788607268487, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5982124344773462769, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5982124344773462769, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccf343d937ed3674cb150afa2d71957e, type: 3}
 --- !u!1001 &1147647523

@@ -11,12 +11,13 @@ public class Character1 : MonoBehaviour
     //Статы
     public static int HP = 100;
     public static int MP = 100;
+    public static int LVL = 1;
     //
     Rigidbody2D Rigi;
     public GameObject DeathText;
+    public static Slider LifeSlider;
     public bool BlackImg = false;
     public bool Death = false;
-    static GameObject _Life;
     static GameObject _Lifepoint;
     private GameObject Player;
     public bool Hit;
@@ -25,7 +26,8 @@ public class Character1 : MonoBehaviour
     public static bool HitTime = false;
     public static int AttackDirection = 1;
     static int AlertPoints = 0;//Нужно для появления индикатора
-    bool Pushed = false; //для толканий персонажа
+    public static bool Pushed = false; //для толканий персонажа
+    public static bool CanWalk = true; //для толканий персонажа
 
     private void Awake()
     {
@@ -41,7 +43,7 @@ public class Character1 : MonoBehaviour
 
     private void Start()
     {
-        _Life = GameObject.Find("Life");
+        LifeSlider = GameObject.Find("HeroLife").GetComponent<Slider>();
         _Lifepoint = GameObject.Find("LifePoint");
         DeathText = GameObject.Find("YouDead");
         _Hit = Hit;
@@ -60,9 +62,6 @@ public class Character1 : MonoBehaviour
             StopHitTime = true;
         }
 
-        try { _Life.GetComponent<Animator>().SetInteger("Stage", EventSavingSystem.RealHp); } catch { } //Синхронизируем ХП и эвент сейвинг систем
-        _Hit = Hit;
-
         if (BlackImg && !Death) //Чтобы экран не повторял тускление при смерти
         {
             Death = true;
@@ -71,7 +70,7 @@ public class Character1 : MonoBehaviour
 
         try
         {
-            if (EventSavingSystem.RealHp < 2) //Смерть
+            if (HP < 1) //Смерть
             {
                 HitTime = false;
                 Player.GetComponent<Animator>().SetBool("Died", true);
@@ -82,12 +81,13 @@ public class Character1 : MonoBehaviour
         AttackDirection = Player.GetComponent<Animator>().GetInteger("Vector");
     }
 
-    static public void MinusHp() //Минус хп если не было получено урона до этого
+    static public void MinusHp(int x = 10) //Минус хп если не было получено урона до этого
     {
-        if (EventSavingSystem.RealHp > 0 && !HitTime) 
+        if (HP > 1 && !HitTime) 
         {
             HitTime = true;
-            EventSavingSystem.RealHp--;
+            HP -= x;
+            LifeSlider.value = HP;
         }
         
     }
@@ -101,7 +101,10 @@ public class Character1 : MonoBehaviour
     static public void NoAlert() //Как опасность проходит снимаем очко опасности
     {
         AlertPoints--;
-        if (AlertPoints < 1) _Lifepoint.SetActive(false);
+        if (AlertPoints < 1) {
+            _Lifepoint.SetActive(false);
+            AlertPoints = 0;
+        }
     }
 
     IEnumerator BlackImgFun() //Затемняем экран
@@ -133,7 +136,6 @@ public class Character1 : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         Rend.color = new Color(1, 1, 1, 1f).linear;
         Rend2.color = new Color(1, 1, 1, 1f).linear;
-        NoAlert();
         }
         finally
         {
@@ -143,16 +145,22 @@ public class Character1 : MonoBehaviour
         }
     }
 
+    public void DragStart(Vector2 pos)
+    {
+        StartCoroutine(Drag(pos));
+    }
+
     public IEnumerator Drag(Vector2 pos) //Отталкиваем героя(передаём позицию врага в векторе)
     {
         int X = Player.GetComponent<Animator>().GetInteger("Vector");
-        if (!Pushed)
+        if (!Pushed && CanWalk)
         {
+        CanWalk = false;
         Pushed = true;
-        Rigi.drag = 0;
-        Rigi.AddForce(((Vector2)transform.position - pos).normalized * 0.2f, ForceMode2D.Impulse);
-        yield return new WaitForSecondsRealtime(0.02f);
+        Rigi.AddForce(((Vector2)transform.position - pos).normalized * 50f, ForceMode2D.Force);
+        yield return new WaitForSecondsRealtime(0.01f);
         Rigi.drag = 100;
+        CanWalk = true;
         }
     }
 }

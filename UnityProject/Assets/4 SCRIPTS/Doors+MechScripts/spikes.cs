@@ -14,14 +14,20 @@ public class spikes : MonoBehaviour
     void OnTriggerEnter2D(Collider2D Col)
     {
         if (Col.CompareTag("Player"))
+        {
             HeroIsHere = true;
             Character1.Alert();
+        }
+
     }
     void OnTriggerExit2D(Collider2D Col)
     {
         if (Col.CompareTag("Player"))
+        {
             HeroIsHere = false;
             Character1.NoAlert();
+        }
+
     }
     private void Update()
     {

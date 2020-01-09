@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CanvasControls : MonoBehaviour
 {
+
     public void ActiveButt()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<moveScript>().ActiveButt();
@@ -17,5 +18,10 @@ public class CanvasControls : MonoBehaviour
     public void Shooting()
     {
         GameObject.FindGameObjectWithTag("Player").GetComponent<Aim>().Shooting();
+    }
+
+    public void Pointr()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Spells>().ChangePointer();
     }
 }
