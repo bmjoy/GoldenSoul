@@ -55,8 +55,8 @@ public class Character1 : MonoBehaviour
     }
     void Update()
     {
-
-        if(HitTime == true && !StopHitTime && EventSavingSystem.RealHp > 1) //Активируем выжидалку от урона(моргание)
+        LifeSlider.value = HP;
+        if (HitTime == true && !StopHitTime) //Активируем выжидалку от урона(моргание)
         {
             StartCoroutine(WaitForHit());
             StopHitTime = true;
@@ -87,7 +87,7 @@ public class Character1 : MonoBehaviour
         {
             HitTime = true;
             HP -= x;
-            LifeSlider.value = HP;
+
         }
         
     }

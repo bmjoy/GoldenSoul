@@ -186,11 +186,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497ba2901d5badc419bfdbe6e44ce8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: 0
+  slider: {fileID: 0}
+  Lifes: 25
+  Xfast: 1
+  Xslow: 4
+  Force: 15
   TypeAttack: 0
   CanDoDamage: 0
   Active: 0
-  Koren: {fileID: 0}
+  Koren: {fileID: 6613763759017253667, guid: a96e8039a7d10d64492aee45ca6b8929, type: 3}
+  Heart: {fileID: 2666954933892946696}
+  posX: 0
+  posY: 0
 --- !u!61 &8099267322673472844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -207,7 +214,7 @@ BoxCollider2D:
   m_Offset: {x: 0.0064229965, y: -0.068823814}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.484375, y: 0.21333334}
+    pivot: {x: 0.5, y: 0.21333334}
     oldSize: {x: 2, y: 2.34375}
     newSize: {x: 2, y: 2.34375}
     adaptiveTilingThreshold: 0.5
@@ -250,6 +257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cf2c776bb4b81042aa46e8aaa5c2bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  x: 6
+  y: 9
 --- !u!1001 &2371660190690270338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -319,6 +328,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e55dd3388b18af941a776aed6a38f4d9, type: 3}
+--- !u!1 &2666954933892946696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 426497267796363146, guid: e55dd3388b18af941a776aed6a38f4d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2371660190690270338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1480765395952150177 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3775538385900042787, guid: e55dd3388b18af941a776aed6a38f4d9,

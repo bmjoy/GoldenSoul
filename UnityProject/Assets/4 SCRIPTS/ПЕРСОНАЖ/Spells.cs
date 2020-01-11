@@ -11,7 +11,7 @@ public class Spells : MonoBehaviour
 
     public static int Pointer = -1;
 
-    public static int[] SpellsList = new int[] {1,2,0};
+    public static int[] SpellsList = new int[] {0,0,0};
 
     public GameObject[] SpellObj;
 
@@ -34,7 +34,7 @@ public class Spells : MonoBehaviour
         }
         Pointer += (Pointer == 2) ? -2 : 1;
         if (SpellsList[Pointer] == 0) ChangePointer();
-        GameObject.Find("Spell").GetComponent<Animator>().SetInteger("Spell", Pointer+1);
+        GameObject.Find("Spell").GetComponent<Animator>().SetInteger("Spell", SpellsList[Pointer]);
         GameObject.Find("SpellText").GetComponent<Text>().text = (Pointer+1).ToString();
     }
 

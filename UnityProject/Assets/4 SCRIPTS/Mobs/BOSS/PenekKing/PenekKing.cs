@@ -8,7 +8,6 @@ public class PenekKing : MonoBehaviour
     private const int V = 50;
     public GameObject slider;
     public int Lifes = 25;
-    public int LifesNow = 25;
     public float Xfast = 1f; // Ускоряем атаки + увеличиваем размер тычек
     public float Xslow = 3f; // Замедляем атаки + Уменьшаем размер тычек
     //---
@@ -24,6 +23,7 @@ public class PenekKing : MonoBehaviour
     TilemapCollider2D TC1;
     TilemapCollider2D TC2;
     TilemapCollider2D TC3;
+    TilemapCollider2D TC4;
     public GameObject Koren;
     public GameObject Heart;
     public float posX;
@@ -40,30 +40,45 @@ public class PenekKing : MonoBehaviour
         TC1 = GameObject.Find("solidmiddle").GetComponent<TilemapCollider2D>();
         TC2 = GameObject.Find("solidbottom").GetComponent<TilemapCollider2D>();
         TC3 = GameObject.Find("solidbottom2").GetComponent<TilemapCollider2D>();
+        TC4 = GameObject.Find("solidtop").GetComponent<TilemapCollider2D>();
     }
 
     void Update()
     {
-        if (LifesNow - Heart.GetComponent<MonsterLife>().MinusHp != LifesNow)
+        if (Lifes < 1)
         {
-            LifesNow--;
-            Lifes = LifesNow;
+            Character1.NoAlert();
+            Anim.SetInteger("Stage", 99);
+            slider.SetActive(false);
+            if (Vector2.Distance(Player.transform.position, transform.position) < 1f && Character1._Hit)
+            {
+                Anim.SetBool("Died", true);
+                Destroy(this);
+            }
+        }
+        if (Heart.GetComponent<MonsterLife>().Damaged)
+        {
+            StopAllCoroutines();
+            Heart.GetComponent<MonsterLife>().Damaged = false;
             StartCoroutine(Drag(Player.transform.position));
         }
-        if (Col.IsTouching(TC1) || Col.IsTouching(TC2) || Col.IsTouching(TC3))
+        if (Col.IsTouching(TC1) || Col.IsTouching(TC2) || Col.IsTouching(TC3) || Col.IsTouching(TC4))
         {
             Col.isTrigger = false;
         }
 
         if (Active)
         {
+            Character1.Alert();
+            Rigi.drag = 100;
             slider.SetActive(true);
             //Heart.GetComponent<MonsterLife>().HitEnable = true;
             Heart.SetActive(false);
             Active = false;
             Anim.SetBool("Attack", true);
-            TypeAttack = (TypeAttack==0) ? 1 : Random.Range(1, 7);
+            TypeAttack = (TypeAttack == 0) ? 1 : Random.Range(1, 5);
             if (Lifes > 1)
+
                 switch (TypeAttack)
                 {
                     case 1:
@@ -76,39 +91,21 @@ public class PenekKing : MonoBehaviour
                         StartCoroutine(Attack3());
                         break;
                     case 4:
-                        StartCoroutine(Attack3());
-                        break;
-                    case 5:
                         StartCoroutine(Attack4());
                         break;
-                    case 6:
-                        StartCoroutine(Attack2());
-                        break;
                 }
-            else if (Lifes == 3)
+            else if (Lifes < 4 && Lifes>0)
             {
                 StartCoroutine(Attack5());
             }
-            else if (Lifes < 1)
-            {
-                Character1.NoAlert();
-                Anim.SetInteger("Stage", 99);
-                slider.SetActive(false);
-                if (Vector2.Distance(Player.transform.position, transform.position) < 1f && Character1._Hit)
-                    {
-                    Anim.SetBool("Died", true);
-                    Destroy(this);
-                }
-            }
+
         }
     }
-    IEnumerator SpareMe()//разбег
+    IEnumerator SpareMe()//отступает
     {
-        //Heart.GetComponent<MonsterLife>().HitEnable = true;
-        Character1.Alert();
+        Heart.SetActive(false);
         Anim.SetBool("Attack", true);
-        Anim.SetInteger("Stage", 99);
-        yield return new WaitForSeconds(0.5f);
+        //Anim.SetInteger("Stage", 99);
         CanDoDamage = true;
         Col.isTrigger = true;
         Rigi.drag = 0;
@@ -118,7 +115,6 @@ public class PenekKing : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Anim.SetInteger("Stage", 1);
         Rigi.drag = V;
-        Character1.NoAlert();
         CanDoDamage = false;
         Anim.SetBool("Attack", false);
         Col.isTrigger = false;
@@ -127,15 +123,14 @@ public class PenekKing : MonoBehaviour
         Active = true;
     }
 
-    IEnumerator Bushed()//разбег
+    IEnumerator Bushed()//баш
     {
-        Character1.NoAlert();
         Active = false;
         Anim.SetBool("Attack", true);
         Anim.SetInteger("Stage", 5);
         CanDoDamage = false;
         Col.isTrigger = true;
-        Rigi.drag = 30;
+        Rigi.drag = 100;
         Anim.speed = 1;
         Heart.SetActive(true);
         //Heart.GetComponent<MonsterLife>().HitEnable = true;
@@ -148,7 +143,6 @@ public class PenekKing : MonoBehaviour
     {
         Anim.SetBool("Attack", true);
         Anim.SetInteger("Stage", 3);
-        Character1.Alert();
         yield return new WaitForSeconds(1f);
         CanDoDamage = true;
         Col.isTrigger = true;
@@ -165,7 +159,6 @@ public class PenekKing : MonoBehaviour
         CanDoDamage = false;
         Rigi.drag = 0;
         Active = true;
-        Character1.NoAlert();
     }
 
     IEnumerator Attack2() //корни преследуют
@@ -175,12 +168,12 @@ public class PenekKing : MonoBehaviour
         yield return new WaitForSeconds(1f);
         for (int i = 0; i < 7 + Xfast; i++)
         {
-            Instantiate(Koren, new Vector2(Player.transform.position.x, Player.transform.position.y), Quaternion.identity);
+            Instantiate(Koren, new Vector2(Player.transform.position.x+Random.Range(0f,0.05f), Player.transform.position.y + Random.Range(0f, 0.05f)), Quaternion.identity);
             yield return new WaitForSeconds(0.5f + 1 / Xfast);
         }
         Anim.SetInteger("Stage", 1);
         Heart.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         Active = true;
     }
 
@@ -204,7 +197,7 @@ public class PenekKing : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Anim.SetInteger("Stage", 1);
         Heart.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(4f);
         Active = true;
     }
 
@@ -214,7 +207,6 @@ public class PenekKing : MonoBehaviour
         {
             Anim.SetBool("Attack", true);
             Anim.SetInteger("Stage", 3);
-            Character1.Alert();
             yield return new WaitForSeconds(1f);
             CanDoDamage = true;
             Col.isTrigger = true;
@@ -228,7 +220,6 @@ public class PenekKing : MonoBehaviour
             Anim.SetBool("Attack", false);
             Col.isTrigger = false;
             yield return new WaitForSeconds(1f);
-            Character1.NoAlert();
             CanDoDamage = false;
             Rigi.drag = 0;
         }
@@ -259,7 +250,6 @@ public class PenekKing : MonoBehaviour
             Rigi.drag = 0;
             Anim.SetBool("Attack", true);
             Anim.SetInteger("Stage", 3);
-            Character1.Alert();
             yield return new WaitForSeconds(1f);
             CanDoDamage = true;
             Col.isTrigger = true;
@@ -267,7 +257,6 @@ public class PenekKing : MonoBehaviour
             Anim.speed = 1;
             Rigi.AddForce((Player.transform.position - transform.position) * (Force + 0.5f) , ForceMode2D.Impulse);
             Anim.SetInteger("Stage", 4);
-            Character1.NoAlert();
             yield return new WaitForSeconds(1f);
             Anim.SetInteger("Stage", 1);
             Rigi.drag = V;
@@ -275,7 +264,7 @@ public class PenekKing : MonoBehaviour
             Col.isTrigger = false;
             Heart.SetActive(true);
             CanDoDamage = false;
-            Rigi.drag = 20;
+            Rigi.drag = 100;
             }
             yield return new WaitForSeconds(2f);
             Heart.SetActive(false);
@@ -294,6 +283,8 @@ public class PenekKing : MonoBehaviour
         }
         if (Col.CompareTag("DamageForBoss"))
         {
+            slider.GetComponent<Slider>().value = Lifes - 3;
+            Lifes -= 3;
             StopAllCoroutines();
             StartCoroutine(Bushed());
         }
@@ -317,17 +308,20 @@ public class PenekKing : MonoBehaviour
 
     public IEnumerator Drag(Vector2 pos) //Отталкиваем монстра(передаём позицию врага в векторе)
     {
+        Anim.SetInteger("Stage", 99);
         Lifes--;
         slider.GetComponent<Slider>().value = Lifes;
         Xslow = (Xslow > 1) ? Xslow-1 : Xslow;
         Xfast = (Xfast < 5) ? Xfast+1 : Xfast;
         int X = Player.GetComponent<Animator>().GetInteger("Vector");
         Rigi.drag = 0;
-        Rigi.AddForce(((Vector2)transform.position - pos).normalized * 2f, ForceMode2D.Impulse);
+        Rigi.AddForce(((Vector2)transform.position - pos).normalized * Force, ForceMode2D.Impulse);
         yield return new WaitForSecondsRealtime(0.02f);
-        Rigi.drag = V;
-        Heart.SetActive(false);
+        Rigi.drag = V;    
+        Rigi.drag = 100;
         //Heart.GetComponent<MonsterLife>().HitEnable = true;
+        yield return new WaitForSecondsRealtime(2f);
+
         StopAllCoroutines();
         StartCoroutine(SpareMe());
     }

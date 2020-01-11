@@ -16,7 +16,7 @@ public class KorenBullet1 : MonoBehaviour
         if (col.CompareTag("Player") && !ignore)
         {
             StartCoroutine(Player.GetComponent<Character1>().Drag(transform.position));
-            Character1.MinusHp();
+            Character1.MinusHp(25);
             ignore = false;
         }
     }

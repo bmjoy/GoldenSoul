@@ -9,6 +9,7 @@ public class moveScript : MonoBehaviour
     float horizontalSpeed,verticalSpeed; // Скорость движения
     Rigidbody2D Rigi;
     //static
+    public static bool NoShooting;
     public static bool moveyes; // Если ходим
     public static Animator hero; 
     public static bool attack;
@@ -27,6 +28,7 @@ public class moveScript : MonoBehaviour
         Rigi = gameObject.GetComponent<Rigidbody2D>();
         hero = GetComponent<Animator>();
         moveyes = true;
+        NoShooting = true;
         attack = false;
         hero.SetInteger("Vector", 1);
         JStick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
@@ -115,13 +117,13 @@ public class moveScript : MonoBehaviour
             horizontalSpeed = Speed; //Скорость движения
             verticalSpeed = Speed;
         }
-        if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || JStick.Horizontal != 0 || JStick.Vertical != 0) && moveyes == true &&
+        if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || JStick.Horizontal != 0 || JStick.Vertical != 0) && moveyes == true && NoShooting == true &&
                 !Input.GetKey(KeyCode.Space) && !attackButt)
         {
             hero.speed = 0; //Остановить анимацию если не идём
         }
 
-        if (moveyes)
+        if (moveyes && NoShooting)
         {
             Rigi.velocity = new Vector2(JStick.Horizontal, JStick.Vertical).normalized * Speed;
         }
@@ -136,7 +138,7 @@ public class moveScript : MonoBehaviour
             hero.speed = 0; //Остановить анимацию если не идём
         }
 
-        if (moveyes)
+        if (moveyes && NoShooting)
         {
         Rigi.velocity = new Vector2(JStick.Horizontal, JStick.Vertical).normalized * Speed;
         }

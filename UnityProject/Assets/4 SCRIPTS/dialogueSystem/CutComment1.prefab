@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ece6fb8416db314496212abcdf23e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mas: 0100000002000000
-  masav: 0100000002000000
+  mas: 000000000000000000000000
+  masav: 000000000000000000000000
   t: 2

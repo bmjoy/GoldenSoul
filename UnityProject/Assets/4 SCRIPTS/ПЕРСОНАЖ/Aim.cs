@@ -55,19 +55,21 @@ public class Aim : MonoBehaviour
 
     public void Aiming()
     {
+        if (Spells.Pointer < 0) return;
         Aim1.SetActive(true);
         PLEE = false;
         gameObject.GetComponent<Spells>().Spawn();
-        moveScript.moveyes = false;
+        moveScript.NoShooting = false;
         gameObject.GetComponent<Animator>().SetBool("Spell", true);
         gameObject.GetComponent<Spells>().Regen = false;
     }
 
     public void Shooting()
     {
+        if (Spells.Pointer < 0) return;
         Aim1.SetActive(false);
         PLEE = true;
-        moveScript.moveyes = true;
+        moveScript.NoShooting = true;
         gameObject.GetComponent<Animator>().SetBool("Spell", false);
         gameObject.GetComponent<Spells>().Regen = true;
     }

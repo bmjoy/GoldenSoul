@@ -24,7 +24,7 @@ public class DialogueMass
             "Прими своё спасение!",//18
             "После поглощения души, я буду ждать тебя впереди.",//19
             "Удачи!",//20
-            "",//21
+            "Вы не можете носить более 3х заклинаний.",//21
             "Огромный блестящий отполированный меч.",//22 Меч в камне
             "Он торчит в огромном блестящем отполированном камне. ",//23
             "Вы пытаетесь отделить этот прекрасный камень от груды металлолома. Потрачено.",//24
@@ -37,11 +37,11 @@ public class DialogueMass
             "Тот плод в лианах, что сверкает золотым цветом, называется СЕРДЦЕ НОЧИ.",//31 Сердце ночи
             "Такие сердца обычно содержат в себе жизненную энергию. Это очень редкое растение.",//32
             "Оно может подкрепить твою НОВУЮ ДУШУ энергией. Для его активации нажми 'A'.",//33
-            "Для того, чтобы ударить, НАЖМИ кнопку удара.",//34
-            "",//35
+            "Найди какое-нибудь заклинание, чтобы убрать препятствия.",//34
+            "Нажмите на кнопку для атаки.\nУдерживайте кнопку для мощной прицельной атаки.",//35
             "Вау! Этого не может быть! Тут в кустах стоит Рояль.",//36
-            "Это старинная газета. Вы можете разобрать только заголовок.\n На нём написано:",//37------Газета
-            "Магический катаклизм: Кто ответит за боль и страдание?",//38
+            "Это старинная газета. Вы можете разобрать только заголовок.\nНа нём написано:",//37------Газета
+            "Магический катаклизм: Кто ответит за боль и страдания?",//38
             "Ну Надо-же! \nПолучилось! \nКак самочувствие?",//39
             "Ты не против присесть и поговорить? Теперь ты в безопасности.",//40
             "Давай знакомиться. Меня зовут Кэндл.",//41
@@ -127,7 +127,7 @@ public class DialogueMass
             "Accept your salvation...",//18
             "Once the merger happens, you'll pass out. I will wait for you near ahead.",//19
             "Good luck.",//20
-            "",//21
+            "You cannot have more than 3 spells.",//21
             "A shiny, polished greatsword.",//22
             "It is fixed into a shiny, polished stone",//23
             "You attempt to separate this wonderful stone from the worthless hunk of metal. You failed.",//24
@@ -140,8 +140,8 @@ public class DialogueMass
             "That fruit concealed within vines, that glisters like gold is called THE HEART OF THE NIGHT.",//31
             "These fruit usually contain life energy within themselves. A very rare plant.",//32
             "This can enrich your NEW SOUL with energy. To activate it, press 'A'",//33
-            "To hit, HOLD the hit button." ,//34
-            "",//35
+            "Find some spell to remove obstacles." ,//34
+            "Click on the button to attack. \nHold the button for a powerful trajectory attack.",//35
             "Wow! It can't be! Here in the bushes stands the Grand Piano.",//36
             "This is an old paper. You can make out only the headline. \n It says:", // 37 ------ Newspaper
             "Magical cataclysm. Who is responsible for pain and suffering?", // 38
