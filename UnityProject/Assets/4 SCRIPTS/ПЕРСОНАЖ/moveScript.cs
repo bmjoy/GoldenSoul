@@ -21,7 +21,7 @@ public class moveScript : MonoBehaviour
     public static bool attackButt = false;
     public static bool activate;
     // Старт!
-    void Start()
+    void Awake()
     {
         //Cursor.lockState = CursorLockMode.Locked; //Фиксируем курсор
         //Cursor.visible = false; //Делаем его невидимым

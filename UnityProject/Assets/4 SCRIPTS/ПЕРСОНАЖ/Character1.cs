@@ -9,7 +9,7 @@ using System;
 public class Character1 : MonoBehaviour
 {
     //Статы
-    public static int HP = 100;
+    public static int HP = 10;
     public static int MP = 100;
     public static int LVL = 1;
     //

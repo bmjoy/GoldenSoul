@@ -17,12 +17,24 @@ public class DirectorCutScene : MonoBehaviour
     public PlayableDirector director;
     public bool Stopable = true;
     public activeComment[] Comms;
+
+    private GameObject ControlButton;
+    private GameObject AttackButton;
+    private GameObject ActiveButton;
     private void OnEnable()
     {
         moveScript.moveyes = false;
         playerAnim = playerAnimator.runtimeAnimatorController;
         playerAnimator.runtimeAnimatorController = null;
-
+        ControlButton = GameObject.Find("PhoneControls");
+        ActiveButton = GameObject.Find("Action");
+        AttackButton = GameObject.Find("Attack");
+        if (!Stopable)
+        {
+            ActiveButton.SetActive(false);
+        }
+        ControlButton.SetActive(false);
+        AttackButton.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -88,7 +100,9 @@ public class DirectorCutScene : MonoBehaviour
             yield return new WaitForSeconds(0.005f);
             }
         }
-
+        ActiveButton.SetActive(true);
+        ControlButton.SetActive(true);
+        AttackButton.SetActive(true);
         yield return new WaitForSeconds(1f);
         image.color = new Color(0, 0, 0, 0);
         moveScript.moveyes = true;
