@@ -38,6 +38,11 @@ public class Character1 : MonoBehaviour
         transform.position = new Vector2(EventSavingSystem.LevelCoordsX[EventSavingSystem.ThisLvl], EventSavingSystem.LevelCoordsY[EventSavingSystem.ThisLvl]);
         }
         catch { }
+        if(EventSavingSystem.x != 0 && EventSavingSystem.y != 0)
+        {
+            gameObject.transform.position = new Vector2(EventSavingSystem.x, EventSavingSystem.y);
+            EventSavingSystem.y = EventSavingSystem.x = 0;
+        }
 
     }
 

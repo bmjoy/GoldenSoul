@@ -24,6 +24,7 @@ public class EventSavingSystem : MonoBehaviour
     public static bool[] UsedEvents = new bool[20];
     public static bool[] Keys = new bool[10];  //Собранные ключи
     public static bool[] HeroWasHere;  //для возврата на пребедущие локации
+    public static float x, y;
 
     //-----------------------------------
     private void Awake()
@@ -46,6 +47,117 @@ public class EventSavingSystem : MonoBehaviour
         _LevelCoordsY = LevelCoordsY;
         _HeroWasHere = HeroWasHere;
         _Keys = Keys;
+    }
+
+    public static void SaveAll(float x, float y)
+    {
+        PlayerPrefs.SetInt("Language", Language);
+        PlayerPrefs.SetInt("Hp", Character1.HP);
+        PlayerPrefs.SetInt("ThisLvl", ThisLvl);
+        PlayerPrefs.SetFloat("LastSaveX", x);
+        PlayerPrefs.SetFloat("LastSaveY", y);
+
+        int i = 0;
+        foreach (int Spells in Spells.SpellsList)
+        {
+            PlayerPrefs.SetInt("SpellsList" + i.ToString(), Spells);
+            i++;
+        }
+
+        i = 0;
+        foreach (bool Events in UsedEvents)
+        {
+            int a = (Events) ? 1 : 0;
+            PlayerPrefs.SetInt("UsedEvents" + i.ToString(), a);
+            i++;
+        }
+
+        i = 0;
+        foreach (float CoordsX  in LevelCoordsX)
+        {
+            PlayerPrefs.SetFloat("LevelCoordsX" + i.ToString(), CoordsX);
+            i++;
+        }
+
+        i = 0;
+        foreach (float CoordsY in LevelCoordsY)
+        {
+            PlayerPrefs.SetFloat("LevelCoordsY" + i.ToString(), CoordsY);
+            i++;
+        }
+
+        i = 0;
+        foreach (bool Washere in HeroWasHere)
+        {
+            int a = (Washere) ? 1 : 0;
+            PlayerPrefs.SetInt("HeroWasHere" + i.ToString(), a);
+            i++;
+        }
+
+        i = 0;
+        foreach (bool Key in Keys)
+        {
+            int a = (Key) ? 1 : 0;
+            PlayerPrefs.SetInt("Key" + i.ToString(), a);
+            i++;
+        }
+        PlayerPrefs.Save();
+    }
+
+
+    public static void LoadAll()
+    {
+        Language = PlayerPrefs.GetInt("Language");
+        Character1.HP = PlayerPrefs.GetInt("Hp");
+        ThisLvl = PlayerPrefs.GetInt("ThisLvl");
+        x = PlayerPrefs.GetFloat("LastSaveX");
+        y =PlayerPrefs.GetFloat("LastSaveY");
+
+        LevelCoordsX[ThisLvl-1] = x;
+        LevelCoordsX[ThisLvl-1] = y;
+
+        int i = 0;
+        foreach (int Spells1 in Spells.SpellsList)
+        {
+            Spells.SpellsList[i] = PlayerPrefs.GetInt("SpellsList" + i.ToString());
+            i++;
+        }
+
+        i = 0;
+        foreach (bool Events in UsedEvents)
+        {
+            UsedEvents[i] = (PlayerPrefs.GetInt("UsedEvents" + i.ToString()) == 1) ? true : false;
+            i++;
+        }
+
+        i = 0;
+        foreach (float CoordsX in LevelCoordsX)
+        {
+            LevelCoordsX[i] = PlayerPrefs.GetFloat("LevelCoordsX" + i.ToString());
+            i++;
+        }
+
+        i = 0;
+        foreach (float CoordsY in LevelCoordsY)
+        {
+            LevelCoordsY[i] = PlayerPrefs.GetFloat("LevelCoordsY" + i.ToString());
+            i++;
+        }
+
+        i = 0;
+        foreach (bool Washere in HeroWasHere)
+        {
+            HeroWasHere[i] = (PlayerPrefs.GetInt("HeroWasHere" + i.ToString())==1) ? true : false;
+            i++;
+        }
+
+        i = 0;
+        foreach (bool Key in Keys)
+        {
+            Keys[i] = (PlayerPrefs.GetInt("Key" + i.ToString()) == 1)? true : false;
+            i++;
+        }
+        PlayerPrefs.Save();
     }
 
 

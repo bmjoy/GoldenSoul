@@ -65,6 +65,18 @@ public class DirectorCutScene : MonoBehaviour
             StartCoroutine(Cs());
         }
     }
+
+    private void OnDestroy()
+    {
+        playerAnim = playerAnimator.runtimeAnimatorController;
+        playerAnimator.runtimeAnimatorController = null;
+        director.Pause();
+        director.Stop();
+        playerAnimator.runtimeAnimatorController = playerAnim;
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector2(EventSavingSystem.LevelCoordsX[EventSavingSystem.ThisLvl], EventSavingSystem.LevelCoordsY[EventSavingSystem.ThisLvl]);
+        gameObject.GetComponent<Appear>().Appears();
+    }
+
     public IEnumerator Cs()
     {
         EventSavingSystem.UsedEvents[NumScene] = true; // отмечаем что катсцена проиграла
@@ -103,6 +115,7 @@ public class DirectorCutScene : MonoBehaviour
         ActiveButton.SetActive(true);
         ControlButton.SetActive(true);
         AttackButton.SetActive(true);
+        moveScript.FindJoystick();
         yield return new WaitForSeconds(1f);
         image.color = new Color(0, 0, 0, 0);
         moveScript.moveyes = true;

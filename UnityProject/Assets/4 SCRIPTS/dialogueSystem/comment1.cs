@@ -87,7 +87,7 @@ public class comment1 : MonoBehaviour
             break;
 
             case 5: //Диалог активируемый удаляется
-                if (col.CompareTag(tagg) && checkcomm == true )
+                if ((moveScript.activate || Input.GetKeyDown(KeyCode.E)) && col.CompareTag(tagg) && checkcomm == true)
                 {
                     if (Stay && checkcomm == true)
                     {
@@ -95,11 +95,8 @@ public class comment1 : MonoBehaviour
                         moveScript.hero.speed = 0;
                     }
                     moveScript.activate = false;
-                    if (Input.GetKeyDown(KeyCode.E) || moveScript.activate)
-                    {
                     StartCoroutine(Dialog.Dialogue3(Dialog.masDial, masav, mas, 0.05f, t));
                     checkcomm = false;
-                    }
                 }
             break;
             case 6: //Диалог активируемый НЕ удаляется

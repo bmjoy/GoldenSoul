@@ -21,7 +21,7 @@ public class moveScript : MonoBehaviour
     public static bool attackButt = false;
     public static bool activate;
     // Старт!
-    void Awake()
+    void Start()
     {
         //Cursor.lockState = CursorLockMode.Locked; //Фиксируем курсор
         //Cursor.visible = false; //Делаем его невидимым
@@ -31,6 +31,11 @@ public class moveScript : MonoBehaviour
         NoShooting = true;
         attack = false;
         hero.SetInteger("Vector", 1);
+        JStick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
+    }
+
+    public static void FindJoystick()
+    {
         JStick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
     }
     void FixedUpdate()

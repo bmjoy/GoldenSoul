@@ -3,6 +3,7 @@ guid: fae7998409afac14dade4d3723b58dbf
 TextureImporter:
   fileIDToRecycleName:
     21300000: oneframe-npc_0
+    21300002: oneframe-npc_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -121,7 +122,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acdcadb3104e90f489e9e67a83b9c9b3
+      spriteID: faac82b6712d66548823f7f7b9990b97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oneframe-npc_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b168275e871fd77498b91045d3a2b068
       vertices: []
       indices: 
       edges: []

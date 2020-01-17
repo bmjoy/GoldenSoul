@@ -4,13 +4,13 @@ public class DialogueMass
     public static string[] Rus =
     {
             "LexusLight", //0
-            "а", //1
+            "Игра сохранена.", //1
             "GoldenSoul.",//2
-            "~ Вера. Надежда. Судьба. \n Всё тщетно..",//3 Вступление
+            "~ Вера. Надежда. Судьба. \nВсё тщетно..",//3 Вступление
             "~ Каждый, кто попадает в зачарованный лес, остаётся здесь навсегда.",//4
             "Может это просто плохой сон?",//5
-            "Нет, ведь ты не спал буд-то целую вечность.",//6
-            "Всё, что осталось − это твоё имя. \n Потеря имени равносильна потере всего, что у тебя есть.",//7
+            "Нет, ведь ты не спал будто целую вечность.",//6
+            "Всё, что осталось − это твоё имя. \nПотеря имени равносильна потере всего, что у тебя есть.",//7
             "Тебя зовут Каспиан. И ты заблудился.",//8
             "Пожалуйста, запомни cвоё имя.",//9
             "Человек, что должен был исчезнуть давным-давно.....",//10
@@ -59,7 +59,7 @@ public class DialogueMass
             "Знаешь, когда я нашёл тебя... Тебе оставалось не долго.",//53
             "Но ЗОЛОТАЯ ДУША - спасла тебя, наполнив тебя МАГИЧЕСКОЙ ЭНЕРГИЕЙ.",//54
             "Это всего лишь ПОДДЕЛКА. Ведь ты не чувствуешь боли, не можешь заплакать. У тебя не течёт кровь.",//55
-            "Мы c тобой в чём то похожи...",//56
+            "Мы c тобой в чём-то похожи...",//56
             "И, я кажется знаю, как можно вернуть твою душу назад. Сначала нам нужно выбраться отсюда.",//57
             "К сожалению, я не могу телепортировать нас обоих. Тебе придётся выбираться своими ногами.",//58
             "Тут поблизости есть старый мост. Он является выходом из этого места.",//59
@@ -99,15 +99,19 @@ public class DialogueMass
             ".................",//93
             "Кинг убежал. Вы не стали его убивать.",//94
             "Кинг получил по заслугам.",//95
-            "",//96
-            "",//97
-
+            "Дверь заперта изнутри. \nВы постучали.",//96
+            "Вам постучали в ответ...",//97
+            "Привет! \nМеня зовут Винсент. \nПриятно познакомиться.",//98 ВАН ГОГ
+            "Всё что я могу и умею - рисовать. \nТы как-раз вовремя! \nЯ завершаю свой рисунок.",//99
+            "Раньше над моими рисунками все смеялись. \nНо после того как я очутился здесь.... Всё изменилось.",//100
+            "Меня время от времени навещает чудная девушка. Ей очень нравятся мои работы.",//101
+            "Здесь я действительно счастлив. ",//102
  /*cat1*/   
     };
     public static string[] Eng =
 {
             "LexusLight", //0
-            "a",//1
+            "Game saved.",//1
             "GoldenSoul.",//2
             "~ Hope. Faith. Fate. \nAll in vain.",//3
             "~ Everyone, who enters the enchanted forest will stay here forever.",//4
@@ -115,7 +119,7 @@ public class DialogueMass
             "It couldn't be, because you haven't slept for what seems like eternity.",//6
             "All you have left is your name.",//7
             "The loss of your name equals the loss of everything you have ever had.",//8
-            "Your name is Caspian.\n And you're lost. \n Please, remember this name.",//9
+            "Your name is Caspian.\nAnd you're lost. \nPlease, remember this name.",//9
             "Human, who should've ceased existance long-long time ago...",//10
             "Your soul is gone, and your body is doomed to roam in this time loop for all eternity.",//11
             "You're lucky, because I happened to stumble upon you COMPLETELY BY CHANCE.",//12
@@ -143,7 +147,7 @@ public class DialogueMass
             "Find some spell to remove obstacles." ,//34
             "Click on the button to attack. \nHold the button for a powerful trajectory attack.",//35
             "Wow! It can't be! Here in the bushes stands the Grand Piano.",//36
-            "This is an old paper. You can make out only the headline. \n It says:", // 37 ------ Newspaper
+            "This is an old paper. You can make out only the headline. \nIt says:", // 37 ------ Newspaper
             "Magical cataclysm. Who is responsible for pain and suffering?", // 38
             "Would you look at that! \nIt worked! \nHow are you feeling right now?",//39
             "Would you mind to sit down and chat with me for a while? You are safe now.",//40
@@ -166,7 +170,7 @@ public class DialogueMass
             "And I think I know, how can we get your soul back. But first we have to escape from here.",//57
             "Unfortunately, I can't teleport both of us. You'll have to get out of here on your own two feet.",//58
             "There's an old bridge nearby. It is the exit from this place.",//59
-            "Get up! \n I will explain how everything works.",//60
+            "Get up! \nI will explain how everything works.",//60
             "Let the genial tutorial begin!",//61
             "~Fiat Lux!",//62
             "What's up?",//63
@@ -176,7 +180,7 @@ public class DialogueMass
             "It seems that you aren't very enjoying this game.",//67
             "Stare at a tree long enough - the tree will stare back.",//68
             "You feel uncomfortable.",//69
-            "Strange inscriptions are written on the stone. Some lyrics are written on top of them.",//70 ПИКЧЕРОВУ
+            "Strange inscriptions are written on the stone. Some lyrics are written on top of them.",//70
             "'Stars are fallen. \nHopes are stolen'.",//71
             "'Сlocks have singed. \nForests have ripped.'",//72
             "'To protect this world. \nI given my word.'",//73
@@ -202,7 +206,12 @@ public class DialogueMass
             ".................",//93
             "Кинг убежал. Вы не стали его убивать.",//94
             "Кинг получил по заслугам.",//95
-            "",//96
-            "",//97
+            "The door is locked from inside. \nYou knocked.",//96
+            "Somebody knocked on door from other side.",//97
+            "Hello! \nMy name is Vincent. \nNice to meet you.",//98 ВАН ГОГ ПРОВЕРИТЬ ПЕРЕВОД
+            "All I can and can do is draw. \nYou are just in time! \nI am completing my drawing.",//99
+            "Previously, everyone laughed at my drawings. \nBut after I got here .... everything has changed.",//100
+            "A wonderful girl visits me from time to time. She really likes my works.",//101
+            "Here I am really happy.",//102
     };
 }

@@ -7,11 +7,13 @@ public class MainMenu : MonoBehaviour
     public int scene;
     public void Load()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
+        EventSavingSystem.LoadAll();
+        SceneManager.LoadScene(EventSavingSystem.ThisLvl);
     }
     public void Play() {
-        EventSavingSystem.RealHp = 2;
-        SceneManager.LoadScene(scene);
+        EventSavingSystem.RealHp = 5;
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(1);
     }
     public void Exit()
     {
