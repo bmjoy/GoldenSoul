@@ -205,6 +205,11 @@ PrefabInstance:
       propertyPath: Hp
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1303597933565052879, guid: e55dd3388b18af941a776aed6a38f4d9,
+        type: 3}
+      propertyPath: MonsterPic
+      value: 
+      objectReference: {fileID: 397810159326100493}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e55dd3388b18af941a776aed6a38f4d9, type: 3}
 --- !u!1 &894352649675754785 stripped

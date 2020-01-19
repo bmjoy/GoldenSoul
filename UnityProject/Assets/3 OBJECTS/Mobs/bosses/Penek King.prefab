@@ -198,6 +198,7 @@ MonoBehaviour:
   Heart: {fileID: 2666954933892946696}
   posX: 0
   posY: 0
+  Phrases: []
 --- !u!61 &8099267322673472844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -326,6 +327,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1303597933565052879, guid: e55dd3388b18af941a776aed6a38f4d9,
+        type: 3}
+      propertyPath: MonsterPic
+      value: 
+      objectReference: {fileID: 5084398681834024564}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e55dd3388b18af941a776aed6a38f4d9, type: 3}
 --- !u!1 &2666954933892946696 stripped

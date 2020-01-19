@@ -5,6 +5,15 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public int scene;
+
+    private void Start()
+    {
+        EventSavingSystem.Language = PlayerPrefs.GetInt("Language");
+        if (EventSavingSystem.Language == 0)
+            GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", true);
+        else
+            GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", false);
+    }
     public void Load()
     {
         EventSavingSystem.LoadAll();
@@ -26,5 +35,7 @@ public class MainMenu : MonoBehaviour
         GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", true);
         else
             GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", false);
+        PlayerPrefs.SetInt("Language", EventSavingSystem.Language);
+        PlayerPrefs.Save();
     }
 }

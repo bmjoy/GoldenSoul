@@ -28,6 +28,10 @@ public class Spells : MonoBehaviour
 
     public void ChangePointer()
     {
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("PlayerBullet2"))
+        {
+            Destroy(item);
+        }
         if (SpellsList[0] == 0 && SpellsList[1] == 0 && SpellsList[2] == 0)
         {
             return;
@@ -51,6 +55,11 @@ public class Spells : MonoBehaviour
 
     public void Spawn() // Спавним заклинание
     {
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("PlayerBullet2"))
+        {
+            Destroy(item);
+        }
+
         switch (SpellsList[Pointer])
         {
             case 1:
@@ -58,6 +67,9 @@ public class Spells : MonoBehaviour
                 break;
             case 2:
                 StartCoroutine(MagicSword());
+                break;
+            case 3:
+                StartCoroutine(MagicWand());
                 break;
         }
         
@@ -90,6 +102,23 @@ public class Spells : MonoBehaviour
             Instantiate(gameObject.GetComponent<Spells>().SpellObj[1], new Vector2(gameObject.transform.position.x + Random.Range(-1f, 1f), gameObject.transform.position.y + Random.Range(-1f, 1f)), Quaternion.identity);
             Instantiate(gameObject.GetComponent<Spells>().SpellObj[1], new Vector2(gameObject.transform.position.x + Random.Range(-1f, 1f), gameObject.transform.position.y + Random.Range(-1f, 1f)), Quaternion.identity);
             yield return new WaitForSeconds(0.5f);
+        }
+
+    }
+    IEnumerator MagicWand()
+    {
+
+        if (ManaSlider.value > 15)
+        {
+        Instantiate(gameObject.GetComponent<Spells>().SpellObj[2], new Vector2(gameObject.transform.position.x + Random.Range(-0.3f, 0.3f), gameObject.transform.position.y + Random.Range(-0.5f, 0.5f)), Quaternion.identity);
+        ManaSlider.value -= 15;
+        }
+
+        while (true)
+        {
+            if (ManaSlider.value <= 15 || Aim.PLEE) { break; }
+            ManaSlider.value -= 7;
+            yield return new WaitForSeconds(0.6f);
         }
 
     }

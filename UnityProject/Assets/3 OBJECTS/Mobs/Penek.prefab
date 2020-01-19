@@ -170,7 +170,7 @@ BoxCollider2D:
   m_Offset: {x: -0.04128635, y: -0.2850721}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.625}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -232,6 +232,11 @@ PrefabInstance:
       propertyPath: Monster
       value: 
       objectReference: {fileID: 7645662659689647076}
+    - target: {fileID: 1303597933565052879, guid: e55dd3388b18af941a776aed6a38f4d9,
+        type: 3}
+      propertyPath: MonsterPic
+      value: 
+      objectReference: {fileID: 7645662659689647074}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e55dd3388b18af941a776aed6a38f4d9, type: 3}
 --- !u!1 &3303189862619350194 stripped

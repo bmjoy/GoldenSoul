@@ -16,6 +16,7 @@ public class playerBullet2 : MonoBehaviour
     {
         Rigi = gameObject.GetComponent<Rigidbody2D>();
         StartCoroutine(WaitPlee());
+        StartCoroutine(WaitDelete());
     }
 
     // Update is called once per frame
@@ -103,6 +104,7 @@ public class playerBullet2 : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         wasForced = true;
         gameObject.GetComponent<Animator>().SetBool("Activate", true);
+        gameObject.tag = "PlayerBullet";
         Rigi.AddForce(Vector.normalized * ForceD, ForceMode2D.Impulse);
         StartCoroutine(WaitDelete());
     }

@@ -18,6 +18,7 @@ TagManager:
   - Aim
   - PlayerBullet
   - Monsterlife
+  - PlayerBullet2
   layers:
   - Default
   - TransparentFX

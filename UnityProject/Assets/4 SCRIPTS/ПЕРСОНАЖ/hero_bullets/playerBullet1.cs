@@ -56,6 +56,7 @@ public class playerBullet1 : MonoBehaviour
 
         if (!wasForced && Aim.PLEE)
         {
+            gameObject.tag = "PlayerBullet";
             Rigi.AddForce(Vector.normalized * ForceD, ForceMode2D.Impulse);
             StartCoroutine(WaitDelete());
             wasForced = true;

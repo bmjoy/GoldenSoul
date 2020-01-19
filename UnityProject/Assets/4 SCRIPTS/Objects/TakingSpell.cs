@@ -41,18 +41,21 @@ public class TakingSpell : MonoBehaviour
                 Spells.SpellsList[0] = type;
                 try { enableObj.SetActive(true); } catch { }
                 GameObject.Find("hero").GetComponent<Spells>().ChangePointer();
+                Destroy(gameObject);
                 return;
             }
             if (Spells.SpellsList[1] == 0) {
                 Spells.SpellsList[1] = type;
                 Spells.Pointer = 0;
                 GameObject.Find("hero").GetComponent<Spells>().ChangePointer();
+                Destroy(gameObject);
                 return;
             }
             if (Spells.SpellsList[2] == 0) {
                 Spells.SpellsList[2] = type;
                 Spells.Pointer = 1;
                 GameObject.Find("hero").GetComponent<Spells>().ChangePointer();
+                Destroy(gameObject);
                 return;
             }
             
@@ -61,8 +64,10 @@ public class TakingSpell : MonoBehaviour
             {
 
                 Spells.SpellsList[Spells.Pointer] = type;
+                Destroy(gameObject);
 
             }
+            
         }
     }
 }
