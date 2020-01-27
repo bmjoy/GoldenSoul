@@ -86,11 +86,11 @@ public class Penek : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name != "solidmiddle" || collision.gameObject.name != "solidbottom1" || collision.gameObject.name != "solidbottom2")
+        if (collision.gameObject.name != "solidmiddle" && collision.gameObject.name != "solidbottom1" && collision.gameObject.name != "solidbottom2")
         {
             Col.isTrigger = true;
         }
-        else {
+        if (collision.gameObject.name == "solidmiddle" || collision.gameObject.name == "solidbottom1" || collision.gameObject.name == "solidbottom2"){
             Col.isTrigger = false;
             Rigi.velocity = Vector2.zero;
         }

@@ -21,7 +21,7 @@ public class Vase : MonoBehaviour
             Destroyed = true;
             Destroy(collision.gameObject);
         }
-        if (collision.CompareTag("PlayerBullet2") && !Destroyed)
+        if (collision.CompareTag("PlayerBullet3") && !Destroyed)
         {
             Break();
             Destroyed = true;

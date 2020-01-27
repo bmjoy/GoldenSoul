@@ -113,8 +113,13 @@ public class EventSavingSystem : MonoBehaviour
         x = PlayerPrefs.GetFloat("LastSaveX");
         y =PlayerPrefs.GetFloat("LastSaveY");
 
-        LevelCoordsX[ThisLvl-1] = x;
-        LevelCoordsX[ThisLvl-1] = y;
+        try
+        {
+            LevelCoordsX[ThisLvl - 1] = x;
+            LevelCoordsX[ThisLvl - 1] = y;
+        }
+        catch { return; }
+
 
         int i = 0;
         foreach (int Spells1 in Spells.SpellsList)

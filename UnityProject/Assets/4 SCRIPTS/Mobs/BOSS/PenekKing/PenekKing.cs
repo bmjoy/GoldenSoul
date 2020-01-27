@@ -55,12 +55,20 @@ public class PenekKing : MonoBehaviour
         if (Lifes < 1 && Heart.GetComponent<MonsterLife>().Damaged && LastStady)
         {
             StopAllCoroutines();
-            Character1.NoAlert();
-            Anim.SetInteger("Stage", 99);
-            try {GameObject.Find("DeleteObjects").SetActive(false);} catch { }
+            StartCoroutine(Die());
             Anim.SetBool("Died", true);
             Heart.SetActive(false);
-            EventSavingSystem.UsedEvents[7] = true;
+            Phrases[3].SetActive(true);
+            EventSavingSystem.UsedEvents[8] = true;
+            return;
+        }
+        if (Lifes < 1 && Vector2.Distance(Player.transform.position, transform.position) > 9 && LastStady)
+        {
+            StopAllCoroutines();
+            Heart.SetActive(false);
+            Phrases[4].SetActive(true);
+            EventSavingSystem.UsedEvents[9] = true;
+            Destroy(gameObject);
             return;
         }
         if (Heart.GetComponent<MonsterLife>().Damaged)
@@ -147,11 +155,15 @@ public class PenekKing : MonoBehaviour
         CanDoDamage = false;
         Anim.SetBool("Attack", false);
         Col.isTrigger = false;
+        Phrases[2].SetActive(true);
         yield return new WaitForSeconds(1f);
         Anim.SetInteger("Stage", 99);
         Rigi.drag = 100;
         LastStady = true;
         Heart.SetActive(true);
+        StartCoroutine(Heart.GetComponent<MonsterLife>().DeathWait());
+        try { GameObject.Find("DeleteObjects").SetActive(false); } catch { }
+        Character1.NoAlert();
     }
 
 
@@ -168,6 +180,12 @@ public class PenekKing : MonoBehaviour
         //Heart.GetComponent<MonsterLife>().HitEnable = true;
         yield return new WaitForSeconds(2f);
         Heart.SetActive(false);
+        if (Lifes < 1 && LastStady == false)
+        {
+            StartCoroutine(SpareMe2());
+            yield break;
+        }
+
         StartCoroutine(SpareMe());
     }
 
@@ -317,7 +335,7 @@ public class PenekKing : MonoBehaviour
         {
             slider.GetComponent<Slider>().value = Lifes - 3;
             Lifes -= 3;
-            Phrases[bushes++].SetActive(true);
+            //Phrases[bushes++].SetActive(true);
             StopAllCoroutines();
             StartCoroutine(Bushed());
             return;
@@ -330,7 +348,7 @@ public class PenekKing : MonoBehaviour
         Col.isTrigger = false;
         Rigi.drag = 0;
         Rigi.AddForce(-(Player.transform.position - transform.position).normalized * Force, ForceMode2D.Force);
-        GetComponent<Animator>().SetBool("Break", true);
+        Anim.SetInteger("Stage", 99);
         yield return new WaitForSeconds(1f);
         Rigi.drag = V;
         Rigi.simulated = false;

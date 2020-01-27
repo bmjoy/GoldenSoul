@@ -34,6 +34,17 @@ public class MonsterLife : MonoBehaviour
         MonsterPic.color = new Color(1, 1, 1, 1f);
     }
 
+    public IEnumerator DeathWait()
+    {
+        while (true)
+        {
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(gameObject.GetComponent<SpriteRenderer>().color.r, gameObject.GetComponent<SpriteRenderer>().color.g, gameObject.GetComponent<SpriteRenderer>().color.b, 0.6f);
+        yield return new WaitForSeconds(0.6f);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(gameObject.GetComponent<SpriteRenderer>().color.r, gameObject.GetComponent<SpriteRenderer>().color.g, gameObject.GetComponent<SpriteRenderer>().color.b, 1f);
+            yield return new WaitForSeconds(0.6f);
+        }
+    }
+
     private void OnDisable()
     {
         MonsterPic.color = new Color(1, 1, 1, 1f);

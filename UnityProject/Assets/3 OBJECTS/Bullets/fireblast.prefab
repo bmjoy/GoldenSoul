@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1521944508282532528}
   m_Layer: 0
   m_Name: fireblast
-  m_TagString: fov
+  m_TagString: bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

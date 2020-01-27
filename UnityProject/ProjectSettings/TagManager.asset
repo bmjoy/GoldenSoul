@@ -19,6 +19,7 @@ TagManager:
   - PlayerBullet
   - Monsterlife
   - PlayerBullet2
+  - PlayerBullet3
   layers:
   - Default
   - TransparentFX

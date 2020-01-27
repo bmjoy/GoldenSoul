@@ -62,6 +62,14 @@ public class playerBullet3 : MonoBehaviour
         Vec = new Vector2(moveScript.JStick.Horizontal, moveScript.JStick.Vertical);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("bullets"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+
     IEnumerator WaitDelete()
     {
         yield return new WaitForSeconds(10f);

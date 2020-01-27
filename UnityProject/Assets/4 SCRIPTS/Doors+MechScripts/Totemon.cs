@@ -18,6 +18,7 @@ public class Totemon : MonoBehaviour
         playerPos = GameObject.Find("hero").GetComponent<Transform>(); //Получаем данные о местонахождении Игрока
         totem = GetComponent<Animator>();
         rend = GetComponent<Renderer>();
+        Wall.counttoop = 0;
     }
     void Update() //Обновление скрипта
     {

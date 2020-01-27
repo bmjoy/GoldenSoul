@@ -47,7 +47,7 @@ public class Spells : MonoBehaviour
     {
         while (true)
         {
-            ManaSlider.value += (ManaSlider.value < 100 && Regen ) ? 4 : 0;
+            ManaSlider.value += (ManaSlider.value < 100 && Regen ) ? 6 : 0;
             Character1.MP = (int)ManaSlider.value;
             yield return new WaitForSeconds(0.1f);
         }

@@ -10,6 +10,7 @@ public class playerBullet2 : MonoBehaviour
     public float multiplier = 1;
     public float ForceD = 6;
     float degree;
+    bool CanChange = true;
     private Rigidbody2D Rigi;
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,8 @@ public class playerBullet2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Aim.PLEE) return;
+        if (Aim.PLEE) CanChange = false;
+        if (!CanChange) return;
         if (!wasForced)
         {
 
@@ -103,6 +105,7 @@ public class playerBullet2 : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         wasForced = true;
+        CanChange = false;
         gameObject.GetComponent<Animator>().SetBool("Activate", true);
         gameObject.tag = "PlayerBullet";
         Rigi.AddForce(Vector.normalized * ForceD, ForceMode2D.Impulse);
