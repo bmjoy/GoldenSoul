@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MonsterLife : MonoBehaviour
 {
+    public bool OffAfterDamaged = false;
     public bool Damaged = false;
     public SpriteRenderer MonsterPic;
 
@@ -13,14 +14,14 @@ public class MonsterLife : MonoBehaviour
         {
             Damaged = true;
             StopAllCoroutines();
-            MonsterPic.color = new Color(1, 1, 1, 1f);
+            MonsterPic.color = new Color(MonsterPic.color.r, MonsterPic.color.g, MonsterPic.color.b, 1f);
             StartCoroutine(DamagedWait());
             Destroy(Col.gameObject);
         }
         if (Col.CompareTag("PlayerBullet2"))
         {
             Damaged = true;
-            MonsterPic.color = new Color(1, 1, 1, 1f);
+            MonsterPic.color = new Color(MonsterPic.color.r, MonsterPic.color.g, MonsterPic.color.b, 1f);
             StopAllCoroutines();
             StartCoroutine(DamagedWait());
             Destroy(Col.gameObject);
@@ -29,9 +30,17 @@ public class MonsterLife : MonoBehaviour
 
     IEnumerator DamagedWait()
     {
-        MonsterPic.color = new Color(1, 1, 1, 0.6f);
+        if (OffAfterDamaged)
+        {
+            gameObject.GetComponent<Collider2D>().enabled = false;
+        }
+        MonsterPic.color = new Color(MonsterPic.color.r, MonsterPic.color.g, MonsterPic.color.b, 0.6f);
         yield return new WaitForSeconds(0.6f);
-        MonsterPic.color = new Color(1, 1, 1, 1f);
+        MonsterPic.color = new Color(MonsterPic.color.r, MonsterPic.color.g, MonsterPic.color.b, 1f);
+        if (OffAfterDamaged)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public IEnumerator DeathWait()
@@ -47,7 +56,10 @@ public class MonsterLife : MonoBehaviour
 
     private void OnDisable()
     {
-        MonsterPic.color = new Color(1, 1, 1, 1f);
+        MonsterPic.color = new Color(MonsterPic.color.r, MonsterPic.color.g, MonsterPic.color.b, 1f);
         Damaged = false;
+        gameObject.GetComponent<Collider2D>().enabled = true;
     }
+
+
 }

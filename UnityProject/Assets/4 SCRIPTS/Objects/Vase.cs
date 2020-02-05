@@ -26,6 +26,19 @@ public class Vase : MonoBehaviour
             Break();
             Destroyed = true;
         }
+        if (collision.CompareTag("enemy") && !Destroyed)
+        {
+            Break();
+            Destroyed = true;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "enemy" && !Destroyed)
+        {
+            Break();
+            Destroyed = true;
+        }
     }
     void Break()
     {
