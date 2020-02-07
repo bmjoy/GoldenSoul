@@ -260,15 +260,15 @@ public class DialogueMass
             "However you avoid violence. \nTrying to escape?.......",//118
             "Do you deserve mercy? ",//119
             "I guess very soon we will find out.",//120
-            "Оу! Вот ты где! \nЯ уже начал волноваться....",//121
-            "Ты исчез на очень долгое время, и я решил всё-таки подождать тебя.",//122
-            "Начал значит пить чай, а тут этот деревянный чудилла.",//123
-            "Сначала я хотел его ИСПЕПЕЛИТЬ В ОДИН ЩЕЛЧОК... \nНо он заявил, что больше не дерётся.",//124
-            "Его задница уже подгорела от кое-чьего заклинания, правда? \nНе плохо.",//125
-            "Сейчас мы близки, как никогда к выходу. \nСоберись.",//126
-            "Чай. Он так утоляет жажду....",//127
-            "...жажду убивать)))",//128
-            "Кинг привёл подругу.         \nЭто обычное бревно... ",//129
-            "Иронично.",//130
+            "Oh! Here you are! \nI even started worrying....",//121
+            "You dissapeared for quite a long time, but I decided to wait for you.",//122
+            "I started to drink my tea, but suddenly there's this wooden bloke.",//123
+            "At first I wanted to TURN IT TO ASH IN A FLICK OF MY FINGERS... \nBut he declared, that he's not fighting anymore.",//124
+            "I guess he got *burned* by someones spell, amirite? \nNot bad.",//125
+            "Right now, we're closer than ever before to the exit. \n*Get yourself together.",//126
+            "Tea. It clenches thirst so much....",//127
+            "...thirst to kill)))",//128
+            "King brought his girlfriend. \n It's just a useless log...",//129
+            "Ironic",//130
     };
 }
