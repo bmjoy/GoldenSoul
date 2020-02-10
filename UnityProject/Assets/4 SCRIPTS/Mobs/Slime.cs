@@ -30,7 +30,7 @@ public class Slime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(Player.transform.position, gameObject.transform.position) < 4 && IsAttacked == false && Alive)
+        if(Vector2.Distance(Player.transform.position, gameObject.transform.position) < 5 && IsAttacked == false && Alive)
         {
             Character1.Alert();
             StartCoroutine(Jump());
