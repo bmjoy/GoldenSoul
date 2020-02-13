@@ -3068,17 +3068,27 @@ PrefabInstance:
     - target: {fileID: 1303713632020544494, guid: 2c7d37e0e1e95774995c5a67af9ae5bf,
         type: 3}
       propertyPath: _HeroWasHere.Array.size
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1303713632020544494, guid: 2c7d37e0e1e95774995c5a67af9ae5bf,
         type: 3}
       propertyPath: _LevelCoordsX.Array.size
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1303713632020544494, guid: 2c7d37e0e1e95774995c5a67af9ae5bf,
         type: 3}
       propertyPath: _UsedEvents.Array.size
-      value: 20
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303713632020544494, guid: 2c7d37e0e1e95774995c5a67af9ae5bf,
+        type: 3}
+      propertyPath: _Keys.Array.size
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303713632020544494, guid: 2c7d37e0e1e95774995c5a67af9ae5bf,
+        type: 3}
+      propertyPath: _LevelCoordsY.Array.size
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c7d37e0e1e95774995c5a67af9ae5bf, type: 3}

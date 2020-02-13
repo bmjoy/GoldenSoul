@@ -58,5 +58,26 @@ EditorBuildSettings:
     guid: c7d9915cb91709346b7cefa3b72867a7
   - enabled: 1
     path: "Assets/5 SCENES/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level16.unity"
+    guid: 6db2bd1a62b0b594fa31ea2d7f933d12
+  - enabled: 1
+    path: "Assets/5 SCENES/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level17.unity"
     guid: 8e4208d5364ccac49b5f7469ae722620
+  - enabled: 1
+    path: "Assets/5 SCENES/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level18.unity"
+    guid: 8373877f865791547989e5b09ad84119
+  - enabled: 1
+    path: "Assets/5 SCENES/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level19.unity"
+    guid: 947be32d326b8f34586aac07f560c05e
+  - enabled: 1
+    path: "Assets/5 SCENES/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level20.unity"
+    guid: eeac1f63fdce15c4e95a374b7c3abf6b
+  - enabled: 1
+    path: "Assets/5 SCENES/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level21.unity"
+    guid: 5854f435b63b9414f861b9616478219c
+  - enabled: 1
+    path: "Assets/5 SCENES/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level22.unity"
+    guid: 8bd1927b92e9efa4596a47a6f782b468
+  - enabled: 1
+    path: "Assets/5 SCENES/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level23.unity"
+    guid: 3d06d9792eed1bf408a4e23d6b61be82
   m_configObjects: {}

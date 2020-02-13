@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dmg: 10
   multiplier: 1
-  ForceD: 1.5
+  ForceD: 2
 --- !u!50 &4695462272275439598
 Rigidbody2D:
   serializedVersion: 4
