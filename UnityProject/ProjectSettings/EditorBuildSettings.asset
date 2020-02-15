@@ -80,4 +80,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/5 SCENES/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level23.unity"
     guid: 3d06d9792eed1bf408a4e23d6b61be82
+  - enabled: 1
+    path: "Assets/5 SCENES/\u041E\u0411\u042B\u0427\u041D\u042B\u0415 \u0421\u0426\u0415\u041D\u042B/Level24.unity"
+    guid: 849eb4d6207711048862ceb87fc1cabe
   m_configObjects: {}
