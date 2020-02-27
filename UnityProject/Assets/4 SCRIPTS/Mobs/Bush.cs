@@ -65,6 +65,7 @@ public class Bush : MonoBehaviour
                 Alive = false;
                 StartCoroutine(Die());
                 Character1.NoAlert();
+                gameObject.GetComponent<State>().dead = true;
                 return;
             }
             StartCoroutine(Drag());
