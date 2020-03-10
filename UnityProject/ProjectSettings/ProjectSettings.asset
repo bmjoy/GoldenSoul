@@ -245,8 +245,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: "C:/Users/\u0412\u043B\u0430\u0434\u0435\u043B\u0435\u0446/Desktop/user.keystore"
-  AndroidKeyaliasName: lexusalias
+  AndroidKeystoreName: 
+  AndroidKeyaliasName: 
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
