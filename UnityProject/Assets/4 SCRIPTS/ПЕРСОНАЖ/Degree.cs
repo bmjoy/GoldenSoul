@@ -38,7 +38,7 @@ public class Degree : MonoBehaviour
         else if (gamePadH <= 0 && gamePadV <= 0)
             degree = Mathf.Acos(Mathf.Abs(cos)) * 180 / Mathf.PI + 180;
         else if (gamePadH >= 0 && gamePadV <= 0)
-            degree = 630 - (Mathf.Acos(Mathf.Abs(cos)) * 180 / Mathf.PI + 270);
+            degree = 360 - Mathf.Acos(Mathf.Abs(cos)) * 180 / Mathf.PI;
         dis = Mathf.Sqrt(Mathf.Pow(gamePadH, 2) + Mathf.Pow(gamePadV, 2));
 
         //Character1.ThrowVector = new Vector2(gamePadH, gamePadV).normalized;

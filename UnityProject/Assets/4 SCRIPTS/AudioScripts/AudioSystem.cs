@@ -2,29 +2,17 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-
-
 public class AudioSystem : MonoBehaviour
 {
     //Констанкты для настройки скрипта
     const bool loop = true; //Постоянное повторение музыки
     const int channels = 2; //Количество каналов звуков, сейчас два, для музыки и звуков
 
-
-    [SerializeField] private AudioClip[] audioclips;
+    private AudioClip[] audioclips;
     private AudioSource[] audiosources;
     // 0 - MusicSource
     // 1 - soundSource
     private AudioSource musicNOW;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-            CallMusic(1);
-
-        if (Input.GetKeyDown(KeyCode.F))
-            ChangeVolume(0.1f,0,true);
-    }
 
     private void Awake()
     {
@@ -50,13 +38,9 @@ public class AudioSystem : MonoBehaviour
         AudioSource soundNOW = audiosources[1];
         soundNOW.PlayOneShot(audioclips[index]);
     }
-
-
     private void ChangeVolume(float newVolume, int Source, bool Smooth = false)
     {
         AudioSource musicNOW = audiosources[Source];
-
-
       if (Smooth)
             {
                 StartCoroutine(timer(newVolume, Source));
