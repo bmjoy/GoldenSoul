@@ -11,6 +11,16 @@ TextureImporter:
     21300012: Beatrice_6
     21300014: Beatrice_7
     21300016: Beatrice_8
+    21300018: Beatrice_9
+    21300020: Beatrice_10
+    21300022: Beatrice_11
+    21300024: Beatrice_12
+    21300026: Beatrice_13
+    21300028: Beatrice_14
+    21300030: Beatrice_15
+    21300032: Beatrice_16
+    21300034: Beatrice_17
+    21300036: Beatrice_18
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -119,9 +129,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 551
+        y: 544
         width: 64
-        height: 89
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1136d64f9aaf53b45ad0afbf9a779688
+      spriteID: 72d70fc0c737759429ea66a23aa69929
       vertices: []
       indices: 
       edges: []
@@ -139,9 +149,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 551
+        y: 544
         width: 64
-        height: 89
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,7 +159,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b2d7548fc27845409127584b069446c
+      spriteID: e5e60860ef5dad045bce931bea7c9fe4
       vertices: []
       indices: 
       edges: []
@@ -159,9 +169,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 551
+        y: 544
         width: 64
-        height: 89
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,7 +179,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e75fece56dde043b2229177ec0bb8b
+      spriteID: 17a1ea78de9b45540b4d63206871d90c
       vertices: []
       indices: 
       edges: []
@@ -179,9 +189,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 551
+        y: 544
         width: 64
-        height: 89
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8a672181d8fcc445a291bf249fa8950
+      spriteID: c6185e53c6a185e4895e3de0677efb31
       vertices: []
       indices: 
       edges: []
@@ -199,9 +209,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 551
+        y: 544
         width: 64
-        height: 89
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,7 +219,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 869790df026c9db43b8b120e8a2dcd5a
+      spriteID: 7280650c7b079c242824472f6c141012
       vertices: []
       indices: 
       edges: []
@@ -219,9 +229,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 551
+        y: 544
         width: 64
-        height: 89
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,7 +239,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f61bc891f1dbe724a9cc587cb12daf28
+      spriteID: 4d7fa89b683ce4040a6f2206b91dabb5
       vertices: []
       indices: 
       edges: []
@@ -239,9 +249,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 384
-        y: 551
+        y: 544
         width: 64
-        height: 89
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,7 +259,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7d8534c51b831548bf7322070d97807
+      spriteID: 5514d8490f2a21e479a24de994f36b1c
       vertices: []
       indices: 
       edges: []
@@ -259,9 +269,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 448
-        y: 551
+        y: 544
         width: 64
-        height: 89
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,7 +279,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 796fe1fd674e06e4da3bc47ab7ad0717
+      spriteID: 1717fac3726689f46a17384475a3515f
       vertices: []
       indices: 
       edges: []
@@ -279,9 +289,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 551
+        y: 544
         width: 64
-        height: 89
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,7 +299,207 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c161ae7805e337c4981aff137f342b63
+      spriteID: 896438bb26d0eaf4d89c9998477c138d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beatrice_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 544
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ab0c17be109df498e65fcf1479aa2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beatrice_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48de5e0d2f22f6c4d9f6d104e9b2f1f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beatrice_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b336538a2b5174ca2ea36d05e8d3a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beatrice_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373fc080ab2ebb14192e6c0284b1cd5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beatrice_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f045394906a63948b54175e2250a826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beatrice_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79c572f927b4094794b2f7751b97f43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beatrice_15
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 448
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89371d17ed4bc6843aa62f9bbea7f9ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beatrice_16
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f398551880a7ffd4dad00bd450eb7c9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beatrice_17
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 448
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2db7e2329eb97240bb630e7c5c28e0a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Beatrice_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fb5cd1817e030468834f08885df48b
       vertices: []
       indices: 
       edges: []

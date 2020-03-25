@@ -11,7 +11,7 @@ public class Spells : MonoBehaviour
 
     public static int Pointer = -1;
 
-    public static int[] SpellsList = new int[] {0,0,0};
+    public static int[] SpellsList = new int[] {0,0,0,0};
 
     public GameObject[] SpellObj;
 
@@ -19,7 +19,7 @@ public class Spells : MonoBehaviour
     {
         ManaSlider = GameObject.Find("HeroMana").GetComponent<Slider>();
         Regen = true;
-        if (!(SpellsList[0] == 0 && SpellsList[1] == 0 && SpellsList[2] == 0))
+        if (!(SpellsList[0] == 0 && SpellsList[1] == 0 && SpellsList[2] == 0 && SpellsList[3] == 0))
         {
             ChangePointer();
         }
@@ -32,14 +32,15 @@ public class Spells : MonoBehaviour
         {
             Destroy(item);
         }
-        if (SpellsList[0] == 0 && SpellsList[1] == 0 && SpellsList[2] == 0)
+        if (SpellsList[0] == 0 && SpellsList[1] == 0 && SpellsList[2] == 0 && SpellsList[3] == 0)
         {
             return;
         }
-        Pointer += (Pointer == 2) ? -2 : 1;
+        Pointer += (Pointer == 3) ? -3 : 1;
         if (SpellsList[Pointer] == 0) ChangePointer();
         GameObject.Find("Spell").GetComponent<Animator>().SetInteger("Spell", SpellsList[Pointer]);
-        GameObject.Find("SpellText").GetComponent<Text>().text = (Pointer+1).ToString();
+        //GameObject.Find("SpellText").GetComponent<Text>().text = (Pointer+1).ToString();
+        GameObject.Find("MagicIcon").GetComponent<Animator>().SetInteger("Type", (Pointer));
     }
 
 

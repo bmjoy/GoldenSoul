@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
+    public GameObject[] MainMenuObj;
+    public GameObject[] BossesObj;
+    public GameObject[] MainMenuScenes;
+    public GameObject[] BossesScenes;
+    public static int PointerBoss = 1;
+    public static int PointerBossMax = 2;
     public int scene;
     public Text[] Texts;
 
@@ -19,6 +25,15 @@ public class MainMenu : MonoBehaviour
     }
     private void Start()
     {
+        foreach (GameObject i in MainMenuObj)
+        {
+            i.SetActive(true);
+        }
+        foreach (GameObject i in BossesObj)
+        {
+            i.SetActive(false);
+        }
+
         EventSavingSystem.Language = PlayerPrefs.GetInt("Language");
         if (EventSavingSystem.Language == 0)
             GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", true);
@@ -27,6 +42,49 @@ public class MainMenu : MonoBehaviour
         Language();
         Language();
     }
+
+    public void BossFight()
+    {
+        
+    }
+
+    public void BossMenu(bool b)
+    {
+        if (b)
+        {
+            foreach (GameObject i in BossesObj)
+            {
+                i.SetActive(true);
+            }
+            foreach (GameObject i in MainMenuObj)
+            {
+                i.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (GameObject i in BossesObj)
+            {
+                i.SetActive(false);
+            }
+            foreach (GameObject i in MainMenuObj)
+            {
+                i.SetActive(true);
+            }
+        }
+
+    }
+
+    public void BossPointerNext()
+    {
+        PointerBoss += (PointerBoss > PointerBossMax) ? 0 : 1;
+    }
+
+    public void BossPointerPrevious()
+    {
+        PointerBoss -= (PointerBoss < 2) ? 0 : 1;
+    }
+
     public void Load()
     {
        
@@ -64,6 +122,12 @@ public class MainMenu : MonoBehaviour
             Texts[3].text = "Exit";
             Texts[3].fontSize = 60;
             Texts[4].text = "Chapter:";
+            Texts[5].text = "Back";
+            Texts[5].fontSize = 60;
+            Texts[6].text = "Fight";
+            Texts[6].fontSize = 60;
+            Texts[7].text = "Bosses";
+            Texts[7].fontSize = 60;
         }
         else
         {
@@ -77,6 +141,12 @@ public class MainMenu : MonoBehaviour
             Texts[3].text = "Выход";
             Texts[3].fontSize = 50;
             Texts[4].text = "Глава:";
+            Texts[5].text = "Назад";
+            Texts[5].fontSize = 60;
+            Texts[6].text = "Бой";
+            Texts[6].fontSize = 60;
+            Texts[7].text = "Боссы";
+            Texts[7].fontSize = 60;
         }
 
         PlayerPrefs.SetInt("Language", EventSavingSystem.Language);
