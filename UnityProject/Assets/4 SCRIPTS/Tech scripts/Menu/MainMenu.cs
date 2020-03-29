@@ -9,8 +9,11 @@ public class MainMenu : MonoBehaviour
     public GameObject[] BossesObj;
     public GameObject[] MainMenuScenes;
     public GameObject[] BossesScenes;
-    public static int PointerBoss = 1;
-    public static int PointerBossMax = 2;
+    public Image MenuBlack;
+    public static int PointerScene = 0;
+    public static int PointerSceneMax = 1;
+    public static int PointerBoss = 0;
+    public static int PointerBossMax = 1;
     public int scene;
     public Text[] Texts;
 
@@ -50,39 +53,22 @@ public class MainMenu : MonoBehaviour
 
     public void BossMenu(bool b)
     {
-        if (b)
-        {
-            foreach (GameObject i in BossesObj)
-            {
-                i.SetActive(true);
-            }
-            foreach (GameObject i in MainMenuObj)
-            {
-                i.SetActive(false);
-            }
-        }
-        else
-        {
-            foreach (GameObject i in BossesObj)
-            {
-                i.SetActive(false);
-            }
-            foreach (GameObject i in MainMenuObj)
-            {
-                i.SetActive(true);
-            }
-        }
+        StartCoroutine(AppearanceImg(b));
 
     }
 
     public void BossPointerNext()
     {
-        PointerBoss += (PointerBoss > PointerBossMax) ? 0 : 1;
+        PointerBoss += (PointerBoss < PointerBossMax) ? 1 : 0;
+
+        StartCoroutine(AppearanceImg(true));
     }
 
     public void BossPointerPrevious()
     {
-        PointerBoss -= (PointerBoss < 2) ? 0 : 1;
+        PointerBoss -= (PointerBoss < 1) ? 0 : 1;
+
+        StartCoroutine(AppearanceImg(true));
     }
 
     public void Load()
@@ -107,6 +93,89 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    IEnumerator AppearanceImg(bool b)
+    {
+        for (float bright = 0; bright < 1; bright += 0.01f)
+        {
+            MenuBlack.color = new Color(0, 0, 0, bright);
+            yield return new WaitForSeconds(0.0005f);
+        }
+
+        if (b)
+        {
+            foreach (GameObject i in BossesScenes)
+            {
+                i.SetActive(false);
+            }
+
+            BossesScenes[PointerBoss].SetActive(true);
+            MainMenuScenes[PointerScene].GetComponent<Animator>().SetInteger("Slide", 1);
+            foreach (GameObject i in BossesObj)
+            {
+                i.SetActive(true);
+            }
+            foreach (GameObject i in MainMenuObj)
+            {
+                i.SetActive(false);
+            }
+        }
+        else
+        {
+            BossesScenes[PointerBoss].GetComponent<Animator>().SetInteger("Slide", 1);
+            foreach (GameObject i in BossesObj)
+            {
+                i.SetActive(false);
+            }
+            foreach (GameObject i in MainMenuObj)
+            {
+                i.SetActive(true);
+            }
+            PointerBoss = 0;
+        }
+
+        StartCoroutine(DisappearanceImg(b));
+    }
+
+    IEnumerator DisappearanceImg(bool b)
+    {
+        if (b)
+        {
+            MainMenuScenes[PointerScene].GetComponent<Animator>().SetInteger("Slide", 2);
+            MainMenuScenes[PointerScene].SetActive(false);
+            BossesScenes[PointerBoss].SetActive(true);
+            BossesScenes[PointerBoss].GetComponent<Animator>().SetInteger("Slide", 1);
+            foreach (GameObject i in BossesObj)
+            {
+                i.SetActive(true);
+            }
+            foreach (GameObject i in MainMenuObj)
+            {
+                i.SetActive(false);
+            }
+        }
+        else
+        {
+            BossesScenes[PointerBoss].GetComponent<Animator>().SetInteger("Slide", 2);
+            BossesScenes[PointerBoss].SetActive(false);
+            MainMenuScenes[0].SetActive(true);
+            MainMenuScenes[0].GetComponent<Animator>().SetInteger("Slide", 1);
+            foreach (GameObject i in BossesObj)
+            {
+                i.SetActive(false);
+            }
+            foreach (GameObject i in MainMenuObj)
+            {
+                i.SetActive(true);
+            }
+        }
+        for (float bright = 1; bright > 0; bright -= 0.01f)
+        {
+            MenuBlack.color = new Color(0, 0, 0, bright);
+            yield return new WaitForSeconds(0.0005f);
+        }
+    }
+
     public void Language()
     {
         EventSavingSystem.Language = (EventSavingSystem.Language == 0) ? 1 : 0;
