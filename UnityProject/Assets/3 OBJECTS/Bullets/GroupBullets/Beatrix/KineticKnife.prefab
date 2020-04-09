@@ -137,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dmg: 10
   multiplier: 1
-  ForceD: 4
+  ForceD: 6
 --- !u!61 &181957612653336264
 BoxCollider2D:
   m_ObjectHideFlags: 0

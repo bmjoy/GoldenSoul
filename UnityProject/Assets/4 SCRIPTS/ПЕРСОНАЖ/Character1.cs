@@ -15,6 +15,7 @@ public class Character1 : MonoBehaviour
     //
     Rigidbody2D Rigi;
     public GameObject DeathText;
+    public static GameObject Indicator;
     public static Slider LifeSlider;
     public bool BlackImg = false;
     public bool Death = false;
@@ -29,6 +30,8 @@ public class Character1 : MonoBehaviour
     public static bool Pushed = false; //для толканий персонажа
     public static bool CanWalk = true; //для толканий персонажа
 
+
+    new Vector2 VecTest;
     private void Awake()
     {
         AlertPoints = 0;
@@ -43,7 +46,7 @@ public class Character1 : MonoBehaviour
             gameObject.transform.position = new Vector2(EventSavingSystem.x, EventSavingSystem.y);
             EventSavingSystem.y = EventSavingSystem.x = 0;
         }
-
+        Indicator = GameObject.Find("Indicator");
     }
 
     private void Start()
@@ -55,8 +58,10 @@ public class Character1 : MonoBehaviour
         Rigi = GetComponent<Rigidbody2D>();
         Player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(Level.ThisLevel());
+        Indicator.SetActive(false);
         _Lifepoint.SetActive(false);
         DeathText.SetActive(false);
+
     }
     void Update()
     {
@@ -168,4 +173,28 @@ public class Character1 : MonoBehaviour
         CanWalk = true;
         }
     }
+    public IEnumerator DragBack() //Отталкиваем героя(передаём позицию врага в векторе)
+    {
+        int X = Player.GetComponent<Animator>().GetInteger("Vector");
+        if (!Pushed && CanWalk)
+        {
+            CanWalk = false;
+            Pushed = true;
+            Rigi.AddForce((Rigi.GetVector(VecTest)).normalized * 50f, ForceMode2D.Force);
+            yield return new WaitForSecondsRealtime(0.01f);
+            Rigi.drag = 100;
+            CanWalk = true;
+        }
+    }
+
+    public static void IndicatorOn()
+    {
+        Indicator.SetActive(true);
+    }
+
+    public static void IndicatorOff()
+    {
+        Indicator.SetActive(false);
+    }
 }
+

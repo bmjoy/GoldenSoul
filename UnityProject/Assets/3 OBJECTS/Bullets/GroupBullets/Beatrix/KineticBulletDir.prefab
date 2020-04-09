@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5142699912499990108}
   - component: {fileID: 6497344758521484167}
   m_Layer: 0
-  m_Name: KineticBullet1
+  m_Name: KineticBulletDir
   m_TagString: bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   x: 0
-  y: 0
-  CanMove: 0
+  y: -1
+  CanMove: 1
   multiplier: 1
   ForceD: 2

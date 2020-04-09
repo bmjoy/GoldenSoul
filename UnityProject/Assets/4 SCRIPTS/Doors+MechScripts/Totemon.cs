@@ -10,6 +10,7 @@ public class Totemon : MonoBehaviour
     public int num;
     private Animator totem;
     private Transform playerPos;
+    bool IsPlayerExited = true;
     //private Transform lampPos;
     private Renderer rend;
     private bool Enabled = false;
@@ -22,26 +23,48 @@ public class Totemon : MonoBehaviour
     }
     void Update() //Обновление скрипта
     {
-        if (Vector2.Distance(transform.position, playerPos.position) < 0.9f && (Input.GetKeyDown(KeyCode.E) ||  moveScript.activate && !Enabled))
+        if (Vector2.Distance(transform.position, playerPos.position) < 0.9f)
         {
-            totem.SetBool("fired", true);
-            Enabled = true;
-            Wall.counttoop = Wall.counttoop * 10 + key;
-            if(Wall.countconst == Wall.counttoop)
+            Character1.IndicatorOn();
+            IsPlayerExited = false;
+            if ((Input.GetKeyDown(KeyCode.E) || moveScript.activate && !Enabled))
             {
-                Wall.Open();
+                totem.SetBool("fired", true);
+                Enabled = true;
+                Wall.counttoop = Wall.counttoop * 10 + key;
+                if(Wall.countconst == Wall.counttoop)
+                {
+                    Wall.Open();
+                }
+                moveScript.activate = false;
+                return;
             }
-            moveScript.activate = false;
-            return;
+
         }
-        if (Vector2.Distance(transform.position, playerPos.position) < 0.9f && (Input.GetKeyDown(KeyCode.E) || moveScript.activate && Enabled))
+        else if (!IsPlayerExited)
         {
-            totem.SetBool("fired", false);
-            Wall.counttoop = Wall.counttoop / 10;
-            Enabled = false;
-            moveScript.activate = false;
-            return;
+            IsPlayerExited = true;
+            Character1.IndicatorOff();
         }
-            ChangeOrder.ChangeLayerOrder(rend, transform, playerPos);
+        if (Vector2.Distance(transform.position, playerPos.position) < 0.9f)
+        {
+            Character1.IndicatorOn();
+            IsPlayerExited = false;
+            if ((Input.GetKeyDown(KeyCode.E) || moveScript.activate && Enabled))
+            {
+                totem.SetBool("fired", false);
+                Wall.counttoop = Wall.counttoop / 10;
+                Enabled = false;
+                moveScript.activate = false;
+                return;
+            }
+
+        }
+        else if (!IsPlayerExited)
+        {
+            IsPlayerExited = true;
+            Character1.IndicatorOff();
+        }
+        ChangeOrder.ChangeLayerOrder(rend, transform, playerPos);
     }
 }

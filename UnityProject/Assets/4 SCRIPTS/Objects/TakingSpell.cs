@@ -9,11 +9,12 @@ public class TakingSpell : MonoBehaviour
     bool CanDo = false;
     public GameObject enableObj;
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerStay2D(Collider2D col)
     {
         if (col.CompareTag("Player"))
         {
             CanDo = true;
+            Character1.IndicatorOn();
         }
     }
 
@@ -22,6 +23,7 @@ public class TakingSpell : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             CanDo = false;
+            Character1.IndicatorOff();
         }
     }
 

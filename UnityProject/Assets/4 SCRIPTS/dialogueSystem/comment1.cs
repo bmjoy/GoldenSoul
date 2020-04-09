@@ -36,6 +36,10 @@ public class comment1 : MonoBehaviour
             }
             return;
         }
+        if((type == 2 || type == 5 || type == 6) && col.CompareTag(tagg))
+        {
+            Character1.IndicatorOn();
+        }
         switch (type)
         {
             case 1: //простой комментарий или неактиваруемый диалог
@@ -113,6 +117,13 @@ public class comment1 : MonoBehaviour
                     checkcomm = true;
                 break;
 
+        }
+    }
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if ((type == 2 || type == 5 || type == 6) && col.CompareTag(tagg))
+        {
+            Character1.IndicatorOff();
         }
     }
 

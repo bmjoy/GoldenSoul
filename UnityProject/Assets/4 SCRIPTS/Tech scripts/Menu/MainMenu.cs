@@ -131,7 +131,6 @@ public class MainMenu : MonoBehaviour
             {
                 i.SetActive(true);
             }
-            PointerBoss = 0;
         }
 
         StartCoroutine(DisappearanceImg(b));
@@ -168,6 +167,7 @@ public class MainMenu : MonoBehaviour
             {
                 i.SetActive(true);
             }
+            PointerBoss = 0;
         }
         for (float bright = 1; bright > 0; bright -= 0.01f)
         {

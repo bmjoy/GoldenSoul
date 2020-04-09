@@ -22,7 +22,6 @@ public class KineticBullet1 : MonoBehaviour
         StartCoroutine(WaitDelete());
         StartCoroutine(WaitPlee());
         Vec = (Player.transform.position - transform.position).normalized;
-        Vec = (Player.transform.position - transform.position).normalized;
         Deg = Degree.GetDegree(Player.transform.position.x - transform.position.x, Player.transform.position.y - transform.position.y);
         gameObject.transform.rotation = Quaternion.Euler(0, 0, Deg - 90);
     }
