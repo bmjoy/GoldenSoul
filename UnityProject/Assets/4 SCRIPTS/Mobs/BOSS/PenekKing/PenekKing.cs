@@ -29,7 +29,7 @@ public class PenekKing : MonoBehaviour
     public GameObject Heart;
     public float posX;
     public float posY;
-    private int bushes = 0;
+//    private int bushes = 0;
     public GameObject[] Phrases;
     void Start()
     {

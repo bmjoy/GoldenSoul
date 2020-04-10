@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4088031322827896853}
   - component: {fileID: 326069950595351333}
   m_Layer: 0
-  m_Name: KineticBullet1 (2)
+  m_Name: KineticRapier
   m_TagString: bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,6 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanMove: 0
-  Dmg: 25
+  Dmg: 20
   multiplier: 1
   ForceD: 6

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9056693829308208403}
   - component: {fileID: 6902658424173731104}
   m_Layer: 0
-  m_Name: KineticBullet1 (1)
+  m_Name: KineticReaper
   m_TagString: bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,6 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CanMove: 0
-  Dmg: 25
+  Dmg: 50
   multiplier: 1
   ForceD: 4
