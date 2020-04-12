@@ -56,6 +56,7 @@ public class Beatrix : MonoBehaviour
         }
         if (Heart.Damaged)
         {
+            StopAllCoroutines();
             StartCoroutine(Bushed());
             Heart.Damaged = false;
             Heart.gameObject.SetActive(false);
@@ -91,8 +92,10 @@ public class Beatrix : MonoBehaviour
                     ChooseAttack2();
                     break;
                 case 3:
+                    ChooseAttack3();
                     break;
                 case 4:
+                    ChooseAttack4();
                     break;
             }
         }
@@ -101,6 +104,14 @@ public class Beatrix : MonoBehaviour
     void ChooseAttack1() //Первая фаза
     {
         int[] MassPos;
+        if (StageCount % 8 == 3 && StageCount > 5)
+        {
+            StopAllCoroutines();
+            StartCoroutine(EnableHeart());          
+            CanDoDamage = false;
+            StageCount++;
+            return;
+        }
         if (StageCount == 0)
         {
             MassPos = new int[] { 0, 1, 0, 1, 0, 0, 0, 0 };
@@ -124,7 +135,7 @@ public class Beatrix : MonoBehaviour
         else if (StageCount == 4)
         {
             MassPos = new int[] { 0, 1, 0, 1, 0, 1, 0, 1 };
-            StartCoroutine(LineObjectSpawn(Bullets[11], 0.2f, 2f, -1f));
+            StartCoroutine(LineObjectSpawn(Bullets[11], 0.2f, 2f, -2f));
         }
         else if (StageCount == 5)
         {
@@ -136,7 +147,7 @@ public class Beatrix : MonoBehaviour
         else if (StageCount == 6)
         {
             MassPos = new int[] { 1, 0, 0, 0, 1, 0, 0, 0 };
-            StartCoroutine(CrossSpawn(Bullets[10], MassPos, 1.5f));
+            StartCoroutine(CrossSpawn(Bullets[10], MassPos, 1.5f, 9f));
             StageCount++;
             return;
         }
@@ -187,18 +198,21 @@ public class Beatrix : MonoBehaviour
             }
         }
         StageCount++;
-        if (StageCount % 8 == 3 && StageCount > 5)
-        {
-            Heart.gameObject.SetActive(true);
-            StopAllCoroutines();
-            CanDoDamage = false;
-        }
     }
     void ChooseAttack2() //Вторая фаза
     {
         int[] MassPos;
+        if (StageCount % 8 == 3 && StageCount > 5)
+        {
+            StopAllCoroutines();
+            StartCoroutine(EnableHeart());
+            CanDoDamage = false;
+            StageCount++;
+            return;
+        }
         if (StageCount == 0)
         {
+            Phrases[3].SetActive(true);
             Anim.SetInteger("Stage", 3);
             StartCoroutine(StarAttack(posX[0],posY[0]));
         }
@@ -207,58 +221,158 @@ public class Beatrix : MonoBehaviour
             Phrases[1].SetActive(true);
             Anim.SetInteger("Stage", 0);
             MassPos = new int[] { 0, 1, 0, 1, 0, 0, 0, 0 };
+            StartCoroutine(CrossSpawn(Bullets[9], MassPos, 1f, 10.8f));
+        }
+        else if (StageCount == 2)
+        {
+            MassPos = new int[] { 1, 0, 1, 0, 1, 0, 1, 0 };
+            StartCoroutine(CrossSpawn(Bullets[0], MassPos, 2f));
+        }
+        else if (StageCount == 3)
+        {
+            MassPos = new int[] { 0, 1, 0, 1, 0, 1, 0, 1 };
+            StartCoroutine(CrossSpawn(Bullets[0], MassPos, 2f));
+        }
+        else if (StageCount == 4)
+        {
+            MassPos = new int[] { 1, 0, 1, 0, 1, 0, 1, 0 };
+            StartCoroutine(CrossSpawn(Bullets[0], MassPos, 2f));
+        }
+        else if (StageCount == 5)
+        {
+            MassPos = new int[] { 0, 1, 0, 1, 0, 1, 0, 1 };
+            StartCoroutine(CrossSpawn(Bullets[0], MassPos, 2f));
+        }
+        else if (StageCount == 6)
+        {
+            MassPos = new int[] { 0, 1, 0, 1, 0, 1, 0, 1 };
+            StartCoroutine(LineObjectSpawn(Bullets[11], 0.2f, 1f, -2f));
+        }
+        else if (StageCount == 7)
+        {
+            Phrases[2].SetActive(true);
+            Heart.gameObject.SetActive(true);
+            StageCount++;
+            return;
+        }
+        else if (StageCount == 8)
+        {
+            MassPos = new int[] { 1, 0, 1, 0, 1, 0, 1, 0 };
+            StartCoroutine(CrossSpawn(Bullets[10], MassPos, 1.5f, 10f));
+            StageCount++;
+            return;
+        }
+        else
+        {
+            switch ((int)Random.Range(0, 2))
+            {
+                case 0:
+                    MassPos = new int[] { 0, 1, 0, 1, 0, 1, 0, 1 };
+                    StartCoroutine(CrossSpawn(Bullets[0], MassPos, 2f, 0.3f));
+                    break;
+                case 1:
+                    MassPos = new int[] {1, 0, 1, 0, 1, 0, 1, 0 };
+                    StartCoroutine(CrossSpawn(Bullets[0], MassPos, 2f, 0.3f));
+                    break;
+
+            }
+        }
+        StageCount++;
+    }
+    void ChooseAttack3()
+    {
+        int[] MassPos;
+        if (StageCount % 8 == 3 && StageCount > 5)
+        {
+            StopAllCoroutines();
+            StartCoroutine(EnableHeart());
+            CanDoDamage = false;
+            StageCount++;
+            return;
+        }
+        if (StageCount == 0)
+        {
+            Phrases[3].SetActive(false);
+            Phrases[3].SetActive(true);
+            Anim.SetInteger("Stage", 3);
+            StartCoroutine(StarAttack(posX[1], posY[1], 2f, 7));
+        }
+        else if (StageCount == 1)
+        {
+            Phrases[4].SetActive(true);
+            Anim.SetInteger("Stage", 0);
+            MassPos = new int[] { 1, 0, 0, 0, 1, 0, 0, 0 };
+            StartCoroutine(CrossSpawn(Bullets[9], MassPos, 2, 10.8f));
+        }
+        else
+        {
+            switch ((int)Random.Range(0, 5))
+            {
+                case 0:
+                    MassPos = new int[] { 0, 1, 1, 1, 0, 1, 1, 1 };
+                    StartCoroutine(CrossSpawn(Bullets[0], MassPos, 2f, 1f));
+                    break;
+                case 1:
+                    MassPos = new int[] { 1, 1, 0, 1, 1, 1, 0, 1 };
+                    StartCoroutine(CrossSpawn(Bullets[0], MassPos, 2f, 1f));
+                    break;
+                case 2:
+                    StartCoroutine(LineObjectSpawn(Bullets[11], 0.2f, 1f, -2f));
+                    break;
+                case 3:
+                    StartCoroutine(LineObjectSpawn(Bullets[2], 0.5f, 0.3f, -2f, 1f));
+                    break;
+                case 4:
+                    MassPos = new int[] { 1, 1, 1, 1, 1, 1, 1, 1 };
+                    StartCoroutine(CrossSpawn(Bullets[12], MassPos, 2f, 2f));
+                    break;
+
+            }
+        }
+        StageCount++;
+    }
+    void ChooseAttack4()
+    {
+        int[] MassPos;
+        if (StageCount == 0)
+        {
+            Phrases[3].SetActive(false);
+            Phrases[3].SetActive(true);
+            Anim.SetInteger("Stage", 3);
+            StartCoroutine(StarAttack(posX[2], posY[2], 1f, 7));
+        }
+        else if (StageCount == 1)
+        {
+            Phrases[5].SetActive(true);
+            Anim.SetInteger("Stage", 0);
+            MassPos = new int[] { 1, 0, 1, 0, 1, 0, 1, 0 };
             StartCoroutine(CrossSpawn(Bullets[9], MassPos, 2, 10.8f));
         }
         else if (StageCount == 2)
         {
-
+            MassPos = new int[] { 0, 1, 1, 1, 0, 1, 1, 1 };
+            StartCoroutine(CrossSpawn(Bullets[0], MassPos, 1f, 1f));
         }
         else if (StageCount == 3)
         {
+            MassPos = new int[] { 1, 1, 0, 1, 1, 1, 0, 1 };
+            StartCoroutine(CrossSpawn(Bullets[0], MassPos, 2f, 1f));
         }
         else if (StageCount == 4)
         {
+            StartCoroutine(LineObjectSpawn(Bullets[2], 0.2f, 0.1f, -2f, 1f));
         }
         else if (StageCount == 5)
         {
-        }
-        else if (StageCount == 6)
-        {
-        }
-        else if (StageCount == 7)
-        {
+            MassPos = new int[] { 1, 1, 0, 1, 1, 1, 0, 1 };
+            StartCoroutine(LineObjectSpawn(Bullets[11], 1f, 1f, -2f));
         }
         else
         {
-            switch ((int)Random.Range(0, 7))
-            {
-                case 0:
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                default:
-                    break;
-            }
-        }
-        StageCount++;
-        if (StageCount % 8 == 3 && StageCount > 5)
-        {
             Heart.gameObject.SetActive(true);
-            StopAllCoroutines();
-            CanDoDamage = false;
         }
-    }
-    void ChooseAttack3()
-    {
 
-    }
-    void ChooseAttack4()
-    {
-
+        StageCount++;
     }
 
     IEnumerator CrossSpawn(GameObject Obj, int[] type, float Distance = 0, float timeWait = 1f) // Вгоняем пулю, Массив с точкой появления по часовой стрелки(начало слева) и дистанцию.
@@ -304,11 +418,18 @@ public class Beatrix : MonoBehaviour
         CanDoDamage = true;
     }
 
-    IEnumerator LineObjectSpawn(GameObject Obj, float time = 0f, float step = 0f, float plusY = 0f, float wait = 7f)
+    IEnumerator BossSpawn(GameObject Obj ,float timeWait = 1f, float Distance = 1f)
+    {
+        Instantiate(Obj, new Vector2(gameObject.transform.position.x + Distance, gameObject.transform.position.y), Quaternion.identity);
+        Instantiate(Obj, new Vector2(gameObject.transform.position.x - Distance, gameObject.transform.position.y), Quaternion.identity);
+        yield return new WaitForSeconds(timeWait);
+    }
+
+    IEnumerator LineObjectSpawn(GameObject Obj, float time = 0f, float step = 0f, float plusY = 0f, float wait = 7f, float X = -22.513f)
     {
         yield return new WaitForSeconds(1f);
         Anim.SetInteger("Stage", 3);
-        for (float i = gameObject.transform.position.x - 5; i < gameObject.transform.position.x + 5; i += 0.5f + step)
+        for (float i = X - 5; i < X + 5; i += 0.5f + step)
         {
             Instantiate(Obj, new Vector2(i, gameObject.transform.position.y + 1 + plusY), Quaternion.identity);
             yield return new WaitForSeconds(time);
@@ -318,7 +439,7 @@ public class Beatrix : MonoBehaviour
         CanDoDamage = true;
     }
 
-    IEnumerator StarAttack(float x = 0f, float y = 0f)
+    IEnumerator StarAttack(float x = 0f, float y = 0f, float wait = 3f, int iterations = 5)
     {
         TC4.gameObject.SetActive(true);
         for (float bright = 0; bright < 1; bright += 0.01f)
@@ -326,8 +447,8 @@ public class Beatrix : MonoBehaviour
             TC4.color = new Color(1, 1, 1,bright);
             yield return new WaitForSeconds(0.001f);
         }
-        gameObject.transform.position = new Vector2(x, y);
-        for(int i = 0; i < 5; i++)
+        gameObject.transform.position = new Vector2(x, y); //12312312313132
+        for(int i = 0; i < iterations; i++)
         {
             
             yield return new WaitForSeconds(3f);
@@ -379,6 +500,14 @@ public class Beatrix : MonoBehaviour
         Anim.SetInteger("Stage", 4);
         yield return new WaitForSeconds(1f);
         Anim.SetInteger("Stage", 0);
+        CanDoDamage = true;
+    }
+
+    IEnumerator EnableHeart() //Включить сердце
+    {
+        Heart.gameObject.SetActive(true);
+        yield return new WaitForSeconds(6f);
+        Heart.gameObject.SetActive(false);
         CanDoDamage = true;
     }
 }
