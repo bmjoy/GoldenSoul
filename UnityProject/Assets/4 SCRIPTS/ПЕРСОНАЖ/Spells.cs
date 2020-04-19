@@ -11,7 +11,7 @@ public class Spells : MonoBehaviour
 
     public static int Pointer = -1;
 
-    public static int[] SpellsList = new int[] {0,0,0,0};
+    public static int[] SpellsList = new int[] {0,0,0,0,0};
 
     public GameObject[] SpellObj;
 
@@ -19,7 +19,7 @@ public class Spells : MonoBehaviour
     {
         ManaSlider = GameObject.Find("HeroMana").GetComponent<Slider>();
         Regen = true;
-        if (!(SpellsList[0] == 0 && SpellsList[1] == 0 && SpellsList[2] == 0 && SpellsList[3] == 0))
+        if (!(SpellsList[0] == 0 && SpellsList[1] == 0 && SpellsList[2] == 0 && SpellsList[3] == 0 && SpellsList[4] == 0))
         {
             ChangePointer();
         }
@@ -32,11 +32,11 @@ public class Spells : MonoBehaviour
         {
             Destroy(item);
         }
-        if (SpellsList[0] == 0 && SpellsList[1] == 0 && SpellsList[2] == 0 && SpellsList[3] == 0)
+        if (SpellsList[0] == 0 && SpellsList[1] == 0 && SpellsList[2] == 0 && SpellsList[3] == 0 && SpellsList[4] == 0)
         {
             return;
         }
-        Pointer += (Pointer == 3) ? -3 : 1;
+        Pointer += (Pointer == 4) ? -4 : 1;
         if (SpellsList[Pointer] == 0) ChangePointer();
         GameObject.Find("Spell").GetComponent<Animator>().SetInteger("Spell", SpellsList[Pointer]);
         //GameObject.Find("SpellText").GetComponent<Text>().text = (Pointer+1).ToString();
@@ -56,6 +56,7 @@ public class Spells : MonoBehaviour
 
     public void Spawn() // Спавним заклинание
     {
+        if (moveScript.moveyes == false) return;
         foreach (GameObject item in GameObject.FindGameObjectsWithTag("PlayerBullet2"))
         {
             Destroy(item);
@@ -72,12 +73,13 @@ public class Spells : MonoBehaviour
             case 3:
                 StartCoroutine(MagicWand());
                 break;
+            case 4:
+                StartCoroutine(AncientSword());
+                break;
         }
         
 
     }
-
-
 
 
 
@@ -120,6 +122,19 @@ public class Spells : MonoBehaviour
             if (ManaSlider.value <= 15 || Aim.PLEE) { break; }
             ManaSlider.value -= 7;
             yield return new WaitForSeconds(0.6f);
+        }
+
+    }
+    IEnumerator AncientSword()
+    {
+        if (ManaSlider.value > 10)
+            Instantiate(gameObject.GetComponent<Spells>().SpellObj[3], new Vector2(gameObject.transform.position.x, gameObject.transform.position.y), Quaternion.identity,gameObject.transform);
+
+        while (true)
+        {
+            if (ManaSlider.value <= 5 || Aim.PLEE) {  Aim.PLEE = true; break; }           
+            ManaSlider.value -= 5;
+            yield return new WaitForSeconds(0.1f);
         }
 
     }

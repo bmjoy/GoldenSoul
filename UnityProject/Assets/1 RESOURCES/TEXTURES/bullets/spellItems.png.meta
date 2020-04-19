@@ -6,6 +6,7 @@ TextureImporter:
     21300002: spellItems_1
     21300004: spellItems_2
     21300006: spellItems_3
+    21300008: spellItems_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -124,7 +125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2698ad1a95672ed4191a1d744d80ac81
+      spriteID: ba9e949b1ded9434daa0f48132e470cc
       vertices: []
       indices: 
       edges: []
@@ -144,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e17fb07f1362a694ab72dcd8106563cf
+      spriteID: 682a023ad56857347b50872b16eb7ee7
       vertices: []
       indices: 
       edges: []
@@ -164,7 +165,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3620e61658a3ce4b977f2533e5f69ac
+      spriteID: 4a35c0323a5362a49905bc33b82b073a
       vertices: []
       indices: 
       edges: []
@@ -178,13 +179,33 @@ TextureImporter:
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee3e794d88e10b9408cadd6e3fb690cb
+      spriteID: 1d3a7156d42509046ab2775ece2a0b4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spellItems_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.53125, y: -0.015625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8d00ec7b0aa10408403ab8e23ce636
       vertices: []
       indices: 
       edges: []

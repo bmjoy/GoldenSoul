@@ -26,6 +26,11 @@ public class Vase : MonoBehaviour
             Break();
             Destroyed = true;
         }
+        if (collision.CompareTag("PlayerBullet4") && !Destroyed)
+        {
+            Break();
+            Destroyed = true;
+        }
         if (collision.CompareTag("enemy") && !Destroyed)
         {
             Break();

@@ -18,6 +18,7 @@ public class PenekKing : MonoBehaviour
     private Rigidbody2D Rigi;
     private GameObject Player;
     private Vector2 Vector;
+    private Vector2 SpareDistance;
     private Collider2D Col;
     public bool Active = false; //если активен вызывает атаку
     public bool LastStady = false;

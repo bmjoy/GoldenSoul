@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
     public static int PointerBossMax = 1;
     public int scene;
     public Text[] Texts;
+    public static int category = 1;
+    public int[] scenes = {0};
 
     private void Awake()
     {
@@ -44,11 +46,21 @@ public class MainMenu : MonoBehaviour
             GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", false);
         Language();
         Language();
+        if(category == 1)
+        {
+            BossMenu(false);
+        }
+        else
+        {
+            BossMenu(true);
+        }
     }
 
     public void BossFight()
     {
-        
+        EventSavingSystem.ThisLvl = scenes[PointerBoss];
+        print(EventSavingSystem.ThisLvl);
+        SceneManager.LoadScene(scenes[PointerBoss]);   
     }
 
     public void BossMenu(bool b)
@@ -104,6 +116,7 @@ public class MainMenu : MonoBehaviour
 
         if (b)
         {
+            category = 2;
             foreach (GameObject i in BossesScenes)
             {
                 i.SetActive(false);
@@ -122,6 +135,7 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
+            category = 1;
             BossesScenes[PointerBoss].GetComponent<Animator>().SetInteger("Slide", 1);
             foreach (GameObject i in BossesObj)
             {

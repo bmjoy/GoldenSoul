@@ -13,4 +13,8 @@ public class QuickMenu : MonoBehaviour
         EventSavingSystem.LoadAll();
         SceneManager.LoadScene(EventSavingSystem.ThisLvl);
     }
+    public void LoadBoss()
+    {
+        SceneManager.LoadScene(EventSavingSystem.ThisLvl);
+    }
 }

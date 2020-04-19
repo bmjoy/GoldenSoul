@@ -26,6 +26,13 @@ public class MonsterLife : MonoBehaviour
             StartCoroutine(DamagedWait());
             Destroy(Col.gameObject);
         }
+        if (Col.CompareTag("PlayerBullet4"))
+        {
+            Damaged = true;
+            MonsterPic.color = new Color(MonsterPic.color.r, MonsterPic.color.g, MonsterPic.color.b, 1f);
+            StopAllCoroutines();
+            StartCoroutine(DamagedWait());
+        }
     }
 
     IEnumerator DamagedWait()

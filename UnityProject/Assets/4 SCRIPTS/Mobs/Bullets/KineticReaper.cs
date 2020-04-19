@@ -42,6 +42,7 @@ public class KineticReaper : MonoBehaviour
 
     IEnumerator WaitDelete()
     {
+        yield return new WaitForSeconds(1f);
         for (int i = 0; i < 3; i++)
         {
             Anim.SetBool("Rotate", true);
