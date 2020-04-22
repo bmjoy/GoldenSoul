@@ -28,10 +28,13 @@ public class PenekKing : MonoBehaviour
     TilemapCollider2D TC4;
     public GameObject Koren;
     public GameObject Heart;
+    public GameObject ActiveArea;
+    public BossMode BossModeObj;
     public float posX;
     public float posY;
 //    private int bushes = 0;
     public GameObject[] Phrases;
+    public bool BossMode = false;
     void Start()
     {
         posX = transform.position.x;
@@ -49,6 +52,12 @@ public class PenekKing : MonoBehaviour
 
     void Update()
     {
+        if (BossMode == true && ActiveArea.GetComponent<ActiveOnStep>().Active && !Active)
+        {
+            Active = true;
+            ActiveArea.GetComponent<ActiveOnStep>().Active = false;
+        }
+
         if (Lifes < 1 && LastStady==false) {
             slider.SetActive(false);
             Heart.SetActive(false);
@@ -70,6 +79,7 @@ public class PenekKing : MonoBehaviour
             Phrases[4].SetActive(true);
             EventSavingSystem.UsedEvents[9] = true;
             Destroy(gameObject);
+            slider.gameObject.SetActive(false);
             return;
         }
         if (Heart.GetComponent<MonsterLife>().Damaged)
@@ -151,6 +161,11 @@ public class PenekKing : MonoBehaviour
         Rigi.AddForce((new Vector2(-16f, 1f) - (Vector2)transform.position) * Force, ForceMode2D.Impulse);
         Anim.SetInteger("Stage", 4);
         yield return new WaitForSeconds(0.5f);
+        if (BossMode)
+        {
+            BossModeObj.win = true;
+            StopAllCoroutines();
+        }
         Anim.SetInteger("Stage", 1);
         Rigi.drag = V;
         CanDoDamage = false;
@@ -190,6 +205,11 @@ public class PenekKing : MonoBehaviour
         StartCoroutine(SpareMe());
     }
 
+    void BossModeEnd()
+    {
+        BossModeObj.win = true;
+    }
+
     IEnumerator Attack1()//разбег
     {
         Anim.SetBool("Attack", true);
@@ -220,7 +240,7 @@ public class PenekKing : MonoBehaviour
         for (int i = 0; i < 7 + Xfast; i++)
         {
             Instantiate(Koren, new Vector2(Player.transform.position.x+Random.Range(0f,0.05f), Player.transform.position.y + Random.Range(0f, 0.05f)), Quaternion.identity);
-            yield return new WaitForSeconds(0.5f + 1 / Xfast);
+            yield return new WaitForSeconds(0.5f);
         }
         Anim.SetInteger("Stage", 1);
         Heart.SetActive(true);

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class BossMode : MonoBehaviour
@@ -26,7 +27,7 @@ public class BossMode : MonoBehaviour
     {
         if (win)
         {
-
+            SceneManager.LoadScene(0);
         }
         if (lose)
         {

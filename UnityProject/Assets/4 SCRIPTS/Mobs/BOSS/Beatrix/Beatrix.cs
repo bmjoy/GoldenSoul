@@ -33,6 +33,8 @@ public class Beatrix : MonoBehaviour
     public float[] posY;
     public GameObject[] Phrases;
     public GameObject[] Bullets;
+    public bool BossMode = false;
+    public BossMode BossModeObj;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,7 +61,6 @@ public class Beatrix : MonoBehaviour
             StopAllCoroutines();
             StartCoroutine(Bushed());
             Heart.Damaged = false;
-            Heart.gameObject.SetActive(false);
             Lifes--;
             slider.value = Lifes;
             if(Lifes < 11 && Lifes > 7 && Stage == 1)
@@ -155,6 +156,7 @@ public class Beatrix : MonoBehaviour
         else if (StageCount == 7)
         {
             Heart.gameObject.SetActive(true);
+            slider.gameObject.SetActive(true);
             StageCount++;
             return;
         }
@@ -379,13 +381,19 @@ public class Beatrix : MonoBehaviour
             {
                 Phrases[6].SetActive(true);
                 Anim.SetInteger("Stage", 5);
+                Heart.gameObject.SetActive(true);
                 StartCoroutine(Bushed());
             } 
 
+            if (Lifes < 1 && !BossMode) Anim.SetInteger("Stage", 6);
             Heart.gameObject.SetActive(true);
+            slider.gameObject.SetActive(true);
 
-            if (Lifes < 1) Anim.SetInteger("Stage", 6);
-            Heart.gameObject.SetActive(true);
+            if (Lifes < 1 && BossMode)
+            {
+                StartCoroutine(BossModeEnd());
+            }
+            
 
         }
 
@@ -529,5 +537,11 @@ public class Beatrix : MonoBehaviour
         Heart.gameObject.SetActive(false);
         slider.gameObject.SetActive(false);
         CanDoDamage = true;
+    }
+
+    IEnumerator BossModeEnd() //Включить сердце
+    {
+        yield return new WaitForSeconds(5f);
+        BossModeObj.win = true;
     }
 }
