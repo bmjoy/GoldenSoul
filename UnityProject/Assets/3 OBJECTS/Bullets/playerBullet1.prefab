@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Vector: {x: 0, y: 0}
   multiplier: 1
-  ForceD: 5
+  ForceD: 7
 --- !u!95 &3668198821420633936
 Animator:
   serializedVersion: 3

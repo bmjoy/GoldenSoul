@@ -26,7 +26,7 @@ public class avatarevent : MonoBehaviour
     }
     public static void avatarstop()
     {
-        avatar.Play(0,0,0f);
+        avatar.Play(0,0,0.9f);
         avatar.speed = 0;
         
     }

@@ -13,7 +13,15 @@ public class MenuAppearance : MonoBehaviour
     void Start()
     {
         Img = GetComponent<Image>();
-        StartCoroutine(Appearance());
+        if (MainMenu.category == 2)
+        {
+            StartCoroutine(Appearance2());
+        }
+        else
+        {
+            StartCoroutine(Appearance());
+        }
+        
         Logo.color = new Color(255, 255, 255, 0);
         Mw.color = new Color(255, 165, 246, 0);
         Ll.color = new Color(255, 165, 246, 0);
@@ -60,6 +68,17 @@ public class MenuAppearance : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    IEnumerator Appearance2()
+    {
+        for (float bright = 1; bright > 0; bright -= Time.deltaTime * 2)
+        {
+            Img.color = new Color(0, 0, 0, bright);
+            yield return new WaitForSeconds(0.005f);
+        }
+        Destroy(gameObject);
+    }
+
     IEnumerator Disappearance()
     {
         for (float bright = 0; bright < 1; bright += Time.deltaTime)

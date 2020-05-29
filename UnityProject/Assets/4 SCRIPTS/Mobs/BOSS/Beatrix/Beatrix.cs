@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Beatrix : MonoBehaviour
 {
+    public GameObject Director;
     public int StageCount = 0; // Накапливание комбинаций чтоыб открыть сердце
     public int Stage = 0; //Стадия Босса
     public float DistanceX = 1; //Дистанция от игрока
@@ -33,7 +34,7 @@ public class Beatrix : MonoBehaviour
     public float[] posY;
     public GameObject[] Phrases;
     public GameObject[] Bullets;
-    public bool BossMode = false;
+    public bool BossModeflag = false;
     public BossMode BossModeObj;
     // Start is called before the first frame update
     void Start()
@@ -55,6 +56,7 @@ public class Beatrix : MonoBehaviour
             StartCoroutine(TileDissapear());
             TC2.gameObject.SetActive(false);
             TC3.gameObject.SetActive(false);
+            GameObject.Find("BOSS2").GetComponent<BossMode>().StartTimer();
         }
         if (Heart.Damaged)
         {
@@ -81,6 +83,7 @@ public class Beatrix : MonoBehaviour
         }
         if (CanDoDamage)
         {
+            BossMode.BossAttacks++;
             CanDoDamage = false;
             switch (Stage)
             {
@@ -383,18 +386,21 @@ public class Beatrix : MonoBehaviour
                 Anim.SetInteger("Stage", 5);
                 Heart.gameObject.SetActive(true);
                 StartCoroutine(Bushed());
-            } 
+                if (Lifes < 1 && !BossModeflag) Anim.SetInteger("Stage", 6);
+                {
+                    StartCoroutine(StartCutScn());
+                }
+                return;
+            }
+            Character1.NoAlert();
+            Heart.gameObject.SetActive(false);
+            slider.gameObject.SetActive(false);
 
-            if (Lifes < 1 && !BossMode) Anim.SetInteger("Stage", 6);
-            Heart.gameObject.SetActive(true);
-            slider.gameObject.SetActive(true);
-
-            if (Lifes < 1 && BossMode)
+            if (Lifes < 1 && BossModeflag)
             {
                 StartCoroutine(BossModeEnd());
+                return;
             }
-            
-
         }
 
         StageCount++;
@@ -543,5 +549,10 @@ public class Beatrix : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         BossModeObj.win = true;
+    }
+    IEnumerator StartCutScn() //Включить сердце
+    {
+        yield return new WaitForSeconds(6f);
+        Director.SetActive(true);
     }
 }

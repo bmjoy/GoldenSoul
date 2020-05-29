@@ -198,6 +198,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1303597933565052879, guid: e55dd3388b18af941a776aed6a38f4d9,
+        type: 3}
+      propertyPath: MonsterPic
+      value: 
+      objectReference: {fileID: 4067373288197190401}
+    - target: {fileID: 1303597933565052879, guid: e55dd3388b18af941a776aed6a38f4d9,
+        type: 3}
+      propertyPath: Damaged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303597933565052879, guid: e55dd3388b18af941a776aed6a38f4d9,
+        type: 3}
+      propertyPath: OffAfterDamaged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1303597933565052879, guid: e55dd3388b18af941a776aed6a38f4d9,
+        type: 3}
+      propertyPath: CountDmg
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3775538385900042787, guid: e55dd3388b18af941a776aed6a38f4d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -252,21 +272,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303597933565052879, guid: e55dd3388b18af941a776aed6a38f4d9,
-        type: 3}
-      propertyPath: MonsterPic
-      value: 
-      objectReference: {fileID: 4067373288197190401}
-    - target: {fileID: 1303597933565052879, guid: e55dd3388b18af941a776aed6a38f4d9,
-        type: 3}
-      propertyPath: Damaged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303597933565052879, guid: e55dd3388b18af941a776aed6a38f4d9,
-        type: 3}
-      propertyPath: OffAfterDamaged
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6598750912704476433, guid: e55dd3388b18af941a776aed6a38f4d9,
         type: 3}

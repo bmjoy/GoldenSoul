@@ -9,7 +9,7 @@ public class StartCutscene : MonoBehaviour
     public GameObject DirectorObject;
     public PlayableDirector Director;
     public float X;
-    public float Y;
+    public float Y ;
     bool active = true;
     void OnTriggerEnter2D(Collider2D Col)
     {

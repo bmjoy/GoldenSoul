@@ -97,7 +97,7 @@ public class Character1 : MonoBehaviour
         {
             HitTime = true;
             HP -= x;
-
+            BossMode.BossDmg -= x; 
         }
         
     }

@@ -19,6 +19,9 @@ public class MainMenu : MonoBehaviour
     public static int category = 1;
     public int[] scenes = {0};
 
+    public GameObject ButtonLeft;
+    public GameObject ButtonRight;
+
     private void Awake()
     {
         int i = 0;
@@ -60,7 +63,7 @@ public class MainMenu : MonoBehaviour
     {
         EventSavingSystem.ThisLvl = scenes[PointerBoss];
         print(EventSavingSystem.ThisLvl);
-        SceneManager.LoadScene(scenes[PointerBoss]);   
+        StartCoroutine(DisappearanceLvl(scenes[PointerBoss]));  
     }
 
     public void BossMenu(bool b)
@@ -89,7 +92,7 @@ public class MainMenu : MonoBehaviour
         if (PlayerPrefs.GetInt("UsedEvents0") == 1)
         {
             EventSavingSystem.LoadAll();
-            SceneManager.LoadScene(EventSavingSystem.ThisLvl);
+            StartCoroutine(DisappearanceLvl(EventSavingSystem.ThisLvl));
         }
         else
         {
@@ -99,7 +102,7 @@ public class MainMenu : MonoBehaviour
     public void Play() {
         EventSavingSystem.RealHp = 5;
         PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene(1);
+        StartCoroutine(DisappearanceLvl(1));
     }
     public void Exit()
     {
@@ -108,10 +111,10 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator AppearanceImg(bool b)
     {
-        for (float bright = 0; bright < 1; bright += 0.01f)
+        for (float bright = 0; bright < 1; bright += Time.deltaTime*3)
         {
             MenuBlack.color = new Color(0, 0, 0, bright);
-            yield return new WaitForSeconds(0.0005f);
+            yield return new WaitForSeconds(0.00001f);
         }
 
         if (b)
@@ -147,7 +150,7 @@ public class MainMenu : MonoBehaviour
             }
         }
 
-        StartCoroutine(DisappearanceImg(b));
+         StartCoroutine(DisappearanceImg(b));
     }
 
     IEnumerator DisappearanceImg(bool b)
@@ -183,10 +186,24 @@ public class MainMenu : MonoBehaviour
             }
             PointerBoss = 0;
         }
-        for (float bright = 1; bright > 0; bright -= 0.01f)
+        if (PointerBoss < 1)
+        {
+            ButtonLeft.SetActive(false);
+        }
+        else
+        if (PointerBoss == PointerBossMax)
+        {
+            ButtonRight.SetActive(false);
+        }
+        else
+        {
+            ButtonLeft.SetActive(true);
+            ButtonRight.SetActive(true);
+        }
+        for (float bright = 1; bright > 0; bright -= Time.deltaTime * 3)
         {
             MenuBlack.color = new Color(0, 0, 0, bright);
-            yield return new WaitForSeconds(0.0005f);
+            yield return new WaitForSeconds(0.00001f);
         }
     }
 
@@ -204,7 +221,7 @@ public class MainMenu : MonoBehaviour
             Texts[3].fontSize = 60;
             Texts[3].text = "Exit";
             Texts[3].fontSize = 60;
-            Texts[4].text = "Chapter:";
+            Texts[4].text = "1. Bring \n     us back";
             Texts[5].text = "Back";
             Texts[5].fontSize = 60;
             Texts[6].text = "Fight";
@@ -223,7 +240,7 @@ public class MainMenu : MonoBehaviour
             Texts[2].fontSize = 50;
             Texts[3].text = "Выход";
             Texts[3].fontSize = 50;
-            Texts[4].text = "Глава:";
+            Texts[4].text = "1. Верни \n     нас назад";
             Texts[5].text = "Назад";
             Texts[5].fontSize = 60;
             Texts[6].text = "Бой";
@@ -234,5 +251,15 @@ public class MainMenu : MonoBehaviour
 
         PlayerPrefs.SetInt("Language", EventSavingSystem.Language);
         PlayerPrefs.Save();
+    }
+    IEnumerator DisappearanceLvl(int lvl)
+    {
+        for (float bright = 0; bright < 1; bright += Time.deltaTime * 3)
+        {
+            MenuBlack.color = new Color(0, 0, 0, bright);
+            yield return new WaitForSeconds(0.00001f);
+        }
+        MenuBlack.color = new Color(0, 0, 0, 1);
+        SceneManager.LoadScene(lvl);
     }
 }

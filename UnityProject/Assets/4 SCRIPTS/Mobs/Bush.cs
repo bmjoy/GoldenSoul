@@ -107,12 +107,26 @@ public class Bush : MonoBehaviour
     IEnumerator Attack()
     {
         Vec = Vector2.zero;
-        for (int i =0; i < Random.Range(2,4); i++)
+        switch (Random.Range(0, 2))
         {
-            Anim.SetInteger("Vector", 3);
-            yield return new WaitForSeconds(0.3f);
-            Instantiate(Bullet, transform.position, Quaternion.identity);
+            case 0:
+                for (int i = 0; i < Random.Range(2, 4); i++)
+                {
+                    Anim.SetInteger("Vector", 3);
+                    yield return new WaitForSeconds(0.3f);
+                    Instantiate(Bullet, new Vector2(gameObject.transform.position.x + Random.Range(-0.3f, 0.3f), gameObject.transform.position.y + Random.Range(-0.3f, 0.3f)), Quaternion.identity);
+                }
+            break;
+
+            case 1:
+                Anim.SetInteger("Vector", 3);
+                Instantiate(Bullet, new Vector2(gameObject.transform.position.x + Random.Range(-0.3f, 0.3f), gameObject.transform.position.y + Random.Range(-0.3f, 0.3f)), Quaternion.identity);
+                Instantiate(Bullet, new Vector2(gameObject.transform.position.x + Random.Range(-0.3f, 0.3f), gameObject.transform.position.y + Random.Range(-0.3f, 0.3f)), Quaternion.identity);
+                Instantiate(Bullet, new Vector2(gameObject.transform.position.x + Random.Range(-0.3f, 0.3f), gameObject.transform.position.y + Random.Range(-0.3f, 0.3f)), Quaternion.identity);
+                yield return new WaitForSeconds(1f);
+                break;
         }
+
         Anim.SetInteger("Vector", 0);
         yield return new WaitForSeconds(1f);
         MonsterLife.SetActive(true);

@@ -58,7 +58,11 @@ public class playerBullet3 : MonoBehaviour
             gameObject.tag = "Untagged";
             return;
         }
-        if (Aim.PLEE) return;
+        if (Aim.PLEE)
+        {
+            StartCoroutine(Delete());
+            return;
+        }
         Vec = new Vector2(moveScript.JStick.Horizontal, moveScript.JStick.Vertical);
     }
 
