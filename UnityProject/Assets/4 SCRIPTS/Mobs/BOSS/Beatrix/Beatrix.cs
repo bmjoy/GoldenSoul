@@ -393,14 +393,16 @@ public class Beatrix : MonoBehaviour
                 return;
             }
             Character1.NoAlert();
-            Heart.gameObject.SetActive(false);
+            Heart.gameObject.SetActive(true);
             slider.gameObject.SetActive(false);
 
             if (Lifes < 1 && BossModeflag)
             {
                 StartCoroutine(BossModeEnd());
+                Heart.gameObject.SetActive(false);
                 return;
             }
+            
         }
 
         StageCount++;
@@ -554,5 +556,21 @@ public class Beatrix : MonoBehaviour
     {
         yield return new WaitForSeconds(6f);
         Director.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        for (float bright = 0.5f; bright < 1; bright += 0.01f)
+        {
+            Tiles[0].color = new Color(bright, bright, bright);
+            Tiles[1].color = new Color(bright, bright, bright);
+            Tiles[2].color = new Color(bright, bright, bright);
+            Tiles[3].color = new Color(bright, bright, bright);
+            Tiles[4].color = new Color(bright, bright, bright);
+            Tiles[5].color = new Color(bright, bright, bright);
+            Tiles[6].color = new Color(bright, bright, bright);
+            Tiles[7].color = new Color(bright, bright, bright);
+            Tiles[8].color = new Color(bright, bright, bright);
+            Tiles[9].color = new Color(bright, bright, bright);
+            yield return new WaitForSeconds(0.001f);
+        }
+        TC1.gameObject.SetActive(true);
     }
 }
