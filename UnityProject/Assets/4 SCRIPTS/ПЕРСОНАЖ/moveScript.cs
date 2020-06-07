@@ -40,7 +40,7 @@ public class moveScript : MonoBehaviour
     }
     void FixedUpdate()
     {
-        JoystickDegree = Degree.GetDegree(JStick.HorizontalSnap, JStick.VerticalSnap);
+        try { JoystickDegree = Degree.GetDegree(JStick.HorizontalSnap, JStick.VerticalSnap); } catch { }
 
         if(moveyes == false && NoShooting)
         {
@@ -58,105 +58,107 @@ public class moveScript : MonoBehaviour
             hero.speed = 1;
             return;
         }
-
-        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || JStick.Vertical != 0) && JStick.Horizontal == 0)//Вертикальное передвижение
+        try
         {
-            if (Input.GetKey(KeyCode.W) || JStick.Vertical == 1)
+            if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || JStick.Vertical != 0) && JStick.Horizontal == 0)//Вертикальное передвижение
             {
-                hero.speed = 1;
-                hero.SetInteger("Vector", 2);
+                if (Input.GetKey(KeyCode.W) || JStick.Vertical == 1)
+                {
+                    hero.speed = 1;
+                    hero.SetInteger("Vector", 2);
+                }
+                if (Input.GetKey(KeyCode.S) || JStick.Vertical == -1)
+                {
+                    hero.speed = 1;
+                    hero.SetInteger("Vector", 4);
+                }
+                if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
+                {
+                    hero.speed = 0;
+                }
             }
-            if (Input.GetKey(KeyCode.S) || JStick.Vertical == -1)
-            {
-                hero.speed = 1;
-                hero.SetInteger("Vector", 4);
-            }
-            if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.S))
-            {
-                hero.speed = 0;
-            }
-        }
 
-        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || JStick.Horizontal != 0) && JStick.Vertical == 0)//Горизонтальное передвижение
-        {
-            if (Input.GetKey(KeyCode.D) || JStick.Horizontal == 1) // Проверяем условие нажатия кнопки D
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || JStick.Horizontal != 0) && JStick.Vertical == 0)//Горизонтальное передвижение
             {
-                hero.speed = 1;
-                hero.SetInteger("Vector", 3);
+                if (Input.GetKey(KeyCode.D) || JStick.Horizontal == 1) // Проверяем условие нажатия кнопки D
+                {
+                    hero.speed = 1;
+                    hero.SetInteger("Vector", 3);
+                }
+                if (Input.GetKey(KeyCode.A) || JStick.Horizontal == -1) // Проверяем условие нажатия кнопки A
+                {
+                    hero.speed = 1;
+                    hero.SetInteger("Vector", 1);
+                }
+                if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) //Костыль от Кости
+                {
+                    hero.speed = 0;
+                }
             }
-            if (Input.GetKey(KeyCode.A) || JStick.Horizontal == -1) // Проверяем условие нажатия кнопки A
-            {
-                hero.speed = 1;
-                hero.SetInteger("Vector", 1);
-            }
-            if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) //Костыль от Кости
-            {
-                hero.speed = 0;
-            }
-        }
 
-        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
-            || JStick.Horizontal != 0 && JStick.Vertical != 0)
-        {
-            horizontalSpeed = Mathf.Sqrt(Mathf.Pow(Speed / 2, 2) * 2); //Скорость вертикальной ходьбы
-            verticalSpeed = Mathf.Sqrt(Mathf.Pow(Speed / 2, 2) * 2);
-            hero.speed = 1;
-            if (JStick.Horizontal < 0 && JStick.Vertical > 0)
+            if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)) && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
+                || JStick.Horizontal != 0 && JStick.Vertical != 0)
             {
-                hero.SetInteger("Vector", 5);
+                horizontalSpeed = Mathf.Sqrt(Mathf.Pow(Speed / 2, 2) * 2); //Скорость вертикальной ходьбы
+                verticalSpeed = Mathf.Sqrt(Mathf.Pow(Speed / 2, 2) * 2);
+                hero.speed = 1;
+                if (JStick.Horizontal < 0 && JStick.Vertical > 0)
+                {
+                    hero.SetInteger("Vector", 5);
+                }
+                else
+                if (JStick.Horizontal > 0 && JStick.Vertical > 0)
+                {
+                    hero.SetInteger("Vector", 6);
+                }
+                else
+                if (JStick.Horizontal > 0 && JStick.Vertical < 0)
+                {
+                    hero.SetInteger("Vector", 7);
+                }
+                else
+                if (JStick.Horizontal < 0 && JStick.Vertical < 0)
+                {
+                    hero.SetInteger("Vector", 8);
+                }
+            }
+
+            else
+            {
+                horizontalSpeed = Speed; //Скорость движения
+                verticalSpeed = Speed;
+            }
+            if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || JStick.Horizontal != 0 || JStick.Vertical != 0) && moveyes == true && NoShooting == true &&
+                    !Input.GetKey(KeyCode.Space) && !attackButt)
+            {
+                hero.speed = 0; //Остановить анимацию если не идём
+            }
+
+            if (moveyes && NoShooting)
+            {
+                Rigi.velocity = new Vector2(JStick.Horizontal, JStick.Vertical).normalized * Speed;
             }
             else
-            if (JStick.Horizontal > 0 && JStick.Vertical > 0)
             {
-                hero.SetInteger("Vector", 6);
+                Rigi.velocity = Vector2.zero;
+            }
+
+
+            if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || JStick.Horizontal != 0 || JStick.Vertical != 0))
+            {
+                hero.speed = 0; //Остановить анимацию если не идём
+            }
+
+            if (moveyes && NoShooting)
+            {
+                Rigi.velocity = new Vector2(JStick.Horizontal, JStick.Vertical).normalized * Speed;
             }
             else
-            if (JStick.Horizontal > 0 && JStick.Vertical < 0)
             {
-                hero.SetInteger("Vector", 7);
-            }
-            else
-            if (JStick.Horizontal < 0 && JStick.Vertical < 0)
-            {
-                hero.SetInteger("Vector", 8);
+                Rigi.velocity = Vector2.zero;
             }
         }
-
-        else
-        {
-            horizontalSpeed = Speed; //Скорость движения
-            verticalSpeed = Speed;
-        }
-        if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || JStick.Horizontal != 0 || JStick.Vertical != 0) && moveyes == true && NoShooting == true &&
-                !Input.GetKey(KeyCode.Space) && !attackButt) 
-        {
-            hero.speed = 0; //Остановить анимацию если не идём
-        }
-
-        if (moveyes && NoShooting)
-        {
-            Rigi.velocity = new Vector2(JStick.Horizontal, JStick.Vertical).normalized * Speed;
-        }
-        else
-        {
-            Rigi.velocity = Vector2.zero;
-        }
-
-
-        if (!(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || JStick.Horizontal != 0 || JStick.Vertical != 0))
-        {
-            hero.speed = 0; //Остановить анимацию если не идём
-        }
-
-        if (moveyes && NoShooting)
-        {
-        Rigi.velocity = new Vector2(JStick.Horizontal, JStick.Vertical).normalized * Speed;
-        }
-        else
-        {
-        Rigi.velocity = Vector2.zero;
-        }
-
+        catch { }
     }
     
     public static void enable(bool x)

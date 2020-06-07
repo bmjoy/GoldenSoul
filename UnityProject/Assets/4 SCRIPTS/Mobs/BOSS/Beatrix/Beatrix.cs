@@ -75,7 +75,7 @@ public class Beatrix : MonoBehaviour
                 Stage = 3;
                 StageCount = 0;
             }
-            if (Lifes < 2 && Stage == 3)
+            if (Lifes < 2 && Stage != 4)
             {
                 Stage = 4;
                 StageCount = 0;
@@ -382,13 +382,19 @@ public class Beatrix : MonoBehaviour
 
             if (Lifes == 0)
             {
+                CanDoDamage = false;
                 Phrases[6].SetActive(true);
                 Anim.SetInteger("Stage", 5);
-                Heart.gameObject.SetActive(true);
                 StartCoroutine(Bushed());
-                if (Lifes < 1 && !BossModeflag) Anim.SetInteger("Stage", 6);
+                TC1.gameObject.SetActive(false);
+                TC2.gameObject.SetActive(false);
+                TC3.gameObject.SetActive(false);
+                TC4.gameObject.SetActive(false);
+                if (!BossModeflag) Anim.SetInteger("Stage", 6);
                 {
                     StartCoroutine(StartCutScn());
+                    Heart.gameObject.SetActive(false);
+                    slider.gameObject.SetActive(false);
                 }
                 return;
             }
@@ -554,23 +560,26 @@ public class Beatrix : MonoBehaviour
     }
     IEnumerator StartCutScn() //Включить сердце
     {
-        yield return new WaitForSeconds(6f);
-        Director.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        for (float bright = 0.5f; bright < 1; bright += 0.01f)
+        yield return new WaitForSeconds(15f);
+
+        moveScript.hero.speed = 0;
+        moveScript.moveyes = false;
+        Image image = GameObject.Find("Imagelvl").GetComponent<Image>();
+        for (float bright = 0; bright < 1; bright += Time.deltaTime)
         {
-            Tiles[0].color = new Color(bright, bright, bright);
-            Tiles[1].color = new Color(bright, bright, bright);
-            Tiles[2].color = new Color(bright, bright, bright);
-            Tiles[3].color = new Color(bright, bright, bright);
-            Tiles[4].color = new Color(bright, bright, bright);
-            Tiles[5].color = new Color(bright, bright, bright);
-            Tiles[6].color = new Color(bright, bright, bright);
-            Tiles[7].color = new Color(bright, bright, bright);
-            Tiles[8].color = new Color(bright, bright, bright);
-            Tiles[9].color = new Color(bright, bright, bright);
-            yield return new WaitForSeconds(0.001f);
+            image.color = new Color(0, 0, 0, bright);
+            yield return new WaitForSeconds(0.005f);
         }
-        TC1.gameObject.SetActive(true);
+
+        Director.SetActive(true);
+        yield return new WaitForSeconds(2f);
+
+        for (float bright = 1; bright > 0; bright -= Time.deltaTime)
+        {
+            image.color = new Color(0, 0, 0, bright);
+            yield return new WaitForSeconds(0.005f);
+        }
+        moveScript.moveyes = true;      
+        yield return new WaitForSeconds(1f);
     }
 }

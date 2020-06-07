@@ -51,21 +51,29 @@ public class Character1 : MonoBehaviour
 
     private void Start()
     {
-        LifeSlider = GameObject.Find("HeroLife").GetComponent<Slider>();
-        _Lifepoint = GameObject.Find("LifePoint");
-        DeathText = GameObject.Find("YouDead");
-        _Hit = Hit;
-        Rigi = GetComponent<Rigidbody2D>();
+        try
+        {
+            LifeSlider = GameObject.Find("HeroLife").GetComponent<Slider>();
+            _Lifepoint = GameObject.Find("LifePoint");
+            DeathText = GameObject.Find("YouDead");
+            _Hit = Hit;
+            Rigi = GetComponent<Rigidbody2D>();
+        }
+        catch { }
         Player = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(Level.ThisLevel());
-        Indicator.SetActive(false);
-        _Lifepoint.SetActive(false);
-        DeathText.SetActive(false);
+        try
+        {
+            Indicator.SetActive(false);
+            _Lifepoint.SetActive(false);
+            DeathText.SetActive(false);
+        }
+        catch { }
 
     }
     void Update()
     {
-        LifeSlider.value = HP;
+        try { LifeSlider.value = HP; } catch { }
         if (HitTime == true && !StopHitTime) //Активируем выжидалку от урона(моргание)
         {
             StartCoroutine(WaitForHit());
@@ -88,7 +96,7 @@ public class Character1 : MonoBehaviour
             }
         }
         catch { }
-        AttackDirection = Player.GetComponent<Animator>().GetInteger("Vector");
+        try{ AttackDirection = Player.GetComponent<Animator>().GetInteger("Vector"); }       catch { }
     }
 
     static public void MinusHp(int x = 10) //Минус хп если не было получено урона до этого

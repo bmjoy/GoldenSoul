@@ -6,12 +6,17 @@ public class CanvasControls : MonoBehaviour
 {
     public void Awake()
     {
-        GameObject x1 = GameObject.Find("Attack");
-        GameObject x2 = GameObject.Find("Action");
-        GameObject x3 = GameObject.Find("PhoneControls");
-        x1.SetActive(true);
-        x2.SetActive(true);
-        x3.SetActive(true);
+        try
+        {
+            GameObject x1 = GameObject.Find("Attack");
+            GameObject x2 = GameObject.Find("Action");
+            GameObject x3 = GameObject.Find("PhoneControls");
+            x1.SetActive(true);
+            x2.SetActive(true);
+            x3.SetActive(true);
+        }
+        catch { }
+
     }
     public void ActiveButt()
     {
