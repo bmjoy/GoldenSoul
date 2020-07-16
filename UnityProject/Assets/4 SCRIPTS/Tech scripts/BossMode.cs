@@ -47,6 +47,21 @@ public class BossMode : MonoBehaviour
 
     private void Update()
     {
+        switch (combo)
+        {
+            case 0:
+                CategoryImage.SetInteger("Category", 0);
+                break;
+            case 1:
+                CategoryImage.SetInteger("Category", 1);
+                break;
+            case 2:
+                CategoryImage.SetInteger("Category", 2);
+                break;
+            case 3:
+                CategoryImage.SetInteger("Category", 3);
+                break;
+        }
         if (win && !winlose)
         {           
             StopAllCoroutines();
@@ -71,7 +86,6 @@ public class BossMode : MonoBehaviour
 
     public static IEnumerator Timer()
     {
-        combo = 0;
         BossTime = 0;
         BossDmg = 0;
         BossAttacks = 0;
@@ -96,8 +110,6 @@ public class BossMode : MonoBehaviour
         BossDmgText.text = BossDmgText.text + BossDmg;
         BossAttacksText.text = BossAttacksText.text + BossAttacks;
 
-        combo = 0;
-
         if (NormaTime > BossTime)
         {
             combo++;
@@ -110,24 +122,19 @@ public class BossMode : MonoBehaviour
         {
             combo++;
         }
-
         switch (combo)
         {
             case 0:
                 BossCategory = "C";
-                CategoryImage.SetInteger("Category", 0);
                 break;
             case 1:
                 BossCategory = "B";
-                CategoryImage.SetInteger("Category", 1);
                 break;
-            case 2: 
+            case 2:
                 BossCategory = "A";
-                CategoryImage.SetInteger("Category", 2);
                 break;
             case 3:
                 BossCategory = "S";
-                CategoryImage.SetInteger("Category", 3);
                 break;
         }
 

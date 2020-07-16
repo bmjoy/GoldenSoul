@@ -64,6 +64,7 @@ public class AngryPlant : MonoBehaviour
 
         if (Anim.GetInteger("Stage") == 1)
         {
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(11, 0.8f);
             Instantiate(bullet, new Vector2(transform.position.x - 0.3f, transform.position.y + 1f), Quaternion.identity);
             Instantiate(bullet, new Vector2(transform.position.x, transform.position.y + 1f), Quaternion.identity);
             Instantiate(bullet, new Vector2(transform.position.x + 0.3f, transform.position.y + 1f), Quaternion.identity);

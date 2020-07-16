@@ -7,6 +7,7 @@ TextureImporter:
     21300004: icons_2
     21300006: icons_3
     21300008: icons_4
+    21300010: icons_5
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -206,6 +207,26 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 9cda63ce0ad258443aa0bf89b0cc0ef1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icons_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a38d011128c1e4081e5b9716f23894
       vertices: []
       indices: 
       edges: []

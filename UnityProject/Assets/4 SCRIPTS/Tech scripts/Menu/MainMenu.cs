@@ -30,9 +30,28 @@ public class MainMenu : MonoBehaviour
             EventSavingSystem.UsedEvents[i] = (PlayerPrefs.GetInt("UsedEvents" + i.ToString()) == 1) ? true : false;
             i++;
         }
+        EventSavingSystem.Language = 1;//Убрать
+        print(EventSavingSystem.Language);
+        GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", false);
+        Texts[0].text = "Новая игра";
+        Texts[0].fontSize = 50;
+        Texts[1].text = "Загрузить";
+        Texts[1].fontSize = 48;
+        Texts[2].text = "Язык";
+        Texts[2].fontSize = 50;
+        Texts[3].text = "Выход";
+        Texts[3].fontSize = 50;
+        Texts[4].text = "1. Верни \n нас назад [PILOT]";
+        Texts[5].text = "Назад";
+        Texts[5].fontSize = 60;
+        Texts[6].text = "Бой";
+        Texts[6].fontSize = 60;
+        Texts[7].text = "Боссы";
+        Texts[7].fontSize = 60;
     }
     private void Start()
     {
+        GameObject.Find("AudioSystem").GetComponent<AudioSystem>().StopMusic();
         foreach (GameObject i in MainMenuObj)
         {
             i.SetActive(true);
@@ -42,14 +61,12 @@ public class MainMenu : MonoBehaviour
             i.SetActive(false);
         }
 
-        EventSavingSystem.Language = PlayerPrefs.GetInt("Language");
+        //EventSavingSystem.Language = PlayerPrefs.GetInt("Language");
         if (EventSavingSystem.Language == 0)
             GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", true);
         else
             GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", false);
-        Language();
-        Language();
-        if(category == 1)
+        if (category == 1)
         {
             BossMenu(false);
         }
@@ -57,6 +74,7 @@ public class MainMenu : MonoBehaviour
         {
             BossMenu(true);
         }
+        //Language();
     }
 
     public void BossFight()

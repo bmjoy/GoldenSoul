@@ -29,13 +29,14 @@ public class Dialog : MonoBehaviour
         try
         {
             masDial = (Convert.ToInt32(EventSavingSystem.Language) == 1) ? masDialRus : masDialEng; //поменять
+            print(EventSavingSystem.Language);
         }
         catch
         {
             masDial = (localLang == 1) ? masDialRus : masDialEng;
         }
     }
-    public static IEnumerator Dialogue(string inputText, int massav = 0, float latency = 0.05f,float timeDestroy = 5f)
+    public static IEnumerator Dialogue(string inputText, int[] masvoice, int massav = 0, float latency = 0.05f,float timeDestroy = 5f)
     {
         comment1.IsLock = false;
         _DialogImage.enabled = true;
@@ -43,6 +44,8 @@ public class Dialog : MonoBehaviour
         char[] a = inputText.ToCharArray();
         for(int i = 0; i < inputText.Length;i++)
         {
+            if (i%2==0 && a[i].ToString() != " ")
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallVoice(masvoice[masvoice[0]], 0.5f);
             TextArea.text = TextArea.text + a[i];
             yield return new WaitForSeconds(latency);
         }
@@ -52,7 +55,7 @@ public class Dialog : MonoBehaviour
         disableImage();
         moveScript.enable(true);
     }
-    public static IEnumerator Dialogue3(string[] mass,int[] masav,int[] numbers,float latency = 0.05f, float timeDestroy = 5f)
+    public static IEnumerator Dialogue3(string[] mass, int[] masvoice, int[] masav, int[] numbers,float latency = 0.05f, float timeDestroy = 5f)
     {
         comment1.IsLock = false;
         _DialogImage.enabled = true;
@@ -62,6 +65,8 @@ public class Dialog : MonoBehaviour
             char[] a = mass[numbers[j]].ToCharArray();
             for (int i = 0; i < mass[numbers[j]].Length; i++)
             {
+                if (i % 2 == 0 && a[i].ToString() != " ")
+                    GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallVoice(masvoice[j], 0.5f);
                 TextArea.text = TextArea.text + a[i];
                 yield return new WaitForSeconds(latency);
             }
@@ -77,7 +82,7 @@ public class Dialog : MonoBehaviour
     {
         char[] a = inputText.ToCharArray();
         for (int i = 0; i < inputText.Length; i++)
-        {
+        {           
             _Titre.text = _Titre.text + a[i];
             yield return new WaitForSeconds(latency);
         }

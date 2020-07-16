@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class Penek : MonoBehaviour
 {
     bool Died = false;
+    bool inCollider = false;
     public float Force;
     private Animator Anim;
     private Rigidbody2D Rigi;
@@ -65,35 +66,41 @@ public class Penek : MonoBehaviour
 
     IEnumerator Attack()
     {
-        Rigi.drag = 0;
         Anim.SetBool("Attack", true);
+        GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(8);
         MonsterLife.SetActive(false);
         Anim.speed = 0;
         yield return new WaitForSeconds(1f);
+        Col.isTrigger = true;
         Anim.speed = 1;
+        GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(9);
         Rigi.AddForce((Player.transform.position - transform.position).normalized * Force, ForceMode2D.Impulse);
-        yield return new WaitForSeconds(1f);
-        Rigi.drag = 20;
+        yield return new WaitForSeconds(1f); 
+        Col.isTrigger = false;
         Rigi.velocity = Vector2.zero;
         Anim.SetBool("Attack", false);
         MonsterLife.SetActive(true);
         yield return new WaitForSeconds(3f);
-        Rigi.drag = 0;
         if (!Died) StartCoroutine(Attack());
     }
 
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name != "solidmiddle" && collision.gameObject.name != "solidbottom1" && collision.gameObject.name != "solidbottom2")
+        inCollider = true;
+        if (!collision.gameObject.GetComponent<TilemapCollider2D>())
         {
             Col.isTrigger = true;
         }
-        if (collision.gameObject.name == "solidmiddle" || collision.gameObject.name == "solidbottom1" || collision.gameObject.name == "solidbottom2"){
+        else
+        {
             Col.isTrigger = false;
             Rigi.velocity = Vector2.zero;
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        inCollider = false;
     }
 
     IEnumerator Die()

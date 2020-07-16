@@ -11,31 +11,46 @@ public class RosesEvent : MonoBehaviour
     public GameObject[] Symbols;
     public static int NeedCombo = 123;
     public static int NewCombo = 0;
+    public static int count = 0;
     public int X = 0;
     void OnTriggerEnter2D(Collider2D col)
     {
 
         if (col.CompareTag("Player"))
         {
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(6, 0.8f);
             NewCombo *= 10;
             NewCombo += X;
-            Symbol.SetActive(true);
-            if (NewCombo == NeedCombo)
+            count++;
+            if(NewCombo == NeedCombo / 100 && count == 1 )
             {
+                Symbol.SetActive(true);
+                return;
+            }
+
+            if (NewCombo == NeedCombo / 10 && count == 2 )
+            {
+                Symbol.SetActive(true);
+                return;
+            }
+
+            if (NewCombo == NeedCombo && count == 3)
+            {
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(10, 0.8f);
+                Symbol.SetActive(true);
                 Comm.SetActive(true);
                 stains.SetActive(false);
                 EventSavingSystem.UsedEvents[Num] = true;
                 Destroy(this);
             }
-        }
-        if (col.CompareTag("Player") && ((NewCombo / 100) != 0 && NewCombo != NeedCombo || NewCombo > 321))
-        {
-            NewCombo = 0;
-            Symbol.SetActive(false);
-            foreach (GameObject item in Symbols)
+            else
             {
-                item.SetActive(false);
+                count--;
+                NewCombo = NewCombo / 10;
             }
+
+
+
         }
         Debug.Log(NewCombo);
     }

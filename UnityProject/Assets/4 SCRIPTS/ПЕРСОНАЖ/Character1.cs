@@ -51,6 +51,7 @@ public class Character1 : MonoBehaviour
 
     private void Start()
     {
+        QuickMenu.can_do_pause = true;
         try
         {
             LifeSlider = GameObject.Find("HeroLife").GetComponent<Slider>();
@@ -83,6 +84,9 @@ public class Character1 : MonoBehaviour
         if (BlackImg && !Death) //Чтобы экран не повторял тускление при смерти
         {
             Death = true;
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().StopMusic();
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(7,3f);
+            AudioSystem.enabled1 = false;
             StartCoroutine(BlackImgFun());
         }
 
@@ -90,6 +94,7 @@ public class Character1 : MonoBehaviour
         {
             if (HP < 1) //Смерть
             {
+                QuickMenu.can_do_pause = false;
                 HitTime = false;
                 Player.GetComponent<Animator>().SetBool("Died", true);
                 Player.GetComponent<Animator>().speed = 1;
@@ -103,6 +108,8 @@ public class Character1 : MonoBehaviour
     {
         if (HP > 1 && !HitTime) 
         {
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(4, 0.8f);
+            //GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(3, 1f);
             HitTime = true;
             HP -= x;
             BossMode.BossDmg -= x; 
@@ -112,7 +119,8 @@ public class Character1 : MonoBehaviour
 
     static public void Alert() //Как опасность начинается даём очко опасности
     {
-        AlertPoints++;
+            //GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(2,0.8f);
+         AlertPoints++;
         _Lifepoint.SetActive(true);
     }
 
@@ -139,27 +147,37 @@ public class Character1 : MonoBehaviour
 
     IEnumerator WaitForHit() //Моргаем персонажем и не позволяем получить урон за это время
     {
-        try { SpriteRenderer Rend = GameObject.Find("LifePoint").GetComponent<SpriteRenderer>(); 
-        SpriteRenderer Rend2 = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
-        Rend2.color = new Color(1, 1, 1, 0.4f).linear; ;
-        Rend.color = new Color(0, 0, 0, 1f).linear;
-        yield return new WaitForSecondsRealtime(0.5f);
-        Rend.color = new Color(1, 1, 1, 1).linear;
-        yield return new WaitForSecondsRealtime(0.5f);
-        Rend.color = new Color(0, 0, 0, 1f).linear;
-        yield return new WaitForSecondsRealtime(0.5f);
-        Rend.color = new Color(1, 1, 1, 1f).linear;
-        yield return new WaitForSecondsRealtime(0.5f);
-        Rend.color = new Color(0, 0, 0, 1f).linear;
-        yield return new WaitForSecondsRealtime(0.5f);
-        Rend.color = new Color(1, 1, 1, 1f).linear;
-        Rend2.color = new Color(1, 1, 1, 1f).linear;
+        try {
+            _Lifepoint.SetActive(true);
+            SpriteRenderer Rend = GameObject.Find("LifePoint").GetComponent<SpriteRenderer>(); 
+            SpriteRenderer Rend2 = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
+            Rend2.color = new Color(1, 1, 1, 0.4f).linear; ;
+            Rend.color = new Color(0, 0, 0, 1f).linear;
+            yield return new WaitForSecondsRealtime(0.5f);
+            Rend.color = new Color(1, 1, 1, 1).linear;
+            yield return new WaitForSecondsRealtime(0.5f);
+            Rend.color = new Color(0, 0, 0, 1f).linear;
+            yield return new WaitForSecondsRealtime(0.5f);
+            Rend.color = new Color(1, 1, 1, 1f).linear;
+            yield return new WaitForSecondsRealtime(0.5f);
+            Rend.color = new Color(0, 0, 0, 1f).linear;
+            yield return new WaitForSecondsRealtime(0.5f);
+            Rend.color = new Color(1, 1, 1, 1f).linear;
+            Rend2.color = new Color(1, 1, 1, 1f).linear;
         }
         finally
         {
             StopHitTime = false;
             HitTime = false;
             Pushed = false;
+            if (AlertPoints < 1)
+            {
+                _Lifepoint.SetActive(false);
+            }
+            else
+            {
+                _Lifepoint.SetActive(true);
+            }
         }
     }
 
@@ -197,12 +215,20 @@ public class Character1 : MonoBehaviour
 
     public static void IndicatorOn()
     {
-        Indicator.SetActive(true);
+        if (!Indicator.active)
+        {
+            Indicator.SetActive(true);
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(0);
+        }
+
     }
 
     public static void IndicatorOff()
     {
-        Indicator.SetActive(false);
+        if (Indicator.active)
+        {
+            Indicator.SetActive(false);
+        }
     }
 }
 

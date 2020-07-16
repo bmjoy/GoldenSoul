@@ -7,12 +7,13 @@ public class MenuAppearance : MonoBehaviour
 {
     private Image Img;
     public Image Logo;
-    public Image Mw;
+    //public Image Mw;
     public Image Ll;
     public Image Gs;
     void Start()
     {
         Img = GetComponent<Image>();
+        Img.color = new Color(0, 0, 0, 1);
         if (MainMenu.category == 2)
         {
             StartCoroutine(Appearance2());
@@ -23,7 +24,7 @@ public class MenuAppearance : MonoBehaviour
         }
         
         Logo.color = new Color(255, 255, 255, 0);
-        Mw.color = new Color(255, 165, 246, 0);
+        //Mw.color = new Color(255, 165, 246, 0);
         Ll.color = new Color(255, 165, 246, 0);
         Gs.color = new Color(255, 255, 255, 0);
     }
@@ -32,7 +33,7 @@ public class MenuAppearance : MonoBehaviour
         for (float bright = 0; bright < 1; bright += Time.deltaTime)
         {
             Logo.color = new Color(255, 255, 255, bright);
-            Mw.color = new Color(255, 165, 246, bright);
+            //Mw.color = new Color(255, 165, 246, bright);
             Ll.color = new Color(255, 165, 246, bright);
             yield return new WaitForSeconds(0.005f);
         }
@@ -40,12 +41,12 @@ public class MenuAppearance : MonoBehaviour
         for (float bright = 1; bright > 0; bright -= Time.deltaTime * 2)
         {
             Logo.color = new Color(255, 255, 255, bright);
-            Mw.color = new Color(255, 165, 246, bright);
+            //Mw.color = new Color(255, 165, 246, bright);
             Ll.color = new Color(255, 165, 246, bright);
             yield return new WaitForSeconds(0.002f);
         }
         Logo.color = new Color(255, 255, 255, 0);
-        Mw.color = new Color(255, 165, 246, 0);
+        //Mw.color = new Color(255, 165, 246, 0);
         Ll.color = new Color(255, 165, 246, 0);
         yield return new WaitForSeconds(1f);
         for (float bright = 0; bright < 1; bright += Time.deltaTime * 2)

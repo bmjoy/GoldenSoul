@@ -10,6 +10,7 @@ public class HpOnStep : MonoBehaviour
         {
             Character1.HP += 33;
             if (Character1.HP > 100) Character1.HP = 100;
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(6,0.7f);
             Destroy(gameObject);
         }
     }

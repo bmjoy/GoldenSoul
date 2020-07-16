@@ -22,6 +22,7 @@ public class Leaver : MonoBehaviour
             Character1.IndicatorOn();
             if (moveScript.activate)
             {
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(1,0.8f);
                 moveScript.activate = false;
                 if (On == false)
                 {

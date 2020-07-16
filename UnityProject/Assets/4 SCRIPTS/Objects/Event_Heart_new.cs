@@ -23,6 +23,7 @@ public class Event_Heart_new : MonoBehaviour
                 {
                     Heart.SetBool("Heart", false);
                     Character1.HP = 100;
+                    GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(1, 0.8f);
                     Character1.IndicatorOff();
                     Destroy(this);
                 }

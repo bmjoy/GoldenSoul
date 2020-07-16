@@ -16,6 +16,7 @@ public class SavePoint : MonoBehaviour
             {
                 moveScript.activate = false;
                 EventSavingSystem.SaveAll(collision.gameObject.transform.position.x, collision.gameObject.transform.position.y);
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(2, 0.8f);
                 gameObject.GetComponent<Animator>().SetBool("Saved", true);
                 titre.SetActive(true);
                 Character1.IndicatorOff();

@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.9
+  bundleVersion: 1.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -156,7 +156,7 @@ PlayerSettings:
     Android: com.Lexuslight.Goldensoul
     Standalone: com.Company.ProductName
   buildNumber: {}
-  AndroidBundleVersionCode: 3
+  AndroidBundleVersionCode: 5
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -263,7 +263,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: a8ce31b4d73e239459b37df10771a126, type: 3}
+      m_Icon: {fileID: 2800000, guid: 829c44baf7d8ab44f98293c39de433bf, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0

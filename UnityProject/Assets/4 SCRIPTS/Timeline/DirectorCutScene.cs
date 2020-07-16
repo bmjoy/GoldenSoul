@@ -8,6 +8,7 @@ using UnityEngine.Playables;
 public class DirectorCutScene : MonoBehaviour
 {
     public bool BlackImgOnEnd = true;
+    public bool StopMusic = true;
     public int NumScene; // номер катсцены
     bool fix = false;
     public Camera Camera1;
@@ -24,6 +25,8 @@ public class DirectorCutScene : MonoBehaviour
     private void OnEnable()
     {
         moveScript.moveyes = false;
+        if(StopMusic)
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().StopMusic();
         playerAnim = playerAnimator.runtimeAnimatorController;
         playerAnimator.runtimeAnimatorController = null;
         ControlButton = GameObject.Find("PhoneControls");
@@ -95,6 +98,8 @@ public class DirectorCutScene : MonoBehaviour
             }
         director.Pause();
         director.Stop();
+        if (StopMusic)
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(AudioSystem.PrevMusic);
         Dialog.TextArea.text = "";
         Dialog.disableImage();
         playerAnimator.runtimeAnimatorController = playerAnim;

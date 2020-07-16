@@ -24,7 +24,6 @@ public class Event_Heart : MonoBehaviour
             Life.SetInteger("Stage", 5);
             }
             Life.SetInteger("Stage", Life.GetInteger("Stage") + 1);
-            StartCoroutine(Dialog.Dialogue("You restored humanity.",0, 0.05f, 4));
         }
     }
     }

@@ -39,6 +39,7 @@ public class MonsterLife : MonoBehaviour
 
     IEnumerator DamagedWait()
     {
+        GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(3, 0.8f);
         if (OffAfterDamaged)
         {
             gameObject.GetComponent<Collider2D>().enabled = false;

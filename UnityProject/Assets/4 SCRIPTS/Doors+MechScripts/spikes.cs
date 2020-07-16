@@ -22,9 +22,10 @@ public class spikes : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D Col)
     {
-        if (Col.CompareTag("Player"))
+        if (Col.CompareTag("Player") && HeroIsHere)
         {
             HeroIsHere = false;
+            print("dasas");
             Character1.NoAlert();
         }
 

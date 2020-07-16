@@ -103,6 +103,7 @@ public class PenekKing : MonoBehaviour
 
         if (Active)
         {
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(3);
             if (!Tilelock)
             {
                 StartCoroutine(TileDissapear());
@@ -242,11 +243,13 @@ public class PenekKing : MonoBehaviour
         StartCoroutine(Heart.GetComponent<MonsterLife>().DeathWait());
         try { GameObject.Find("DeleteObjects").SetActive(false); } catch { }
         Character1.NoAlert();
+        GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(0);
     }
 
 
     IEnumerator Bushed()//баш
     {
+        GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(5);
         Active = false;
         Anim.SetBool("Attack", true);
         Anim.SetInteger("Stage", 5);

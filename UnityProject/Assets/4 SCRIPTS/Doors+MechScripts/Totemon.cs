@@ -30,10 +30,12 @@ public class Totemon : MonoBehaviour
             if ((Input.GetKeyDown(KeyCode.E) || moveScript.activate && !Enabled))
             {
                 totem.SetBool("fired", true);
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(7, 0.8f);
                 Enabled = true;
                 Wall.counttoop = Wall.counttoop * 10 + key;
                 if(Wall.countconst == Wall.counttoop)
                 {
+                    GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(10, 0.8f);
                     Wall.Open();
                 }
                 moveScript.activate = false;

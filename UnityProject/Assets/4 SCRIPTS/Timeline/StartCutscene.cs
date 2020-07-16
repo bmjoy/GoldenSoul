@@ -15,7 +15,6 @@ public class StartCutscene : MonoBehaviour
     {
         if (Col.CompareTag("Player") && active)
         {
-            print(1);
             active = false;
             StartCoroutine(StartCS());
         }

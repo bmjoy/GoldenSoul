@@ -43,6 +43,7 @@ public class Beatrix : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         Anim = GetComponent<Animator>();
         slider.gameObject.SetActive(false);
+        GameObject.Find("AudioSystem").GetComponent<AudioSystem>().StopMusic();
     }
 
     // Update is called once per frame
@@ -144,6 +145,7 @@ public class Beatrix : MonoBehaviour
         else if (StageCount == 5)
         {
             Phrases[0].SetActive(true);
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(8, 3f);
             slider.gameObject.SetActive(true);
             Heart.gameObject.SetActive(true);
             StageCount++;
@@ -384,6 +386,7 @@ public class Beatrix : MonoBehaviour
             {
                 CanDoDamage = false;
                 Phrases[6].SetActive(true);
+                //GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(4, 3f);
                 Anim.SetInteger("Stage", 5);
                 StartCoroutine(Bushed());
                 TC1.gameObject.SetActive(false);

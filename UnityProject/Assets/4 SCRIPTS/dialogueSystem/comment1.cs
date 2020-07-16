@@ -10,6 +10,7 @@ public class comment1 : MonoBehaviour
     public int type; // ТИП Диалога
     public int[] mas = new int[10]; // нумерация строк из массива в диалоге
     public int[] masav = new int[10];
+    public int[] masvoice = new int[0];
     public  bool checkcomm = true; // Проверка для одноразовости диалога
     public float t; // Время до удаления диалога
     public float await; // Время до удаления диалога
@@ -19,6 +20,7 @@ public class comment1 : MonoBehaviour
     void Awake() //Вход в скрипт
     {
         col = GetComponent<Collider2D>();
+        masvoice = (masvoice.Length <= 0) ? new int[masav.Length] : masvoice;
     }
 
     void OnTriggerStay2D(Collider2D col)
@@ -51,7 +53,7 @@ public class comment1 : MonoBehaviour
                         moveScript.hero.speed = 0;
                     }
                     moveScript.activate = false;
-                    StartCoroutine(Dialog.Dialogue(Dialog.masDial[mas[0]], masav[0], 0.05f, t)); 
+                    StartCoroutine(Dialog.Dialogue(Dialog.masDial[mas[0]], masvoice, masav[0], 0.05f, t)); 
                     checkcomm = false;
                 }
             break;
@@ -64,7 +66,7 @@ public class comment1 : MonoBehaviour
                         moveScript.hero.speed = 0;
                     }
                     moveScript.activate = false;
-                    StartCoroutine(Dialog.Dialogue(Dialog.masDial[mas[0]], masav[0], 0.05f, t)); 
+                    StartCoroutine(Dialog.Dialogue(Dialog.masDial[mas[0]], masvoice, masav[0], 0.05f, t)); 
                 }
                 break;
             case 3: //Диалог наступательный удаляется
@@ -76,7 +78,7 @@ public class comment1 : MonoBehaviour
                         moveScript.hero.speed = 0;
                     }
                     moveScript.activate = false;
-                    StartCoroutine(Dialog.Dialogue3(Dialog.masDial,masav,mas,0.05f,t));
+                    StartCoroutine(Dialog.Dialogue3(Dialog.masDial, masvoice, masav, mas,0.05f,t));
                     checkcomm = false;
                 }
             break;
@@ -99,7 +101,7 @@ public class comment1 : MonoBehaviour
                         moveScript.hero.speed = 0;
                     }
                     moveScript.activate = false;
-                    StartCoroutine(Dialog.Dialogue3(Dialog.masDial, masav, mas, 0.05f, t));
+                    StartCoroutine(Dialog.Dialogue3(Dialog.masDial, masvoice, masav, mas, 0.05f, t));
                     checkcomm = false;
                 }
             break;
@@ -112,7 +114,7 @@ public class comment1 : MonoBehaviour
                         moveScript.hero.speed = 0;
                     }
                     moveScript.activate = false;
-                    StartCoroutine(Dialog.Dialogue3(Dialog.masDial, masav, mas, 0.05f, t));
+                    StartCoroutine(Dialog.Dialogue3(Dialog.masDial, masvoice, masav, mas, 0.05f, t));
                 }
                     checkcomm = true;
                 break;

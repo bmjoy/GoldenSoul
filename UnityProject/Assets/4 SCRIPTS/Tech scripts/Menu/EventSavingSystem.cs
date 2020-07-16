@@ -51,7 +51,7 @@ public class EventSavingSystem : MonoBehaviour
 
     public static void SaveAll(float x, float y)
     {
-        PlayerPrefs.SetInt("Language", Language);
+        //PlayerPrefs.SetInt("Language", Language);
         PlayerPrefs.SetInt("Hp", Character1.HP);
         PlayerPrefs.SetInt("ThisLvl", ThisLvl);
         PlayerPrefs.SetFloat("LastSaveX", x);
@@ -107,7 +107,7 @@ public class EventSavingSystem : MonoBehaviour
 
     public static void LoadAll()
     {
-        Language = PlayerPrefs.GetInt("Language");
+        //Language = PlayerPrefs.GetInt("Language");
         Character1.HP = PlayerPrefs.GetInt("Hp");
         ThisLvl = PlayerPrefs.GetInt("ThisLvl");
         x = PlayerPrefs.GetFloat("LastSaveX");

@@ -47,6 +47,7 @@ public class Vase : MonoBehaviour
     }
     void Break()
     {
+        GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(5, 0.7f);
         GetComponent<Animator>().SetBool("Break", true);
         GetComponent<Collider2D>().isTrigger = true;
         GetComponent<ChangeOrderOnly>().enabled = false;

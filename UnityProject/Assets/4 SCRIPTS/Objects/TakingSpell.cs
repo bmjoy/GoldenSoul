@@ -31,6 +31,7 @@ public class TakingSpell : MonoBehaviour
     {
         if (CanDo && moveScript.activate)
         {
+            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(1, 0.8f);
             moveScript.activate = false;
 
             if (Spells.SpellsList[SpellMagic] == type)
@@ -39,6 +40,7 @@ public class TakingSpell : MonoBehaviour
             }
             Spells.SpellsList[SpellMagic] = type;
             GameObject.Find("hero").GetComponent<Spells>().ChangePointer();
+            enableObj.SetActive(true);
             Destroy(gameObject);
         }
         
