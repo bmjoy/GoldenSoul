@@ -328,64 +328,64 @@ public class DialogueMass
             "...thirst to kill)))",//128
             "King brought his girlfriend. \n It's just a useless log...",//129
             "Ironically.",//130
-            "Магия звёзд.",//131
-            "Веками звёзды даровали людям магию. \nИсточник магии - внешний мир.",//132
-            "Магию звёзд символизируют песочные часы - течение из одного состояния в другое.",//133
-            "Совершенство - создание порталов и кинетических предметов. \nСамый распространённый источник магии.",//134
-            "Магия разума.",//135
-            "Отказ от эмоций и полный контроль своего разума - мощный источник магии.",//136
-            "Магию разума символизирует голодный змей, который охраняет запретный плод.",//137
-            "Магия позволяет точно воздействовать на предметы, а так же на разум других существ.",//138
-            "Магия чувств.",//139
-            "Иногда чувства и эмоции могут высекать искру магии, например пламя ненависти или огонь надежды.",//140
-            "Магия чувств обратна магии разума. Её вызывает очень сильная любовь, ненависть, надежда или отчаяние.",//141
-            "Символ магии чувств - горящее сердце, разрывающее цепи.",//142
-            "Иная магия.",//143
-            "Самая непредсказуемая и мощная магия. Источники магии - ИНЫЕ. Реликтовые магические элементарные существа.",//144
-            "Однако, магией могут владеть и обычные смертные. Нет ни одной школы, обучающей данной магии.",//145
-            "Иная магия хаотична - она воздействует на реальность, время и материю. Её практически невозможно направить.",//146
-            "Символ магии - око 'ФИАТ ЛЮКС.'",//147
-            "Это место, кажется хранит знания о магии.",//148
-            "О, ты очень настойчив. Как интересно.",//149
-            "Тебя ведёт какая-то цель?",//150
-            "Ты осознанно хочешь сбежать?",//151
-            "Что движет тобой покинуть этот Лес Бездны?",//152
-            "Что ты, чёрт возьми, такое?",//153
-            "Когда-то, пол века назад.....",//154
-            "Это место было обычным. \nВесь мир был обычным.",//155
-            "Но пришёл великий катаклизм. \nЗвёзды упали с неба.",//156
-            "Великие потоки магии хлынули в этот мир. Всё изменилось...",//157
-            "Меня зовут Беатрис. Я была одной из безупречных солдат империи Соларис.",//158
-            "Во время катаклизма, я предала клятву, данную солнцу.",//159
-            "И вот, в качестве наказания я целых 50 лет держу свой пост.",//160
-            "Все, кого я знала - исчезли. \nВсё моё прошлое похоронено временем.",//161
-            "Моё наказание - вечность на посту края света.",//162
-            "Не хочешь его прервать?",//163
-            "В любом случае, если ты хочешь выйти отсюда - тебе придётся сразиться со мной.",//164
-            "Почему мы всё ещё здесь?.......",//165
-            "Чтобы страдать!?",//166
-            "Покажи, чего стоит твоя смелость!",//167
-            "Ты всё ещё жив? \nТак держать.",//168
-            "Хватит бегать!",//169
-            "Умри уже наконец!",//170
-            "Сдохни!",//171
-            "Меня невозможно убить!",//172
-            "Да... Кажется ты в разы сильнее меня....",//173
-            "Ничего не понимаю. \nНо раз судьба выбрала ТЕБЯ...",//174
-            "Значит так должно быть...",//175
+            "Magic of the stars.",//131
+            "For centuries, stars have given people magic. \nThe source of magic is the outside world.",//132
+            "The symbol of the magic of the stars is hourglass, like sand it flows from one form to another.",//133
+            "Perfection is the creation of portals and kinetic objects. \n It’s the most common source of magic.",//134
+            "Magic of the mind.",//135
+            "Rejection of emotions and control of your mind is a powerful source of magic.",//136
+            "The magic of the mind symbolizes a hungry snake that guards the forbidden fruit.",//137
+            "Magic allows you to accurately affect objects, as well as the mind of other creatures.",//138
+            "Magic of the senses.",//139
+            "Sometimes feelings and emotions can strike a spark of magic, such as the flame of hatred or the fire of hope.",//140
+            "The magic of the senses is the opposite of the magic of the mind. It is caused by a very strong love, hatred, hope or despair.",//141
+            "The symbol of the magic of the senses is a burning heart that breaks the chains.",//142
+            "Magic of OTHERS.",//143
+            "The most unpredictable and powerful magic. The sources of this magic are different. Relict magical elemental creatures.",//144
+            "However, ordinary mortals may also possess magic. There is not a single school that teaches this kind of magic.",//145
+            "OTHER'S magic is chaotic - it affects reality, time, and matter. It is almost impossible to direct it.",//146
+            "The symbol of magic is the eye of 'FIAT LUX'.",//147
+            "This place seems to hold knowledge of magic.",//148
+            "Oh, you're very persistent. How interesting.",//149
+            "Is there a goal leading you??",//150
+            "Do you consciously want to escape?",//151
+            "What motivates you to leave this Forest of the Abyss?",//152
+            "What the hell are you?",//153
+            "Once, half a century ago.....",//154
+            "This place was ordinary. \nThe whole world was ordinary.",//155
+            "But then came the great cataclysm. \nThe stars fell from the sky.",//156
+            "Great streams of magic have flowed into this world. Everything has changed...",//157
+            "My name is Beatrice. I was one of the impeccable soldiers of the Solaris Empire.",//158
+            "During the cataclysm, I betrayed my vow to the sun..",//159
+            "And so, as a punishment, I keep my post for 50 years.",//160
+            "Everyone I knew is gone.. \nAll my past is buried by time.",//161
+            "My punishment is an eternity at the post of the edge of the world.",//162
+            "Don't you want to interrupt it?",//163
+            "Anyway, if you want to get out of here, you’re gonna have to fight me.",//164
+            "Why are we still here?.......",//165
+            "Just to suffer!?",//166
+            "Show me what your courage is worth!",//167
+            "Are you still alive? \nKeep it up.",//168
+            "Stop running!",//169
+            "Die already at last!",//170
+            "Die!",//171
+            "I can't be killed!",//172
+            "Yes... It seems that you are many times stronger than me....",//173
+            "I don't understand anything. \nBut if fate has chosen you...",//174
+            "So it must be...",//175
             "Per aspera ad astra!",//176
-            "ЧТО?!!    \nТЫ?",//177
-            "Пардон, извиняюсь за опоздание. Я только что закончил пить чай.",//178
-            "НО ТЫ ЖЕ... ТЫ......",//179
-            "Привеет! Мы знакомы? \nМожет быть не в этой жизни?",//180
-            "Беатрис рухнула в обомрок.",//181
-            "Что-ж, мы у моста во ВНЕШНИЙ МИР. \nУ нас полно работы.",//182
-            "И, да, не стоит забивать себе голову странными вопросами. С ней наверняка всё будет впорядке. \nЭто ты её так потрепал?",//183
-            "Как только ты вернёшь душу, всё встанет на свои места.",//184
-            "Вперёд!",//185
-            "Мы пришли. \nЧто-бы то ни произошло за чертой ВНЕШНЕГО МИРА, верь мне, я тебе не враг.",//186
-            "Я-же не какой-нибудь клишированный злодей из игры, написанной студентом от нечего делать....",//187
-            "ХА-ХА, иногда я жду от тебя ответа, но забываю, что ты не можешь говорить....",//188
-            "Добро пожаловать в дивный новый мир!",//189
+            "WHAT?!! \nYOU?",//177
+            "Sorry I'm late. I just finished my tea.",//178
+            "BUT YOU... YOU......",//179
+            "Hi! Do we know each other? \nMaybe not in this life?",//180
+            "Beatrice has fainted.",//181
+            "Well, we're at the bridge to the OUTSIDE WORLD. \nWe have a lot of work to do.",//182
+            "And, yes, do not bother yourself with strange questions. She'll probably be fine. \nDid you beat her up like that?",//183
+            "Once you get your soul back, everything will fall into place.",//184
+            "Go ahead!",//185
+            "We're here.\nWhatever happens beyond of the OUTSIDE WORLD, believe me, I'm not your enemy.",//186
+            "I'm not some cliched villain from a game written by a student with nothing better to do....",//187
+            "HA-HA, sometimes I wait for you to answer, but I forget that you can't talk....",//188
+            "Welcome to the brave new world!",//189
     };
 }
