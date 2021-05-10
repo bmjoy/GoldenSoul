@@ -13,7 +13,7 @@ public class playerBullet3 : MonoBehaviour
         Vec = Vector2.zero;
         Rigi = gameObject.GetComponent<Rigidbody2D>();
         StartCoroutine(WaitDelete());
-        if (moveScript.JStick.HorizontalSnap == 0 && moveScript.JStick.VerticalSnap == 0)
+        if (moveScript.AimJStick.HorizontalSnap == 0 && moveScript.AimJStick.VerticalSnap == 0)
         {
             int V = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().GetInteger("Vector");
             switch (V)
@@ -63,7 +63,7 @@ public class playerBullet3 : MonoBehaviour
             StartCoroutine(Delete());
             return;
         }
-        Vec = new Vector2(moveScript.JStick.Horizontal, moveScript.JStick.Vertical);
+        Vec = new Vector2(moveScript.AimJStick.Horizontal, moveScript.AimJStick.Vertical);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

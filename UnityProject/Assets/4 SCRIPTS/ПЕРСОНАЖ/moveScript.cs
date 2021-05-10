@@ -14,10 +14,12 @@ public class moveScript : MonoBehaviour
     public static Animator hero;
     public static bool attack;
     public static float JoystickDegree;
+    public static float AimDegree;
 
 
     //Джойстик
     public static FixedJoystick JStick;
+    public static AimJoystick AimJStick;
     public static bool attackButt = false;
     public static bool activate;
     // Старт!
@@ -32,15 +34,22 @@ public class moveScript : MonoBehaviour
         attack = false;
         hero.SetInteger("Vector", 1);
         JStick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
+        AimJStick = GameObject.Find("Aim Joystick").GetComponent<AimJoystick>();
     }
 
     public static void FindJoystick()
     {
         JStick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
+        AimJStick = GameObject.Find("Aim Joystick").GetComponent<AimJoystick>();
     }
     void FixedUpdate()
     {
-        try { JoystickDegree = Degree.GetDegree(JStick.HorizontalSnap, JStick.VerticalSnap); } catch { }
+        try
+        {
+            JoystickDegree = Degree.GetDegree(JStick.HorizontalSnap, JStick.VerticalSnap);
+            AimDegree = Degree.GetDegree(AimJStick.HorizontalSnap, AimJStick.VerticalSnap);
+        }
+        catch { }
 
         if(moveyes == false && NoShooting)
         {

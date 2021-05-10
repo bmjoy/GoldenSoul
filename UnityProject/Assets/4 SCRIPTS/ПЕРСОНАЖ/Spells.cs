@@ -15,8 +15,11 @@ public class Spells : MonoBehaviour
 
     public GameObject[] SpellObj;
 
+    private Spells Spells1;
+
     private void Start()
     {
+        Spells1 = gameObject.GetComponent<Spells>();
         ManaSlider = GameObject.Find("HeroMana").GetComponent<Slider>();
         Regen = true;
         if (!(SpellsList[0] == 0 && SpellsList[1] == 0 && SpellsList[2] == 0 && SpellsList[3] == 0 && SpellsList[4] == 0))
@@ -89,7 +92,7 @@ public class Spells : MonoBehaviour
         while (true)
         {
             if (ManaSlider.value <= 33 || Aim.PLEE) { break; }
-            Instantiate(gameObject.GetComponent<Spells>().SpellObj[0], new Vector2(gameObject.transform.position.x + Random.Range(-0.3f, 0.3f), gameObject.transform.position.y + Random.Range(-0.5f, 0.5f)), Quaternion.identity);
+            GameObject blast = Instantiate(Spells1.SpellObj[0], new Vector2(gameObject.transform.position.x + Random.Range(-0.3f, 0.3f), gameObject.transform.position.y + Random.Range(-0.5f, 0.5f)), Quaternion.identity, gameObject.transform);
             ManaSlider.value -= 33;
             yield return new WaitForSeconds(0.6f);
         }
@@ -99,12 +102,11 @@ public class Spells : MonoBehaviour
     {
         while (true)
         {
-            if (ManaSlider.value <= 33 || Aim.PLEE) { break; }
-            ManaSlider.value -= 33;
-            Instantiate(gameObject.GetComponent<Spells>().SpellObj[1], new Vector2(gameObject.transform.position.x + Random.Range(-0.6f, 0.6f), gameObject.transform.position.y + Random.Range(-0.6f, 0.6f)), Quaternion.identity);
-            Instantiate(gameObject.GetComponent<Spells>().SpellObj[1], new Vector2(gameObject.transform.position.x + Random.Range(-0.6f, 0.6f), gameObject.transform.position.y + Random.Range(-0.6f, 0.6f)), Quaternion.identity);
-            Instantiate(gameObject.GetComponent<Spells>().SpellObj[1], new Vector2(gameObject.transform.position.x + Random.Range(-0.6f, 0.6f), gameObject.transform.position.y + Random.Range(-0.6f, 0.6f)), Quaternion.identity);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
+            if (ManaSlider.value <= 11 || Aim.PLEE) { break; }
+            ManaSlider.value -= 0;
+            Instantiate(gameObject.GetComponent<Spells>().SpellObj[1], new Vector2(gameObject.transform.position.x + Random.Range(-0.6f, 0.6f), gameObject.transform.position.y + Random.Range(-0.6f, 0.6f)),Quaternion.identity);
+            yield return new WaitForSeconds(0.1f);
         }
 
     }

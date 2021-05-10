@@ -19,7 +19,7 @@ public class playerBullet4 : MonoBehaviour
             }
             return;
         }
-        degree = (moveScript.JoystickDegree < 361) ? moveScript.JoystickDegree - 90 : 666;
+        degree = (moveScript.AimDegree < 361) ? moveScript.AimDegree - 90 : 666;
 
         if (degree == 666)
         {

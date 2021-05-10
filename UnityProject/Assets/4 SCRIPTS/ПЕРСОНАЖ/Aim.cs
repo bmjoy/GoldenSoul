@@ -11,14 +11,14 @@ public class Aim : MonoBehaviour
 
     private void Start()
     {
-        
         Aim1 = GameObject.FindGameObjectWithTag("Aim");
         Aim1.SetActive(false);
     }
 
     private void Update()
     {
-        degree = (moveScript.JoystickDegree < 361) ? moveScript.JoystickDegree - 90 : 666;
+        degree = (moveScript.AimDegree < 361) ? moveScript.AimDegree - 90 : 666;
+        print(moveScript.AimDegree);
         if (degree == 666)
         {
             switch (gameObject.GetComponent<Animator>().GetInteger("Vector"))
@@ -55,22 +55,24 @@ public class Aim : MonoBehaviour
 
     public void Aiming()
     {
+        print("Aiming");
         if (Spells.Pointer < 0) return;
         Aim1.SetActive(true);
         PLEE = false;
         gameObject.GetComponent<Spells>().Spawn();
-        moveScript.NoShooting = false;
-        gameObject.GetComponent<Animator>().SetBool("Spell", true);
+       // moveScript.NoShooting = false;
+       // gameObject.GetComponent<Animator>().SetBool("Spell", true);
         gameObject.GetComponent<Spells>().Regen = false;
     }
 
     public void Shooting()
     {
+        print("Shooting");
         if (Spells.Pointer < 0) return;
         Aim1.SetActive(false);
         PLEE = true;
-        moveScript.NoShooting = true;
-        gameObject.GetComponent<Animator>().SetBool("Spell", false);
+        //moveScript.NoShooting = true;
+        // gameObject.GetComponent<Animator>().SetBool("Spell", false);
         gameObject.GetComponent<Spells>().Regen = true;
     }
 }

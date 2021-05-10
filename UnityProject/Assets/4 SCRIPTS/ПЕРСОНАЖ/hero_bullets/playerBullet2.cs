@@ -18,56 +18,44 @@ public class playerBullet2 : MonoBehaviour
         Rigi = gameObject.GetComponent<Rigidbody2D>();
         StartCoroutine(WaitPlee());
         StartCoroutine(WaitDelete());
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Aim.PLEE) CanChange = false;
-        if (!CanChange) return;
-        if (!wasForced)
+        degree = (moveScript.AimDegree < 361) ? moveScript.AimDegree - 90 : 666;
+
+        if (degree == 666)
         {
-
-            degree = (moveScript.JoystickDegree < 361) ? moveScript.JoystickDegree - 90 : 666;
-
-            if (degree == 666)
+            switch (GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().GetInteger("Vector"))
             {
-                switch (GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().GetInteger("Vector"))
-                {
-                    case 1:
-                        degree = 90;
-                        break;
-                    case 2:
-                        degree = 0;
-                        break;
-                    case 3:
-                        degree = -90;
-                        break;
-                    case 4:
-                        degree = 180;
-                        break;
-                    case 5:
-                        degree = 45;
-                        break;
-                    case 6:
-                        degree = -45;
-                        break;
-                    case 7:
-                        degree = -135;
-                        break;
-                    case 8:
-                        degree = -225;
-                        break;
-                }
+                case 1:
+                    degree = 90;
+                    break;
+                case 2:
+                    degree = 0;
+                    break;
+                case 3:
+                    degree = -90;
+                    break;
+                case 4:
+                    degree = 180;
+                    break;
+                case 5:
+                    degree = 45;
+                    break;
+                case 6:
+                    degree = -45;
+                    break;
+                case 7:
+                    degree = -135;
+                    break;
+                case 8:
+                    degree = -225;
+                    break;
             }
-
-
-            gameObject.transform.rotation = Quaternion.Euler(0, 0, degree);
         }
-       
-        Vector = (moveScript.JStick.Horizontal != 0 || moveScript.JStick.Vertical != 0) ? new Vector2(moveScript.JStick.HorizontalSnap, moveScript.JStick.VerticalSnap) : Vector;
 
-        if (moveScript.JStick.HorizontalSnap == 0  && moveScript.JStick.VerticalSnap == 0)
+        
+        Vector = (moveScript.AimJStick.Horizontal != 0 || moveScript.AimJStick.Vertical != 0) ? new Vector2(moveScript.AimJStick.HorizontalSnap, moveScript.AimJStick.VerticalSnap) : Vector;
+
+        if (moveScript.AimJStick.HorizontalSnap == 0 && moveScript.AimJStick.VerticalSnap == 0)
         {
             int V = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().GetInteger("Vector");
             switch (V)
@@ -99,6 +87,7 @@ public class playerBullet2 : MonoBehaviour
             }
 
         }
+        gameObject.transform.rotation = Quaternion.Euler(0, 0, degree);
     }
 
     IEnumerator WaitPlee()

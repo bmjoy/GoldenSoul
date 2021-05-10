@@ -14,12 +14,13 @@ public class playerBullet1 : MonoBehaviour
     void Start()
     {
         Rigi = gameObject.GetComponent<Rigidbody2D>();
+        Rigi.simulated = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector = (moveScript.JStick.Horizontal != 0 || moveScript.JStick.Vertical != 0) ? new Vector2(moveScript.JStick.HorizontalSnap, moveScript.JStick.VerticalSnap) : Vector;
+        Vector = (moveScript.AimJStick.Horizontal != 0 || moveScript.AimJStick.Vertical != 0) ? new Vector2(moveScript.AimJStick.HorizontalSnap, moveScript.AimJStick.VerticalSnap) : Vector;
 
         if(Vector.x == 0 && Vector.y == 0)
         {
@@ -57,10 +58,12 @@ public class playerBullet1 : MonoBehaviour
         if (!wasForced && Aim.PLEE)
         {
             gameObject.tag = "PlayerBullet";
+            Rigi.simulated = true;
             Rigi.AddForce(Vector.normalized * ForceD, ForceMode2D.Impulse);
             StartCoroutine(WaitDelete());
             wasForced = true;
         }
+        
     }
 
     IEnumerator WaitDelete()

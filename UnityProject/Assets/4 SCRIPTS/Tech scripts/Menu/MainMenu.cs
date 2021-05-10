@@ -33,7 +33,7 @@ public class MainMenu : MonoBehaviour
         EventSavingSystem.Language = 1;//Убрать
         print(EventSavingSystem.Language);
         GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", false);
-        Texts[0].text = "Новая игра";
+        Texts[0].text = "История";
         Texts[0].fontSize = 50;
         Texts[1].text = "Загрузить";
         Texts[1].fontSize = 48;
@@ -86,7 +86,7 @@ public class MainMenu : MonoBehaviour
 
     public void BossMenu(bool b)
     {
-        StartCoroutine(AppearanceImg(b));
+        StartCoroutine(AppearanceImg("bosses"));
 
     }
 
@@ -94,14 +94,14 @@ public class MainMenu : MonoBehaviour
     {
         PointerBoss += (PointerBoss < PointerBossMax) ? 1 : 0;
 
-        StartCoroutine(AppearanceImg(true));
+        StartCoroutine(AppearanceImg("bosses"));
     }
 
     public void BossPointerPrevious()
     {
         PointerBoss -= (PointerBoss < 1) ? 0 : 1;
 
-        StartCoroutine(AppearanceImg(true));
+        StartCoroutine(AppearanceImg("bosses"));
     }
 
     public void Load()
@@ -127,82 +127,92 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator AppearanceImg(bool b)
+    IEnumerator AppearanceImg(string b)
     {
-        for (float bright = 0; bright < 1; bright += Time.deltaTime*3)
+        for (float bright = 0; bright < 1; bright += Time.deltaTime * 3)
         {
             MenuBlack.color = new Color(0, 0, 0, bright);
             yield return new WaitForSeconds(0.00001f);
         }
 
-        if (b)
+        switch (b)
         {
-            category = 2;
-            foreach (GameObject i in BossesScenes)
-            {
-                i.SetActive(false);
-            }
+            case "bosses":
 
-            BossesScenes[PointerBoss].SetActive(true);
-            MainMenuScenes[PointerScene].GetComponent<Animator>().SetInteger("Slide", 1);
-            foreach (GameObject i in BossesObj)
-            {
-                i.SetActive(true);
-            }
-            foreach (GameObject i in MainMenuObj)
-            {
-                i.SetActive(false);
-            }
-        }
-        else
-        {
-            category = 1;
-            BossesScenes[PointerBoss].GetComponent<Animator>().SetInteger("Slide", 1);
-            foreach (GameObject i in BossesObj)
-            {
-                i.SetActive(false);
-            }
-            foreach (GameObject i in MainMenuObj)
-            {
-                i.SetActive(true);
-            }
-        }
+                category = 2;
+                foreach (GameObject i in BossesScenes)
+                {
+                    i.SetActive(false);
+                }
 
-         StartCoroutine(DisappearanceImg(b));
+                BossesScenes[PointerBoss].SetActive(true);
+                MainMenuScenes[PointerScene].GetComponent<Animator>().SetInteger("Slide", 1);
+                foreach (GameObject i in BossesObj)
+                {
+                    i.SetActive(true);
+                }
+                foreach (GameObject i in MainMenuObj)
+                {
+                    i.SetActive(false);
+                }
+                break;
+            case "menu":
+                {
+                    category = 1;
+                    BossesScenes[PointerBoss].GetComponent<Animator>().SetInteger("Slide", 1);
+                    foreach (GameObject i in BossesObj)
+                    {
+                        i.SetActive(false);
+                    }
+                    foreach (GameObject i in MainMenuObj)
+                    {
+                        i.SetActive(true);
+                    }
+                }
+            break;
+
+        }
+        StartCoroutine(DisappearanceImg(""));
     }
+        
+        
 
-    IEnumerator DisappearanceImg(bool b)
+         
+
+    IEnumerator DisappearanceImg(string b)
     {
-        if (b)
+        switch (b)
         {
-            MainMenuScenes[PointerScene].GetComponent<Animator>().SetInteger("Slide", 2);
-            MainMenuScenes[PointerScene].SetActive(false);
-            BossesScenes[PointerBoss].SetActive(true);
-            BossesScenes[PointerBoss].GetComponent<Animator>().SetInteger("Slide", 1);
-            foreach (GameObject i in BossesObj)
-            {
-                i.SetActive(true);
-            }
-            foreach (GameObject i in MainMenuObj)
-            {
-                i.SetActive(false);
-            }
-        }
-        else
-        {
-            BossesScenes[PointerBoss].GetComponent<Animator>().SetInteger("Slide", 2);
-            BossesScenes[PointerBoss].SetActive(false);
-            MainMenuScenes[0].SetActive(true);
-            MainMenuScenes[0].GetComponent<Animator>().SetInteger("Slide", 1);
-            foreach (GameObject i in BossesObj)
-            {
-                i.SetActive(false);
-            }
-            foreach (GameObject i in MainMenuObj)
-            {
-                i.SetActive(true);
-            }
-            PointerBoss = 0;
+            case "bosses":
+                MainMenuScenes[PointerScene].GetComponent<Animator>().SetInteger("Slide", 2);
+                MainMenuScenes[PointerScene].SetActive(false);
+                BossesScenes[PointerBoss].SetActive(true);
+                BossesScenes[PointerBoss].GetComponent<Animator>().SetInteger("Slide", 1);
+                foreach (GameObject i in BossesObj)
+                {
+                    i.SetActive(true);
+                }
+                foreach (GameObject i in MainMenuObj)
+                {
+                    i.SetActive(false);
+                }
+            break;
+
+            case "menu":
+                BossesScenes[PointerBoss].GetComponent<Animator>().SetInteger("Slide", 2);
+                BossesScenes[PointerBoss].SetActive(false);
+                MainMenuScenes[0].SetActive(true);
+                MainMenuScenes[0].GetComponent<Animator>().SetInteger("Slide", 1);
+                foreach (GameObject i in BossesObj)
+                {
+                    i.SetActive(false);
+                }
+                foreach (GameObject i in MainMenuObj)
+                {
+                    i.SetActive(true);
+                }
+                PointerBoss = 0;
+                break;
         }
         if (PointerBoss < 1)
         {
@@ -231,7 +241,7 @@ public class MainMenu : MonoBehaviour
         if (EventSavingSystem.Language == 0)
         {
             GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", true);
-            Texts[0].text = "New Game";
+            Texts[0].text = "Story";
             Texts[3].fontSize = 60;
             Texts[1].text = "Load";
             Texts[3].fontSize = 60;
@@ -250,7 +260,7 @@ public class MainMenu : MonoBehaviour
         else
         {
             GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", false);
-            Texts[0].text = "Новая игра";
+            Texts[0].text = "История";
             Texts[0].fontSize = 50;
             Texts[1].text = "Загрузить";
             Texts[1].fontSize = 48;

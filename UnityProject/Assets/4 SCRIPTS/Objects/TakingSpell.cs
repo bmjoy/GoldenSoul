@@ -7,7 +7,6 @@ public class TakingSpell : MonoBehaviour
     public int type = 1;
     public int SpellMagic = 1;
     bool CanDo = false;
-    public GameObject enableObj;
 
     void OnTriggerStay2D(Collider2D col)
     {
@@ -40,7 +39,7 @@ public class TakingSpell : MonoBehaviour
             }
             Spells.SpellsList[SpellMagic] = type;
             GameObject.Find("hero").GetComponent<Spells>().ChangePointer();
-            enableObj.SetActive(true);
+            GameObject.Find("Aim Joystick").SetActive(true);
             Destroy(gameObject);
         }
         
