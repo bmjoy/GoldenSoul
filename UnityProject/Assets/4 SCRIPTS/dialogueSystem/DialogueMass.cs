@@ -1,5 +1,4 @@
-﻿
-public class DialogueMass
+﻿public class DialogueMass
 {
     public static string[] Rus =
     {
@@ -200,16 +199,16 @@ public class DialogueMass
             "LexusLight", //0
             "Game saved.",//1
             "Attack the enemy as soon as his indicator appears.",//2
-            "~ Hope. Faith. Fate. \nAll in vain.",//3
-            "~ Everyone, who enters the enchanted forest will stay here forever.",//4
-            "Maybee Is all of this just a bad dream?",//5
-            "It couldn't be, because you haven't slept for what seems like eternity.",//6
-            "All you have left is your name.",//7
-            "The loss of your name equals the loss of everything you have ever had.",//8
-            "Your name is Caspian.\nAnd you're lost. \nPlease, remember this name.",//9
+            "~ Faith. Hope. Fate. \nAll is in vain..",//3 Introduction
+            "~ Everyone who enters the enchanted forest remains here forever.",//4
+            "Maybe it's just a bad dream?",//5
+            "It couldn't be, because you haven't slept for what it seems like eternity.",//6
+            "All you have left is your name. \nПотеря имени равносильна потере всего, что у тебя есть.",//7
+            "Your name is Caspian. And you are lost.",//8
+            "Please, remember this name.",//9
             "Human, who should've ceased existance long-long time ago...",//10
-            "Your soul is gone, and your body is doomed to roam in this time loop for all eternity.",//11
-            "You're lucky, because I happened to stumble upon you COMPLETELY BY CHANCE.",//12
+            "Your soul is gone, and your body is doomed to roam in this time loop for all eternity...",//11
+            "You're lucky, because I happened to stumble upon you COMPLETELY BY CHANCE...",//12
             "Come closer, if you still have any emotions or feelings!",//13
             "Ha-Ha! I wish you could see youself right now. It's as if you have just seen a ghost... ",//14
             "We have little time to keep you sane, but I know how to help you.",//15
@@ -223,7 +222,7 @@ public class DialogueMass
             "It is fixed into a shiny, polished stone",//23
             "You attempt to separate this wonderful stone from the worthless hunk of metal. You failed.",//24
             "What were you hoping for? It's inscribed right here: 'Only for heroes' ",//25
-            "You are no hero))))1)",//26
+            "You're not a hero",//26
             "Look at that menacing tree stump. Act as if it's trying to kill you.",//27
             "There's lots of them around. Beware of them!",//28
             "This is a cheerful tree stump with a knife strapped to it. It doesn't seem scary at all.",//29
@@ -233,7 +232,7 @@ public class DialogueMass
             "This can enrich your NEW SOUL with energy. To activate it, press 'A'",//33
             "Find some spell to remove obstacles." ,//34
             "Click on the button to attack. \nHold the button for a powerful trajectory attack.",//35
-            "Wow! It can't be! Here in the bushes stands the Grand Piano.",//36
+            "Wow! This can't be happening! There's a Grand piano in the bushes.",//36
             "This is an old paper. You can make out only the headline. \nIt says:", // 37 ------ Newspaper
             "Magical cataclysm. Who is responsible for pain and suffering?", // 38
             "Would you look at that! \nIt worked! \nHow are you feeling right now?",//39
@@ -244,7 +243,7 @@ public class DialogueMass
             "Let us start with the place.",//44
             "These are the Woods of nothingness. An anomalous place where people go missing.",//45
             "Legends say that this forest served to magical cage for relicts and monsters.",//46
-            "Regarding you...........",//47
+            "Regarding you...",//47
             "Mate, congratulations! You died!",//48
             "...Well, formally, your body ain't dead. You can breathe, hear and see.",//49
             "But you lost the most valuable part of yourself — YOUR SOUL.",//50
@@ -285,7 +284,7 @@ public class DialogueMass
             "What are you? This magic! \n There's so much of it! \n And all of it almost completely free.",//85
             "By the way, my name is King.",//86
             "And you're already doomed.",//87
-            "",//88
+            "I give up.",//88
             "Ouch!",//89
             "Bush!",//90
             "Ha~",//91
@@ -295,11 +294,11 @@ public class DialogueMass
             "~ King fell in an unequal battle with you. \nREVENGE leads you.", // 95
             "The door is locked from inside. \nYou knocked.",//96
             "Somebody knocked on door from other side.",//97
-            "Hello! \nMy name is Vincent. \nNice to meet you.",//98 ВАН ГОГ ПРОВЕРИТЬ ПЕРЕВОД
-            "All I can and can do is draw. \nYou are just in time! \nI am completing my drawing.",//99
+            "Hello! \nMy name is Vincent. \nNice to meet you.",//98 Van Gogh
+            "All I can is drawing. \nYou are just in time! \nI am completing my drawing.",//99
             "Previously, everyone laughed at my drawings. \nBut after I got here .... everything has changed.",//100
             "A wonderful girl visits me from time to time. She really likes my works.",//101
-            "Here I am really happy.",//102
+            "I'm really happy here.",//102
             "~ You are a bringer of justice \nand you may give your mercy.",//103
             "~ But there are some actions, that would show your foolishness if you leave them be.",//104
             ".................",//105
@@ -309,7 +308,7 @@ public class DialogueMass
             "Roses......\nBeautiful roses.......",//109
             "Roses bloom exactly where someones fate is being made. ",//110
             "I see as they lead you to an exit. To the exit to outer world",//111
-            "Do they lead you to a rightful death from my hands?.....\nI do not know.",//112
+            "Do they lead you to a rightful death from my hands?.....\nI don't know.",//112
             "But this magic...... Magic of the OTHERS. You literally consist of it.",//113
             "Those like you have no place in this world.",//114
             "Even by your presence alone you harm this place. \nI saw your cruelty.",//115
@@ -329,23 +328,22 @@ public class DialogueMass
             "King brought his girlfriend. \n It's just a useless log...",//129
             "Ironically.",//130
             "Magic of the stars.",//131
-            "For centuries, stars have given people magic. \nThe source of magic is the outside world.",//132
-            "The symbol of the magic of the stars is hourglass, like sand it flows from one form to another.",//133
-            "Perfection is the creation of portals and kinetic objects. \n It’s the most common source of magic.",//134
-            "Magic of the mind.",//135
-            "Rejection of emotions and control of your mind is a powerful source of magic.",//136
-            "The magic of the mind symbolizes a hungry snake that guards the forbidden fruit.",//137
-            "Magic allows you to accurately affect objects, as well as the mind of other creatures.",//138
+	        "For centuries, stars have given people magic. \nThe source of magic is the outside world.",//132
+	        "The symbol of the magic of the stars is hourglass, like sand it flows from one form to another.",//133
+	        "Perfection is the creation of portals and kinetic objects. \n It’s the most common source of magic.",//134
+	        "Magic of the mind.",//135
+	        "Rejection of emotions and control of your mind is a powerful source of magic.",//136
+	        "The magic of the mind symbolizes a hungry snake that guards the forbidden fruit.",//137
+	        "Magic allows you to accurately affect objects, as well as the mind of other creatures.",//138
             "Magic of the senses.",//139
             "Sometimes feelings and emotions can strike a spark of magic, such as the flame of hatred or the fire of hope.",//140
             "The magic of the senses is the opposite of the magic of the mind. It is caused by a very strong love, hatred, hope or despair.",//141
             "The symbol of the magic of the senses is a burning heart that breaks the chains.",//142
             "Magic of OTHERS.",//143
-            "The most unpredictable and powerful magic. The sources of this magic are different. Relict magical elemental creatures.",//144
-            "However, ordinary mortals may also possess magic. There is not a single school that teaches this kind of magic.",//145
+            "The most unpredictable and powerful magic. The sources of this magic are different. Relict magical elemental creatures.",//144However, ordinary mortals may also possess magic. There is not a single school that teaches this kind of magic.",//145
             "OTHER'S magic is chaotic - it affects reality, time, and matter. It is almost impossible to direct it.",//146
-            "The symbol of magic is the eye of 'FIAT LUX'.",//147
-            "This place seems to hold knowledge of magic.",//148
+            "The symbol of magic is the eye of `FIAT LUX`.'",//147
+            "This place seems to hold knowledge of magic..",//148
             "Oh, you're very persistent. How interesting.",//149
             "Is there a goal leading you??",//150
             "Do you consciously want to escape?",//151
@@ -380,7 +378,7 @@ public class DialogueMass
             "Hi! Do we know each other? \nMaybe not in this life?",//180
             "Beatrice has fainted.",//181
             "Well, we're at the bridge to the OUTSIDE WORLD. \nWe have a lot of work to do.",//182
-            "And, yes, do not bother yourself with strange questions. She'll probably be fine. \nDid you beat her up like that?",//183
+            "And, yes, do not bother yourself with strange questions. She'll probably be fine. \nDid you beat her up like that",//183
             "Once you get your soul back, everything will fall into place.",//184
             "Go ahead!",//185
             "We're here.\nWhatever happens beyond of the OUTSIDE WORLD, believe me, I'm not your enemy.",//186
