@@ -26,18 +26,31 @@ public class DirectorCutScene : MonoBehaviour
     {
         moveScript.moveyes = false;
         if(StopMusic)
-            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().StopMusic();
+            try
+            {
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().StopMusic();
+            }
+            catch
+            {
+
+            }
+            
         playerAnim = playerAnimator.runtimeAnimatorController;
         playerAnimator.runtimeAnimatorController = null;
         ControlButton = GameObject.Find("PhoneControls");
         ActiveButton = GameObject.Find("Action");
-        AttackButton = GameObject.Find("Attack");
+        AttackButton = GameObject.Find("Aim Joystick");
         if (!Stopable)
         {
             ActiveButton.SetActive(false);
         }
         ControlButton.SetActive(false);
-        AttackButton.SetActive(false);
+        try
+        {
+            AttackButton.SetActive(false);
+        }
+        catch { }
+        
     }
 
     private void FixedUpdate()
@@ -56,7 +69,7 @@ public class DirectorCutScene : MonoBehaviour
         }
         catch { }
 
-        if (moveScript.activate && Stopable) // Возможность остановить таймлайн
+        if (moveScript.activate && Stopable && !fix) // Возможность остановить таймлайн
         {
             StartCoroutine(Cs());
         }
@@ -99,7 +112,12 @@ public class DirectorCutScene : MonoBehaviour
         director.Pause();
         director.Stop();
         if (StopMusic)
-            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(AudioSystem.PrevMusic);
+            try
+            {
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(AudioSystem.PrevMusic);
+            }
+            catch { }
+          
         Dialog.TextArea.text = "";
         Dialog.disableImage();
         playerAnimator.runtimeAnimatorController = playerAnim;
@@ -117,7 +135,15 @@ public class DirectorCutScene : MonoBehaviour
             yield return new WaitForSeconds(0.005f);
             }
         }
-        ActiveButton.SetActive(true);
+        try
+        {
+            ActiveButton.SetActive(true);
+        }
+        catch
+        {
+
+        }
+        
         ControlButton.SetActive(true);
         AttackButton.SetActive(true);
         moveScript.FindJoystick();
@@ -128,5 +154,6 @@ public class DirectorCutScene : MonoBehaviour
         comment1.IsLock = true;
         moveScript.activate = false;
         gameObject.SetActive(false);
+        
     }
 }

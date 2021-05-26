@@ -23,6 +23,12 @@ public class moveScript : MonoBehaviour
     public static bool attackButt = false;
     public static bool activate;
     // Старт!
+    private void Awake()
+    {
+        JStick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
+        AimJStick = GameObject.Find("Aim Joystick").GetComponent<AimJoystick>();
+    }
+
     void Start()
     {
         //Cursor.lockState = CursorLockMode.Locked; //Фиксируем курсор
@@ -33,8 +39,6 @@ public class moveScript : MonoBehaviour
         NoShooting = true;
         attack = false;
         hero.SetInteger("Vector", 1);
-        JStick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
-        AimJStick = GameObject.Find("Aim Joystick").GetComponent<AimJoystick>();
     }
 
     public static void FindJoystick()

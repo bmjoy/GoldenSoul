@@ -66,7 +66,11 @@ public class Dialog : MonoBehaviour
             for (int i = 0; i < mass[numbers[j]].Length; i++)
             {
                 if (i % 2 == 0 && a[i].ToString() != " ")
-                    GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallVoice(masvoice[j], 0.5f);
+                    try
+                    {
+                        GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallVoice(masvoice[j], 0.5f);
+                    }
+                    catch { }
                 TextArea.text = TextArea.text + a[i];
                 yield return new WaitForSeconds(latency);
             }

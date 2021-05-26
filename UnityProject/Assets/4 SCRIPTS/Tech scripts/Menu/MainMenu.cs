@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class MainMenu : MonoBehaviour
 {
+    public string[] TitlesRus;
+    public string[] TitlesEng;
+
     public GameObject[] MainMenuObj;
     public GameObject[] BossesObj;
 
@@ -55,13 +58,17 @@ public class MainMenu : MonoBehaviour
         Texts[2].fontSize = 50;
         Texts[3].text = "Выход";
         Texts[3].fontSize = 50;
-        Texts[4].text = "1. Верни \n нас назад [PILOT]";
+        //Texts[4].text = "1. Верни \n нас назад [PILOT]";
         Texts[5].text = "Назад";
         Texts[5].fontSize = 60;
         Texts[6].text = "Бой";
         Texts[6].fontSize = 60;
         Texts[7].text = "Боссы";
         Texts[7].fontSize = 60;
+        Texts[8].text = "Начать";
+        Texts[8].fontSize = 60;
+        Texts[9].text = "Назад";
+        Texts[9].fontSize = 60;
     }
     private void Start()
     {
@@ -372,13 +379,17 @@ public class MainMenu : MonoBehaviour
             Texts[3].fontSize = 60;
             Texts[3].text = "Exit";
             Texts[3].fontSize = 60;
-            Texts[4].text = "1. Bring \n     us back";
+            Texts[4].text = TitlesEng[0];
             Texts[5].text = "Back";
             Texts[5].fontSize = 60;
             Texts[6].text = "Fight";
             Texts[6].fontSize = 60;
             Texts[7].text = "Bosses";
             Texts[7].fontSize = 60;
+            Texts[8].text = "Start";
+            Texts[8].fontSize = 60;
+            Texts[9].text = "Back";
+            Texts[9].fontSize = 60;
         }
         else
         {
@@ -391,13 +402,17 @@ public class MainMenu : MonoBehaviour
             Texts[2].fontSize = 50;
             Texts[3].text = "Выход";
             Texts[3].fontSize = 50;
-            Texts[4].text = "1. Верни \n     нас назад";
+            Texts[4].text = TitlesRus[0];
             Texts[5].text = "Назад";
             Texts[5].fontSize = 60;
             Texts[6].text = "Бой";
             Texts[6].fontSize = 60;
             Texts[7].text = "Боссы";
             Texts[7].fontSize = 60;
+            Texts[8].text = "Начать";
+            Texts[8].fontSize = 60;
+            Texts[9].text = "Назад";
+            Texts[9].fontSize = 60;
         }
 
         PlayerPrefs.SetInt("Language", EventSavingSystem.Language);
