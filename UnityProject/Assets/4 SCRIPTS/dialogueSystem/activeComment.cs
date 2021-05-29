@@ -16,7 +16,12 @@ public class activeComment : MonoBehaviour
     private void OnEnable()
     {
         if(!move) moveScript.moveyes = false;
-        moveScript.hero.speed = 0;
+        try
+        {
+            moveScript.hero.speed = 0;
+        }
+        catch { }
+        
         StartCoroutine(Dialog.Dialogue3(Dialog.masDial, masvoice, masav, mas, 0.05f, t));
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bush : MonoBehaviour
 {
     public int HP = 5;
-    int Count = 0;
     public GameObject Bullet;
     GameObject Player;
     Animator Anim;

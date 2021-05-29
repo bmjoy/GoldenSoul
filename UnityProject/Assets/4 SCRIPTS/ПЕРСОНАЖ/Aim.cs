@@ -18,7 +18,6 @@ public class Aim : MonoBehaviour
     private void Update()
     {
         degree = (moveScript.AimDegree < 361) ? moveScript.AimDegree - 90 : 666;
-        print(moveScript.AimDegree);
         if (degree == 666)
         {
             switch (gameObject.GetComponent<Animator>().GetInteger("Vector"))
@@ -55,7 +54,6 @@ public class Aim : MonoBehaviour
 
     public void Aiming()
     {
-        print("Aiming");
         if (Spells.Pointer < 0) return;
         Aim1.SetActive(true);
         PLEE = false;
@@ -67,7 +65,6 @@ public class Aim : MonoBehaviour
 
     public void Shooting()
     {
-        print("Shooting");
         if (Spells.Pointer < 0) return;
         Aim1.SetActive(false);
         PLEE = true;

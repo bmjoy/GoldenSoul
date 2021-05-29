@@ -15,7 +15,6 @@ public class Dialog : MonoBehaviour
     static public readonly string[] masDialRus = DialogueMass.Rus;
     static public readonly string[] masDialEng = DialogueMass.Eng;
     static public string[] masDial;
-    private static bool flag = true; 
 
     void Awake()
     {

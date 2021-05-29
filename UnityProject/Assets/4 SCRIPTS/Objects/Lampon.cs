@@ -7,7 +7,6 @@ public class Lampon : MonoBehaviour
     private Transform playerPos;
     //private Transform lampPos;
     private Renderer lamprend;
-    private bool lampEnabled = false;
     void Awake() //Вход в скрипт
     {
         playerPos = GameObject.Find("hero").GetComponent<Transform>(); //Получаем данные о местонахождении Игрока

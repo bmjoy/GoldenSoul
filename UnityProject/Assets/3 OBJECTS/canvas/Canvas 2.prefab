@@ -3098,7 +3098,7 @@ GameObject:
   - component: {fileID: 8772060653434747842}
   - component: {fileID: 7811459691127624535}
   m_Layer: 5
-  m_Name: Aim Joystick
+  m_Name: AimJoystick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

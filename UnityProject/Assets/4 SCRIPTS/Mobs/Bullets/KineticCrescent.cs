@@ -8,7 +8,6 @@ public class KineticCrescent : MonoBehaviour
     //private Transform Enemy;
     private GameObject Player;
     private Animator Anim;
-    private bool Start_Bullet = false;
     public int Dmg = 20;
     Vector2 Vec;
     //public

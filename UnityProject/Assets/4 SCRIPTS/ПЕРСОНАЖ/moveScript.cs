@@ -26,7 +26,7 @@ public class moveScript : MonoBehaviour
     private void Awake()
     {
         JStick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
-        AimJStick = GameObject.Find("Aim Joystick").GetComponent<AimJoystick>();
+        AimJStick = GameObject.Find("AimJoystick").GetComponent<AimJoystick>();
     }
 
     void Start()
@@ -44,7 +44,7 @@ public class moveScript : MonoBehaviour
     public static void FindJoystick()
     {
         JStick = GameObject.Find("Fixed Joystick").GetComponent<FixedJoystick>();
-        AimJStick = GameObject.Find("Aim Joystick").GetComponent<AimJoystick>();
+        AimJStick = GameObject.Find("AimJoystick").GetComponent<AimJoystick>();
     }
     void FixedUpdate()
     {

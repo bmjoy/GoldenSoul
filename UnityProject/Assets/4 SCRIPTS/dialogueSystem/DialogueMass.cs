@@ -203,7 +203,7 @@
             "~ Everyone who enters the enchanted forest remains here forever.",//4
             "Maybe it's just a bad dream?",//5
             "It couldn't be, because you haven't slept for what it seems like eternity.",//6
-            "All you have left is your name. \nПотеря имени равносильна потере всего, что у тебя есть.",//7
+            "All you have left is your name. \nThe loss of your name equals the loss of everything you have ever had.",//7
             "Your name is Caspian. And you are lost.",//8
             "Please, remember this name.",//9
             "Human, who should've ceased existance long-long time ago...",//10

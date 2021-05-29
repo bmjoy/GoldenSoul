@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SavePoint : MonoBehaviour
 {
-    bool InZone = false;
     public GameObject titre;
 
     private void OnTriggerStay2D(Collider2D collision)

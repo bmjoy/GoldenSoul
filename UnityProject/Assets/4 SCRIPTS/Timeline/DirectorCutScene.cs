@@ -1,9 +1,7 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Playables;
 using UnityEngine;
-using UnityEngine.Playables;
 
 public class DirectorCutScene : MonoBehaviour
 {
@@ -22,6 +20,16 @@ public class DirectorCutScene : MonoBehaviour
     private GameObject ControlButton;
     private GameObject AttackButton;
     private GameObject ActiveButton;
+
+    void Awake()
+    {
+        ControlButton = GameObject.Find("PhoneControls");
+        ActiveButton = GameObject.Find("Action");
+        AttackButton = GameObject.Find("AimJoystick");
+        playerAnim = playerAnimator.runtimeAnimatorController;
+        playerAnimator.runtimeAnimatorController = null;
+    }
+
     private void OnEnable()
     {
         moveScript.moveyes = false;
@@ -34,12 +42,6 @@ public class DirectorCutScene : MonoBehaviour
             {
 
             }
-            
-        playerAnim = playerAnimator.runtimeAnimatorController;
-        playerAnimator.runtimeAnimatorController = null;
-        ControlButton = GameObject.Find("PhoneControls");
-        ActiveButton = GameObject.Find("Action");
-        AttackButton = GameObject.Find("Aim Joystick");
         if (!Stopable)
         {
             ActiveButton.SetActive(false);
@@ -84,7 +86,7 @@ public class DirectorCutScene : MonoBehaviour
 
     private void OnDestroy()
     {
-        playerAnim = playerAnimator.runtimeAnimatorController;
+        //playerAnim = playerAnimator.runtimeAnimatorController;
         playerAnimator.runtimeAnimatorController = null;
         director.Pause();
         director.Stop();
@@ -95,65 +97,72 @@ public class DirectorCutScene : MonoBehaviour
 
     public IEnumerator Cs()
     {
-        EventSavingSystem.UsedEvents[NumScene] = true; // отмечаем что катсцена проиграла
-        foreach (activeComment i in Comms)
-        {
-            i.StopAllCoroutines();
-        }
-        Dialog.TextArea.text = "";
-        Dialog.disableImage();
         Image image = GameObject.Find("Imagelvl").GetComponent<Image>();
-        if (BlackImgOnEnd)
-            for (float bright = 0; bright < 1; bright += Time.deltaTime)
-            {
-                image.color = new Color(0, 0, 0, bright);
-                yield return new WaitForSeconds(0.005f);
-            }
-        director.Pause();
-        director.Stop();
-        if (StopMusic)
-            try
-            {
-                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(AudioSystem.PrevMusic);
-            }
-            catch { }
-          
-        Dialog.TextArea.text = "";
-        Dialog.disableImage();
-        playerAnimator.runtimeAnimatorController = playerAnim;
-        Camera1.orthographicSize = 3.5f;
-        Camera.SetActive(true);
-        gameObject.GetComponent<Appear>().Appears();
-        try { GameObject.Find("Delete").SetActive(false); }
-        catch { }
-        fix = true;
-        if (BlackImgOnEnd)
-        {
-            for (float bright = 1; bright > 0; bright -= Time.deltaTime)
-            {
-            image.color = new Color(0, 0, 0, bright);
-            yield return new WaitForSeconds(0.005f);
-            }
-        }
         try
         {
-            ActiveButton.SetActive(true);
+            EventSavingSystem.UsedEvents[NumScene] = true; // отмечаем что катсцена проиграла
+            foreach (activeComment i in Comms)
+            {
+                i.StopAllCoroutines();
+            }
+            try
+            {
+                Dialog.TextArea.text = "";
+                Dialog.disableImage();
+            }
+            catch { }
+            if (BlackImgOnEnd)
+                for (float bright = 0; bright < 1; bright += Time.deltaTime)
+                {
+                    image.color = new Color(0, 0, 0, bright);
+                    yield return new WaitForSeconds(0.005f);
+                }
+            director.Pause();
+            director.Stop();
+            if (StopMusic)
+                try
+                {
+                    GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(AudioSystem.PrevMusic);
+                }
+                catch { }
+            playerAnimator.runtimeAnimatorController = playerAnim;
+            Camera1.orthographicSize = 3.5f;
+            Camera.SetActive(true);
+            gameObject.GetComponent<Appear>().Appears();
+            try { GameObject.Find("Delete").SetActive(false); }
+            catch { }
+            fix = true;
+            if (BlackImgOnEnd)
+            {
+                for (float bright = 1; bright > 0; bright -= Time.deltaTime)
+                {
+                    image.color = new Color(0, 0, 0, bright);
+                    yield return new WaitForSeconds(0.005f);
+                }
+            }
+            try
+            {
+                ActiveButton.SetActive(true);
+                ControlButton.SetActive(true);
+                AttackButton.SetActive(true);
+                moveScript.FindJoystick();
+                moveScript.moveyes = true;
+                moveScript.hero.speed = 0;
+            }
+            catch
+            {
+
+            }
         }
-        catch
+        finally
         {
 
+
         }
-        
-        ControlButton.SetActive(true);
-        AttackButton.SetActive(true);
-        moveScript.FindJoystick();
         yield return new WaitForSeconds(1f);
         image.color = new Color(0, 0, 0, 0);
-        moveScript.moveyes = true;
-        moveScript.hero.speed = 0;
         comment1.IsLock = true;
         moveScript.activate = false;
         gameObject.SetActive(false);
-        
     }
 }

@@ -8,7 +8,6 @@ public class KineticRapier : MonoBehaviour
     //private Transform Enemy;
     private GameObject Player;
     private Animator Anim;
-    private bool Start_Bullet = false;
     public int Dmg = 25;
     Vector2 Vec;
     float Deg;
