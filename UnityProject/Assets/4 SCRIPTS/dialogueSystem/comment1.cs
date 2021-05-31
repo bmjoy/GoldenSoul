@@ -24,7 +24,7 @@ public class comment1 : MonoBehaviour
     }
 
     void OnTriggerStay2D(Collider2D col)
-    {
+    {    
         if (!IsLock) {
             if (moveScript.activate && Stay)
             {
@@ -34,7 +34,7 @@ public class comment1 : MonoBehaviour
                 IsLock = true;
                 checkcomm = false;
                 Dialog.TextArea.text = "";
-                IsLock = true;
+                return;
             }
             return;
         }

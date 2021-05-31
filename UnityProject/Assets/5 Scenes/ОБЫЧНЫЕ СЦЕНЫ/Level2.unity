@@ -11044,6 +11044,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas 2
       objectReference: {fileID: 0}
+    - target: {fileID: 426191241258493583, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: localLang
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 426191241937243007, guid: ccf343d937ed3674cb150afa2d71957e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11379,11 +11384,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ActiveButt
-      objectReference: {fileID: 0}
-    - target: {fileID: 426191241258493583, guid: ccf343d937ed3674cb150afa2d71957e,
-        type: 3}
-      propertyPath: localLang
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8515718481618210563, guid: ccf343d937ed3674cb150afa2d71957e,
         type: 3}
@@ -46888,56 +46888,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1.4123344
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000914207584882570, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
-        type: 3}
-      propertyPath: masvoice.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000914207584882570, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
-        type: 3}
-      propertyPath: mas.Array.data[0]
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000914207584882570, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
-        type: 3}
-      propertyPath: mas.Array.data[1]
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000914207584882570, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
-        type: 3}
-      propertyPath: mas.Array.data[2]
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000914207584882570, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
-        type: 3}
-      propertyPath: mas.Array.data[3]
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000914207584882570, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
-        type: 3}
-      propertyPath: mas.Array.data[4]
-      value: 26
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000914207584882570, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
-        type: 3}
-      propertyPath: Stay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000914207584882570, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
-        type: 3}
-      propertyPath: type
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000914207584882570, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
-        type: 3}
-      propertyPath: masvoice.Array.data[3]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000914207584882570, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
-        type: 3}
-      propertyPath: masvoice.Array.data[4]
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8772619240245956279, guid: 2ecf7dbff55feef40a015a1bfd17a6d7,
         type: 3}

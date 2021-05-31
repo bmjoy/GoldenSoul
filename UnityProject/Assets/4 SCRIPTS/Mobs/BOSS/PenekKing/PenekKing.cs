@@ -96,6 +96,7 @@ public class PenekKing : MonoBehaviour
             Heart.GetComponent<MonsterLife>().Damaged = false;
             StartCoroutine(Drag(Player.transform.position));
         }
+
         if (Col.IsTouching(TC1) || Col.IsTouching(TC2) || Col.IsTouching(TC3) || Col.IsTouching(TC4) || Col.IsTouching(TC5))
         {
             Col.isTrigger = false;
@@ -103,6 +104,7 @@ public class PenekKing : MonoBehaviour
 
         if (Active)
         {
+            TC5.gameObject.SetActive(true);
             GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(3);
             if (!Tilelock)
             {
