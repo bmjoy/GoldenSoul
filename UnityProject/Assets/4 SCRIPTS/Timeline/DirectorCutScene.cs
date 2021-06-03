@@ -73,14 +73,14 @@ public class DirectorCutScene : MonoBehaviour
 
         if (moveScript.activate && Stopable && !fix) // Возможность остановить таймлайн
         {
-            StartCoroutine(Cs());
+            StartCoroutine(Cs(true));
         }
 
         if (director.state != PlayState.Playing && !fix) //Сложно
         {
             try {GameObject.Find("Delete").SetActive(false); }
             catch { }
-            StartCoroutine(Cs());
+            StartCoroutine(Cs(BlackImgOnEnd));
         }
     }
 
@@ -95,7 +95,7 @@ public class DirectorCutScene : MonoBehaviour
         gameObject.GetComponent<Appear>().Appears();
     }
 
-    public IEnumerator Cs()
+    public IEnumerator Cs(bool BlackImgFlag)
     {
         Image image = GameObject.Find("Imagelvl").GetComponent<Image>();
         try
@@ -111,7 +111,7 @@ public class DirectorCutScene : MonoBehaviour
                 Dialog.disableImage();
             }
             catch { }
-            if (BlackImgOnEnd)
+            if (BlackImgFlag)
                 for (float bright = 0; bright < 1; bright += Time.deltaTime)
                 {
                     image.color = new Color(0, 0, 0, bright);
@@ -132,7 +132,7 @@ public class DirectorCutScene : MonoBehaviour
             try { GameObject.Find("Delete").SetActive(false); }
             catch { }
             fix = true;
-            if (BlackImgOnEnd)
+            if (BlackImgFlag)
             {
                 for (float bright = 1; bright > 0; bright -= Time.deltaTime)
                 {

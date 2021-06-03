@@ -211,11 +211,11 @@
             "You're lucky, because I happened to stumble upon you COMPLETELY BY CHANCE...",//12
             "Come closer, if you still have any emotions or feelings!",//13
             "Ha-Ha! I wish you could see youself right now. It's as if you have just seen a ghost... ",//14
-            "We have little time to keep you sane, but I know how to help you.",//15
+            "You don't have much time, but I know how to help you.",//15
             "I will make you a Soul out of Gold.",//16
-            "With a Golden Soul you can lengthen your life, so I could guide you out of this place.",//17
+            "It will prolong your life and help you get out of this strange place",//17
             "Accept your salvation...",//18
-            "Once the merger happens, you'll pass out. I will wait for you near ahead.",//19
+            "After absorbing the soul, I will wait for you near ahead.",//19
             "Good luck.",//20
             "You can only have one spell of one type.",//21
             "A shiny, polished greatsword.",//22
@@ -238,12 +238,12 @@
             "Would you look at that! \nIt worked! \nHow are you feeling right now?",//39
             "Would you mind to sit down and chat with me for a while? You are safe now.",//40
             "Allow me to introduce myself — I'm Candle.",//41
-            "I like to spend my free time is various strange places... Just like these woods.",//42
+            "II love to spend my free time in this forest.",//42
             "You've probably got a ton of questions for me:'Who are you and what is this place?'",//43
             "Let us start with the place.",//44
-            "These are the Woods of nothingness. An anomalous place where people go missing.",//45
-            "Legends say that this forest served to magical cage for relicts and monsters.",//46
-            "Regarding you...",//47
+            "These are the Woods of nothingness. People get lost here.",//45
+            "This forest served to magical cage for relicts and monsters.",//46
+            "Regarding you...........",//47
             "Mate, congratulations! You died!",//48
             "...Well, formally, your body ain't dead. You can breathe, hear and see.",//49
             "But you lost the most valuable part of yourself — YOUR SOUL.",//50
@@ -251,10 +251,10 @@
             "It's your energy, your memories, feelings and emotions.",//52
             "You know, when I found you... You didn't have much longer.",//53
             "But the GOLDEN SOUL saved you, filling you with MAGIC ENERGY.",//54
-            "It is just a FAKE SOUL, since you can't feel pain nor can you cry. You can't bleed either.",//55
+            "It is just a FAKE SOUL, since you can't feel pain nor can you cry.",//55
             "We are somewhat alike...",//56
-            "And I think I know, how can we get your soul back. But first we have to escape from here.",//57
-            "Unfortunately, I can't teleport both of us. You'll have to get out of here on your own two feet.",//58
+            "I know, how can we get your soul back. But first we have to escape from here.",//57
+            "Unfortunately, I can't teleport both of us. You'll have to get out of here by own.",//58
             "There's an old bridge nearby. It is the exit from this place.",//59
             "Get up! \nI will explain how everything works.",//60
             "Let the genial tutorial begin!",//61
@@ -340,7 +340,8 @@
             "The magic of the senses is the opposite of the magic of the mind. It is caused by a very strong love, hatred, hope or despair.",//141
             "The symbol of the magic of the senses is a burning heart that breaks the chains.",//142
             "Magic of OTHERS.",//143
-            "The most unpredictable and powerful magic. The sources of this magic are different. Relict magical elemental creatures.",//144However, ordinary mortals may also possess magic. There is not a single school that teaches this kind of magic.",//145
+            "The most unpredictable and powerful magic. The sources of this magic are different. Relict magical elemental creatures.",//144
+            "However, ordinary mortals may also possess magic. There is not a single school that teaches this kind of magic.",//145
             "OTHER'S magic is chaotic - it affects reality, time, and matter. It is almost impossible to direct it.",//146
             "The symbol of magic is the eye of `FIAT LUX`.'",//147
             "This place seems to hold knowledge of magic..",//148
