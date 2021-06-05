@@ -36771,7 +36771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73cbae22ddc38d9469c515973b94a14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://vk.com/lexuslight
+  url: https://twitter.com/lexus_light
 --- !u!114 &1872034608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36990,7 +36990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73cbae22ddc38d9469c515973b94a14c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://vk.com/lexuslight
+  url: https://www.patreon.com/LexusLight
 --- !u!114 &1888975564
 MonoBehaviour:
   m_ObjectHideFlags: 0

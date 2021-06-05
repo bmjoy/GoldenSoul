@@ -104,7 +104,7 @@ public class Spells : MonoBehaviour
         {
             yield return new WaitForSeconds(0.1f);
             if (ManaSlider.value <= 11 || Aim.PLEE) { break; }
-            ManaSlider.value -= 0;
+            ManaSlider.value -= 15;
             Instantiate(gameObject.GetComponent<Spells>().SpellObj[1], new Vector2(gameObject.transform.position.x + Random.Range(-0.6f, 0.6f), gameObject.transform.position.y + Random.Range(-0.6f, 0.6f)),Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
         }

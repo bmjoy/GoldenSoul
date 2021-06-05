@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System;
 public class Dialog : MonoBehaviour
 {
-    public int localLang = 1;
+    public int localLang;
     public Image DialogImage;
     public static Image _DialogImage;
     static public Text TextArea;
@@ -27,7 +27,7 @@ public class Dialog : MonoBehaviour
     {
         try
         {
-            masDial = (Convert.ToInt32(EventSavingSystem.Language) == 1) ? masDialRus : masDialEng; //поменять
+            masDial = (Convert.ToInt32(EventSavingSystem.Language) == 1) ? masDialEng : masDialEng; //поменять
             print(EventSavingSystem.Language);
         }
         catch

@@ -213,7 +213,7 @@
             "Ha-Ha! I wish you could see youself right now. It's as if you have just seen a ghost... ",//14
             "You don't have much time, but I know how to help you.",//15
             "I will make you a Soul out of Gold.",//16
-            "It will prolong your life and help you get out of this strange place",//17
+            "It will prolong your life and help you get out of this strange place. ",//17
             "Accept your salvation...",//18
             "After absorbing the soul, I will wait for you near ahead.",//19
             "Good luck.",//20
@@ -238,7 +238,7 @@
             "Would you look at that! \nIt worked! \nHow are you feeling right now?",//39
             "Would you mind to sit down and chat with me for a while? You are safe now.",//40
             "Allow me to introduce myself — I'm Candle.",//41
-            "II love to spend my free time in this forest.",//42
+            "I love to spend my free time in this forest.",//42
             "You've probably got a ton of questions for me:'Who are you and what is this place?'",//43
             "Let us start with the place.",//44
             "These are the Woods of nothingness. People get lost here.",//45
@@ -378,11 +378,11 @@
             "BUT YOU... YOU......",//179
             "Hi! Do we know each other? \nMaybe not in this life?",//180
             "Beatrice has fainted.",//181
-            "Well, we're at the bridge to the OUTSIDE WORLD. \nWe have a lot of work to do.",//182
+            "Well, we're at the bridge to the OUTER WORLD. \nWe have a lot of work to do.",//182
             "And, yes, do not bother yourself with strange questions. She'll probably be fine. \nDid you beat her up like that",//183
             "Once you get your soul back, everything will fall into place.",//184
             "Go ahead!",//185
-            "We're here.\nWhatever happens beyond of the OUTSIDE WORLD, believe me, I'm not your enemy.",//186
+            "We're here.\nWhatever happens beyond of the OUTER WORLD, believe me, I'm not your enemy.",//186
             "I'm not some cliched villain from a game written by a student with nothing better to do....",//187
             "HA-HA, sometimes I wait for you to answer, but I forget that you can't talk....",//188
             "Welcome to the brave new world!",//189

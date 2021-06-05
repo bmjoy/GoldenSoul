@@ -564,7 +564,7 @@ public class Beatrix : MonoBehaviour
     IEnumerator StartCutScn() //Включить сердце
     {
         yield return new WaitForSeconds(15f);
-
+        GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(9);
         moveScript.hero.speed = 0;
         moveScript.moveyes = false;
         Image image = GameObject.Find("Imagelvl").GetComponent<Image>();

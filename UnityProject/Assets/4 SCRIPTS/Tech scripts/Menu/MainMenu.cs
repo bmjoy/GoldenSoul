@@ -164,6 +164,10 @@ public class MainMenu : MonoBehaviour
     public void Play() {
         EventSavingSystem.RealHp = 5;
         PlayerPrefs.DeleteAll();
+        Spells.SpellsList[1] = 0;
+        Spells.SpellsList[2] = 0;
+        Spells.SpellsList[3] = 0;
+        Spells.SpellsList[4] = 0;
         StartCoroutine(DisappearanceLvl(1));
     }
     public void Exit()

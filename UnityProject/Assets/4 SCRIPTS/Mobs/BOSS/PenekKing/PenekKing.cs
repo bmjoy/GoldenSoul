@@ -76,6 +76,7 @@ public class PenekKing : MonoBehaviour
             Heart.SetActive(false);
             Phrases[3].SetActive(true);
             EventSavingSystem.UsedEvents[8] = true;
+            slider.gameObject.SetActive(false);
             StartCoroutine(TileAppear());
             return;
         }

@@ -15,11 +15,10 @@ public class EndingTitre : MonoBehaviour
         try
         {
             message = (Convert.ToInt32(EventSavingSystem.Language) == 1) ? russian : english; //поменять
-            print(EventSavingSystem.Language);
         }
         catch
         {
-            message = russian;
+            message = english;
         }
         Text1 = gameObject.GetComponent<Text>();
         Text1.text = message;
