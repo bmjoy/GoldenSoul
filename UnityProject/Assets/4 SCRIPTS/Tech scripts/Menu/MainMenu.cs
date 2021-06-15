@@ -372,6 +372,7 @@ public class MainMenu : MonoBehaviour
     public void Language()
     {
         EventSavingSystem.Language = (EventSavingSystem.Language == 0) ? 1 : 0;
+        print(EventSavingSystem.Language);
         if (EventSavingSystem.Language == 0)
         {
             GameObject.FindGameObjectWithTag("flag").GetComponent<Animator>().SetBool("Eng", true);
