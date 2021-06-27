@@ -84,8 +84,13 @@ public class Character1 : MonoBehaviour
         if (BlackImg && !Death) //Чтобы экран не повторял тускление при смерти
         {
             Death = true;
-            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().StopMusic();
-            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(7,3f);
+            try
+            {
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().StopMusic();
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallMusic(7, 3f);
+            }
+            catch { }
+            
             AudioSystem.enabled1 = false;
             StartCoroutine(BlackImgFun());
         }
@@ -108,7 +113,14 @@ public class Character1 : MonoBehaviour
     {
         if (HP > 1 && !HitTime) 
         {
-            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(4, 0.8f);
+            try
+            {
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(4, 0.8f);
+            }
+            catch
+            {
+
+            }
             //GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(3, 1f);
             HitTime = true;
             HP -= x;
@@ -218,7 +230,15 @@ public class Character1 : MonoBehaviour
         if (!Indicator.active)
         {
             Indicator.SetActive(true);
-            GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(0);
+            try
+            {
+                GameObject.Find("AudioSystem").GetComponent<AudioSystem>().CallSound(0);
+            }
+            catch
+            {
+
+            }
+            
         }
 
     }

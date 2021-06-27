@@ -128,7 +128,6 @@ public class MainMenu : MonoBehaviour
     public void PartPointerPrevious()
     {
         PointerPart -= (PointerPart < 1) ? 0 : 1;
-
         StartCoroutine(AppearanceImg("parts"));
     }
 
@@ -136,7 +135,6 @@ public class MainMenu : MonoBehaviour
     {
 
         PointerPart += (PointerPart < PointerPartMax) ? 1 : 0;
-
         StartCoroutine(AppearanceImg("parts"));
     }
 
@@ -150,25 +148,29 @@ public class MainMenu : MonoBehaviour
 
     public void Load()
     {
-       
-        if (PlayerPrefs.GetInt("UsedEvents0") == 1)
+        if (EventSavingSystem.ThisLvl != 0)
         {
             EventSavingSystem.LoadAll();
             StartCoroutine(DisappearanceLvl(EventSavingSystem.ThisLvl));
         }
-        else
-        {
-            PlayerPrefs.DeleteAll();
-        }
     }
     public void Play() {
-        EventSavingSystem.RealHp = 5;
         PlayerPrefs.DeleteAll();
+        EventSavingSystem.RealHp = 5;
         Spells.SpellsList[1] = 0;
         Spells.SpellsList[2] = 0;
         Spells.SpellsList[3] = 0;
         Spells.SpellsList[4] = 0;
-        StartCoroutine(DisappearanceLvl(1));
+        switch (PointerPart)
+        {
+            case 0:
+                StartCoroutine(DisappearanceLvl(1));
+                break;
+            case 1:
+                StartCoroutine(DisappearanceLvl(27));
+                break;
+        }
+        
     }
     public void Exit()
     {

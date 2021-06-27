@@ -17,7 +17,7 @@ public class EventSavingSystem : MonoBehaviour
     //-----------------------------------
     public static int Language = 1; //Язык
     public static int RealHp = 5; //Минимальное ХП с начала 
-    public static int ThisLvl = 1;
+    public static int ThisLvl = 0;
     public static int LastLvl = 1;
     public static float[] LevelCoordsX = new float[100]; //для возврата на пребедущие локации
     public static float[] LevelCoordsY = new float[100]; //для возврата на пребедущие локации
@@ -27,6 +27,8 @@ public class EventSavingSystem : MonoBehaviour
     public static float x, y;
 
     //-----------------------------------
+    private GameObject sameObjects;
+
     private void Awake()
     {
         HeroWasHere = _HeroWasHere;
@@ -34,7 +36,11 @@ public class EventSavingSystem : MonoBehaviour
         {
             HeroWasHere[i] = true;
         }
+        ThisLvl = PlayerPrefs.GetInt("ThisLvl");
         _HeroWasHere = HeroWasHere;
+        sameObjects = GameObject.Find(gameObject.name);
+        if(gameObject != sameObjects)
+            Destroy(sameObjects);
     }
 
     public void Update()
