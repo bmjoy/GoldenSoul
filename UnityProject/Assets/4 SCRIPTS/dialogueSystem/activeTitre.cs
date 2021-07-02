@@ -7,8 +7,19 @@ public class activeTitre : MonoBehaviour
     public int[] mas = new int[10]; // нумерация строк из массива в диалоге
     public int[] masav = new int[10];
     public float t; // Время до удаления диалога
+    public bool onetime = false;
+    bool flag = false;
     private void OnEnable()
     {
-        StartCoroutine(Dialog.Titres(Dialog.masDial[mas[0]], 0.05f, t));
+        if(onetime&&!flag)
+        {
+            StartCoroutine(Dialog.Titres(Dialog.masDial[mas[0]], 0.05f, t));
+            flag = true;
+        }
+        if (!onetime)
+        {
+            StartCoroutine(Dialog.Titres(Dialog.masDial[mas[0]], 0.05f, t));
+        }
+
     }
 }

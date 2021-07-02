@@ -203,6 +203,7 @@ MonoBehaviour:
   mas: 01000000
   masav: 00000000
   t: 1
+  onetime: 1
 --- !u!1 &4110597985986696755
 GameObject:
   m_ObjectHideFlags: 0

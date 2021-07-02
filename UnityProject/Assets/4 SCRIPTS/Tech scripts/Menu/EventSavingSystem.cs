@@ -32,6 +32,7 @@ public class EventSavingSystem : MonoBehaviour
     private void Awake()
     {
         HeroWasHere = _HeroWasHere;
+
         for (int i = 0; i < LastLvl; i++) //Отмечаем где мы были до последнего уровня(помогает соблюсти сюжет и вернуться к прогрессу)
         {
             HeroWasHere[i] = true;

@@ -128,6 +128,7 @@ public class MainMenu : MonoBehaviour
     public void PartPointerPrevious()
     {
         PointerPart -= (PointerPart < 1) ? 0 : 1;
+        Texts[4].text =(EventSavingSystem.Language == 0) ? TitlesEng[PointerPart] : TitlesRus[PointerPart];
         StartCoroutine(AppearanceImg("parts"));
     }
 
@@ -135,6 +136,7 @@ public class MainMenu : MonoBehaviour
     {
 
         PointerPart += (PointerPart < PointerPartMax) ? 1 : 0;
+        Texts[4].text = (EventSavingSystem.Language == 0) ? TitlesEng[PointerPart] : TitlesRus[PointerPart];
         StartCoroutine(AppearanceImg("parts"));
     }
 
@@ -164,10 +166,12 @@ public class MainMenu : MonoBehaviour
         switch (PointerPart)
         {
             case 0:
+                EventSavingSystem.ThisLvl = 1;
                 StartCoroutine(DisappearanceLvl(1));
                 break;
             case 1:
-                StartCoroutine(DisappearanceLvl(27));
+                //EventSavingSystem.ThisLvl = 27;
+                //StartCoroutine(DisappearanceLvl(27));
                 break;
         }
         
@@ -215,6 +219,7 @@ public class MainMenu : MonoBehaviour
 
             case "menu":
                 {
+                    Texts[4].text = (EventSavingSystem.Language == 0) ? TitlesEng[0] : TitlesRus[0];
                     foreach (GameObject i in PartsScenes)
                     {
                         i.SetActive(false);
@@ -239,6 +244,7 @@ public class MainMenu : MonoBehaviour
 
             case "parts":
                 {
+                    Texts[4].text = (EventSavingSystem.Language == 0) ? TitlesEng[PointerPart] : TitlesRus[PointerPart];
                     category = 3;
                     foreach (GameObject i in PartsScenes)
                     {
@@ -386,7 +392,7 @@ public class MainMenu : MonoBehaviour
             Texts[3].fontSize = 60;
             Texts[3].text = "Exit";
             Texts[3].fontSize = 60;
-            Texts[4].text = TitlesEng[0];
+            Texts[4].text = TitlesEng[PointerPart];
             Texts[5].text = "Back";
             Texts[5].fontSize = 60;
             Texts[6].text = "Fight";
@@ -409,7 +415,7 @@ public class MainMenu : MonoBehaviour
             Texts[2].fontSize = 50;
             Texts[3].text = "Выход";
             Texts[3].fontSize = 50;
-            Texts[4].text = TitlesRus[0];
+            Texts[4].text = TitlesRus[PointerPart];
             Texts[5].text = "Назад";
             Texts[5].fontSize = 60;
             Texts[6].text = "Бой";
