@@ -6,6 +6,7 @@ TextureImporter:
     21300002: oneframe-npc_1
     21300004: oneframe-npc_2
     21300006: oneframe-npc_3
+    21300008: oneframe-npc_4
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -124,7 +125,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b869c9a4adce4d479a024a91bb79cf6
+      spriteID: b6fe4443b5325e54f8595461263d206d
       vertices: []
       indices: 
       edges: []
@@ -144,7 +145,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67e42f413e3b60743b179c204d65c3cd
+      spriteID: 7ff0f0af080c7a848b3a8d267f7ed7c5
       vertices: []
       indices: 
       edges: []
@@ -164,7 +165,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb15bbebf6b2612449804fff070897f4
+      spriteID: ab778961f3f67da4eb44842496923204
       vertices: []
       indices: 
       edges: []
@@ -184,7 +185,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9ce4b35065bd6e47bc363870f782211
+      spriteID: 1cb2b2c570570a2409c0018890d4190f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oneframe-npc_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065dcfdd7b4163f41af5f3ea48bdd2d1
       vertices: []
       indices: 
       edges: []

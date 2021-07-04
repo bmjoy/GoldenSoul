@@ -15,7 +15,7 @@ public class Level : MonoBehaviour
     public float scale;
     private void Update()
     {
-        Time.timeScale = scale;
+        //Time.timeScale = scale;
     }
     void OnTriggerEnter2D(Collider2D col)
     {

@@ -3430,15 +3430,15 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 426191241258493583, guid: ccf343d937ed3674cb150afa2d71957e,
-        type: 3}
-      propertyPath: localLang
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2239629470591607656, guid: ccf343d937ed3674cb150afa2d71957e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -1.800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 426191241258493583, guid: ccf343d937ed3674cb150afa2d71957e,
+        type: 3}
+      propertyPath: localLang
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -3545,7 +3545,6 @@ GameObject:
   m_Component:
   - component: {fileID: 619473557}
   - component: {fileID: 619473556}
-  - component: {fileID: 619473555}
   - component: {fileID: 619473554}
   m_Layer: 0
   m_Name: Floppa
@@ -3575,20 +3574,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &619473555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619473553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cf2c776bb4b81042aa46e8aaa5c2bb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 3
-  y: 7
 --- !u!212 &619473556
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -91506,11 +91491,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 7154936331847220831, guid: f03877bde7d5776448fbfb9d0f8db606,
-        type: 3}
-      propertyPath: m_ChunkCullingBounds.y
-      value: 0.125
-      objectReference: {fileID: 0}
     - target: {fileID: 5869794691276648094, guid: f03877bde7d5776448fbfb9d0f8db606,
         type: 3}
       propertyPath: m_Color.r
@@ -91525,6 +91505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 7154936331847220831, guid: f03877bde7d5776448fbfb9d0f8db606,
+        type: 3}
+      propertyPath: m_ChunkCullingBounds.y
+      value: 0.125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f03877bde7d5776448fbfb9d0f8db606, type: 3}
@@ -91840,6 +91825,11 @@ PrefabInstance:
       propertyPath: m_projectionMatrixMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8193057592192605682, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8193057592140921003, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: JStick
@@ -91849,11 +91839,6 @@ PrefabInstance:
         type: 3}
       propertyPath: StopAttack
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193057592192605682, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6980745527865888087, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
@@ -91925,15 +91910,15 @@ PrefabInstance:
       propertyPath: DeathObj
       value: 
       objectReference: {fileID: 614657217}
-    - target: {fileID: 2539946702688045657, guid: 9268050b6b1a1e946a8e77cce7bf3230,
-        type: 3}
-      propertyPath: TexturePixelsPerWorldUnit
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 6980745527865888086, guid: 9268050b6b1a1e946a8e77cce7bf3230,
         type: 3}
       propertyPath: m_CollisionDetection
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539946702688045657, guid: 9268050b6b1a1e946a8e77cce7bf3230,
+        type: 3}
+      propertyPath: TexturePixelsPerWorldUnit
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9268050b6b1a1e946a8e77cce7bf3230, type: 3}
